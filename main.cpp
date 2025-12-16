@@ -131,7 +131,10 @@ const unsigned KBleu    (34);
 const unsigned KMAgenta (35);
 const unsigned KCyan    (36);
 
-
+/**
+ * @brief main
+ * @return
+ */
 int main()
 {
     char direction = 'a';
