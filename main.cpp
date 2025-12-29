@@ -178,7 +178,6 @@ bool litdoublon (const mat & grille, maPosition & coord, unsigned & nombrememe,c
         ++i;
     }
     nombrememe = nombrememe - 1;
-    cout << nombrememe << endl;
     if (nombrememe >= 3) {
         return true;
     }
@@ -201,18 +200,19 @@ void suppressiondoublons (mat & grille, const maPosition & coord,const long int 
         ++i;
     }
 }
-void remonteval (mat & grille,const long int & Nbcolonne) {
+void remonteval (mat & grille,const long int & Nbligne,const long int & Nbcolonne) {
     long int i = 0;
     long int j = 0;
-    while( i <= Nbcolonne ) {
-        while (j <= Nbcolonne) {
-            if (j == Nbcolonne) {
+    long int k;
+    while( i < Nbcolonne ) {
+        while (j < Nbligne) {
+            k = j + 1;
+            while ((k < Nbligne ) && (grille[j][i] == (-1))) {
+            grille[j][i] = grille[k][i];
+            grille[k][i] = (-1);
+            ++k;
             }
-            else {
-            grille[j][i] = grille[j + 1][i];
-            grille[j + 1][i] = (-1);
             ++j;
-            }
         }
     ++i;
     j = 0;
@@ -250,11 +250,9 @@ int main()
         makeAMove (grille,coord,direction,Nbligne,Nbcolonne);
         if (litdoublon(grille,coord,nombrememe,Nbligne,Nbcolonne)== true) {
             suppressiondoublons(grille,coord,Nbligne,Nbcolonne);
-            /**remonteval (grille,Nbcolonne);*/
+            remonteval (grille,Nbligne,Nbcolonne);
             displayGrid(grille, Nbligne,Nbcolonne,coord);
-            break;
         }
-        displayGrid(grille, Nbligne,Nbcolonne,coord);
     }
     return 0;
 }
