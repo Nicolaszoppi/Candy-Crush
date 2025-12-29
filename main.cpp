@@ -35,8 +35,8 @@ void creategrille (size_t & KNbCandies, long int & Nbligne, long int & Nbcolonne
         }
         else break;
     }
-    Nbcolonne = Nbcolonne + 1;
-    Nbligne = Nbligne + 1;
+    Nbcolonne = Nbcolonne;
+    Nbligne = Nbligne;
 }
 
 void initGrid (mat & grille,const long int & Nbligne,const long int & Nbcolonne,const size_t & KNbCandies) {
@@ -86,14 +86,14 @@ void makeAMove (mat & grille,maPosition & coord,char & direction,const long int 
     while (true) {
         while (true) {
             cin >> coord.abs;
-            if ((coord.abs > Nbcolonne) | (coord.abs < 0)) {
+            if ((coord.abs >= Nbcolonne) | (coord.abs < 0)) {
                 cout << "La position doit appartenir au tableau." << endl;
             }
             else break;
         }
         while (true) {
             cin >> coord.ord;
-            if ((coord.ord > Nbligne) | (coord.ord < 0)) {
+            if ((coord.ord >= Nbligne) | (coord.ord < 0)) {
                 cout << "La position doit appartenir au tableau." << endl;
             }
             else break;
@@ -121,7 +121,7 @@ void makeAMove (mat & grille,maPosition & coord,char & direction,const long int 
             }
         }
         if (directionmin == 's') {
-            if (coord.ord >= Nbligne) {
+            if (coord.ord >= Nbligne - 1) {
                 cout << "Vous ne pouvez pas avancer plus" << endl;
             }
             else {
@@ -145,7 +145,7 @@ void makeAMove (mat & grille,maPosition & coord,char & direction,const long int 
             }
         }
         if (directionmin == 'd') {
-            if (coord.abs >= Nbcolonne) {
+            if (coord.abs >= Nbcolonne - 1) {
                 cout << "Vous ne pouvez pas avancer plus" << endl;
             }
             else {
@@ -156,114 +156,66 @@ void makeAMove (mat & grille,maPosition & coord,char & direction,const long int 
                 break;
             }
         }
-        if (directionmin == 'r') break;
+        /**if (directionmin == 'r') break;*/
 
     }
 
 }
-bool litdoublon (const mat & grille, maPosition & coord, unsigned & nombrechaine,const long int & Nbligne,const long int & Nbcolonne) {
-    nombrechaine = 0;
-    long int i = coord.ord;
-    while (i <= Nbcolonne) {
+bool litdoublon (const mat & grille, maPosition & coord, unsigned & nombrememe,const long int & Nbligne,const long int & Nbcolonne) {
+    long int i = 0;
+    nombrememe = 0;
+    while (i < Nbligne) {
         if (grille[i][coord.abs] == grille[coord.ord][coord.abs]){
-            nombrechaine = nombrechaine + 1;
-            ++i;
+            nombrememe = nombrememe + 1;
         }
-        else break;
+        ++i;
     }
-    i = coord.ord;
-    while (i >= 0) {
-        if (grille[i][coord.abs] == grille[coord.ord][coord.abs]){
-            nombrechaine = nombrechaine + 1;
-            --i;
-        }
-        else break;
-    }
-    i = coord.abs;
-    while (i <= Nbligne) {
+    i = 0;
+    while (i < Nbcolonne) {
         if (grille[coord.ord][i] == grille[coord.ord][coord.abs]){
-            nombrechaine = nombrechaine + 1;
-            ++i;
+            nombrememe = nombrememe + 1;
         }
-        else break;
+        ++i;
     }
-    i = coord.abs;
-    while (i >= 0) {
-        if (grille[coord.ord][i] == grille[coord.ord][coord.abs]){
-            nombrechaine = nombrechaine + 1;
-            --i;
-        }
-        else break;
-    }
-    if (nombrechaine - 3 >= 3) {
+    nombrememe = nombrememe - 1;
+    cout << nombrememe << endl;
+    if (nombrememe >= 3) {
         return true;
     }
     else return false;
 }
 void suppressiondoublons (mat & grille, const maPosition & coord,const long int & Nbligne,const long int & Nbcolonne) {
     long int doublon = grille[coord.ord][coord.abs];
-    /**size_t valeurtrans;
-    */
-    long int i = coord.ord;
-    while (i <= Nbcolonne) {
+    long int i = 0;
+    while (i < Nbligne) {
         if (grille[i][coord.abs] == doublon){
             grille[i][coord.abs] = (-1);
-            ++i;
         }
-        else if (grille[i][coord.abs] == (-1)) {
-            ++i;
-        }
-        else break;
-    }
-    i = coord.ord;
-    while (i >= 0) {
-        if (grille[i][coord.abs] == doublon){
-            grille[i][coord.abs] = (-1);
-            --i;
-        }
-        else if (grille[i][coord.abs] == (-1)) {
-            --i;
-        }
-        else break;
-    }
-    i = coord.abs;
-    while (i <= Nbligne) {
-        if (grille[coord.ord][i] == doublon){
-            grille[coord.ord][i] = (-1);
-            ++i;
-        }
-        else if (grille[coord.ord][i] == (-1)) {
-            ++i;
-        }
-        else break;
-    }
-    i = coord.abs;
-    while (i >= 0) {
-        if (grille[coord.ord][i] == doublon){
-            grille[coord.ord][i] = (-1);
-            --i;
-        }
-        else if (grille[coord.ord][i] == (-1)) {
-            --i;
-        }
-        else break;
+        ++i;
     }
     i = 0;
+    while (i < Nbcolonne) {
+        if (grille[coord.ord][i] == doublon){
+            grille[coord.ord][i] = (-1);
+        }
+        ++i;
+    }
 }
-void remonteval (mat & grille, const maPosition & coord,const long int & Nbligne,const long int & Nbcolonne) {
-    long int i = Nbligne;
-    while (i >= 0) {
-        long int j = Nbcolonne;
-        while (j >= 0) {
-            if (j == 0) {
-                --j;
+void remonteval (mat & grille,const long int & Nbcolonne) {
+    long int i = 0;
+    long int j = 0;
+    while( i <= Nbcolonne ) {
+        while (j <= Nbcolonne) {
+            if (j == Nbcolonne) {
             }
-            else if (grille[i][j] == (-1)) {
-                cout << "tg";
+            else {
+            grille[j][i] = grille[j + 1][i];
+            grille[j + 1][i] = (-1);
+            ++j;
             }
         }
-
-
+    ++i;
+    j = 0;
     }
 }
 void clearScreen () {
@@ -284,7 +236,7 @@ const unsigned KCyan    (36);
  */
 int main()
 {
-    unsigned nombrechaine = 0;
+    unsigned nombrememe = 0;
     char direction = 'a';
     maPosition coord;
     long int Nbligne;
@@ -296,8 +248,9 @@ int main()
     displayGrid(grille, Nbligne,Nbcolonne,coord);
     while (true) {
         makeAMove (grille,coord,direction,Nbligne,Nbcolonne);
-        if (litdoublon(grille,coord,nombrechaine,Nbligne,Nbcolonne)) {
+        if (litdoublon(grille,coord,nombrememe,Nbligne,Nbcolonne)== true) {
             suppressiondoublons(grille,coord,Nbligne,Nbcolonne);
+            /**remonteval (grille,Nbcolonne);*/
             displayGrid(grille, Nbligne,Nbcolonne,coord);
             break;
         }
@@ -305,49 +258,4 @@ int main()
     }
     return 0;
 }
-/**
-    unsigned litdoubloncolonne (const mat & grille, maPosition & coord, unsigned & nombrechaine,const size_t & Nbcolonne) {
-    nombrechaine = 0;
-    int i = coord.ord;
-    while (i <= Nbcolonne) {
-        if (grille[i][coord.abs] == grille[coord.ord][coord.abs]){
-            nombrechaine = nombrechaine + 1;
-            ++i;
-            cout << i << endl;
-        }
-        else break;
-    }
-    i = coord.ord;
-    while (i >= 0) {
-        if (grille[i][coord.abs] == grille[coord.ord][coord.abs]){
-            nombrechaine = nombrechaine + 1;
-            --i;
-            cout << i << endl;
-        }
-        else break;
-    }
-    return nombrechaine - 1;
-}
-unsigned litdoublonligne (const mat & grille, maPosition & coord, unsigned & nombrechaine,const size_t & Nbligne) {
-    nombrechaine = 0;
-    size_t i = coord.abs;
-    while (i <= Nbligne) {
-        if (grille[coord.ord][i] == grille[coord.ord][coord.abs]){
-            nombrechaine = nombrechaine + 1;
-            ++i;
-            cout << i << endl;
-        }
-        else break;
-    }
-    i = coord.abs;
-    while (i >= 0) {
-        if (grille[coord.ord][i] == grille[coord.ord][coord.abs]){
-            nombrechaine = nombrechaine + 1;
-            --i;
-            cout << i << endl;
-        }
-        else break;
-    }
-    return nombrechaine - 1;
-}
-*/
+
