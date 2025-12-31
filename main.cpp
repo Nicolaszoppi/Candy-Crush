@@ -19,6 +19,18 @@ void surligner (const unsigned & truc) {
 }
 void creategrille (size_t & KNbCandies, long int & Nbligne, long int & Nbcolonne) {
     cout << "Nombre max ?" << endl;
+    while (true) {
+        cin >> KNbCandies;
+        if (KNbCandies < 3) {
+            cout << "Il doit y avoir minimum 3 chiffres possibles." << endl;
+        }
+        else break;
+    }
+    Nbligne = KNbCandies*2;
+    Nbcolonne= Nbligne;
+}
+void creategrilleperso (size_t & KNbCandies, long int & Nbligne, long int & Nbcolonne) {
+    cout << "Nombre max ?" << endl;
     cin >> KNbCandies;
     cout << "Lignes ?" << endl;
     while (true) {
@@ -36,8 +48,6 @@ void creategrille (size_t & KNbCandies, long int & Nbligne, long int & Nbcolonne
         }
         else break;
     }
-    Nbcolonne = Nbcolonne;
-    Nbligne = Nbligne;
 }
 
 void initGrid (mat & grille,const long int & Nbligne,const long int & Nbcolonne,const size_t & KNbCandies) {
@@ -54,7 +64,7 @@ void displayGrid (mat & grille,const long int & Nbligne,const long int & Nbcolon
                 cout << "| ";
                 surligner(4);
                 couleur(30+grille[i][j]);
-                if (grille[i][j] == -1) {
+                if (grille[i][j] == -1 || grille[i][j] == -2) {
                     cout << " ";
                     surligner(24);
                     cout << " ";
@@ -66,7 +76,7 @@ void displayGrid (mat & grille,const long int & Nbligne,const long int & Nbcolon
                 }
                 couleur(0);
             }
-            else if (grille[i][j] == -1) {
+            else if (grille[i][j] == -1 || grille[i][j] == -2) {
                 cout << "| ";
                 cout << "  ";
                 couleur(0);
@@ -191,43 +201,78 @@ void makeAMove (mat & grille,maPosition & coord,char & direction,unsigned long &
     }
 
 }
-bool litdoublon (const mat & grille, maPosition & coord, unsigned long & nombrememe,const long int & Nbligne,const long int & Nbcolonne) {
+bool litalign (const mat & grille, maPosition & coord,const long int & Nbligne,const long int & Nbcolonne) {
     long int i = 0;
-    nombrememe = 0;
-    while (i < Nbligne) {
-        if (grille[i][coord.abs] == grille[coord.ord][coord.abs]){
-            nombrememe = nombrememe + 1;
+    long int val = 1;
+    //en abscisse
+    while (i < Nbcolonne - 1) {
+        if (grille[coord.ord][i] >= 0 && grille[coord.ord][i] == grille[coord.ord][i + 1]) {
+            ++val;
+            if (val == 3) {
+                return true;
+            }
+        }
+        else {
+            val = 1;
         }
         ++i;
     }
     i = 0;
-    while (i < Nbcolonne) {
-        if (grille[coord.ord][i] == grille[coord.ord][coord.abs]){
-            nombrememe = nombrememe + 1;
+    val = 1;
+    //en ordonnée
+    while (i < Nbligne - 1) {
+        if (grille[i][coord.abs] >= 0 && grille[i][coord.abs] == grille[i + 1][coord.abs]) {
+            ++val;
+            if (val == 3) {
+                return true;
+            }
+        }
+        else {
+            val = 1;
         }
         ++i;
     }
-    nombrememe = nombrememe - 1;
-    if (nombrememe >= 3) {
-        return true;
+    return false;
     }
-    else return false;
-}
-void suppressiondoublons (mat & grille, const maPosition & coord,const long int & Nbligne,const long int & Nbcolonne) {
-    long int doublon = grille[coord.ord][coord.abs];
+void suppressiondoublons (mat & grille, const maPosition & coord,const long int & Nbligne,const long int & Nbcolonne,unsigned long & nombresupp) {
+    long int valeurmilieu = grille[coord.ord][coord.abs];
+    long int nombre;
+    long int dep = 0;
     long int i = 0;
-    while (i < Nbligne) {
-        if (grille[i][coord.abs] == doublon){
-            grille[i][coord.abs] = (-1);
+    bool cond;
+    //en abscisse
+    while (i < Nbcolonne - 2) {
+        if ((grille[coord.ord][i] >= 0) && (grille[coord.ord][i] == grille[coord.ord][i+1]) && (grille[coord.ord][i] == grille[coord.ord][i+2])) {
+            nombre = grille[coord.ord][i];
+            dep = 0;
+            while ((dep + i < Nbcolonne) && (grille[coord.ord][i + dep] == nombre)) {
+                grille[coord.ord][i + dep] = -1;
+                ++nombresupp;
+                ++dep;
+            }
         }
         ++i;
+    }
+    //en ordonnée
+    if (grille[coord.ord][coord.abs] == -1) {
+    grille[coord.ord][coord.abs] = valeurmilieu;
+    cond = true;
     }
     i = 0;
-    while (i < Nbcolonne) {
-        if (grille[coord.ord][i] == doublon){
-            grille[coord.ord][i] = (-1);
+    while (i < Nbligne - 2) {
+        if ((grille[i][coord.abs] >= 0) && (grille[i][coord.abs] == grille[i+1][coord.abs]) && (grille[i+1][coord.abs] == grille[i+2][coord.abs])) {
+            nombre = grille[i][coord.abs];
+            dep = 0;
+            while ((dep + i < Nbligne) && (grille[i + dep][coord.abs] == nombre)) {
+                grille[i + dep][coord.abs] = -1;
+                ++nombresupp;
+                ++dep;
+            }
         }
         ++i;
+    }
+    if (grille[coord.ord][coord.abs] != -1 && cond == true) {
+        grille[coord.ord][coord.abs] = -1;
     }
 }
 void remonteval (mat & grille,const long int & Nbligne,const long int & Nbcolonne) {
@@ -248,17 +293,36 @@ void remonteval (mat & grille,const long int & Nbligne,const long int & Nbcolonn
     j = 0;
     }
 }
-void scorejeu (unsigned long & score, unsigned long & nombredep, unsigned long & nombrememe) {
+void scorejeu (unsigned long & score, unsigned long & nombredep, unsigned long & nombresupp) {
     cout << "Nombre de déplacements : " << nombredep << endl;
     if (nombredep < 3) {
-        score = score + (nombrememe * 10 * (nombredep + 1));
+        score = score + (nombresupp * 10 * (nombredep + 1));
     }
     else {
-        score = score + (nombrememe * 10);
+        score = score + (nombresupp * 10);
     }
     cout << "Score : " << score << endl;
-    nombrememe = 0;
+    nombresupp = 0;
 
+}
+bool findujeu (mat & grille,size_t & KNbCandies, long int & Nbligne, long int & Nbcolonne) {
+    long int nombregal = 0;
+    for (size_t val = 1; val < KNbCandies; ++val){
+        for (long int i = 0; i < Nbcolonne; ++i) {
+            for (long int j = 0; j < Nbligne - 1; ++j){
+                for (long int k = 1; k < Nbligne - j; ++k) {
+                    if (grille[j][i] == grille[j+k][i]) {
+                        ++nombregal;
+                        if (nombregal >= 3) {
+                            return false;
+                        }
+                    }
+                }
+            }
+        }
+        nombregal = 0;
+    }
+    return true;
 }
 void clearScreen () {
     cout << "\033[H\033[2J";
@@ -276,31 +340,86 @@ const unsigned KCyan    (36);
  * @brief main
  * @return
  */
-int main()
-{
-    srand(time(nullptr));
-    unsigned long score = 0;
-    unsigned long nombredep = 0;
-    unsigned long nombrememe = 0;
-    char direction = 'a';
-    maPosition coord;
-    long int Nbligne;
-    long int Nbcolonne;
-    size_t KNbCandies;
+void modenormal (unsigned long & score, unsigned long & nombredep, unsigned long & nombresupp , char & direction, maPosition & coord, long int & Nbligne,long int & Nbcolonne, size_t & KNbCandies) {
     creategrille (KNbCandies, Nbligne,Nbcolonne);
     mat grille(Nbligne,line (Nbcolonne,0));
     initGrid(grille,Nbligne,Nbcolonne, KNbCandies);
+    while (findujeu (grille, KNbCandies, Nbligne,Nbcolonne)) {
+        srand(time(nullptr));
+        initGrid (grille,Nbligne,Nbcolonne, KNbCandies);
+    }
     displayGrid(grille, Nbligne,Nbcolonne,coord);
-    while (true) {
+    while (!findujeu (grille, KNbCandies, Nbligne,Nbcolonne)) {
         makeAMove (grille,coord,direction,nombredep,Nbligne,Nbcolonne);
-        if (litdoublon(grille,coord,nombrememe,Nbligne,Nbcolonne)== true) {
-            suppressiondoublons(grille,coord,Nbligne,Nbcolonne);
+        if (litalign(grille,coord,Nbligne,Nbcolonne)== true) {
+            suppressiondoublons(grille,coord,Nbligne,Nbcolonne,nombresupp);
             remonteval (grille,Nbligne,Nbcolonne);
             displayGrid(grille, Nbligne,Nbcolonne,coord);
-            scorejeu(score,nombredep,nombrememe);
-
+            scorejeu(score,nombredep,nombresupp);
+        }
+        else {
+            displayGrid(grille, Nbligne,Nbcolonne,coord);
         }
     }
+    cout << "Partie terminée !" << endl;
+    scorejeu(score,nombredep,nombresupp);
+}
+void modeperso (unsigned long & score, unsigned long & nombredep, unsigned long & nombresupp , char & direction, maPosition & coord, long int & Nbligne,long int & Nbcolonne, size_t & KNbCandies) {
+    creategrilleperso (KNbCandies, Nbligne,Nbcolonne);
+    mat grille(Nbligne,line (Nbcolonne,0));
+    initGrid(grille,Nbligne,Nbcolonne, KNbCandies);
+    while (findujeu (grille, KNbCandies, Nbligne,Nbcolonne)) {
+        srand(time(nullptr));
+        initGrid (grille,Nbligne,Nbcolonne, KNbCandies);
+    }
+    displayGrid(grille, Nbligne,Nbcolonne,coord);
+    while (!findujeu (grille, KNbCandies, Nbligne,Nbcolonne)) {
+        makeAMove (grille,coord,direction,nombredep,Nbligne,Nbcolonne);
+        if (litalign(grille,coord,Nbligne,Nbcolonne)== true) {
+            suppressiondoublons(grille,coord,Nbligne,Nbcolonne,nombresupp);
+            remonteval (grille,Nbligne,Nbcolonne);
+            displayGrid(grille, Nbligne,Nbcolonne,coord);
+            scorejeu(score,nombredep,nombresupp);
+        }
+        else {
+            displayGrid(grille, Nbligne,Nbcolonne,coord);
+        }
+    }
+    cout << "Partie terminée !" << endl;
+    scorejeu(score,nombredep,nombresupp);
+
+}
+void choixmode () {
+    unsigned long score = 0;
+    unsigned long nombredep = 0;
+    unsigned long nombresupp = 0;
+    char direction = 'a';
+    maPosition coord;
+    coord.ord = 0;
+    coord.abs = 0;
+    long int Nbligne;
+    long int Nbcolonne;
+    size_t KNbCandies;
+    size_t mode;
+    cout << "Bienvenue !" << endl << "Quel mode choisir ?" << endl;
+    cout << "1 : Mode normal" << endl << "2 : Mode personnalisé" << endl;
+    while (true) {
+        cin >> mode;
+        if (mode == 1) {
+            modenormal(score,nombredep,nombresupp,direction,coord,Nbligne,Nbcolonne,KNbCandies);
+        }
+        else if (mode == 2) {
+            modeperso (score,nombredep,nombresupp,direction,coord,Nbligne,Nbcolonne,KNbCandies);
+        }
+        else {
+            cout << "Entrez quelque chose de valide.";
+        }
+    }
+}
+int main()
+{
+    srand(time(nullptr));
+    choixmode();
     return 0;
 }
 
