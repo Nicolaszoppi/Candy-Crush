@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include <ctime>
 using namespace std;
 
 typedef vector <short int> line; // un type représentant une ligne de la grille
@@ -81,7 +82,7 @@ void displayGrid (mat & grille,const long int & Nbligne,const long int & Nbcolon
         }
     }
 
-void makeAMove (mat & grille,maPosition & coord,char & direction,const long int & Nbligne,const long int & Nbcolonne ) {
+void makeAMove (mat & grille,maPosition & coord,char & direction,unsigned long & nombredep,const long int & Nbligne,const long int & Nbcolonne ) {
     cout << "coordonnées ? (x,y)" << endl;
     while (true) {
         while (true) {
@@ -117,6 +118,7 @@ void makeAMove (mat & grille,maPosition & coord,char & direction,const long int 
                 valeurtrans = grille[coord.ord][coord.abs];
                 grille[coord.ord][coord.abs] = grille[coord.ord + 1][coord.abs];
                 grille[coord.ord + 1][coord.abs] = valeurtrans;
+                ++nombredep;
                 break;
             }
         }
@@ -129,6 +131,7 @@ void makeAMove (mat & grille,maPosition & coord,char & direction,const long int 
                 valeurtrans = grille[coord.ord][coord.abs];
                 grille[coord.ord][coord.abs] = grille[coord.ord - 1][coord.abs];
                 grille[coord.ord - 1][coord.abs] = valeurtrans;
+                ++nombredep;
                 break;
             }
         }
@@ -141,6 +144,7 @@ void makeAMove (mat & grille,maPosition & coord,char & direction,const long int 
                 valeurtrans = grille[coord.ord][coord.abs];
                 grille[coord.ord][coord.abs] = grille[coord.ord][coord.abs + 1];
                 grille[coord.ord][coord.abs + 1] = valeurtrans;
+                ++nombredep;
                 break;
             }
         }
@@ -153,15 +157,41 @@ void makeAMove (mat & grille,maPosition & coord,char & direction,const long int 
                 valeurtrans = grille[coord.ord][coord.abs];
                 grille[coord.ord][coord.abs] = grille[coord.ord][coord.abs - 1];
                 grille[coord.ord][coord.abs - 1] = valeurtrans;
+                ++nombredep;
                 break;
             }
         }
-        /**if (directionmin == 'r') break;*/
+        if (directionmin == 'r') {
+            cout << "coordonnées ? (x,y)" << endl;
+            while (true) {
+                while (true) {
+                    cin >> coord.abs;
+                    if ((coord.abs >= Nbcolonne) | (coord.abs < 0)) {
+                        cout << "La position doit appartenir au tableau." << endl;
+                    }
+                    else break;
+                }
+                while (true) {
+                    cin >> coord.ord;
+                    if ((coord.ord >= Nbligne) | (coord.ord < 0)) {
+                        cout << "La position doit appartenir au tableau." << endl;
+                    }
+                    else break;
+                }
+                if (grille[coord.ord][coord.abs] == (-1)) {
+                    cout << "il n'y a rien ici.";
+                }
+                else break;
+            }
+        }
+        else {
+            cout << "Entrez quelque chose de valide." << endl;
+        }
 
     }
 
 }
-bool litdoublon (const mat & grille, maPosition & coord, unsigned & nombrememe,const long int & Nbligne,const long int & Nbcolonne) {
+bool litdoublon (const mat & grille, maPosition & coord, unsigned long & nombrememe,const long int & Nbligne,const long int & Nbcolonne) {
     long int i = 0;
     nombrememe = 0;
     while (i < Nbligne) {
@@ -218,6 +248,18 @@ void remonteval (mat & grille,const long int & Nbligne,const long int & Nbcolonn
     j = 0;
     }
 }
+void scorejeu (unsigned long & score, unsigned long & nombredep, unsigned long & nombrememe) {
+    cout << "Nombre de déplacements : " << nombredep << endl;
+    if (nombredep < 3) {
+        score = score + (nombrememe * 10 * (nombredep + 1));
+    }
+    else {
+        score = score + (nombrememe * 10);
+    }
+    cout << "Score : " << score << endl;
+    nombrememe = 0;
+
+}
 void clearScreen () {
     cout << "\033[H\033[2J";
 }
@@ -236,7 +278,10 @@ const unsigned KCyan    (36);
  */
 int main()
 {
-    unsigned nombrememe = 0;
+    srand(time(nullptr));
+    unsigned long score = 0;
+    unsigned long nombredep = 0;
+    unsigned long nombrememe = 0;
     char direction = 'a';
     maPosition coord;
     long int Nbligne;
@@ -247,11 +292,13 @@ int main()
     initGrid(grille,Nbligne,Nbcolonne, KNbCandies);
     displayGrid(grille, Nbligne,Nbcolonne,coord);
     while (true) {
-        makeAMove (grille,coord,direction,Nbligne,Nbcolonne);
+        makeAMove (grille,coord,direction,nombredep,Nbligne,Nbcolonne);
         if (litdoublon(grille,coord,nombrememe,Nbligne,Nbcolonne)== true) {
             suppressiondoublons(grille,coord,Nbligne,Nbcolonne);
             remonteval (grille,Nbligne,Nbcolonne);
             displayGrid(grille, Nbligne,Nbcolonne,coord);
+            scorejeu(score,nombredep,nombrememe);
+
         }
     }
     return 0;
