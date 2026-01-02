@@ -5,19 +5,19 @@ using namespace std;
 
 typedef vector <short int> line; // un type représentant une ligne de la grille
 typedef vector <line> mat; // un type représentant la grille
-struct maPosition
+struct maPosition //Permet de définir les coordonnées dans la matrice
 {
     long int abs;
     long int ord;
 }; // une position dans la grille
 
 void couleur (const unsigned & coul) {
-    cout << "\033[" << coul <<"m";
+    cout << "\033[" << coul <<"m";//Définira la couleur de chaque chiffre
 }
-void surligner (const unsigned & truc) {
+void souligner (const unsigned & truc) {//Souligne ou nous serons dans la matrice
     cout << "\033[4;" << truc << "m";
 }
-void creategrille (size_t & KNbCandies, long int & Nbligne, long int & Nbcolonne) {
+void creategrille (size_t & KNbCandies, long int & Nbligne, long int & Nbcolonne) {  //Crée une grille selon le nombre de chiffres possibles (commence à 3)
     cout << "Nombre max ?" << endl;
     while (true) {
         cin >> KNbCandies;
@@ -29,9 +29,15 @@ void creategrille (size_t & KNbCandies, long int & Nbligne, long int & Nbcolonne
     Nbligne = KNbCandies*2;
     Nbcolonne= Nbligne;
 }
-void creategrilleperso (size_t & KNbCandies, long int & Nbligne, long int & Nbcolonne) {
-    cout << "Nombre max ?" << endl;
-    cin >> KNbCandies;
+void creategrilleperso (size_t & KNbCandies, long int & Nbligne, long int & Nbcolonne) { //Crée une grille entièrement customisable (rectangulaire ou carrée)
+    while (true) {
+        cout << "Nombre max ?" << endl;
+        cin >> KNbCandies;
+        if (KNbCandies < 2) {
+            cout << "Il doit y avoir minimum 2 chiffres possibles." << endl;
+        }
+        else break;
+    }
     cout << "Lignes ?" << endl;
     while (true) {
         cin >> Nbligne;
@@ -50,28 +56,28 @@ void creategrilleperso (size_t & KNbCandies, long int & Nbligne, long int & Nbco
     }
 }
 
-void initGrid (mat & grille,const long int & Nbligne,const long int & Nbcolonne,const size_t & KNbCandies) {
+void initGrid (mat & grille,const long int & Nbligne,const long int & Nbcolonne,const size_t & KNbCandies) { //Donne les valeurs aléatoirement dans chaque cases
     for (long int i = 0; i < Nbligne ; ++i) {
         for (long int j = 0; j < Nbcolonne;++j ) {
             grille[i][j] = rand()%KNbCandies + 1;
         }
     }
 }
-void displayGrid (mat & grille,const long int & Nbligne,const long int & Nbcolonne, const maPosition & coord) {
+void displayGrid (mat & grille,const long int & Nbligne,const long int & Nbcolonne, const maPosition & coord) {//Affiche la grille sous forme de tableau
     for (long int i = 0; i < Nbligne ; ++i) {
         for (long int j = 0; j < Nbcolonne; ++j ) {
             if (j == coord.abs && i == coord.ord) {
                 cout << "| ";
-                surligner(4);
+                souligner(4);
                 couleur(30+grille[i][j]);
                 if (grille[i][j] == -1 || grille[i][j] == -2) {
                     cout << " ";
-                    surligner(24);
+                    souligner(24);
                     cout << " ";
                 }
                 else {
                     cout << grille[i][j];
-                    surligner(24);
+                    souligner(24);
                     cout << " ";
                 }
                 couleur(0);
@@ -93,6 +99,7 @@ void displayGrid (mat & grille,const long int & Nbligne,const long int & Nbcolon
     }
 
 void makeAMove (mat & grille,maPosition & coord,char & direction,unsigned long & nombredep,const long int & Nbligne,const long int & Nbcolonne ) {
+    //Donne les coordonnées du départ du déplacement
     cout << "coordonnées ? (x,y)" << endl;
     while (true) {
         while (true) {
@@ -115,6 +122,7 @@ void makeAMove (mat & grille,maPosition & coord,char & direction,unsigned long &
         else break;
     }
     size_t valeurtrans;
+    //Demande la directon du déplacement (de 1 case seulement)
     while (true) {
         cout << "Entrez votre direction. (ZQSD) ou R pour revenir en arrière" << endl;
         cin >> direction;
@@ -171,7 +179,7 @@ void makeAMove (mat & grille,maPosition & coord,char & direction,unsigned long &
                 break;
             }
         }
-        if (directionmin == 'r') {
+        if (directionmin == 'r') {//revient en arrière en cas d'erreur
             cout << "coordonnées ? (x,y)" << endl;
             while (true) {
                 while (true) {
@@ -202,6 +210,7 @@ void makeAMove (mat & grille,maPosition & coord,char & direction,unsigned long &
 
 }
 bool litalign (const mat & grille, maPosition & coord,const long int & Nbligne,const long int & Nbcolonne) {
+    //permet de trouver si il y a un alignement vertical ou horizontal de minimum trois mêmes chiffre d'affilée
     long int i = 0;
     long int val = 1;
     //en abscisse
@@ -235,6 +244,7 @@ bool litalign (const mat & grille, maPosition & coord,const long int & Nbligne,c
     return false;
     }
 void suppressiondoublons (mat & grille, const maPosition & coord,const long int & Nbligne,const long int & Nbcolonne,unsigned long & nombresupp) {
+    //applique la suppression des alignements de même chiffres d'affilée
     long int valeurmilieu = grille[coord.ord][coord.abs];
     long int nombre;
     long int dep = 0;
@@ -276,6 +286,7 @@ void suppressiondoublons (mat & grille, const maPosition & coord,const long int 
     }
 }
 void remonteval (mat & grille,const long int & Nbligne,const long int & Nbcolonne) {
+    //remonte de BAS EN HAUT les chiffres
     long int i = 0;
     long int j = 0;
     long int k;
@@ -294,9 +305,10 @@ void remonteval (mat & grille,const long int & Nbligne,const long int & Nbcolonn
     }
 }
 void scorejeu (unsigned long & score, unsigned long & nombredep, unsigned long & nombresupp) {
+    //affiche le score après chaque déplacement et aussi le nombre de déplacement
     cout << "Nombre de déplacements : " << nombredep << endl;
-    if (nombredep < 3) {
-        score = score + (nombresupp * 10 * (nombredep + 1));
+    if (nombredep < 3) {//méthode du calcul du score
+        score = score + (nombresupp * 10 * (4 - nombredep));
     }
     else {
         score = score + (nombresupp * 10);
@@ -306,6 +318,7 @@ void scorejeu (unsigned long & score, unsigned long & nombredep, unsigned long &
 
 }
 bool findujeu (mat & grille,size_t & KNbCandies, long int & Nbligne, long int & Nbcolonne) {
+    //vérifie après chaque déplacement si il est possible de continuer (si non, le jeu est terminé)
     long int nombregal = 0;
     for (size_t val = 1; val < KNbCandies; ++val){
         for (long int i = 0; i < Nbcolonne; ++i) {
@@ -390,6 +403,7 @@ void modeperso (unsigned long & score, unsigned long & nombredep, unsigned long 
 
 }
 void choixmode () {
+    //menu principal qui permet le choix du mode voulu
     unsigned long score = 0;
     unsigned long nombredep = 0;
     unsigned long nombresupp = 0;
