@@ -55,7 +55,40 @@ void creategrilleperso (size_t & KNbCandies, long int & Nbligne, long int & Nbco
         else break;
     }
 }
-
+bool litalign (const mat & grille, maPosition & coord,const long int & Nbligne,const long int & Nbcolonne) {
+    //permet de trouver si il y a un alignement vertical ou horizontal de minimum trois mêmes chiffre d'affilée par raport à la position
+    long int i = 0;
+    long int val = 1;
+    //en abscisse
+    while (i < Nbcolonne - 1) {
+        if (grille[coord.ord][i] >= 0 && grille[coord.ord][i] == grille[coord.ord][i + 1]) {
+            ++val;
+            if (val == 3) {
+                return true;
+            }
+        }
+        else {
+            val = 1;
+        }
+        ++i;
+    }
+    i = 0;
+    val = 1;
+    //en ordonnée
+    while (i < Nbligne - 1) {
+        if (grille[i][coord.abs] >= 0 && grille[i][coord.abs] == grille[i + 1][coord.abs]) {
+            ++val;
+            if (val == 3) {
+                return true;
+            }
+        }
+        else {
+            val = 1;
+        }
+        ++i;
+    }
+    return false;
+}
 void initGrid (mat & grille,const long int & Nbligne,const long int & Nbcolonne,const size_t & KNbCandies) { //Donne les valeurs aléatoirement dans chaque cases
     for (long int i = 0; i < Nbligne ; ++i) {
         for (long int j = 0; j < Nbcolonne;++j ) {
@@ -97,8 +130,55 @@ void displayGrid (mat & grille,const long int & Nbligne,const long int & Nbcolon
         cout << "|" << endl;
         }
     }
-
-void makeAMove (mat & grille,maPosition & coord,char & direction,unsigned long & nombredep,const long int & Nbligne,const long int & Nbcolonne ) {
+bool possmove (const mat & grille, maPosition & coord,char & direction,const long int & Nbligne,const long int & Nbcolonne) {
+    maPosition coordtest;
+    mat grillebis = grille;
+    coordtest.abs = coord.abs;
+    coordtest.ord = coord.ord;
+    size_t valeurtrans;
+    if (direction == 'z') {
+        --coordtest.ord;
+        valeurtrans = grillebis[coordtest.ord][coordtest.abs];
+        grillebis[coordtest.ord][coordtest.abs] = grillebis[coordtest.ord + 1][coordtest.abs];
+        grillebis[coordtest.ord + 1][coordtest.abs] = valeurtrans;
+        if (litalign(grillebis,coordtest,Nbligne,Nbcolonne)) {
+            return true;
+        }
+        else return false;
+    }
+    if (direction == 's') {
+        ++coordtest.ord;
+        valeurtrans = grillebis[coordtest.ord][coordtest.abs];
+        grillebis[coordtest.ord][coordtest.abs] = grillebis[coordtest.ord - 1][coordtest.abs];
+        grillebis[coordtest.ord - 1][coordtest.abs] = valeurtrans;
+        if (litalign(grillebis,coordtest,Nbligne,Nbcolonne)) {
+            return true;
+        }
+        else return false;
+    }
+    if (direction == 'q') {
+        --coordtest.abs;
+        valeurtrans = grillebis[coordtest.ord][coordtest.abs];
+        grillebis[coordtest.ord][coordtest.abs] = grillebis[coordtest.ord][coordtest.abs + 1];
+        grillebis[coordtest.ord][coordtest.abs + 1] = valeurtrans;
+        if (litalign(grillebis,coordtest,Nbligne,Nbcolonne)) {
+            return true;
+        }
+        else return false;
+    }
+    if (direction == 'd') {
+        ++coordtest.abs;
+        valeurtrans = grillebis[coordtest.ord][coordtest.abs];
+        grillebis[coordtest.ord][coordtest.abs] = grillebis[coordtest.ord][coordtest.abs - 1];
+        grillebis[coordtest.ord][coordtest.abs - 1] = valeurtrans;
+        if (litalign(grillebis,coordtest,Nbligne,Nbcolonne)) {
+            return true;
+        }
+        else return false;
+    }
+    return false;
+}
+void initmove (mat & grille,maPosition & coord,const long int & Nbligne,const long int & Nbcolonne ) {
     //Donne les coordonnées du départ du déplacement
     cout << "coordonnées ? (x,y)" << endl;
     while (true) {
@@ -121,6 +201,9 @@ void makeAMove (mat & grille,maPosition & coord,char & direction,unsigned long &
         }
         else break;
     }
+}
+void makeAMove (mat & grille,maPosition & coord,char & direction,unsigned long & nombredep,const long int & Nbligne,const long int & Nbcolonne ) {
+    initmove(grille,coord,Nbligne,Nbcolonne);
     size_t valeurtrans;
     //Demande la directon du déplacement (de 1 case seulement)
     while (true) {
@@ -132,12 +215,17 @@ void makeAMove (mat & grille,maPosition & coord,char & direction,unsigned long &
                 cout << "Vous ne pouvez pas avancer plus" << endl;
             }
             else {
-                coord.ord = coord.ord - 1;
-                valeurtrans = grille[coord.ord][coord.abs];
-                grille[coord.ord][coord.abs] = grille[coord.ord + 1][coord.abs];
-                grille[coord.ord + 1][coord.abs] = valeurtrans;
-                ++nombredep;
-                break;
+                if (possmove(grille,coord,directionmin,Nbligne,Nbcolonne)) {
+                    coord.ord = coord.ord - 1;
+                    valeurtrans = grille[coord.ord][coord.abs];
+                    grille[coord.ord][coord.abs] = grille[coord.ord + 1][coord.abs];
+                    grille[coord.ord + 1][coord.abs] = valeurtrans;
+                    ++nombredep;
+                    break;
+                }
+                else {
+                    cout << "déplacement impossible." << endl;//dans le cas ou litalign() est faux càd aucune suite de 3 chiffres identiques
+                }
             }
         }
         if (directionmin == 's') {
@@ -145,12 +233,17 @@ void makeAMove (mat & grille,maPosition & coord,char & direction,unsigned long &
                 cout << "Vous ne pouvez pas avancer plus" << endl;
             }
             else {
-                coord.ord = coord.ord + 1;
-                valeurtrans = grille[coord.ord][coord.abs];
-                grille[coord.ord][coord.abs] = grille[coord.ord - 1][coord.abs];
-                grille[coord.ord - 1][coord.abs] = valeurtrans;
-                ++nombredep;
-                break;
+                if (possmove(grille,coord,directionmin,Nbligne,Nbcolonne)) {
+                    coord.ord = coord.ord + 1;
+                    valeurtrans = grille[coord.ord][coord.abs];
+                    grille[coord.ord][coord.abs] = grille[coord.ord - 1][coord.abs];
+                    grille[coord.ord - 1][coord.abs] = valeurtrans;
+                    ++nombredep;
+                    break;
+                }
+                else {
+                    cout << "déplacement impossible." << endl;
+                }
             }
         }
         if (directionmin == 'q') {
@@ -158,12 +251,17 @@ void makeAMove (mat & grille,maPosition & coord,char & direction,unsigned long &
                 cout << "Vous ne pouvez pas avancer plus" << endl;
             }
             else {
-                coord.abs = coord.abs - 1;
-                valeurtrans = grille[coord.ord][coord.abs];
-                grille[coord.ord][coord.abs] = grille[coord.ord][coord.abs + 1];
-                grille[coord.ord][coord.abs + 1] = valeurtrans;
-                ++nombredep;
-                break;
+                if (possmove(grille,coord,directionmin,Nbligne,Nbcolonne)) {
+                    coord.abs = coord.abs - 1;
+                    valeurtrans = grille[coord.ord][coord.abs];
+                    grille[coord.ord][coord.abs] = grille[coord.ord][coord.abs + 1];
+                    grille[coord.ord][coord.abs + 1] = valeurtrans;
+                    ++nombredep;
+                    break;
+                }
+                else {
+                    cout << "déplacement impossible." << endl;
+                }
             }
         }
         if (directionmin == 'd') {
@@ -171,78 +269,27 @@ void makeAMove (mat & grille,maPosition & coord,char & direction,unsigned long &
                 cout << "Vous ne pouvez pas avancer plus" << endl;
             }
             else {
-                coord.abs = coord.abs + 1;
-                valeurtrans = grille[coord.ord][coord.abs];
-                grille[coord.ord][coord.abs] = grille[coord.ord][coord.abs - 1];
-                grille[coord.ord][coord.abs - 1] = valeurtrans;
-                ++nombredep;
-                break;
+                if (possmove(grille,coord,directionmin,Nbligne,Nbcolonne)) {
+                    coord.abs = coord.abs + 1;
+                    valeurtrans = grille[coord.ord][coord.abs];
+                    grille[coord.ord][coord.abs] = grille[coord.ord][coord.abs - 1];
+                    grille[coord.ord][coord.abs - 1] = valeurtrans;
+                    ++nombredep;
+                    break;
+                }
+                else {
+                    cout << "déplacement impossible." << endl;
+                }
             }
         }
         if (directionmin == 'r') {//revient en arrière en cas d'erreur
-            cout << "coordonnées ? (x,y)" << endl;
-            while (true) {
-                while (true) {
-                    cin >> coord.abs;
-                    if ((coord.abs >= Nbcolonne) | (coord.abs < 0)) {
-                        cout << "La position doit appartenir au tableau." << endl;
-                    }
-                    else break;
-                }
-                while (true) {
-                    cin >> coord.ord;
-                    if ((coord.ord >= Nbligne) | (coord.ord < 0)) {
-                        cout << "La position doit appartenir au tableau." << endl;
-                    }
-                    else break;
-                }
-                if (grille[coord.ord][coord.abs] == (-1)) {
-                    cout << "il n'y a rien ici.";
-                }
-                else break;
-            }
+            initmove(grille,coord,Nbligne,Nbcolonne);
         }
         else {
             cout << "Entrez quelque chose de valide." << endl;
         }
-
     }
-
 }
-bool litalign (const mat & grille, maPosition & coord,const long int & Nbligne,const long int & Nbcolonne) {
-    //permet de trouver si il y a un alignement vertical ou horizontal de minimum trois mêmes chiffre d'affilée
-    long int i = 0;
-    long int val = 1;
-    //en abscisse
-    while (i < Nbcolonne - 1) {
-        if (grille[coord.ord][i] >= 0 && grille[coord.ord][i] == grille[coord.ord][i + 1]) {
-            ++val;
-            if (val == 3) {
-                return true;
-            }
-        }
-        else {
-            val = 1;
-        }
-        ++i;
-    }
-    i = 0;
-    val = 1;
-    //en ordonnée
-    while (i < Nbligne - 1) {
-        if (grille[i][coord.abs] >= 0 && grille[i][coord.abs] == grille[i + 1][coord.abs]) {
-            ++val;
-            if (val == 3) {
-                return true;
-            }
-        }
-        else {
-            val = 1;
-        }
-        ++i;
-    }
-    return false;
-    }
 void suppressiondoublons (mat & grille, const maPosition & coord,const long int & Nbligne,const long int & Nbcolonne,unsigned long & nombresupp) {
     //applique la suppression des alignements de même chiffres d'affilée
     long int valeurmilieu = grille[coord.ord][coord.abs];
@@ -317,23 +364,44 @@ void scorejeu (unsigned long & score, unsigned long & nombredep, unsigned long &
     nombresupp = 0;
 
 }
-bool findujeu (mat & grille,size_t & KNbCandies, long int & Nbligne, long int & Nbcolonne) {
-    //vérifie après chaque déplacement si il est possible de continuer (si non, le jeu est terminé)
-    long int nombregal = 0;
-    for (size_t val = 1; val < KNbCandies; ++val){
-        for (long int i = 0; i < Nbcolonne; ++i) {
-            for (long int j = 0; j < Nbligne - 1; ++j){
-                for (long int k = 1; k < Nbligne - j; ++k) {
-                    if (grille[j][i] == grille[j+k][i]) {
-                        ++nombregal;
-                        if (nombregal >= 3) {
-                            return false;
-                        }
-                    }
-                }
+bool verifiecoups (mat & grille, long int & Nbligne, long int & Nbcolonne, long int ordonnee, long int abscisse) {
+    maPosition coord;
+    char direction = 'a';
+    coord.abs = abscisse;
+    coord.ord = ordonnee;
+    if (!(coord.abs <= 0)) {
+        direction = 'q';
+        if (possmove (grille,coord,direction,Nbligne,Nbcolonne)) {
+            return true;
+        }
+    }
+    if (!(coord.abs >= Nbcolonne - 1)) {
+        direction = 'd';
+        if (possmove (grille,coord,direction,Nbligne,Nbcolonne)) {
+            return true;
+        }
+    }
+    if (!(coord.ord <= 0)) {
+        direction = 'z';
+        if (possmove (grille,coord,direction,Nbligne,Nbcolonne)) {
+            return true;
+        }
+    }
+    if (!(coord.ord >= Nbligne - 1)) {
+        direction = 's';
+        if (possmove (grille,coord,direction,Nbligne,Nbcolonne)) {
+            return true;
+        }
+    }
+    return false;
+}
+bool findujeu (mat & grille, long int & Nbligne, long int & Nbcolonne){
+    for (long int i = 0;i < Nbligne;++i) {
+        for (long int j = 0 ; j < Nbcolonne; ++j) {
+            if (verifiecoups (grille,Nbligne,Nbcolonne,i,j)) {
+                return false;
             }
         }
-        nombregal = 0;
     }
     return true;
 }
@@ -357,22 +425,16 @@ void modenormal (unsigned long & score, unsigned long & nombredep, unsigned long
     creategrille (KNbCandies, Nbligne,Nbcolonne);
     mat grille(Nbligne,line (Nbcolonne,0));
     initGrid(grille,Nbligne,Nbcolonne, KNbCandies);
-    while (findujeu (grille, KNbCandies, Nbligne,Nbcolonne)) {
-        srand(time(nullptr));
+    while (findujeu(grille,Nbligne,Nbcolonne)) {
         initGrid (grille,Nbligne,Nbcolonne, KNbCandies);
     }
     displayGrid(grille, Nbligne,Nbcolonne,coord);
-    while (!findujeu (grille, KNbCandies, Nbligne,Nbcolonne)) {
+    while (!findujeu (grille,Nbligne,Nbcolonne)) {
         makeAMove (grille,coord,direction,nombredep,Nbligne,Nbcolonne);
-        if (litalign(grille,coord,Nbligne,Nbcolonne)== true) {
-            suppressiondoublons(grille,coord,Nbligne,Nbcolonne,nombresupp);
-            remonteval (grille,Nbligne,Nbcolonne);
-            displayGrid(grille, Nbligne,Nbcolonne,coord);
-            scorejeu(score,nombredep,nombresupp);
-        }
-        else {
-            displayGrid(grille, Nbligne,Nbcolonne,coord);
-        }
+        suppressiondoublons(grille,coord,Nbligne,Nbcolonne,nombresupp);
+        remonteval (grille,Nbligne,Nbcolonne);
+        displayGrid(grille, Nbligne,Nbcolonne,coord);
+        scorejeu(score,nombredep,nombresupp);
     }
     cout << "Partie terminée !" << endl;
     scorejeu(score,nombredep,nombresupp);
@@ -381,22 +443,16 @@ void modeperso (unsigned long & score, unsigned long & nombredep, unsigned long 
     creategrilleperso (KNbCandies, Nbligne,Nbcolonne);
     mat grille(Nbligne,line (Nbcolonne,0));
     initGrid(grille,Nbligne,Nbcolonne, KNbCandies);
-    while (findujeu (grille, KNbCandies, Nbligne,Nbcolonne)) {
-        srand(time(nullptr));
+    while (findujeu (grille,Nbligne,Nbcolonne)) {
         initGrid (grille,Nbligne,Nbcolonne, KNbCandies);
     }
     displayGrid(grille, Nbligne,Nbcolonne,coord);
-    while (!findujeu (grille, KNbCandies, Nbligne,Nbcolonne)) {
+    while (!findujeu (grille,Nbligne,Nbcolonne)) {
         makeAMove (grille,coord,direction,nombredep,Nbligne,Nbcolonne);
-        if (litalign(grille,coord,Nbligne,Nbcolonne)== true) {
-            suppressiondoublons(grille,coord,Nbligne,Nbcolonne,nombresupp);
-            remonteval (grille,Nbligne,Nbcolonne);
-            displayGrid(grille, Nbligne,Nbcolonne,coord);
-            scorejeu(score,nombredep,nombresupp);
-        }
-        else {
-            displayGrid(grille, Nbligne,Nbcolonne,coord);
-        }
+        suppressiondoublons(grille,coord,Nbligne,Nbcolonne,nombresupp);
+        remonteval (grille,Nbligne,Nbcolonne);
+        displayGrid(grille, Nbligne,Nbcolonne,coord);
+        scorejeu(score,nombredep,nombresupp);
     }
     cout << "Partie terminée !" << endl;
     scorejeu(score,nombredep,nombresupp);
@@ -436,4 +492,3 @@ int main()
     choixmode();
     return 0;
 }
-
