@@ -31,7 +31,7 @@ void rempliColonne(mat & grille, long int & Nbligne,long int & Nbcolonne, size_t
             }
         }
     }
-    
+}
     /**for (int i = (int)startRow - 1; i >= 0; --i) {
         grille[i + howMany][col] = grid[i][col];
     }
@@ -53,6 +53,7 @@ void modenormalinfini (unsigned long & score, unsigned long & nombredep, unsigne
         makeAMove (grille,coord,direction,nombredep,Nbligne,Nbcolonne,nbtour);
         suppressiondoublons(grille,coord,Nbligne,Nbcolonne,nombresupp);
         remonteval (grille,Nbligne,Nbcolonne);
+        rempliColonne(grille,Nbligne, Nbcolonne, KNbCandies);
         displayGrid(grille, Nbligne,Nbcolonne,coord);
         scorejeuinfini(score,nombredep,nombresupp,nbtour);
     }
