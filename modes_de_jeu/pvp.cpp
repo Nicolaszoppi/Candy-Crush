@@ -6,6 +6,7 @@
 #include <ctime>
 #include <unistd.h>
 #include <termios.h>
+#include <fstream>
 using namespace std;
 
 typedef vector <short int> line; // un type représentant une ligne de la grille
@@ -156,7 +157,7 @@ void modepvp() {
             modepersopvp(score,score2,nombredep,nombredep2,nombresupp,nombresupp2,direction,coord,Nbligne,Nbcolonne,KNbCandies,joueur);
         }
         else if (mode == 3) {
-            cout << "Dans ce jeu, le but va être de deplacer un jeton (chiffre) et sa ligne et colonne d'arrivée va supprimer les alignements de trois (ou plus) mêmes chiffres. " << endl << "Le but est donc de vider la grille et le jeu se finit quand il n'y a plus d'alignement possible ou que le nombre de tours restants est nul." << endl << "chacun des 2 joueurs joue quand c'est son tour et celui qui finit avec le meilleur score gagne !" << endl << endl;
+            reglesjeu ();
         }
         else if (mode == 10) {
             return;

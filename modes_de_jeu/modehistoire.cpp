@@ -2,12 +2,14 @@
 #include <iostream>
 #include <vector>
 #include <ctime>
+#include <fstream>
 using namespace std;
 
 typedef vector <short int> line; // un type représentant une ligne de la grille
 typedef vector <line> mat; // un type représentant la grille
 
 void chap1() {
+
 }
 void chap2() {
 }

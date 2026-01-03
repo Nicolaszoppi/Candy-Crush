@@ -1,6 +1,6 @@
 #ifndef SOLO_H
 #define SOLO_H
-
+#include <fstream>
 #include <vector>
 using namespace std;
 
@@ -11,6 +11,7 @@ struct maPosition //Permet de définir les coordonnées dans la matrice
     long int abs;
     long int ord;
 }; // une position dans la grille
+void reglesjeu ();
 void couleur (const unsigned & coul);
 void souligner (const unsigned & chiffre);
 void creategrille (size_t & KNbCandies, long int & Nbligne, long int & Nbcolonne, size_t & nbtour);

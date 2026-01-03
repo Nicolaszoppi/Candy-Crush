@@ -7,11 +7,24 @@
 #include <modes_de_jeu/modeinfini.h>
 #include <modes_de_jeu/modehistoire.h>
 #include<cstdlib>
+#include <fstream>
 using namespace std;
 
 typedef vector <short int> line; // un type représentant une ligne de la grille
 typedef vector <line> mat; // un type représentant la grille
-
+void reglesjeu () {
+    string ligne;
+    ifstream fichier("../../reglesdujeu.txt");
+    if (!fichier) {
+        cerr << "Erreur : Le fichier reglesdujeu.txt est introuvable au chemin spécifié." << endl;
+        return;
+    }
+    while (true){
+        getline(fichier,ligne);
+        if (fichier.eof())break;
+        cout << ligne << endl;
+    }
+}
 void couleur (const unsigned & coul) {
     cout << "\033[" << coul <<"m";//Définira la couleur de chaque chiffre
 }
