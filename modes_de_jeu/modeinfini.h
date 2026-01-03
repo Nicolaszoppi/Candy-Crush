@@ -1,0 +1,13 @@
+#ifndef MODEINFINI_H
+#define MODEINFINI_H
+#include "solo.h"
+
+#include <vector>
+using namespace std;
+
+typedef vector <short int> line; // un type représentant une ligne de la grille
+typedef vector <line> mat; // un type représentant la grille
+void scorejeuinfini (unsigned long & score, unsigned long & nombredep, unsigned long & nombresupp, size_t & nbtour);
+void rempliColonne(mat & grille, long int & Nbligne,long int & Nbcolonne, size_t & KNbCandies);
+void modenormalinfini (unsigned long & score, unsigned long & nombredep, unsigned long & nombresupp , char & direction, maPosition & coord, long int & Nbligne,long int & Nbcolonne, size_t & KNbCandies);
+#endif

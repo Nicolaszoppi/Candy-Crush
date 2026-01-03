@@ -45,19 +45,19 @@ void modepersoduo (unsigned long & score, unsigned long & nombredep, unsigned lo
     creategrilleperso (KNbCandies, Nbligne,Nbcolonne,nbtour);
     mat grille(Nbligne,line (Nbcolonne,0));
     initGrid(grille,Nbligne,Nbcolonne, KNbCandies);
-    while (findujeu (grille,Nbligne,Nbcolonne)) {
+    while (findujeu(grille,Nbligne,Nbcolonne)) {
         initGrid (grille,Nbligne,Nbcolonne, KNbCandies);
     }
     displayGrid(grille, Nbligne,Nbcolonne,coord);
     while (!findujeu (grille,Nbligne,Nbcolonne) && !(nbtour == 0)) {
+        tourjoueur(joueur);
         makeAMove (grille,coord,direction,nombredep,Nbligne,Nbcolonne,nbtour);
         suppressiondoublons(grille,coord,Nbligne,Nbcolonne,nombresupp);
         remonteval (grille,Nbligne,Nbcolonne);
         displayGrid(grille, Nbligne,Nbcolonne,coord);
         scorejeu(score,nombredep,nombresupp,nbtour);
-        ++joueur;
     }
-    cout << "Partie terminée !" << endl;
+    cout << endl << "Partie terminée !" << endl;
     scorejeu(score,nombredep,nombresupp,nbtour);
 }
 void modeduo() {

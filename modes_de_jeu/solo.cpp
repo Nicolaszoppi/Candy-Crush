@@ -4,6 +4,7 @@
 #include <ctime>
 #include <unistd.h>
 #include <termios.h>
+#include "modeinfini.h"
 using namespace std;
 
 typedef vector <short int> line; // un type représentant une ligne de la grille
@@ -79,8 +80,8 @@ void modesolo() {
     long int Nbcolonne;
     size_t KNbCandies;
     size_t mode;
-    cout << "Bienvenue !" << endl << "Quel mode choisir ?" << endl;
-    cout << "1 : Mode normal" << endl << "2 : Mode personnalisé" << endl << "3 : Règles du jeu" << endl;
+    cout << "Quel mode choisir ?" << endl;
+    cout << "1 : Mode normal" << endl << "2 : Mode personnalisé" << endl << "3 : Mode infini" << endl << "4 : Règles du jeu" << endl;
     while (true) {
         cin >> mode;
         if (mode == 1) {
@@ -90,6 +91,9 @@ void modesolo() {
             modepersosolo(score,nombredep,nombresupp,direction,coord,Nbligne,Nbcolonne,KNbCandies);
         }
         else if (mode == 3) {
+            modenormalinfini(score,nombredep,nombresupp,direction,coord,Nbligne,Nbcolonne,KNbCandies);
+        }
+        else if (mode == 4) {
             cout << "Dans ce jeu, le but va être de deplacer un jeton (chiffre) et sa ligne et colonne d'arrivée va supprimer les alignements de trois (ou plus) mêmes chiffres. " << endl << "Le but est donc de vider la grille et le jeu se finit quand il n'y a plus d'alignement possible ou que le nombre de tours restants est nul.";
         }
         else {
