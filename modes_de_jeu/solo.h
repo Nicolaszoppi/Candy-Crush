@@ -31,4 +31,3 @@ void modenormalsolo (unsigned long & score, unsigned long & nombredep, unsigned 
 void modepersosolo (unsigned long & score, unsigned long & nombredep, unsigned long & nombresupp , char & direction, maPosition & coord, long int & Nbligne,long int & Nbcolonne, size_t & KNbCandies);
 void modesolo();
 #endif
-//modif au pif

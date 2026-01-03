@@ -2,9 +2,8 @@
 #include <iostream>
 #include <vector>
 #include <ctime>
-#include <unistd.h>
-#include <termios.h>
 #include "modeinfini.h"
+#include "modehistoire.h"
 using namespace std;
 
 typedef vector <short int> line; // un type représentant une ligne de la grille
@@ -66,6 +65,7 @@ void modepersosolo (unsigned long & score, unsigned long & nombredep, unsigned l
     }
     cout << "Partie terminée !" << endl;
     scorejeu(score,nombredep,nombresupp,nbtour);
+    return;
 
 }
 void modesolo() {
@@ -81,7 +81,8 @@ void modesolo() {
     size_t KNbCandies;
     size_t mode;
     cout << "Quel mode choisir ?" << endl;
-    cout << "1 : Mode normal" << endl << "2 : Mode personnalisé" << endl << "3 : Mode infini" << endl << "4 : Règles du jeu" << endl;
+    cout << "1 : Mode normal" << endl << "2 : Mode personnalisé" << endl << "3 : Mode infini" << endl << "4 : Mode campagne" << endl << "5 : Règles du jeu" << endl;
+    cout << "(ou 10 pour quitter)" << endl;
     while (true) {
         cin >> mode;
         if (mode == 1) {
@@ -94,7 +95,13 @@ void modesolo() {
             modenormalinfini(score,nombredep,nombresupp,direction,coord,Nbligne,Nbcolonne,KNbCandies);
         }
         else if (mode == 4) {
+            modehistoire();
+        }
+        else if (mode == 5) {
             cout << "Dans ce jeu, le but va être de deplacer un jeton (chiffre) et sa ligne et colonne d'arrivée va supprimer les alignements de trois (ou plus) mêmes chiffres. " << endl << "Le but est donc de vider la grille et le jeu se finit quand il n'y a plus d'alignement possible ou que le nombre de tours restants est nul.";
+        }
+        else if (mode == 10) {
+            return;
         }
         else {
             cout << "Entrez quelque chose de valide.";

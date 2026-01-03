@@ -1,10 +1,12 @@
 #include <iostream>
 #include <vector>
 #include <ctime>
-#include <unistd.h>
-#include <termios.h>
 #include <modes_de_jeu/solo.h>
-#include "modes_de_jeu/duo.h"
+#include <modes_de_jeu/duo.h>
+#include <modes_de_jeu/pvp.h>
+#include <modes_de_jeu/modeinfini.h>
+#include <modes_de_jeu/modehistoire.h>
+#include<cstdlib>
 using namespace std;
 
 typedef vector <short int> line; // un type représentant une ligne de la grille
@@ -446,14 +448,18 @@ void choixmode () {
     //menu principal qui permet le choix du mode voulu
     size_t mode;
     cout << "Bienvenue !" << endl << "Sélectionnez le nombre de joueur" << endl;
-    cout << "1 : Solo" << endl << "2 : Duo" << endl;
     while (true) {
+        cout << "1 : Solo" << endl << "2 : Duo" << endl;
+        cout << "(10 pour quitter)" << endl;
         cin >> mode;
         if (mode == 1) {
             modesolo();
         }
         else if (mode == 2) {
             modeduo();
+        }
+        else if (mode == 10) {
+            break;
         }
         else {
             cout << "Entrez quelque chose de valide.";
