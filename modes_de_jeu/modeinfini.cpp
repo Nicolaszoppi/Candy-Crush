@@ -2,15 +2,108 @@
 #include <iostream>
 #include <vector>
 #include <ctime>
-#include <unistd.h>
-#include <termios.h>
 using namespace std;
 
 typedef vector <short int> line; // un type représentant une ligne de la grille
 typedef vector <line> mat; // un type représentant la grille
 
-
-void scorejeuinfini (unsigned long & score, unsigned long & nombredep, unsigned long & nombresupp, size_t & nbtour) {
+int makeAMoveinfini (mat & grille,maPosition & coord,char & direction,unsigned long & nombredep,const long int & Nbligne,const long int & Nbcolonne,size_t & nbtour ) {
+    initmove(grille,coord,Nbligne,Nbcolonne);
+    size_t valeurtrans;
+    //Demande la directon du déplacement (de 1 case seulement)
+    while (true) {
+        cout << "Entrez votre direction. (ZQSD), R pour revenir en arrière et A pour arrêter" << endl;
+        cin >> direction;
+        char directionmin = tolower(direction);
+        if (directionmin == 'z') {
+            if (coord.ord <= 0) {
+                cout << "Vous ne pouvez pas avancer plus" << endl;
+            }
+            else {
+                if (possmove(grille,coord,directionmin,Nbligne,Nbcolonne)) {
+                    coord.ord = coord.ord - 1;
+                    valeurtrans = grille[coord.ord][coord.abs];
+                    grille[coord.ord][coord.abs] = grille[coord.ord + 1][coord.abs];
+                    grille[coord.ord + 1][coord.abs] = valeurtrans;
+                    ++nombredep;
+                    --nbtour;
+                    break;
+                }
+                else {
+                    cout << "déplacement impossible." << endl;//dans le cas ou litalign() est faux càd aucune suite de 3 chiffres identiques
+                }
+            }
+        }
+        if (directionmin == 's') {
+            if (coord.ord >= Nbligne - 1) {
+                cout << "Vous ne pouvez pas avancer plus" << endl;
+            }
+            else {
+                if (possmove(grille,coord,directionmin,Nbligne,Nbcolonne)) {
+                    coord.ord = coord.ord + 1;
+                    valeurtrans = grille[coord.ord][coord.abs];
+                    grille[coord.ord][coord.abs] = grille[coord.ord - 1][coord.abs];
+                    grille[coord.ord - 1][coord.abs] = valeurtrans;
+                    ++nombredep;
+                    --nbtour;
+                    break;
+                }
+                else {
+                    cout << "déplacement impossible." << endl;
+                }
+            }
+        }
+        if (directionmin == 'q') {
+            if (coord.abs <= 0) {
+                cout << "Vous ne pouvez pas avancer plus" << endl;
+            }
+            else {
+                if (possmove(grille,coord,directionmin,Nbligne,Nbcolonne)) {
+                    coord.abs = coord.abs - 1;
+                    valeurtrans = grille[coord.ord][coord.abs];
+                    grille[coord.ord][coord.abs] = grille[coord.ord][coord.abs + 1];
+                    grille[coord.ord][coord.abs + 1] = valeurtrans;
+                    ++nombredep;
+                    --nbtour;
+                    break;
+                }
+                else {
+                    cout << "déplacement impossible." << endl;
+                }
+            }
+        }
+        if (directionmin == 'd') {
+            if (coord.abs >= Nbcolonne - 1) {
+                cout << "Vous ne pouvez pas avancer plus" << endl;
+            }
+            else {
+                if (possmove(grille,coord,directionmin,Nbligne,Nbcolonne)) {
+                    coord.abs = coord.abs + 1;
+                    valeurtrans = grille[coord.ord][coord.abs];
+                    grille[coord.ord][coord.abs] = grille[coord.ord][coord.abs - 1];
+                    grille[coord.ord][coord.abs - 1] = valeurtrans;
+                    ++nombredep;
+                    --nbtour;
+                    break;
+                }
+                else {
+                    cout << "déplacement impossible." << endl;
+                }
+            }
+        }
+        if (directionmin == 'r') {//revient en arrière en cas d'erreur
+            initmove(grille,coord,Nbligne,Nbcolonne);
+        }
+        else if (directionmin == 'a') {
+            return 0;
+        }
+        else {
+            cout << "Entrez quelque chose de valide." << endl;
+        }
+    }
+    return 0;
+}
+void scorejeuinfini (unsigned long & score, unsigned long & nombredep, unsigned long & nombresupp) {
     //affiche le score après chaque déplacement et aussi le nombre de déplacement
     cout << "Nombre de déplacements : " << nombredep << endl;
     score = score + (nombresupp * 10);
@@ -32,14 +125,6 @@ void rempliColonne(mat & grille, long int & Nbligne,long int & Nbcolonne, size_t
         }
     }
 }
-/**for (int i = (int)startRow - 1; i >= 0; --i) {
-        grille[i + howMany][col] = grid[i][col];
-    }
-    for (unsigned i = 0; i < howMany; ++i) {
-        grille[i][col] = 1 + rand() % KNbCandies;
-    }
-}
-*/
 void modenormalinfini (unsigned long & score, unsigned long & nombredep, unsigned long & nombresupp , char & direction, maPosition & coord, long int & Nbligne,long int & Nbcolonne, size_t & KNbCandies) {
     size_t nbtour = 0;
     creategrille (KNbCandies, Nbligne,Nbcolonne,nbtour);
@@ -50,13 +135,17 @@ void modenormalinfini (unsigned long & score, unsigned long & nombredep, unsigne
     }
     displayGrid(grille, Nbligne,Nbcolonne,coord);
     while (!findujeu (grille,Nbligne,Nbcolonne) && !(nbtour == 0)) {
-        makeAMove (grille,coord,direction,nombredep,Nbligne,Nbcolonne,nbtour);
+        makeAMoveinfini (grille,coord,direction,nombredep,Nbligne,Nbcolonne,nbtour);
+        if (direction == 'a') {
+            break;
+        }
         suppressiondoublons(grille,coord,Nbligne,Nbcolonne,nombresupp);
         remonteval (grille,Nbligne,Nbcolonne);
         rempliColonne(grille,Nbligne, Nbcolonne, KNbCandies);
         displayGrid(grille, Nbligne,Nbcolonne,coord);
-        scorejeuinfini(score,nombredep,nombresupp,nbtour);
+        scorejeuinfini(score,nombredep,nombresupp);
     }
     cout << "Partie terminée !" << endl;
-    scorejeuinfini(score,nombredep,nombresupp,nbtour);
+    scorejeuinfini(score,nombredep,nombresupp);
+    return;
 }

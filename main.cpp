@@ -4,7 +4,8 @@
 #include <unistd.h>
 #include <termios.h>
 #include <modes_de_jeu/solo.h>
-#include "modes_de_jeu/duo.h"
+#include <modes_de_jeu/duo.h>
+#include<cstdlib>
 using namespace std;
 
 typedef vector <short int> line; // un type représentant une ligne de la grille

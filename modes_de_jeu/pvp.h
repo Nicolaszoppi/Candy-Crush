@@ -7,7 +7,8 @@ using namespace std;
 
 typedef vector <short int> line; // un type représentant une ligne de la grille
 typedef vector <line> mat; // un type représentant la grille
-
+void scorejeupvp (unsigned long & score, unsigned long & nombredep, unsigned long & nombresupp, size_t & nbtour,size_t joueur );
+void scorejeufinal(unsigned long & score,unsigned long & score2, unsigned long & nombredep,unsigned long nombredep2);
 void modenormalpvp (unsigned long & score, unsigned long & nombredep, unsigned long & nombresupp , char & direction, maPosition & coord, long int & Nbligne,long int & Nbcolonne, size_t & KNbCandies,size_t & joueur);
 void modepersopvp (unsigned long & score, unsigned long & nombredep, unsigned long & nombresupp , char & direction, maPosition & coord, long int & Nbligne,long int & Nbcolonne, size_t & KNbCandies,size_t & joueur);
 void modepvp();

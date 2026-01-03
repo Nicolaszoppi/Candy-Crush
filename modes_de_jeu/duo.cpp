@@ -1,5 +1,6 @@
 #include "duo.h"
 #include "modes_de_jeu/solo.h"
+#include "modes_de_jeu/pvp.h"
 #include <iostream>
 #include <vector>
 #include <ctime>
@@ -59,6 +60,7 @@ void modepersoduo (unsigned long & score, unsigned long & nombredep, unsigned lo
     }
     cout << endl << "Partie terminée !" << endl;
     scorejeu(score,nombredep,nombresupp,nbtour);
+    return;
 }
 void modeduo() {
     size_t joueur = 2;
@@ -97,7 +99,7 @@ void modeduo() {
             }
         }
         else if (mode == 2) {
-            modepersoduo(score,nombredep,nombresupp,direction,coord,Nbligne,Nbcolonne,KNbCandies,joueur);
+            modepvp();
         }
         else if (mode == 3) {
             cout << "Dans ce jeu, le but va être de deplacer un jeton (chiffre) et sa ligne et colonne d'arrivée va supprimer les alignements de trois (ou plus) mêmes chiffres. " << endl << "Le but est donc de vider la grille et le jeu se finit quand il n'y a plus d'alignement possible ou que le nombre de tours restants est nul." << endl << "chacun des 2 joueurs joue quand c'est son tour !" << endl << endl;
