@@ -78,11 +78,13 @@ void modeduo() {
     cout << "Bienvenue !" << endl << "Quel mode de jeu choisir ?" << endl;
     while (true) {
         cout << "1 : Mode coop" << endl << "2 : Mode PVP (contre)" << endl << "3 : Règles du jeu" << endl;
+        cout << "(10 pour quitter)" << endl;
         cin >> mode;
         if (mode == 1) {
             while (true) {
                 cout << "Quel mode de choisir ?" << endl;
                 cout << "1 : Mode normal" << endl << "2 : Mode personnalisé" << endl << "3 : Règles du jeu" << endl;
+                cout << "(10 pour quitter)" << endl;
                 cin >> mode;
                 if (mode == 1) {
                     modenormalduo(score,nombredep,nombresupp,direction,coord,Nbligne,Nbcolonne,KNbCandies,joueur);
@@ -92,6 +94,9 @@ void modeduo() {
                 }
                 else if (mode == 3) {
                     cout << "Dans ce jeu, le but va être de deplacer un jeton (chiffre) et sa ligne et colonne d'arrivée va supprimer les alignements de trois (ou plus) mêmes chiffres. " << endl << "Le but est donc de vider la grille et le jeu se finit quand il n'y a plus d'alignement possible ou que le nombre de tours restants est nul." << endl << "chacun des 2 joueurs joue quand c'est son tour !" << endl << endl;
+                }
+                else if (mode == 10) {
+                    return;
                 }
                 else {
                     cout << "Entrez quelque chose de valide.";
@@ -103,6 +108,9 @@ void modeduo() {
         }
         else if (mode == 3) {
             cout << "Dans ce jeu, le but va être de deplacer un jeton (chiffre) et sa ligne et colonne d'arrivée va supprimer les alignements de trois (ou plus) mêmes chiffres. " << endl << "Le but est donc de vider la grille et le jeu se finit quand il n'y a plus d'alignement possible ou que le nombre de tours restants est nul." << endl << "chacun des 2 joueurs joue quand c'est son tour !" << endl << endl;
+        }
+        else if (mode == 10) {
+            return;
         }
         else {
             cout << "Entrez quelque chose de valide.";
