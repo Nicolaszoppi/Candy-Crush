@@ -101,10 +101,10 @@ int makeAMoveinfini (mat & grille,maPosition & coord,char & direction,unsigned l
     return 0;
 }
 void scorejeuinfini (unsigned long & score, unsigned long & nombredep, unsigned long & nombresupp) {
-    //affiche le score après chaque déplacement et aussi le nombre de déplacement
+    //affiche le score après chaque déplacement et aussi le nombre de déplacement mais pas les tours
     cout << "Nombre de déplacements : " << nombredep << endl;
     score = score + (nombresupp * 10);
-    cout << "Score jeu : " << score << endl;
+    cout << "Score : " << score << endl;
     nombresupp = 0;
 }
 

@@ -5,6 +5,7 @@
 #include "modeinfini.h"
 #include "modehistoire.h"
 #include <fstream>
+#include <limits>
 using namespace std;
 
 typedef vector <short int> line; // un type représentant une ligne de la grille
@@ -81,11 +82,12 @@ void modesolo() {
     long int Nbcolonne;
     size_t KNbCandies;
     size_t mode;
-    cout << "Quel mode choisir ?" << endl;
-    cout << "1 : Mode normal" << endl << "2 : Mode personnalisé" << endl << "3 : Mode infini" << endl << "4 : Mode campagne" << endl << "5 : Règles du jeu" << endl;
-    cout << "(ou 10 pour quitter)" << endl;
     while (true) {
+        cout << "Quel mode choisir ?" << endl;
+        cout << "1 : Mode normal" << endl << "2 : Mode personnalisé" << endl << "3 : Mode infini" << endl << "4 : Mode campagne" << endl << "5 : Règles du jeu" << endl;
+        cout << "(ou 10 pour quitter)" << endl;
         cin >> mode;
+        cin.ignore(numeric_limits<streamsize>::max(), '\n');
         if (mode == 1) {
             modenormalsolo(score,nombredep,nombresupp,direction,coord,Nbligne,Nbcolonne,KNbCandies);
         }

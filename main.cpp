@@ -15,10 +15,6 @@ typedef vector <line> mat; // un type représentant la grille
 void reglesjeu () {
     string ligne;
     ifstream fichier("../../reglesdujeu.txt");
-    if (!fichier) {
-        cerr << "Erreur : Le fichier reglesdujeu.txt est introuvable au chemin spécifié." << endl;
-        return;
-    }
     while (true){
         getline(fichier,ligne);
         if (fichier.eof())break;
@@ -460,8 +456,8 @@ const unsigned KCyan    (36);
 void choixmode () {
     //menu principal qui permet le choix du mode voulu
     size_t mode;
-    cout << "Bienvenue !" << endl << "Sélectionnez le nombre de joueur" << endl;
     while (true) {
+        cout << "Bienvenue !" << endl << "Sélectionnez le nombre de joueur" << endl;
         cout << "1 : Solo" << endl << "2 : Duo" << endl;
         cout << "(10 pour quitter)" << endl;
         cin >> mode;
