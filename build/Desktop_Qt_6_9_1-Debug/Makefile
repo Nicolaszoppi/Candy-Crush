@@ -842,7 +842,8 @@ solo.o: ../../modes_de_jeu/solo.cpp ../../modes_de_jeu/solo.h \
 modeinfini.o: ../../modes_de_jeu/modeinfini.cpp ../../modes_de_jeu/solo.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o modeinfini.o ../../modes_de_jeu/modeinfini.cpp
 
-modehistoire.o: ../../modes_de_jeu/modehistoire.cpp ../../modes_de_jeu/solo.h
+modehistoire.o: ../../modes_de_jeu/modehistoire.cpp ../../modes_de_jeu/solo.h \
+		../../modes_de_jeu/modeinfini.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o modehistoire.o ../../modes_de_jeu/modehistoire.cpp
 
 ####### Install

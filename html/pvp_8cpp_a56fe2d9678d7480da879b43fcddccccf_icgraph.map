@@ -1,14 +1,14 @@
 <map id="scorejeufinal" name="scorejeufinal">
-<area shape="rect" id="Node000001" title=" " alt="" coords="587,31,692,56"/>
-<area shape="rect" id="Node000002" href="$pvp_8cpp.html#a0970a0efd6e3ca77db70a8790c7d1638" title=" " alt="" coords="409,5,539,31"/>
+<area shape="rect" id="Node000001" title="Affiche les résultats et choisi le vainqueur Compare les scores des deux joueurs et affiche un messag..." alt="" coords="587,31,692,56"/>
+<area shape="rect" id="Node000002" href="$pvp_8cpp.html#a0970a0efd6e3ca77db70a8790c7d1638" title="Lance une partie PvP en mode normal. Génère une grille, puis la duplique pour que chaque joueur ait e..." alt="" coords="409,5,539,31"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="573,36,539,31,539,25,574,31"/>
-<area shape="rect" id="Node000007" href="$pvp_8cpp.html#a9db53af76781f897f707ed99d0a54751" title=" " alt="" coords="415,55,533,80"/>
+<area shape="rect" id="Node000007" href="$pvp_8cpp.html#a9db53af76781f897f707ed99d0a54751" title="Lance une partie PvP en mode personnalisé. Fonctionne exactement comme modenormalpvp mais utilise cre..." alt="" coords="415,55,533,80"/>
 <area shape="poly" id="edge5_Node000001_Node000007" title=" " alt="" coords="574,56,534,61,533,56,573,50"/>
-<area shape="rect" id="Node000003" href="$pvp_8cpp.html#a7f39b2756087709b7b84f40e9ff882b1" title=" " alt="" coords="279,31,361,56"/>
+<area shape="rect" id="Node000003" href="$pvp_8cpp.html#a7f39b2756087709b7b84f40e9ff882b1" title="Menu principal du mode PvP. Permet de choisir entre le mode normal et le mode personnalisé...." alt="" coords="279,31,361,56"/>
 <area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="396,34,362,39,361,34,395,28"/>
-<area shape="rect" id="Node000004" href="$main_8cpp.html#a5d321712f87eb6014a0a07500cc2eb45" title=" " alt="" coords="148,31,231,56"/>
+<area shape="rect" id="Node000004" href="$main_8cpp.html#a5d321712f87eb6014a0a07500cc2eb45" title="Menu principal du mode Duo. Permet de choisir entre le mode coop et le mode PVP." alt="" coords="148,31,231,56"/>
 <area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="265,46,231,46,231,41,265,41"/>
-<area shape="rect" id="Node000005" href="$main_8cpp.html#a87da64dc404fab46f81b3a2f39e4d2e3" title=" " alt="" coords="5,31,100,56"/>
+<area shape="rect" id="Node000005" href="$main_8cpp.html#a87da64dc404fab46f81b3a2f39e4d2e3" title="Affiche le menu principal et lance le mode de jeu choisi Permet de choisir entre Solo,..." alt="" coords="5,31,100,56"/>
 <area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="134,46,100,46,100,41,134,41"/>
 <area shape="poly" id="edge6_Node000007_Node000003" title=" " alt="" coords="401,59,361,52,362,47,402,53"/>
 </map>

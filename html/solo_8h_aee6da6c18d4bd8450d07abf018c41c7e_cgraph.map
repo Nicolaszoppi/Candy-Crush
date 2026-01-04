@@ -1,9 +1,9 @@
 <map id="findujeu" name="findujeu">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,80,31"/>
-<area shape="rect" id="Node000002" href="$main_8cpp.html#ae3eccf309cc7813338869b0aad49cb28" title=" " alt="" coords="128,5,229,31"/>
+<area shape="rect" id="Node000001" title="Vérifie si le jeu est bloqué (aucun coup possible sur toute la grille)." alt="" coords="5,5,80,31"/>
+<area shape="rect" id="Node000002" href="$main_8cpp.html#ae3eccf309cc7813338869b0aad49cb28" title="Vérifie s&#39;il existe au moins un coup possible à partir d&#39;une case." alt="" coords="128,5,229,31"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="80,15,114,15,114,21,80,21"/>
-<area shape="rect" id="Node000003" href="$main_8cpp.html#a48e2cdcaa0de3d338131e81661bf6999" title=" " alt="" coords="277,5,367,31"/>
+<area shape="rect" id="Node000003" href="$main_8cpp.html#a48e2cdcaa0de3d338131e81661bf6999" title="Vérifie si un mouvement est possible Verifie l&#39;échange de deux cases selon la direction donnée...." alt="" coords="277,5,367,31"/>
 <area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="230,15,264,15,264,21,230,21"/>
-<area shape="rect" id="Node000004" href="$main_8cpp.html#a1fd049c8408b3e98edecd1472f25b0a7" title=" " alt="" coords="415,5,481,31"/>
+<area shape="rect" id="Node000004" href="$main_8cpp.html#a1fd049c8408b3e98edecd1472f25b0a7" title="Vérifie si on a un alignement de 3 chiffres identique." alt="" coords="415,5,481,31"/>
 <area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="367,15,401,15,401,21,367,21"/>
 </map>

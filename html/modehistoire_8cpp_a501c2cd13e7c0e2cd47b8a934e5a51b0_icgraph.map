@@ -1,0 +1,16 @@
+<map id="niveau4" name="niveau4">
+<area shape="rect" id="Node000001" title="Niveau 4 Grille 6x8, 4 couleurs, 10 tours maximum." alt="" coords="599,132,673,157"/>
+<area shape="rect" id="Node000002" href="$modehistoire_8cpp.html#ab12343047fefb3413ea3ad9b8ba3e5aa" title="Chapitre 4. Passe au chapitre 5 si le joueur veut." alt="" coords="489,132,551,157"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="585,147,551,147,551,142,585,142"/>
+<area shape="rect" id="Node000003" href="$modehistoire_8cpp.html#a6a2711a5a74ae4812c6164add65e4da3" title="Chapitre 3. Enchaîne vers le Chapitre 4 si le joueur le souhaite." alt="" coords="380,107,441,132"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="475,137,441,129,442,124,477,132"/>
+<area shape="rect" id="Node000006" href="$modehistoire_8cpp.html#a24d1c656b93e29aafae03c8235b80a0a" title="Menu principal du Mode Histoire. Ouvre le fichier texte de narration et permet au joueur de sélection..." alt="" coords="5,81,113,107"/>
+<area shape="poly" id="edge8_Node000002_Node000006" title=" " alt="" coords="475,149,380,147,270,133,161,113,113,105,114,100,162,107,271,128,380,142,475,144"/>
+<area shape="rect" id="Node000004" href="$modehistoire_8cpp.html#ad9fcc453c77abfcb4533a4abf7833950" title="Chapitre 2. Enchaîne vers le Chapitre 3 si le joueur le souhaite." alt="" coords="271,56,332,81"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="369,103,328,84,331,79,371,98"/>
+<area shape="poly" id="edge7_Node000003_Node000006" title=" " alt="" coords="366,119,114,101,114,95,366,114"/>
+<area shape="rect" id="Node000005" href="$modehistoire_8cpp.html#a9acdc485860975bd64adef3834c3cf56" title="Chapitre 1. Enchaîne vers le Chapitre 2 si le joueur le souhaite." alt="" coords="161,5,223,31"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="260,52,219,33,221,28,262,48"/>
+<area shape="poly" id="edge6_Node000004_Node000006" title=" " alt="" coords="258,76,114,91,113,86,257,71"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="158,40,84,84,81,79,156,35"/>
+</map>

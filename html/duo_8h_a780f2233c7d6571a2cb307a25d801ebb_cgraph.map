@@ -1,5 +1,5 @@
 <map id="tourjoueur" name="tourjoueur">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,95,31"/>
-<area shape="rect" id="Node000002" href="$main_8cpp.html#ae241cf89d39423f89bb8e65688e4c031" title=" " alt="" coords="143,5,213,31"/>
+<area shape="rect" id="Node000001" title="Affiche quel joueur doit jouer sur le tour Si pair joueur 1 joue, si impair joueur 2 joue." alt="" coords="5,5,95,31"/>
+<area shape="rect" id="Node000002" href="$main_8cpp.html#ae241cf89d39423f89bb8e65688e4c031" title="Change la couleur du texte dans la console." alt="" coords="143,5,213,31"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="95,15,129,15,129,21,95,21"/>
 </map>

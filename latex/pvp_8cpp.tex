@@ -1,5 +1,10 @@
 \doxysection{modes\+\_\+de\+\_\+jeu/pvp.cpp File Reference}
 \hypertarget{pvp_8cpp}{}\label{pvp_8cpp}\index{modes\_de\_jeu/pvp.cpp@{modes\_de\_jeu/pvp.cpp}}
+
+
+Gestion du mode PvP.  
+
+
 {\ttfamily \#include "{}duo.\+h"{}}\newline
 {\ttfamily \#include "{}modes\+\_\+de\+\_\+jeu/solo.\+h"{}}\newline
 {\ttfamily \#include $<$iostream$>$}\newline
@@ -8,7 +13,8 @@
 {\ttfamily \#include $<$unistd.\+h$>$}\newline
 {\ttfamily \#include $<$termios.\+h$>$}\newline
 {\ttfamily \#include $<$fstream$>$}\newline
-Include dependency graph for pvp.\+cpp\+:\nopagebreak
+Include dependency graph for pvp.\+cpp\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -20,35 +26,46 @@ Include dependency graph for pvp.\+cpp\+:\nopagebreak
 \item 
 typedef vector$<$ short int $>$ \mbox{\hyperlink{pvp_8cpp_ae045c87c132fe15ce75aeefe25f3aac5}{line}}
 \item 
-typedef vector$<$ \mbox{\hyperlink{main_8cpp_ae045c87c132fe15ce75aeefe25f3aac5}{line}} $>$ \mbox{\hyperlink{pvp_8cpp_aee710f500ed8d179390ae3862af69d24}{mat}}
+typedef vector$<$ \mbox{\hyperlink{main_8cpp_a4fa05b1f00fcde100685cc887554b93b}{line}} $>$ \mbox{\hyperlink{pvp_8cpp_aee710f500ed8d179390ae3862af69d24}{mat}}
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{pvp_8cpp_a8b028aef35e81dfdb44a7ba4741036b1}{scorejeupvp}} (unsigned long \&score, unsigned long \&nombredep, unsigned long \&nombresupp, size\+\_\+t \&nbtour, size\+\_\+t joueur)
-\item 
+\begin{DoxyCompactList}\small\item\em Calcule et affiche le score d\textquotesingle{}un joueur pendant son tour. Applique un bonus de points si le joueur a joué vite (moins de 3 déplacements). enlève un tour au compteur si tour du joueur 2. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{pvp_8cpp_a56fe2d9678d7480da879b43fcddccccf}{scorejeufinal}} (unsigned long \&score, unsigned long \&score2, unsigned long \&nombredep, unsigned long nombredep2)
-\item 
+\begin{DoxyCompactList}\small\item\em Affiche les résultats et choisi le vainqueur Compare les scores des deux joueurs et affiche un message de victoire ou d\textquotesingle{}égalité,et les stats de la partie. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{pvp_8cpp_a0970a0efd6e3ca77db70a8790c7d1638}{modenormalpvp}} (unsigned long \&score, unsigned long \&score2, unsigned long \&nombredep, unsigned long nombredep2, unsigned long \&nombresupp, unsigned long nombresupp2, char \&direction, \mbox{\hyperlink{structmaPosition}{ma\+Position}} \&coord, long int \&Nbligne, long int \&Nbcolonne, size\+\_\+t \&KNb\+Candies, size\+\_\+t \&joueur)
-\item 
+\begin{DoxyCompactList}\small\item\em Lance une partie PvP en mode normal. Génère une grille, puis la duplique pour que chaque joueur ait exactement la même grille. Les joueurs jouent chacun leur tour sur leur propre grille. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{pvp_8cpp_a9db53af76781f897f707ed99d0a54751}{modepersopvp}} (unsigned long \&score, unsigned long \&score2, unsigned long \&nombredep, unsigned long nombredep2, unsigned long \&nombresupp, unsigned long nombresupp2, char \&direction, \mbox{\hyperlink{structmaPosition}{ma\+Position}} \&coord, long int \&Nbligne, long int \&Nbcolonne, size\+\_\+t \&KNb\+Candies, size\+\_\+t \&joueur)
-\item 
+\begin{DoxyCompactList}\small\item\em Lance une partie PvP en mode personnalisé. Fonctionne exactement comme modenormalpvp mais utilise {\ttfamily creategrilleperso} pour personaliser les paramètres de la grille. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{pvp_8cpp_a7f39b2756087709b7b84f40e9ff882b1}{modepvp}} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Menu principal du mode PvP. Permet de choisir entre le mode normal et le mode personnalisé. Initialise les variables nécessaires a la partie. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+Gestion du mode PvP. 
+
+\begin{DoxyAuthor}{Author}
+ZOPPI Nicolas, KEOKHAM Rayan, LONGO Matys ; BUT1 Informatique GROUPE 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+31-\/12-\/2025 
+\end{DoxyDate}
+Ce fichier contient les fonctions pour faire marcher le mode pvp Chaque joueur dispose de sa propre grille identique au début et doit réaliser le meilleur score. 
 
 \doxysubsection{Typedef Documentation}
 \Hypertarget{pvp_8cpp_ae045c87c132fe15ce75aeefe25f3aac5}\label{pvp_8cpp_ae045c87c132fe15ce75aeefe25f3aac5} 
 \index{pvp.cpp@{pvp.cpp}!line@{line}}
 \index{line@{line}!pvp.cpp@{pvp.cpp}}
 \doxysubsubsection{\texorpdfstring{line}{line}}
-{\footnotesize\ttfamily typedef vector$<$short int$>$ \mbox{\hyperlink{main_8cpp_ae045c87c132fe15ce75aeefe25f3aac5}{line}}}
+{\footnotesize\ttfamily typedef vector$<$short int$>$ \mbox{\hyperlink{main_8cpp_a4fa05b1f00fcde100685cc887554b93b}{line}}}
 
 \Hypertarget{pvp_8cpp_aee710f500ed8d179390ae3862af69d24}\label{pvp_8cpp_aee710f500ed8d179390ae3862af69d24} 
 \index{pvp.cpp@{pvp.cpp}!mat@{mat}}
 \index{mat@{mat}!pvp.cpp@{pvp.cpp}}
 \doxysubsubsection{\texorpdfstring{mat}{mat}}
-{\footnotesize\ttfamily typedef vector$<$\mbox{\hyperlink{main_8cpp_ae045c87c132fe15ce75aeefe25f3aac5}{line}}$>$ \mbox{\hyperlink{main_8cpp_aee710f500ed8d179390ae3862af69d24}{mat}}}
+{\footnotesize\ttfamily typedef vector$<$\mbox{\hyperlink{main_8cpp_a4fa05b1f00fcde100685cc887554b93b}{line}}$>$ \mbox{\hyperlink{main_8cpp_a34079cedfcd0dcc6476bf9f1076e8cbd}{mat}}}
 
 
 
@@ -59,7 +76,39 @@ void \mbox{\hyperlink{pvp_8cpp_a7f39b2756087709b7b84f40e9ff882b1}{modepvp}} ()
 \doxysubsubsection{\texorpdfstring{modenormalpvp()}{modenormalpvp()}}
 {\footnotesize\ttfamily void modenormalpvp (\begin{DoxyParamCaption}\item[{unsigned long \&}]{score,  }\item[{unsigned long \&}]{score2,  }\item[{unsigned long \&}]{nombredep,  }\item[{unsigned long}]{nombredep2,  }\item[{unsigned long \&}]{nombresupp,  }\item[{unsigned long}]{nombresupp2,  }\item[{char \&}]{direction,  }\item[{\mbox{\hyperlink{structmaPosition}{ma\+Position}} \&}]{coord,  }\item[{long int \&}]{Nbligne,  }\item[{long int \&}]{Nbcolonne,  }\item[{size\+\_\+t \&}]{KNb\+Candies,  }\item[{size\+\_\+t \&}]{joueur }\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:\nopagebreak
+
+
+Lance une partie PvP en mode normal. Génère une grille, puis la duplique pour que chaque joueur ait exactement la même grille. Les joueurs jouent chacun leur tour sur leur propre grille. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em score} & Score du Joueur 1. \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em score2} & Score du Joueur 2. \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em nombredep} & Déplacements Joueur 1. \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em nombredep2} & Déplacements Joueur 2. \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em nombresupp} & Chiffres supprimés J1. \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em nombresupp2} & Chiffres supprimés J2. \\
+\hline
+\mbox{\texttt{ out}}  & {\em direction} & Direction du déplacement \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em coord} & Position du joueur \\
+\hline
+\mbox{\texttt{ out}}  & {\em Nbligne} & Nombre de lignes. \\
+\hline
+\mbox{\texttt{ out}}  & {\em Nbcolonne} & Nombre de colonnes. \\
+\hline
+\mbox{\texttt{ out}}  & {\em KNb\+Candies} & Nombre de chiffres différents. \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em joueur} & tour du joueur \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -80,7 +129,39 @@ Here is the caller graph for this function\+:
 \doxysubsubsection{\texorpdfstring{modepersopvp()}{modepersopvp()}}
 {\footnotesize\ttfamily void modepersopvp (\begin{DoxyParamCaption}\item[{unsigned long \&}]{score,  }\item[{unsigned long \&}]{score2,  }\item[{unsigned long \&}]{nombredep,  }\item[{unsigned long}]{nombredep2,  }\item[{unsigned long \&}]{nombresupp,  }\item[{unsigned long}]{nombresupp2,  }\item[{char \&}]{direction,  }\item[{\mbox{\hyperlink{structmaPosition}{ma\+Position}} \&}]{coord,  }\item[{long int \&}]{Nbligne,  }\item[{long int \&}]{Nbcolonne,  }\item[{size\+\_\+t \&}]{KNb\+Candies,  }\item[{size\+\_\+t \&}]{joueur }\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:\nopagebreak
+
+
+Lance une partie PvP en mode personnalisé. Fonctionne exactement comme modenormalpvp mais utilise {\ttfamily creategrilleperso} pour personaliser les paramètres de la grille. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em score} & Score J1. \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em score2} & Score J2. \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em nombredep} & Déplacements J1. \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em nombredep2} & Déplacements J2. \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em nombresupp} & Suppressions J1. \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em nombresupp2} & Suppressions J2. \\
+\hline
+\mbox{\texttt{ out}}  & {\em direction} & Direction. \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em coord} & Position. \\
+\hline
+\mbox{\texttt{ out}}  & {\em Nbligne} & Lignes. \\
+\hline
+\mbox{\texttt{ out}}  & {\em Nbcolonne} & Colonnes. \\
+\hline
+\mbox{\texttt{ out}}  & {\em KNb\+Candies} & Nombres de chiffres différents. \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em joueur} & Identifiant joueur. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -101,7 +182,12 @@ Here is the caller graph for this function\+:
 \doxysubsubsection{\texorpdfstring{modepvp()}{modepvp()}}
 {\footnotesize\ttfamily void modepvp (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:\nopagebreak
+
+
+Menu principal du mode PvP. Permet de choisir entre le mode normal et le mode personnalisé. Initialise les variables nécessaires a la partie. 
+
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -122,7 +208,23 @@ Here is the caller graph for this function\+:
 \doxysubsubsection{\texorpdfstring{scorejeufinal()}{scorejeufinal()}}
 {\footnotesize\ttfamily void scorejeufinal (\begin{DoxyParamCaption}\item[{unsigned long \&}]{score,  }\item[{unsigned long \&}]{score2,  }\item[{unsigned long \&}]{nombredep,  }\item[{unsigned long}]{nombredep2 }\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:\nopagebreak
+
+
+Affiche les résultats et choisi le vainqueur Compare les scores des deux joueurs et affiche un message de victoire ou d\textquotesingle{}égalité,et les stats de la partie. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em score} & Score final du Joueur 1. \\
+\hline
+\mbox{\texttt{ in}}  & {\em score2} & Score final du Joueur 2. \\
+\hline
+\mbox{\texttt{ in}}  & {\em nombredep} & Total des déplacements du Joueur 1. \\
+\hline
+\mbox{\texttt{ in}}  & {\em nombredep2} & Total des déplacements du Joueur 2. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -143,6 +245,23 @@ Here is the caller graph for this function\+:
 \doxysubsubsection{\texorpdfstring{scorejeupvp()}{scorejeupvp()}}
 {\footnotesize\ttfamily void scorejeupvp (\begin{DoxyParamCaption}\item[{unsigned long \&}]{score,  }\item[{unsigned long \&}]{nombredep,  }\item[{unsigned long \&}]{nombresupp,  }\item[{size\+\_\+t \&}]{nbtour,  }\item[{size\+\_\+t}]{joueur }\end{DoxyParamCaption})}
 
+
+
+Calcule et affiche le score d\textquotesingle{}un joueur pendant son tour. Applique un bonus de points si le joueur a joué vite (moins de 3 déplacements). enlève un tour au compteur si tour du joueur 2. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em score} & Score actuel du joueur. \\
+\hline
+\mbox{\texttt{ in}}  & {\em nombredep} & Nombre de déplacements effectués \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em nombresupp} & Nombre de chiffres supprimés \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em nbtour} & Nombre de tours restants pour la partie. \\
+\hline
+\mbox{\texttt{ in}}  & {\em joueur} & joueur 1 ou joueur 2 selon la parité. \\
+\hline
+\end{DoxyParams}
 Here is the caller graph for this function\+:
 \nopagebreak
 \begin{figure}[H]

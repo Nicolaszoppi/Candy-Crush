@@ -1,5 +1,5 @@
 <map id="modes_de_jeu/solo.cpp" name="modes_de_jeu/solo.cpp">
-<area shape="rect" id="Node000001" title=" " alt="" coords="192,5,366,31"/>
+<area shape="rect" id="Node000001" title="Gestion des menus et des boucles de jeu pour le joueur Solo." alt="" coords="192,5,366,31"/>
 <area shape="rect" id="Node000002" href="$solo_8h.html" title=" " alt="" coords="64,152,126,177"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="192,31,96,50,57,64,33,80,28,96,34,112,48,128,66,142,63,146,45,132,30,115,23,96,29,77,54,59,94,45,191,26"/>
 <area shape="rect" id="Node000003" title=" " alt="" coords="13,225,86,251"/>

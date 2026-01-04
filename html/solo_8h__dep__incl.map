@@ -1,22 +1,22 @@
 <map id="modes_de_jeu/solo.h" name="modes_de_jeu/solo.h">
 <area shape="rect" id="Node000001" title=" " alt="" coords="431,5,589,31"/>
-<area shape="rect" id="Node000002" href="$main_8cpp.html" title=" " alt="" coords="471,225,554,251"/>
+<area shape="rect" id="Node000002" href="$main_8cpp.html" title="Fichier principal de notre Projet de SAE 1.01 &#45; &quot;Candy Crush&quot;." alt="" coords="471,225,554,251"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="488,43,475,60,464,80,462,91,464,103,476,127,490,151,512,224,507,226,485,153,471,130,459,105,457,91,459,78,470,57,484,39"/>
-<area shape="rect" id="Node000003" href="$duo_8cpp.html" title=" " alt="" coords="15,225,186,251"/>
+<area shape="rect" id="Node000003" href="$duo_8cpp.html" title="Mode de jeu à deux joueurs COOP et PVP." alt="" coords="15,225,186,251"/>
 <area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="417,28,285,45,212,60,141,81,65,104,37,121,12,153,8,164,9,174,23,193,46,210,72,223,69,227,43,214,19,197,4,176,3,163,8,151,34,117,63,100,140,76,211,55,284,40,417,23"/>
 <area shape="rect" id="Node000004" href="$duo_8h.html" title=" " alt="" coords="189,79,345,104"/>
 <area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="459,37,307,81,306,76,457,32"/>
-<area shape="rect" id="Node000005" href="$pvp_8cpp.html" title=" " alt="" coords="305,152,475,177"/>
+<area shape="rect" id="Node000005" href="$pvp_8cpp.html" title="Gestion du mode PvP." alt="" coords="305,152,475,177"/>
 <area shape="poly" id="edge19_Node000001_Node000005" title=" " alt="" coords="472,39,444,57,420,80,409,98,402,118,394,152,389,151,396,116,404,96,416,77,441,53,469,35"/>
 <area shape="rect" id="Node000006" href="$pvp_8h.html" title=" " alt="" coords="23,152,179,177"/>
 <area shape="poly" id="edge20_Node000001_Node000006" title=" " alt="" coords="417,22,360,28,299,38,236,55,178,81,156,97,136,117,109,153,105,150,132,113,152,93,175,76,234,50,297,33,360,22,416,17"/>
-<area shape="rect" id="Node000007" href="$modehistoire_8cpp.html" title=" " alt="" coords="1012,152,1245,177"/>
+<area shape="rect" id="Node000007" href="$modehistoire_8cpp.html" title="Gestion du Mode Histoire." alt="" coords="1012,152,1245,177"/>
 <area shape="poly" id="edge10_Node000001_Node000007" title=" " alt="" coords="603,18,772,22,966,31,1134,48,1192,61,1211,68,1224,77,1231,89,1230,101,1215,122,1188,140,1159,154,1157,150,1185,136,1211,118,1225,99,1225,90,1220,80,1209,73,1190,66,1133,54,966,36,771,27,603,23"/>
 <area shape="rect" id="Node000008" href="$modehistoire_8h.html" title=" " alt="" coords="474,79,693,104"/>
 <area shape="poly" id="edge11_Node000001_Node000008" title=" " alt="" coords="533,38,573,77,569,80,530,42"/>
-<area shape="rect" id="Node000009" href="$solo_8cpp.html" title=" " alt="" coords="643,152,817,177"/>
+<area shape="rect" id="Node000009" href="$solo_8cpp.html" title="Gestion des menus et des boucles de jeu pour le joueur Solo." alt="" coords="643,152,817,177"/>
 <area shape="poly" id="edge21_Node000001_Node000009" title=" " alt="" coords="603,26,658,44,684,58,706,77,719,95,727,115,732,151,727,152,722,117,714,97,703,80,681,63,656,49,602,31"/>
-<area shape="rect" id="Node000010" href="$modeinfini_8cpp.html" title=" " alt="" coords="994,79,1210,104"/>
+<area shape="rect" id="Node000010" href="$modeinfini_8cpp.html" title="mode de jeu infini." alt="" coords="994,79,1210,104"/>
 <area shape="poly" id="edge14_Node000001_Node000010" title=" " alt="" coords="603,28,1007,76,1006,81,603,33"/>
 <area shape="rect" id="Node000011" href="$modeinfini_8h.html" title=" " alt="" coords="768,79,969,104"/>
 <area shape="poly" id="edge15_Node000001_Node000011" title=" " alt="" coords="581,31,811,76,810,81,580,36"/>

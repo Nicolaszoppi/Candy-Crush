@@ -1,5 +1,15 @@
 <map id="condchap5" name="condchap5">
-<area shape="rect" id="Node000001" title=" " alt="" coords="128,5,220,31"/>
-<area shape="rect" id="Node000002" href="$modehistoire_8cpp.html#a6b5cc1de640781ab04604fe8aea9b27b" title=" " alt="" coords="5,5,80,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="114,21,80,21,80,15,114,15"/>
+<area shape="rect" id="Node000001" title="Vérifie la condition de victoire du Chapitre 4. Compte le nombre de cases vides (&#45;1) dans la grille." alt="" coords="612,81,704,107"/>
+<area shape="rect" id="Node000002" href="$modehistoire_8cpp.html#a6b5cc1de640781ab04604fe8aea9b27b" title="Niveau 5 Grille 8x8, 4 couleurs, 16 tours. Doit éliminer 45 chiffres en moins de 16 tours." alt="" coords="489,81,564,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="598,97,564,97,564,91,598,91"/>
+<area shape="rect" id="Node000003" href="$modehistoire_8cpp.html#aab5a0ed6f45a325ad63871d8945be6c1" title="Chapitre 5 Lit la narration du chapitre 5, lance le niveau 5 et affiche la fin du jeu." alt="" coords="380,81,441,107"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="475,97,442,97,442,91,475,91"/>
+<area shape="rect" id="Node000004" href="$modehistoire_8cpp.html#ab12343047fefb3413ea3ad9b8ba3e5aa" title="Chapitre 4. Passe au chapitre 5 si le joueur veut." alt="" coords="271,56,332,81"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="366,86,332,78,333,73,367,81"/>
+<area shape="rect" id="Node000008" href="$modehistoire_8cpp.html#a24d1c656b93e29aafae03c8235b80a0a" title="Menu principal du Mode Histoire. Ouvre le fichier texte de narration et permet au joueur de sélection..." alt="" coords="5,56,113,81"/>
+<area shape="poly" id="edge7_Node000003_Node000008" title=" " alt="" coords="366,98,271,97,113,79,114,74,271,91,366,93"/>
+<area shape="rect" id="Node000005" href="$modehistoire_8cpp.html#a6a2711a5a74ae4812c6164add65e4da3" title="Chapitre 3. Enchaîne vers le Chapitre 4 si le joueur le souhaite." alt="" coords="161,5,223,31"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="260,52,219,33,221,28,262,48"/>
+<area shape="poly" id="edge6_Node000004_Node000008" title=" " alt="" coords="257,71,113,71,113,66,257,66"/>
+<area shape="poly" id="edge5_Node000005_Node000008" title=" " alt="" coords="150,37,94,58,92,53,148,32"/>
 </map>

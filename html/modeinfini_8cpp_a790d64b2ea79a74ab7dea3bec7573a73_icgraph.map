@@ -1,17 +1,30 @@
 <map id="makeAMoveinfini" name="makeAMoveinfini">
-<area shape="rect" id="Node000001" title=" " alt="" coords="571,80,705,105"/>
-<area shape="rect" id="Node000002" href="$modeinfini_8cpp.html#af30deecaf4ef694e85d7765be6764bd4" title=" " alt="" coords="385,5,523,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="596,76,522,44,492,33,494,28,524,40,598,72"/>
-<area shape="rect" id="Node000006" href="$modehistoire_8cpp.html#a69908ca28708a1df8a3aa3503172594d" title=" " alt="" coords="417,55,491,80"/>
-<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="557,84,491,75,492,70,557,79"/>
-<area shape="rect" id="Node000007" href="$modehistoire_8cpp.html#ab46654af818b28fe03110fe96363c207" title=" " alt="" coords="417,104,491,129"/>
-<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="557,106,492,114,491,109,557,101"/>
-<area shape="rect" id="Node000008" href="$modehistoire_8cpp.html#a8e16742dc90f5d314418ac54b9bc4e70" title=" " alt="" coords="417,153,491,179"/>
-<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="596,113,524,143,491,156,489,151,522,138,594,108"/>
-<area shape="rect" id="Node000003" href="$main_8cpp.html#a36ce9df10cf710ee8621446713854a71" title=" " alt="" coords="251,5,337,31"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="372,21,337,21,337,15,372,15"/>
-<area shape="rect" id="Node000004" href="$main_8cpp.html#a87da64dc404fab46f81b3a2f39e4d2e3" title=" " alt="" coords="108,5,203,31"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="237,21,203,21,203,15,237,15"/>
-<area shape="rect" id="Node000005" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,60,31"/>
-<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="95,21,60,21,60,15,95,15"/>
+<area shape="rect" id="Node000001" title="Gère le déplacement d&#39;un bonbon en mode infini Pareil que celle de base et ajoute la possibilité d&#39;ar..." alt="" coords="1081,81,1216,107"/>
+<area shape="rect" id="Node000002" href="$modeinfini_8cpp.html#af30deecaf4ef694e85d7765be6764bd4" title="Fonction principale du jeu en Mode Infini. Initialise une grille mode normal La boucle continue tant ..." alt="" coords="773,5,911,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="1105,78,1033,53,970,38,910,29,911,23,971,33,1034,47,1107,73"/>
+<area shape="rect" id="Node000006" href="$modehistoire_8cpp.html#a69908ca28708a1df8a3aa3503172594d" title="Lance le Niveau 1 l&#39;introduction. Grille 4x4, 2 couleurs, jouer jusqu&#39;au blocage." alt="" coords="651,56,725,81"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="1067,92,725,73,726,68,1068,87"/>
+<area shape="rect" id="Node000009" href="$modehistoire_8cpp.html#ab46654af818b28fe03110fe96363c207" title="Niveau 2 Grille (6x6), 4 chiffres." alt="" coords="959,107,1033,132"/>
+<area shape="poly" id="edge9_Node000001_Node000009" title=" " alt="" coords="1068,110,1034,116,1033,111,1067,105"/>
+<area shape="rect" id="Node000011" href="$modehistoire_8cpp.html#a8e16742dc90f5d314418ac54b9bc4e70" title="Niveau 3 Grille 6x6, 3 chiffres doit avoir effacé au moins 15 chiffres." alt="" coords="959,156,1033,181"/>
+<area shape="poly" id="edge13_Node000001_Node000011" title=" " alt="" coords="1111,115,1024,158,1022,154,1108,110"/>
+<area shape="rect" id="Node000003" href="$main_8cpp.html#a36ce9df10cf710ee8621446713854a71" title="Menu principal pour les modes Solo. Propose au joueur de choisir entre les différents modes de jeu di..." alt="" coords="251,56,337,81"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="759,27,542,46,338,67,337,61,541,41,759,22"/>
+<area shape="rect" id="Node000004" href="$main_8cpp.html#a87da64dc404fab46f81b3a2f39e4d2e3" title="Affiche le menu principal et lance le mode de jeu choisi Permet de choisir entre Solo,..." alt="" coords="108,56,203,81"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="237,71,203,71,203,66,237,66"/>
+<area shape="rect" id="Node000005" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main Lance le menu pour jouer" alt="" coords="5,56,60,81"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="95,71,60,71,60,66,95,66"/>
+<area shape="rect" id="Node000007" href="$modehistoire_8cpp.html#a9acdc485860975bd64adef3834c3cf56" title="Chapitre 1. Enchaîne vers le Chapitre 2 si le joueur le souhaite." alt="" coords="541,56,603,81"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="637,71,603,71,603,66,637,66"/>
+<area shape="rect" id="Node000008" href="$modehistoire_8cpp.html#a24d1c656b93e29aafae03c8235b80a0a" title="Menu principal du Mode Histoire. Ouvre le fichier texte de narration et permet au joueur de sélection..." alt="" coords="385,81,493,107"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="528,80,494,86,493,81,527,74"/>
+<area shape="poly" id="edge8_Node000008_Node000003" title=" " alt="" coords="371,85,337,79,338,74,372,80"/>
+<area shape="rect" id="Node000010" href="$modehistoire_8cpp.html#ad9fcc453c77abfcb4533a4abf7833950" title="Chapitre 2. Enchaîne vers le Chapitre 3 si le joueur le souhaite." alt="" coords="657,107,719,132"/>
+<area shape="poly" id="edge10_Node000009_Node000010" title=" " alt="" coords="945,122,719,122,719,117,945,117"/>
+<area shape="poly" id="edge11_Node000010_Node000007" title=" " alt="" coords="645,103,601,84,603,79,647,99"/>
+<area shape="poly" id="edge12_Node000010_Node000008" title=" " alt="" coords="643,118,493,102,494,97,643,112"/>
+<area shape="rect" id="Node000012" href="$modehistoire_8cpp.html#a6a2711a5a74ae4812c6164add65e4da3" title="Chapitre 3. Enchaîne vers le Chapitre 4 si le joueur le souhaite." alt="" coords="811,157,873,183"/>
+<area shape="poly" id="edge14_Node000011_Node000012" title=" " alt="" coords="945,172,873,172,873,167,945,166"/>
+<area shape="poly" id="edge16_Node000012_Node000008" title=" " alt="" coords="797,168,650,147,486,109,488,104,651,142,798,163"/>
+<area shape="poly" id="edge15_Node000012_Node000010" title=" " alt="" coords="797,158,718,132,720,127,799,153"/>
 </map>

@@ -1,0 +1,11 @@
+<map id="niveau1" name="niveau1">
+<area shape="rect" id="Node000001" title="Lance le Niveau 1 l&#39;introduction. Grille 4x4, 2 couleurs, jouer jusqu&#39;au blocage." alt="" coords="548,5,623,31"/>
+<area shape="rect" id="Node000002" href="$modehistoire_8cpp.html#a9acdc485860975bd64adef3834c3cf56" title="Chapitre 1. Enchaîne vers le Chapitre 2 si le joueur le souhaite." alt="" coords="439,5,500,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="534,21,500,21,500,15,534,15"/>
+<area shape="rect" id="Node000003" href="$modehistoire_8cpp.html#a24d1c656b93e29aafae03c8235b80a0a" title="Menu principal du Mode Histoire. Ouvre le fichier texte de narration et permet au joueur de sélection..." alt="" coords="283,5,391,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="425,21,391,21,391,15,425,15"/>
+<area shape="rect" id="Node000004" href="$main_8cpp.html#a36ce9df10cf710ee8621446713854a71" title="Menu principal pour les modes Solo. Propose au joueur de choisir entre les différents modes de jeu di..." alt="" coords="148,5,235,31"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="269,21,235,21,235,15,269,15"/>
+<area shape="rect" id="Node000005" href="$main_8cpp.html#a87da64dc404fab46f81b3a2f39e4d2e3" title="Affiche le menu principal et lance le mode de jeu choisi Permet de choisir entre Solo,..." alt="" coords="5,5,100,31"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="134,21,100,21,100,15,134,15"/>
+</map>

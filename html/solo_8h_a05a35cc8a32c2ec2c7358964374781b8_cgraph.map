@@ -1,9 +1,9 @@
 <map id="makeAMove" name="makeAMove">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,31,108,56"/>
-<area shape="rect" id="Node000002" href="$main_8cpp.html#aae0c721c97bf177470b2fb801df605d1" title=" " alt="" coords="161,5,241,31"/>
+<area shape="rect" id="Node000001" title="Gère le tour de jeu (sélection et déplacement). Appelle initmove pour la sélection,..." alt="" coords="5,31,108,56"/>
+<area shape="rect" id="Node000002" href="$main_8cpp.html#aae0c721c97bf177470b2fb801df605d1" title="Demande à l&#39;utilisateur de sélectionner une case. Vérifie que les coordonnées entrées sont possible e..." alt="" coords="161,5,241,31"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="108,32,147,25,147,30,109,37"/>
-<area shape="rect" id="Node000003" href="$main_8cpp.html#a48e2cdcaa0de3d338131e81661bf6999" title=" " alt="" coords="156,55,245,80"/>
+<area shape="rect" id="Node000003" href="$main_8cpp.html#a48e2cdcaa0de3d338131e81661bf6999" title="Vérifie si un mouvement est possible Verifie l&#39;échange de deux cases selon la direction donnée...." alt="" coords="156,55,245,80"/>
 <area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="109,49,143,55,142,60,108,54"/>
-<area shape="rect" id="Node000004" href="$main_8cpp.html#a1fd049c8408b3e98edecd1472f25b0a7" title=" " alt="" coords="293,55,360,80"/>
+<area shape="rect" id="Node000004" href="$main_8cpp.html#a1fd049c8408b3e98edecd1472f25b0a7" title="Vérifie si on a un alignement de 3 chiffres identique." alt="" coords="293,55,360,80"/>
 <area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="245,65,280,65,280,70,245,70"/>
 </map>

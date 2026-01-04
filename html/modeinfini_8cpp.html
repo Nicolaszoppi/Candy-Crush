@@ -79,6 +79,9 @@ $(function() {
   <div class="headertitle"><div class="title">modeinfini.cpp File Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>mode de jeu infini.  
+<a href="#details">More...</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="solo_8h_source.html">solo.h</a>&quot;</code><br />
 <code>#include &lt;iostream&gt;</code><br />
 <code>#include &lt;vector&gt;</code><br />
@@ -89,7 +92,7 @@ Include dependency graph for modeinfini.cpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="modeinfini_8cpp__incl.png" border="0" usemap="#amodes__de__jeu_2modeinfini_8cpp" alt=""/></div>
 <map name="amodes__de__jeu_2modeinfini_8cpp" id="amodes__de__jeu_2modeinfini_8cpp">
-<area shape="rect" title=" " alt="" coords="59,5,275,31"/>
+<area shape="rect" title="mode de jeu infini." alt="" coords="59,5,275,31"/>
 <area shape="rect" href="solo_8h.html" title=" " alt="" coords="69,79,130,104"/>
 <area shape="poly" title=" " alt="" coords="158,33,122,70,118,67,154,29"/>
 <area shape="rect" title=" " alt="" coords="5,152,79,177"/>
@@ -109,22 +112,30 @@ Include dependency graph for modeinfini.cpp:</div>
 Typedefs</h2></td></tr>
 <tr class="memitem:ae045c87c132fe15ce75aeefe25f3aac5" id="r_ae045c87c132fe15ce75aeefe25f3aac5"><td class="memItemLeft" align="right" valign="top">typedef vector&lt; short int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="modeinfini_8cpp.html#ae045c87c132fe15ce75aeefe25f3aac5">line</a></td></tr>
 <tr class="separator:ae045c87c132fe15ce75aeefe25f3aac5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aee710f500ed8d179390ae3862af69d24" id="r_aee710f500ed8d179390ae3862af69d24"><td class="memItemLeft" align="right" valign="top">typedef vector&lt; <a class="el" href="main_8cpp.html#ae045c87c132fe15ce75aeefe25f3aac5">line</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="modeinfini_8cpp.html#aee710f500ed8d179390ae3862af69d24">mat</a></td></tr>
+<tr class="memitem:aee710f500ed8d179390ae3862af69d24" id="r_aee710f500ed8d179390ae3862af69d24"><td class="memItemLeft" align="right" valign="top">typedef vector&lt; <a class="el" href="main_8cpp.html#a4fa05b1f00fcde100685cc887554b93b">line</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="modeinfini_8cpp.html#aee710f500ed8d179390ae3862af69d24">mat</a></td></tr>
 <tr class="separator:aee710f500ed8d179390ae3862af69d24"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a790d64b2ea79a74ab7dea3bec7573a73" id="r_a790d64b2ea79a74ab7dea3bec7573a73"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="modeinfini_8cpp.html#a790d64b2ea79a74ab7dea3bec7573a73">makeAMoveinfini</a> (<a class="el" href="main_8cpp.html#aee710f500ed8d179390ae3862af69d24">mat</a> &amp;grille, <a class="el" href="structmaPosition.html">maPosition</a> &amp;coord, char &amp;direction, unsigned long &amp;nombredep, const long int &amp;Nbligne, const long int &amp;Nbcolonne)</td></tr>
+<tr class="memitem:a790d64b2ea79a74ab7dea3bec7573a73" id="r_a790d64b2ea79a74ab7dea3bec7573a73"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="modeinfini_8cpp.html#a790d64b2ea79a74ab7dea3bec7573a73">makeAMoveinfini</a> (<a class="el" href="main_8cpp.html#a34079cedfcd0dcc6476bf9f1076e8cbd">mat</a> &amp;grille, <a class="el" href="structmaPosition.html">maPosition</a> &amp;coord, char &amp;direction, unsigned long &amp;nombredep, const long int &amp;Nbligne, const long int &amp;Nbcolonne)</td></tr>
+<tr class="memdesc:a790d64b2ea79a74ab7dea3bec7573a73"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gère le déplacement d'un bonbon en mode infini Pareil que celle de base et ajoute la possibilité d'arrêter la partie en appuyant sur la touche 'A' .  <br /></td></tr>
 <tr class="separator:a790d64b2ea79a74ab7dea3bec7573a73"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af5591e9d5429fcc2b2573e00c7aed10f" id="r_af5591e9d5429fcc2b2573e00c7aed10f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="modeinfini_8cpp.html#af5591e9d5429fcc2b2573e00c7aed10f">scorejeuinfini</a> (unsigned long &amp;score, unsigned long &amp;nombredep, unsigned long &amp;nombresupp)</td></tr>
+<tr class="memdesc:af5591e9d5429fcc2b2573e00c7aed10f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Affiche et met à jour le score pour le mode infini. Le score est calculé en multipliant le nombre de bonbons supprimés par 10.  <br /></td></tr>
 <tr class="separator:af5591e9d5429fcc2b2573e00c7aed10f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a76eb451a8dc883f15db7502c9860ced9" id="r_a76eb451a8dc883f15db7502c9860ced9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="modeinfini_8cpp.html#a76eb451a8dc883f15db7502c9860ced9">rempliColonne</a> (<a class="el" href="main_8cpp.html#aee710f500ed8d179390ae3862af69d24">mat</a> &amp;grille, long int &amp;Nbligne, long int &amp;Nbcolonne, size_t &amp;KNbCandies)</td></tr>
+<tr class="memitem:a76eb451a8dc883f15db7502c9860ced9" id="r_a76eb451a8dc883f15db7502c9860ced9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="modeinfini_8cpp.html#a76eb451a8dc883f15db7502c9860ced9">rempliColonne</a> (<a class="el" href="main_8cpp.html#a34079cedfcd0dcc6476bf9f1076e8cbd">mat</a> &amp;grille, long int &amp;Nbligne, long int &amp;Nbcolonne, size_t &amp;KNbCandies)</td></tr>
 <tr class="memdesc:a76eb451a8dc883f15db7502c9860ced9"><td class="mdescLeft">&#160;</td><td class="mdescRight">main  <br /></td></tr>
 <tr class="separator:a76eb451a8dc883f15db7502c9860ced9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af30deecaf4ef694e85d7765be6764bd4" id="r_af30deecaf4ef694e85d7765be6764bd4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="modeinfini_8cpp.html#af30deecaf4ef694e85d7765be6764bd4">modenormalinfini</a> (unsigned long &amp;score, unsigned long &amp;nombredep, unsigned long &amp;nombresupp, char &amp;direction, <a class="el" href="structmaPosition.html">maPosition</a> &amp;coord, long int &amp;Nbligne, long int &amp;Nbcolonne, size_t &amp;KNbCandies)</td></tr>
+<tr class="memdesc:af30deecaf4ef694e85d7765be6764bd4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fonction principale du jeu en Mode Infini. Initialise une grille mode normal La boucle continue tant que des coups sont possibles ou que le joueur n'appuie pas sur A. À chaque tour, la grille est rempli via rempliColonne.  <br /></td></tr>
 <tr class="separator:af30deecaf4ef694e85d7765be6764bd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Typedef Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>mode de jeu infini. </p>
+<dl class="section author"><dt>Author</dt><dd>ZOPPI Nicolas, KEOKHAM Rayan, LONGO Matys ; BUT1 Informatique GROUPE </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>31-12-2025 </dd></dl>
+<p>Ce mode fait en sorte de remplir la grille automatiquement après chaque coup, permettant une partie sans fin tant que des coups sont possibles. </p>
+</div><h2 class="groupheader">Typedef Documentation</h2>
 <a id="ae045c87c132fe15ce75aeefe25f3aac5" name="ae045c87c132fe15ce75aeefe25f3aac5"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae045c87c132fe15ce75aeefe25f3aac5">&#9670;&#160;</a></span>line</h2>
 
@@ -132,7 +143,7 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef vector&lt;short int&gt; <a class="el" href="main_8cpp.html#ae045c87c132fe15ce75aeefe25f3aac5">line</a></td>
+          <td class="memname">typedef vector&lt;short int&gt; <a class="el" href="main_8cpp.html#a4fa05b1f00fcde100685cc887554b93b">line</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -146,7 +157,7 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef vector&lt;<a class="el" href="main_8cpp.html#ae045c87c132fe15ce75aeefe25f3aac5">line</a>&gt; <a class="el" href="main_8cpp.html#aee710f500ed8d179390ae3862af69d24">mat</a></td>
+          <td class="memname">typedef vector&lt;<a class="el" href="main_8cpp.html#a4fa05b1f00fcde100685cc887554b93b">line</a>&gt; <a class="el" href="main_8cpp.html#a34079cedfcd0dcc6476bf9f1076e8cbd">mat</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -163,7 +174,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">int makeAMoveinfini </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="main_8cpp.html#aee710f500ed8d179390ae3862af69d24">mat</a> &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="main_8cpp.html#a34079cedfcd0dcc6476bf9f1076e8cbd">mat</a> &amp;&#160;</td>
           <td class="paramname"><em>grille</em>, </td>
         </tr>
         <tr>
@@ -203,17 +214,31 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Gère le déplacement d'un bonbon en mode infini Pareil que celle de base et ajoute la possibilité d'arrêter la partie en appuyant sur la touche 'A' . </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">grille</td><td>La grille de jeu. </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">coord</td><td>La position du curseur. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">direction</td><td>La direction choisie par le joueur. </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">nombredep</td><td>Compteur de déplacements (incrémenté si mouvement valide). </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">Nbligne</td><td>Nombre de lignes. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">Nbcolonne</td><td>Nombre de colonnes. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>int Retourne 0 (Code de statut, potentiellement pour future extension). </dd></dl>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="modeinfini_8cpp_a790d64b2ea79a74ab7dea3bec7573a73_cgraph.png" border="0" usemap="#amodeinfini_8cpp_a790d64b2ea79a74ab7dea3bec7573a73_cgraph" alt=""/></div>
 <map name="amodeinfini_8cpp_a790d64b2ea79a74ab7dea3bec7573a73_cgraph" id="amodeinfini_8cpp_a790d64b2ea79a74ab7dea3bec7573a73_cgraph">
-<area shape="rect" title=" " alt="" coords="5,31,140,56"/>
-<area shape="rect" href="main_8cpp.html#aae0c721c97bf177470b2fb801df605d1" title=" " alt="" coords="193,5,273,31"/>
+<area shape="rect" title="Gère le déplacement d&#39;un bonbon en mode infini Pareil que celle de base et ajoute la possibilité d&#39;ar..." alt="" coords="5,31,140,56"/>
+<area shape="rect" href="main_8cpp.html#aae0c721c97bf177470b2fb801df605d1" title="Demande à l&#39;utilisateur de sélectionner une case. Vérifie que les coordonnées entrées sont possible e..." alt="" coords="193,5,273,31"/>
 <area shape="poly" title=" " alt="" coords="140,30,179,24,179,29,141,35"/>
-<area shape="rect" href="main_8cpp.html#a48e2cdcaa0de3d338131e81661bf6999" title=" " alt="" coords="188,55,277,80"/>
+<area shape="rect" href="main_8cpp.html#a48e2cdcaa0de3d338131e81661bf6999" title="Vérifie si un mouvement est possible Verifie l&#39;échange de deux cases selon la direction donnée...." alt="" coords="188,55,277,80"/>
 <area shape="poly" title=" " alt="" coords="141,51,175,56,174,61,140,56"/>
-<area shape="rect" href="main_8cpp.html#a1fd049c8408b3e98edecd1472f25b0a7" title=" " alt="" coords="325,55,392,80"/>
+<area shape="rect" href="main_8cpp.html#a1fd049c8408b3e98edecd1472f25b0a7" title="Vérifie si on a un alignement de 3 chiffres identique." alt="" coords="325,55,392,80"/>
 <area shape="poly" title=" " alt="" coords="277,65,312,65,312,70,277,70"/>
 </map>
 </div>
@@ -222,21 +247,34 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="modeinfini_8cpp_a790d64b2ea79a74ab7dea3bec7573a73_icgraph.png" border="0" usemap="#amodeinfini_8cpp_a790d64b2ea79a74ab7dea3bec7573a73_icgraph" alt=""/></div>
 <map name="amodeinfini_8cpp_a790d64b2ea79a74ab7dea3bec7573a73_icgraph" id="amodeinfini_8cpp_a790d64b2ea79a74ab7dea3bec7573a73_icgraph">
-<area shape="rect" title=" " alt="" coords="571,80,705,105"/>
-<area shape="rect" href="modeinfini_8cpp.html#af30deecaf4ef694e85d7765be6764bd4" title=" " alt="" coords="385,5,523,31"/>
-<area shape="poly" title=" " alt="" coords="596,76,522,44,492,33,494,28,524,40,598,72"/>
-<area shape="rect" href="modehistoire_8cpp.html#a69908ca28708a1df8a3aa3503172594d" title=" " alt="" coords="417,55,491,80"/>
-<area shape="poly" title=" " alt="" coords="557,84,491,75,492,70,557,79"/>
-<area shape="rect" href="modehistoire_8cpp.html#ab46654af818b28fe03110fe96363c207" title=" " alt="" coords="417,104,491,129"/>
-<area shape="poly" title=" " alt="" coords="557,106,492,114,491,109,557,101"/>
-<area shape="rect" href="modehistoire_8cpp.html#a8e16742dc90f5d314418ac54b9bc4e70" title=" " alt="" coords="417,153,491,179"/>
-<area shape="poly" title=" " alt="" coords="596,113,524,143,491,156,489,151,522,138,594,108"/>
-<area shape="rect" href="main_8cpp.html#a36ce9df10cf710ee8621446713854a71" title=" " alt="" coords="251,5,337,31"/>
-<area shape="poly" title=" " alt="" coords="372,21,337,21,337,15,372,15"/>
-<area shape="rect" href="main_8cpp.html#a87da64dc404fab46f81b3a2f39e4d2e3" title=" " alt="" coords="108,5,203,31"/>
-<area shape="poly" title=" " alt="" coords="237,21,203,21,203,15,237,15"/>
-<area shape="rect" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,60,31"/>
-<area shape="poly" title=" " alt="" coords="95,21,60,21,60,15,95,15"/>
+<area shape="rect" title="Gère le déplacement d&#39;un bonbon en mode infini Pareil que celle de base et ajoute la possibilité d&#39;ar..." alt="" coords="1081,81,1216,107"/>
+<area shape="rect" href="modeinfini_8cpp.html#af30deecaf4ef694e85d7765be6764bd4" title="Fonction principale du jeu en Mode Infini. Initialise une grille mode normal La boucle continue tant ..." alt="" coords="773,5,911,31"/>
+<area shape="poly" title=" " alt="" coords="1105,78,1033,53,970,38,910,29,911,23,971,33,1034,47,1107,73"/>
+<area shape="rect" href="modehistoire_8cpp.html#a69908ca28708a1df8a3aa3503172594d" title="Lance le Niveau 1 l&#39;introduction. Grille 4x4, 2 couleurs, jouer jusqu&#39;au blocage." alt="" coords="651,56,725,81"/>
+<area shape="poly" title=" " alt="" coords="1067,92,725,73,726,68,1068,87"/>
+<area shape="rect" href="modehistoire_8cpp.html#ab46654af818b28fe03110fe96363c207" title="Niveau 2 Grille (6x6), 4 chiffres." alt="" coords="959,107,1033,132"/>
+<area shape="poly" title=" " alt="" coords="1068,110,1034,116,1033,111,1067,105"/>
+<area shape="rect" href="modehistoire_8cpp.html#a8e16742dc90f5d314418ac54b9bc4e70" title="Niveau 3 Grille 6x6, 3 chiffres doit avoir effacé au moins 15 chiffres." alt="" coords="959,156,1033,181"/>
+<area shape="poly" title=" " alt="" coords="1111,115,1024,158,1022,154,1108,110"/>
+<area shape="rect" href="main_8cpp.html#a36ce9df10cf710ee8621446713854a71" title="Menu principal pour les modes Solo. Propose au joueur de choisir entre les différents modes de jeu di..." alt="" coords="251,56,337,81"/>
+<area shape="poly" title=" " alt="" coords="759,27,542,46,338,67,337,61,541,41,759,22"/>
+<area shape="rect" href="main_8cpp.html#a87da64dc404fab46f81b3a2f39e4d2e3" title="Affiche le menu principal et lance le mode de jeu choisi Permet de choisir entre Solo,..." alt="" coords="108,56,203,81"/>
+<area shape="poly" title=" " alt="" coords="237,71,203,71,203,66,237,66"/>
+<area shape="rect" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main Lance le menu pour jouer" alt="" coords="5,56,60,81"/>
+<area shape="poly" title=" " alt="" coords="95,71,60,71,60,66,95,66"/>
+<area shape="rect" href="modehistoire_8cpp.html#a9acdc485860975bd64adef3834c3cf56" title="Chapitre 1. Enchaîne vers le Chapitre 2 si le joueur le souhaite." alt="" coords="541,56,603,81"/>
+<area shape="poly" title=" " alt="" coords="637,71,603,71,603,66,637,66"/>
+<area shape="rect" href="modehistoire_8cpp.html#a24d1c656b93e29aafae03c8235b80a0a" title="Menu principal du Mode Histoire. Ouvre le fichier texte de narration et permet au joueur de sélection..." alt="" coords="385,81,493,107"/>
+<area shape="poly" title=" " alt="" coords="528,80,494,86,493,81,527,74"/>
+<area shape="poly" title=" " alt="" coords="371,85,337,79,338,74,372,80"/>
+<area shape="rect" href="modehistoire_8cpp.html#ad9fcc453c77abfcb4533a4abf7833950" title="Chapitre 2. Enchaîne vers le Chapitre 3 si le joueur le souhaite." alt="" coords="657,107,719,132"/>
+<area shape="poly" title=" " alt="" coords="945,122,719,122,719,117,945,117"/>
+<area shape="poly" title=" " alt="" coords="645,103,601,84,603,79,647,99"/>
+<area shape="poly" title=" " alt="" coords="643,118,493,102,494,97,643,112"/>
+<area shape="rect" href="modehistoire_8cpp.html#a6a2711a5a74ae4812c6164add65e4da3" title="Chapitre 3. Enchaîne vers le Chapitre 4 si le joueur le souhaite." alt="" coords="811,157,873,183"/>
+<area shape="poly" title=" " alt="" coords="945,172,873,172,873,167,945,166"/>
+<area shape="poly" title=" " alt="" coords="797,168,650,147,486,109,488,104,651,142,798,163"/>
+<area shape="poly" title=" " alt="" coords="797,158,718,132,720,127,799,153"/>
 </map>
 </div>
 
@@ -303,40 +341,55 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Fonction principale du jeu en Mode Infini. Initialise une grille mode normal La boucle continue tant que des coups sont possibles ou que le joueur n'appuie pas sur A. À chaque tour, la grille est rempli via rempliColonne. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">score</td><td>Score du joueur </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">nombredep</td><td>Compteur de déplacements </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">nombresupp</td><td>Compteur de chiffres supprimés. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">direction</td><td>Direction du mouvement </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">coord</td><td>Position du joueur </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">Nbligne</td><td>Nombre de lignes </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">Nbcolonne</td><td>Nombre de colonnes </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">KNbCandies</td><td>Nombre de chiffres différents pour le jeu </td></tr>
+  </table>
+  </dd>
+</dl>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="modeinfini_8cpp_af30deecaf4ef694e85d7765be6764bd4_cgraph.png" border="0" usemap="#amodeinfini_8cpp_af30deecaf4ef694e85d7765be6764bd4_cgraph" alt=""/></div>
 <map name="amodeinfini_8cpp_af30deecaf4ef694e85d7765be6764bd4_cgraph" id="amodeinfini_8cpp_af30deecaf4ef694e85d7765be6764bd4_cgraph">
-<area shape="rect" title=" " alt="" coords="5,228,143,253"/>
-<area shape="rect" href="main_8cpp.html#aeac4844f2b7ebff74c1f10f044043f88" title=" " alt="" coords="222,55,318,80"/>
+<area shape="rect" title="Fonction principale du jeu en Mode Infini. Initialise une grille mode normal La boucle continue tant ..." alt="" coords="5,228,143,253"/>
+<area shape="rect" href="main_8cpp.html#aeac4844f2b7ebff74c1f10f044043f88" title="Affiche la grille dans la console. Gère l&#39;affichage des bordures, des couleurs des chiffres et du cur..." alt="" coords="222,55,318,80"/>
 <area shape="poly" title=" " alt="" coords="79,226,119,161,151,122,189,89,208,79,211,84,192,94,155,126,124,164,84,229"/>
-<area shape="rect" href="main_8cpp.html#aee6da6c18d4bd8450d07abf018c41c7e" title=" " alt="" coords="233,104,307,129"/>
+<area shape="rect" href="main_8cpp.html#aee6da6c18d4bd8450d07abf018c41c7e" title="Vérifie si le jeu est bloqué (aucun coup possible sur toute la grille)." alt="" coords="233,104,307,129"/>
 <area shape="poly" title=" " alt="" coords="85,226,128,183,157,159,189,138,219,126,221,131,192,143,161,164,132,187,89,230"/>
-<area shape="rect" href="main_8cpp.html#a65a2362688df5d28d549009b60eac855" title=" " alt="" coords="235,153,305,179"/>
+<area shape="rect" href="main_8cpp.html#a65a2362688df5d28d549009b60eac855" title="Initialise et remplis la grille avec des valeurs aléatoires." alt="" coords="235,153,305,179"/>
 <area shape="poly" title=" " alt="" coords="102,226,190,189,221,178,223,183,192,194,104,230"/>
-<area shape="rect" href="modeinfini_8cpp.html#a790d64b2ea79a74ab7dea3bec7573a73" title=" " alt="" coords="203,203,337,228"/>
+<area shape="rect" href="modeinfini_8cpp.html#a790d64b2ea79a74ab7dea3bec7573a73" title="Gère le déplacement d&#39;un bonbon en mode infini Pareil que celle de base et ajoute la possibilité d&#39;ar..." alt="" coords="203,203,337,228"/>
 <area shape="poly" title=" " alt="" coords="143,229,188,223,189,228,143,234"/>
-<area shape="rect" href="main_8cpp.html#a5abcd3dadd4e12f8dd749111b9909e74" title=" " alt="" coords="221,252,319,277"/>
+<area shape="rect" href="main_8cpp.html#a5abcd3dadd4e12f8dd749111b9909e74" title="Remonte les chiffres sur la grille. Fait remonter les valeurs pour combler les trous (&#45;1) après la su..." alt="" coords="221,252,319,277"/>
 <area shape="poly" title=" " alt="" coords="143,246,207,254,207,260,143,252"/>
 <area shape="rect" href="modeinfini_8cpp.html#a76eb451a8dc883f15db7502c9860ced9" title="main" alt="" coords="211,301,329,327"/>
 <area shape="poly" title=" " alt="" coords="104,251,192,288,212,295,210,300,190,292,102,256"/>
-<area shape="rect" href="modeinfini_8cpp.html#af5591e9d5429fcc2b2573e00c7aed10f" title=" " alt="" coords="215,351,325,376"/>
+<area shape="rect" href="modeinfini_8cpp.html#af5591e9d5429fcc2b2573e00c7aed10f" title="Affiche et met à jour le score pour le mode infini. Le score est calculé en multipliant le nombre de ..." alt="" coords="215,351,325,376"/>
 <area shape="poly" title=" " alt="" coords="89,252,132,293,161,317,192,337,205,343,203,348,189,342,158,321,128,297,85,255"/>
-<area shape="rect" href="main_8cpp.html#a5036d502c4e8e5796835286339b8e644" title=" " alt="" coords="191,400,349,425"/>
+<area shape="rect" href="main_8cpp.html#a5036d502c4e8e5796835286339b8e644" title="Supprime les alignements et met à jour le score. Parcourt la grille autour de la position donnée pour..." alt="" coords="191,400,349,425"/>
 <area shape="poly" title=" " alt="" coords="84,252,124,316,155,354,192,387,201,392,199,397,189,391,151,358,120,320,80,255"/>
-<area shape="rect" href="main_8cpp.html#ae241cf89d39423f89bb8e65688e4c031" title=" " alt="" coords="413,5,483,31"/>
+<area shape="rect" href="main_8cpp.html#ae241cf89d39423f89bb8e65688e4c031" title="Change la couleur du texte dans la console." alt="" coords="413,5,483,31"/>
 <area shape="poly" title=" " alt="" coords="316,52,399,29,400,34,317,57"/>
-<area shape="rect" href="main_8cpp.html#a889694f6e3de61c00c7ef972da1b49ff" title=" " alt="" coords="407,55,489,80"/>
+<area shape="rect" href="main_8cpp.html#a889694f6e3de61c00c7ef972da1b49ff" title="Souligne le texte dans la console." alt="" coords="407,55,489,80"/>
 <area shape="poly" title=" " alt="" coords="318,65,393,65,393,70,318,70"/>
-<area shape="rect" href="main_8cpp.html#ae3eccf309cc7813338869b0aad49cb28" title=" " alt="" coords="397,104,499,129"/>
+<area shape="rect" href="main_8cpp.html#ae3eccf309cc7813338869b0aad49cb28" title="Vérifie s&#39;il existe au moins un coup possible à partir d&#39;une case." alt="" coords="397,104,499,129"/>
 <area shape="poly" title=" " alt="" coords="308,114,384,114,384,119,308,119"/>
-<area shape="rect" href="main_8cpp.html#a48e2cdcaa0de3d338131e81661bf6999" title=" " alt="" coords="547,129,636,155"/>
+<area shape="rect" href="main_8cpp.html#a48e2cdcaa0de3d338131e81661bf6999" title="Vérifie si un mouvement est possible Verifie l&#39;échange de deux cases selon la direction donnée...." alt="" coords="547,129,636,155"/>
 <area shape="poly" title=" " alt="" coords="499,123,533,129,533,134,498,128"/>
-<area shape="rect" href="main_8cpp.html#a1fd049c8408b3e98edecd1472f25b0a7" title=" " alt="" coords="684,129,751,155"/>
+<area shape="rect" href="main_8cpp.html#a1fd049c8408b3e98edecd1472f25b0a7" title="Vérifie si on a un alignement de 3 chiffres identique." alt="" coords="684,129,751,155"/>
 <area shape="poly" title=" " alt="" coords="636,139,670,139,670,145,636,145"/>
 <area shape="poly" title=" " alt="" coords="326,200,533,152,534,158,327,205"/>
-<area shape="rect" href="main_8cpp.html#aae0c721c97bf177470b2fb801df605d1" title=" " alt="" coords="408,205,488,231"/>
+<area shape="rect" href="main_8cpp.html#aae0c721c97bf177470b2fb801df605d1" title="Demande à l&#39;utilisateur de sélectionner une case. Vérifie que les coordonnées entrées sont possible e..." alt="" coords="408,205,488,231"/>
 <area shape="poly" title=" " alt="" coords="338,214,394,215,394,220,338,219"/>
 </map>
 </div>
@@ -345,12 +398,12 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="modeinfini_8cpp_af30deecaf4ef694e85d7765be6764bd4_icgraph.png" border="0" usemap="#amodeinfini_8cpp_af30deecaf4ef694e85d7765be6764bd4_icgraph" alt=""/></div>
 <map name="amodeinfini_8cpp_af30deecaf4ef694e85d7765be6764bd4_icgraph" id="amodeinfini_8cpp_af30deecaf4ef694e85d7765be6764bd4_icgraph">
-<area shape="rect" title=" " alt="" coords="385,5,523,31"/>
-<area shape="rect" href="main_8cpp.html#a36ce9df10cf710ee8621446713854a71" title=" " alt="" coords="251,5,337,31"/>
+<area shape="rect" title="Fonction principale du jeu en Mode Infini. Initialise une grille mode normal La boucle continue tant ..." alt="" coords="385,5,523,31"/>
+<area shape="rect" href="main_8cpp.html#a36ce9df10cf710ee8621446713854a71" title="Menu principal pour les modes Solo. Propose au joueur de choisir entre les différents modes de jeu di..." alt="" coords="251,5,337,31"/>
 <area shape="poly" title=" " alt="" coords="372,21,337,21,337,15,372,15"/>
-<area shape="rect" href="main_8cpp.html#a87da64dc404fab46f81b3a2f39e4d2e3" title=" " alt="" coords="108,5,203,31"/>
+<area shape="rect" href="main_8cpp.html#a87da64dc404fab46f81b3a2f39e4d2e3" title="Affiche le menu principal et lance le mode de jeu choisi Permet de choisir entre Solo,..." alt="" coords="108,5,203,31"/>
 <area shape="poly" title=" " alt="" coords="237,21,203,21,203,15,237,15"/>
-<area shape="rect" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,60,31"/>
+<area shape="rect" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main Lance le menu pour jouer" alt="" coords="5,5,60,31"/>
 <area shape="poly" title=" " alt="" coords="95,21,60,21,60,15,95,15"/>
 </map>
 </div>
@@ -366,7 +419,7 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="memname">void rempliColonne </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="main_8cpp.html#aee710f500ed8d179390ae3862af69d24">mat</a> &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="main_8cpp.html#a34079cedfcd0dcc6476bf9f1076e8cbd">mat</a> &amp;&#160;</td>
           <td class="paramname"><em>grille</em>, </td>
         </tr>
         <tr>
@@ -397,19 +450,29 @@ Here is the caller graph for this function:</div>
 
 <p>main </p>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
+<p>Remplit les colonnes de la grille Remplit les cases vides -1 de la grille avec des vals aléatoires entre 1 et KNbCandies</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">grille</td><td>La grille </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">Nbligne</td><td>Nombre de lignes </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">Nbcolonne</td><td>Nombre de colonnes </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">KNbCandies</td><td>Nombes de chiffres différents </td></tr>
+  </table>
+  </dd>
+</dl>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="modeinfini_8cpp_a76eb451a8dc883f15db7502c9860ced9_icgraph.png" border="0" usemap="#amodeinfini_8cpp_a76eb451a8dc883f15db7502c9860ced9_icgraph" alt=""/></div>
 <map name="amodeinfini_8cpp_a76eb451a8dc883f15db7502c9860ced9_icgraph" id="amodeinfini_8cpp_a76eb451a8dc883f15db7502c9860ced9_icgraph">
 <area shape="rect" title="main" alt="" coords="571,5,688,31"/>
-<area shape="rect" href="modeinfini_8cpp.html#af30deecaf4ef694e85d7765be6764bd4" title=" " alt="" coords="385,5,523,31"/>
+<area shape="rect" href="modeinfini_8cpp.html#af30deecaf4ef694e85d7765be6764bd4" title="Fonction principale du jeu en Mode Infini. Initialise une grille mode normal La boucle continue tant ..." alt="" coords="385,5,523,31"/>
 <area shape="poly" title=" " alt="" coords="557,21,523,21,523,15,557,15"/>
-<area shape="rect" href="main_8cpp.html#a36ce9df10cf710ee8621446713854a71" title=" " alt="" coords="251,5,337,31"/>
+<area shape="rect" href="main_8cpp.html#a36ce9df10cf710ee8621446713854a71" title="Menu principal pour les modes Solo. Propose au joueur de choisir entre les différents modes de jeu di..." alt="" coords="251,5,337,31"/>
 <area shape="poly" title=" " alt="" coords="372,21,337,21,337,15,372,15"/>
-<area shape="rect" href="main_8cpp.html#a87da64dc404fab46f81b3a2f39e4d2e3" title=" " alt="" coords="108,5,203,31"/>
+<area shape="rect" href="main_8cpp.html#a87da64dc404fab46f81b3a2f39e4d2e3" title="Affiche le menu principal et lance le mode de jeu choisi Permet de choisir entre Solo,..." alt="" coords="108,5,203,31"/>
 <area shape="poly" title=" " alt="" coords="237,21,203,21,203,15,237,15"/>
-<area shape="rect" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,60,31"/>
+<area shape="rect" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main Lance le menu pour jouer" alt="" coords="5,5,60,31"/>
 <area shape="poly" title=" " alt="" coords="95,21,60,21,60,15,95,15"/>
 </map>
 </div>
@@ -447,26 +510,49 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Affiche et met à jour le score pour le mode infini. Le score est calculé en multipliant le nombre de bonbons supprimés par 10. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">score</td><td>Score total du joueur </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">nombredep</td><td>Nombre total de déplacements effectués </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">nombresupp</td><td>Nombre de chiffres supprimés remis a 0 après chaque deplacements </td></tr>
+  </table>
+  </dd>
+</dl>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="modeinfini_8cpp_af5591e9d5429fcc2b2573e00c7aed10f_icgraph.png" border="0" usemap="#amodeinfini_8cpp_af5591e9d5429fcc2b2573e00c7aed10f_icgraph" alt=""/></div>
 <map name="amodeinfini_8cpp_af5591e9d5429fcc2b2573e00c7aed10f_icgraph" id="amodeinfini_8cpp_af5591e9d5429fcc2b2573e00c7aed10f_icgraph">
-<area shape="rect" title=" " alt="" coords="571,80,680,105"/>
-<area shape="rect" href="modeinfini_8cpp.html#af30deecaf4ef694e85d7765be6764bd4" title=" " alt="" coords="385,5,523,31"/>
-<area shape="poly" title=" " alt="" coords="588,76,522,44,493,33,495,28,524,40,590,71"/>
-<area shape="rect" href="modehistoire_8cpp.html#a69908ca28708a1df8a3aa3503172594d" title=" " alt="" coords="417,55,491,80"/>
-<area shape="poly" title=" " alt="" coords="557,85,491,75,492,70,557,80"/>
-<area shape="rect" href="modehistoire_8cpp.html#ab46654af818b28fe03110fe96363c207" title=" " alt="" coords="417,104,491,129"/>
-<area shape="poly" title=" " alt="" coords="557,105,492,114,491,109,557,100"/>
-<area shape="rect" href="modehistoire_8cpp.html#a8e16742dc90f5d314418ac54b9bc4e70" title=" " alt="" coords="417,153,491,179"/>
-<area shape="poly" title=" " alt="" coords="587,114,524,143,492,156,490,151,522,138,585,109"/>
-<area shape="rect" href="main_8cpp.html#a36ce9df10cf710ee8621446713854a71" title=" " alt="" coords="251,5,337,31"/>
-<area shape="poly" title=" " alt="" coords="372,21,337,21,337,15,372,15"/>
-<area shape="rect" href="main_8cpp.html#a87da64dc404fab46f81b3a2f39e4d2e3" title=" " alt="" coords="108,5,203,31"/>
-<area shape="poly" title=" " alt="" coords="237,21,203,21,203,15,237,15"/>
-<area shape="rect" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,60,31"/>
-<area shape="poly" title=" " alt="" coords="95,21,60,21,60,15,95,15"/>
+<area shape="rect" title="Affiche et met à jour le score pour le mode infini. Le score est calculé en multipliant le nombre de ..." alt="" coords="1081,81,1191,107"/>
+<area shape="rect" href="modeinfini_8cpp.html#af30deecaf4ef694e85d7765be6764bd4" title="Fonction principale du jeu en Mode Infini. Initialise une grille mode normal La boucle continue tant ..." alt="" coords="773,5,911,31"/>
+<area shape="poly" title=" " alt="" coords="1097,78,1033,53,971,38,911,28,911,23,972,33,1034,47,1099,73"/>
+<area shape="rect" href="modehistoire_8cpp.html#a69908ca28708a1df8a3aa3503172594d" title="Lance le Niveau 1 l&#39;introduction. Grille 4x4, 2 couleurs, jouer jusqu&#39;au blocage." alt="" coords="651,56,725,81"/>
+<area shape="poly" title=" " alt="" coords="1067,93,726,73,726,68,1068,88"/>
+<area shape="rect" href="modehistoire_8cpp.html#ab46654af818b28fe03110fe96363c207" title="Niveau 2 Grille (6x6), 4 chiffres." alt="" coords="959,107,1033,132"/>
+<area shape="poly" title=" " alt="" coords="1068,109,1034,115,1033,110,1067,104"/>
+<area shape="rect" href="modehistoire_8cpp.html#a8e16742dc90f5d314418ac54b9bc4e70" title="Niveau 3 Grille 6x6, 3 chiffres doit avoir effacé au moins 15 chiffres." alt="" coords="959,156,1033,181"/>
+<area shape="poly" title=" " alt="" coords="1100,116,1022,158,1020,153,1098,111"/>
+<area shape="rect" href="main_8cpp.html#a36ce9df10cf710ee8621446713854a71" title="Menu principal pour les modes Solo. Propose au joueur de choisir entre les différents modes de jeu di..." alt="" coords="251,56,337,81"/>
+<area shape="poly" title=" " alt="" coords="759,27,542,46,338,67,337,61,541,41,759,22"/>
+<area shape="rect" href="main_8cpp.html#a87da64dc404fab46f81b3a2f39e4d2e3" title="Affiche le menu principal et lance le mode de jeu choisi Permet de choisir entre Solo,..." alt="" coords="108,56,203,81"/>
+<area shape="poly" title=" " alt="" coords="237,71,203,71,203,66,237,66"/>
+<area shape="rect" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main Lance le menu pour jouer" alt="" coords="5,56,60,81"/>
+<area shape="poly" title=" " alt="" coords="95,71,60,71,60,66,95,66"/>
+<area shape="rect" href="modehistoire_8cpp.html#a9acdc485860975bd64adef3834c3cf56" title="Chapitre 1. Enchaîne vers le Chapitre 2 si le joueur le souhaite." alt="" coords="541,56,603,81"/>
+<area shape="poly" title=" " alt="" coords="637,71,603,71,603,66,637,66"/>
+<area shape="rect" href="modehistoire_8cpp.html#a24d1c656b93e29aafae03c8235b80a0a" title="Menu principal du Mode Histoire. Ouvre le fichier texte de narration et permet au joueur de sélection..." alt="" coords="385,81,493,107"/>
+<area shape="poly" title=" " alt="" coords="528,80,494,86,493,81,527,74"/>
+<area shape="poly" title=" " alt="" coords="371,85,337,79,338,74,372,80"/>
+<area shape="rect" href="modehistoire_8cpp.html#ad9fcc453c77abfcb4533a4abf7833950" title="Chapitre 2. Enchaîne vers le Chapitre 3 si le joueur le souhaite." alt="" coords="657,107,719,132"/>
+<area shape="poly" title=" " alt="" coords="945,122,719,122,719,117,945,117"/>
+<area shape="poly" title=" " alt="" coords="645,103,601,84,603,79,647,99"/>
+<area shape="poly" title=" " alt="" coords="643,118,493,102,494,97,643,112"/>
+<area shape="rect" href="modehistoire_8cpp.html#a6a2711a5a74ae4812c6164add65e4da3" title="Chapitre 3. Enchaîne vers le Chapitre 4 si le joueur le souhaite." alt="" coords="811,157,873,183"/>
+<area shape="poly" title=" " alt="" coords="945,172,873,172,873,167,945,166"/>
+<area shape="poly" title=" " alt="" coords="797,168,650,147,486,109,488,104,651,142,798,163"/>
+<area shape="poly" title=" " alt="" coords="797,158,718,132,720,127,799,153"/>
 </map>
 </div>
 

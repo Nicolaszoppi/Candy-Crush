@@ -1,5 +1,10 @@
 \doxysection{modes\+\_\+de\+\_\+jeu/modehistoire.cpp File Reference}
 \hypertarget{modehistoire_8cpp}{}\label{modehistoire_8cpp}\index{modes\_de\_jeu/modehistoire.cpp@{modes\_de\_jeu/modehistoire.cpp}}
+
+
+Gestion du Mode Histoire.  
+
+
 {\ttfamily \#include "{}solo.\+h"{}}\newline
 {\ttfamily \#include $<$iostream$>$}\newline
 {\ttfamily \#include $<$vector$>$}\newline
@@ -7,7 +12,8 @@
 {\ttfamily \#include $<$fstream$>$}\newline
 {\ttfamily \#include $<$limits$>$}\newline
 {\ttfamily \#include "{}modeinfini.\+h"{}}\newline
-Include dependency graph for modehistoire.\+cpp\+:\nopagebreak
+Include dependency graph for modehistoire.\+cpp\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -19,57 +25,68 @@ Include dependency graph for modehistoire.\+cpp\+:\nopagebreak
 \item 
 typedef vector$<$ short int $>$ \mbox{\hyperlink{modehistoire_8cpp_ae045c87c132fe15ce75aeefe25f3aac5}{line}}
 \item 
-typedef vector$<$ \mbox{\hyperlink{main_8cpp_ae045c87c132fe15ce75aeefe25f3aac5}{line}} $>$ \mbox{\hyperlink{modehistoire_8cpp_aee710f500ed8d179390ae3862af69d24}{mat}}
+typedef vector$<$ \mbox{\hyperlink{main_8cpp_a4fa05b1f00fcde100685cc887554b93b}{line}} $>$ \mbox{\hyperlink{modehistoire_8cpp_aee710f500ed8d179390ae3862af69d24}{mat}}
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{modehistoire_8cpp_a48184dc3b25f26859350dbc4aa63a599}{verifnom}} (string \&nom)
-\item 
-int \mbox{\hyperlink{modehistoire_8cpp_a5add5c5559950476c2dc56c6baed9afb}{condchap3}} (\mbox{\hyperlink{main_8cpp_aee710f500ed8d179390ae3862af69d24}{mat}} grille, long int \&Nbligne, long int \&Nbcolonne)
-\item 
-int \mbox{\hyperlink{modehistoire_8cpp_a37a23d4d1a008e192560ef88b8f7694d}{condchap5}} (\mbox{\hyperlink{main_8cpp_aee710f500ed8d179390ae3862af69d24}{mat}} \&grille, long int \&Nbligne, long int \&Nbcolonne)
-\item 
+\begin{DoxyCompactList}\small\item\em Demande le nom du joueur pour le mode histoire. Si le joueur entre "{}\&"{}alors il doit entrer un autre nom valide. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{modehistoire_8cpp_a5add5c5559950476c2dc56c6baed9afb}{condchap3}} (\mbox{\hyperlink{main_8cpp_a34079cedfcd0dcc6476bf9f1076e8cbd}{mat}} grille, long int \&Nbligne, long int \&Nbcolonne)
+\begin{DoxyCompactList}\small\item\em Vérifie la condition de victoire du Chapitre 3. Compte le nombre de cases vides (-\/1) dans la grille. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{modehistoire_8cpp_a37a23d4d1a008e192560ef88b8f7694d}{condchap5}} (\mbox{\hyperlink{main_8cpp_a34079cedfcd0dcc6476bf9f1076e8cbd}{mat}} \&grille, long int \&Nbligne, long int \&Nbcolonne)
+\begin{DoxyCompactList}\small\item\em Vérifie la condition de victoire du Chapitre 4. Compte le nombre de cases vides (-\/1) dans la grille. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{modehistoire_8cpp_a69908ca28708a1df8a3aa3503172594d}{niveau1}} (string \&nom, unsigned long \&score, unsigned long \&nombredep, unsigned long \&nombresupp, char \&direction, \mbox{\hyperlink{structmaPosition}{ma\+Position}} \&coord, long int \&Nbligne, long int \&Nbcolonne, size\+\_\+t \&KNb\+Candies)
-\item 
+\begin{DoxyCompactList}\small\item\em Lance le Niveau 1 l\textquotesingle{}introduction. Grille 4x4, 2 couleurs, jouer jusqu\textquotesingle{}au blocage. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{modehistoire_8cpp_ab46654af818b28fe03110fe96363c207}{niveau2}} (string \&nom, unsigned long \&score, unsigned long \&nombredep, unsigned long \&nombresupp, char \&direction, \mbox{\hyperlink{structmaPosition}{ma\+Position}} \&coord, long int \&Nbligne, long int \&Nbcolonne, size\+\_\+t \&KNb\+Candies)
-\item 
+\begin{DoxyCompactList}\small\item\em Niveau 2 Grille (6x6), 4 chiffres. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{modehistoire_8cpp_a8e16742dc90f5d314418ac54b9bc4e70}{niveau3}} (string \&nom, unsigned long \&score, unsigned long \&nombredep, unsigned long \&nombresupp, char \&direction, \mbox{\hyperlink{structmaPosition}{ma\+Position}} \&coord, long int \&Nbligne, long int \&Nbcolonne, size\+\_\+t \&KNb\+Candies)
-\item 
+\begin{DoxyCompactList}\small\item\em Niveau 3 Grille 6x6, 3 chiffres doit avoir effacé au moins 15 chiffres. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{modehistoire_8cpp_a501c2cd13e7c0e2cd47b8a934e5a51b0}{niveau4}} (string \&nom, unsigned long \&score, unsigned long \&nombredep, unsigned long \&nombresupp, char \&direction, \mbox{\hyperlink{structmaPosition}{ma\+Position}} \&coord, long int \&Nbligne, long int \&Nbcolonne, size\+\_\+t \&KNb\+Candies, size\+\_\+t \&nbtour)
-\item 
+\begin{DoxyCompactList}\small\item\em Niveau 4 Grille 6x8, 4 couleurs, 10 tours maximum. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{modehistoire_8cpp_a6b5cc1de640781ab04604fe8aea9b27b}{niveau5}} (string \&nom, unsigned long \&score, unsigned long \&nombredep, unsigned long \&nombresupp, char \&direction, \mbox{\hyperlink{structmaPosition}{ma\+Position}} \&coord, long int \&Nbligne, long int \&Nbcolonne, size\+\_\+t \&KNb\+Candies, size\+\_\+t \&nbtour)
-\item 
+\begin{DoxyCompactList}\small\item\em Niveau 5 Grille 8x8, 4 couleurs, 16 tours. Doit éliminer 45 chiffres en moins de 16 tours. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{modehistoire_8cpp_ab4c880e4d24ea4654f2ffcc029087cc9}{affichetxt}} (ifstream \&fichier, int val)
-\item 
+\begin{DoxyCompactList}\small\item\em Affiche les lignes du fichier texte. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{modehistoire_8cpp_a882ce2a1f510bde5afda2fb52c650a58}{ajourtxt}} (ifstream \&fichier, int val)
-\item 
+\begin{DoxyCompactList}\small\item\em Saute un nombre donné de lignes dans un fichier sans afficher. Met a jour le texte a afficher pour le mode histoire. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{modehistoire_8cpp_aab5a0ed6f45a325ad63871d8945be6c1}{chap5}} (string \&nom, ifstream \&fichier, unsigned long \&score, unsigned long \&nombredep, unsigned long \&nombresupp, char \&direction, \mbox{\hyperlink{structmaPosition}{ma\+Position}} \&coord, long int \&Nbligne, long int \&Nbcolonne, size\+\_\+t \&KNb\+Candies, size\+\_\+t \&nbtour)
-\item 
+\begin{DoxyCompactList}\small\item\em Chapitre 5 Lit la narration du chapitre 5, lance le niveau 5 et affiche la fin du jeu. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{modehistoire_8cpp_ab12343047fefb3413ea3ad9b8ba3e5aa}{chap4}} (string \&nom, ifstream \&fichier, unsigned long \&score, unsigned long \&nombredep, unsigned long \&nombresupp, char \&direction, \mbox{\hyperlink{structmaPosition}{ma\+Position}} \&coord, long int \&Nbligne, long int \&Nbcolonne, size\+\_\+t \&KNb\+Candies, size\+\_\+t \&nbtour)
-\item 
+\begin{DoxyCompactList}\small\item\em Chapitre 4. Passe au chapitre 5 si le joueur veut. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{modehistoire_8cpp_a6a2711a5a74ae4812c6164add65e4da3}{chap3}} (string \&nom, ifstream \&fichier, unsigned long \&score, unsigned long \&nombredep, unsigned long \&nombresupp, char \&direction, \mbox{\hyperlink{structmaPosition}{ma\+Position}} \&coord, long int \&Nbligne, long int \&Nbcolonne, size\+\_\+t \&KNb\+Candies)
-\item 
+\begin{DoxyCompactList}\small\item\em Chapitre 3. Enchaîne vers le Chapitre 4 si le joueur le souhaite. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{modehistoire_8cpp_ad9fcc453c77abfcb4533a4abf7833950}{chap2}} (string \&nom, ifstream \&fichier, unsigned long \&score, unsigned long \&nombredep, unsigned long \&nombresupp, char \&direction, \mbox{\hyperlink{structmaPosition}{ma\+Position}} \&coord, long int \&Nbligne, long int \&Nbcolonne, size\+\_\+t \&KNb\+Candies)
-\item 
+\begin{DoxyCompactList}\small\item\em Chapitre 2. Enchaîne vers le Chapitre 3 si le joueur le souhaite. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{modehistoire_8cpp_a9acdc485860975bd64adef3834c3cf56}{chap1}} (string \&nom, ifstream \&fichier, unsigned long \&score, unsigned long \&nombredep, unsigned long \&nombresupp, char \&direction, \mbox{\hyperlink{structmaPosition}{ma\+Position}} \&coord, long int \&Nbligne, long int \&Nbcolonne, size\+\_\+t \&KNb\+Candies)
-\item 
+\begin{DoxyCompactList}\small\item\em Chapitre 1. Enchaîne vers le Chapitre 2 si le joueur le souhaite. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{modehistoire_8cpp_a24d1c656b93e29aafae03c8235b80a0a}{modehistoire}} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Menu principal du Mode Histoire. Ouvre le fichier texte de narration et permet au joueur de sélectionner le chapitre qu\textquotesingle{}il souhaite jouer. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+Gestion du Mode Histoire. 
+
+\begin{DoxyAuthor}{Author}
+ZOPPI Nicolas, KEOKHAM Rayan, LONGO Matys ; BUT1 Informatique GROUPE 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2025-\/01-\/04 
+\end{DoxyDate}
+Ce fichier contient les fonctions pour les 5 chapitres du mode histoire. 
 
 \doxysubsection{Typedef Documentation}
 \Hypertarget{modehistoire_8cpp_ae045c87c132fe15ce75aeefe25f3aac5}\label{modehistoire_8cpp_ae045c87c132fe15ce75aeefe25f3aac5} 
 \index{modehistoire.cpp@{modehistoire.cpp}!line@{line}}
 \index{line@{line}!modehistoire.cpp@{modehistoire.cpp}}
 \doxysubsubsection{\texorpdfstring{line}{line}}
-{\footnotesize\ttfamily typedef vector$<$short int$>$ \mbox{\hyperlink{main_8cpp_ae045c87c132fe15ce75aeefe25f3aac5}{line}}}
+{\footnotesize\ttfamily typedef vector$<$short int$>$ \mbox{\hyperlink{main_8cpp_a4fa05b1f00fcde100685cc887554b93b}{line}}}
 
 \Hypertarget{modehistoire_8cpp_aee710f500ed8d179390ae3862af69d24}\label{modehistoire_8cpp_aee710f500ed8d179390ae3862af69d24} 
 \index{modehistoire.cpp@{modehistoire.cpp}!mat@{mat}}
 \index{mat@{mat}!modehistoire.cpp@{modehistoire.cpp}}
 \doxysubsubsection{\texorpdfstring{mat}{mat}}
-{\footnotesize\ttfamily typedef vector$<$\mbox{\hyperlink{main_8cpp_ae045c87c132fe15ce75aeefe25f3aac5}{line}}$>$ \mbox{\hyperlink{main_8cpp_aee710f500ed8d179390ae3862af69d24}{mat}}}
+{\footnotesize\ttfamily typedef vector$<$\mbox{\hyperlink{main_8cpp_a4fa05b1f00fcde100685cc887554b93b}{line}}$>$ \mbox{\hyperlink{main_8cpp_a34079cedfcd0dcc6476bf9f1076e8cbd}{mat}}}
 
 
 
@@ -80,6 +97,17 @@ void \mbox{\hyperlink{modehistoire_8cpp_a24d1c656b93e29aafae03c8235b80a0a}{modeh
 \doxysubsubsection{\texorpdfstring{affichetxt()}{affichetxt()}}
 {\footnotesize\ttfamily void affichetxt (\begin{DoxyParamCaption}\item[{ifstream \&}]{fichier,  }\item[{int}]{val }\end{DoxyParamCaption})}
 
+
+
+Affiche les lignes du fichier texte. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em fichier} & Flux de fichier ouvert ifstream \\
+\hline
+\mbox{\texttt{ in}}  & {\em val} & Nombre de lignes à lire et afficher \\
+\hline
+\end{DoxyParams}
 Here is the caller graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
@@ -94,6 +122,17 @@ Here is the caller graph for this function\+:
 \doxysubsubsection{\texorpdfstring{ajourtxt()}{ajourtxt()}}
 {\footnotesize\ttfamily void ajourtxt (\begin{DoxyParamCaption}\item[{ifstream \&}]{fichier,  }\item[{int}]{val }\end{DoxyParamCaption})}
 
+
+
+Saute un nombre donné de lignes dans un fichier sans afficher. Met a jour le texte a afficher pour le mode histoire. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em fichier} & Flux de fichier \\
+\hline
+\mbox{\texttt{ in}}  & {\em val} & Nombre de lignes à ignorer \\
+\hline
+\end{DoxyParams}
 Here is the caller graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
@@ -108,7 +147,12 @@ Here is the caller graph for this function\+:
 \doxysubsubsection{\texorpdfstring{chap1()}{chap1()}}
 {\footnotesize\ttfamily void chap1 (\begin{DoxyParamCaption}\item[{string \&}]{nom,  }\item[{ifstream \&}]{fichier,  }\item[{unsigned long \&}]{score,  }\item[{unsigned long \&}]{nombredep,  }\item[{unsigned long \&}]{nombresupp,  }\item[{char \&}]{direction,  }\item[{\mbox{\hyperlink{structmaPosition}{ma\+Position}} \&}]{coord,  }\item[{long int \&}]{Nbligne,  }\item[{long int \&}]{Nbcolonne,  }\item[{size\+\_\+t \&}]{KNb\+Candies }\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:\nopagebreak
+
+
+Chapitre 1. Enchaîne vers le Chapitre 2 si le joueur le souhaite. 
+
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -129,7 +173,12 @@ Here is the caller graph for this function\+:
 \doxysubsubsection{\texorpdfstring{chap2()}{chap2()}}
 {\footnotesize\ttfamily void chap2 (\begin{DoxyParamCaption}\item[{string \&}]{nom,  }\item[{ifstream \&}]{fichier,  }\item[{unsigned long \&}]{score,  }\item[{unsigned long \&}]{nombredep,  }\item[{unsigned long \&}]{nombresupp,  }\item[{char \&}]{direction,  }\item[{\mbox{\hyperlink{structmaPosition}{ma\+Position}} \&}]{coord,  }\item[{long int \&}]{Nbligne,  }\item[{long int \&}]{Nbcolonne,  }\item[{size\+\_\+t \&}]{KNb\+Candies }\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:\nopagebreak
+
+
+Chapitre 2. Enchaîne vers le Chapitre 3 si le joueur le souhaite. 
+
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -150,7 +199,12 @@ Here is the caller graph for this function\+:
 \doxysubsubsection{\texorpdfstring{chap3()}{chap3()}}
 {\footnotesize\ttfamily void chap3 (\begin{DoxyParamCaption}\item[{string \&}]{nom,  }\item[{ifstream \&}]{fichier,  }\item[{unsigned long \&}]{score,  }\item[{unsigned long \&}]{nombredep,  }\item[{unsigned long \&}]{nombresupp,  }\item[{char \&}]{direction,  }\item[{\mbox{\hyperlink{structmaPosition}{ma\+Position}} \&}]{coord,  }\item[{long int \&}]{Nbligne,  }\item[{long int \&}]{Nbcolonne,  }\item[{size\+\_\+t \&}]{KNb\+Candies }\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:\nopagebreak
+
+
+Chapitre 3. Enchaîne vers le Chapitre 4 si le joueur le souhaite. 
+
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -171,14 +225,20 @@ Here is the caller graph for this function\+:
 \doxysubsubsection{\texorpdfstring{chap4()}{chap4()}}
 {\footnotesize\ttfamily void chap4 (\begin{DoxyParamCaption}\item[{string \&}]{nom,  }\item[{ifstream \&}]{fichier,  }\item[{unsigned long \&}]{score,  }\item[{unsigned long \&}]{nombredep,  }\item[{unsigned long \&}]{nombresupp,  }\item[{char \&}]{direction,  }\item[{\mbox{\hyperlink{structmaPosition}{ma\+Position}} \&}]{coord,  }\item[{long int \&}]{Nbligne,  }\item[{long int \&}]{Nbcolonne,  }\item[{size\+\_\+t \&}]{KNb\+Candies,  }\item[{size\+\_\+t \&}]{nbtour }\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:\nopagebreak
+
+
+Chapitre 4. Passe au chapitre 5 si le joueur veut. 
+
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=307pt]{modehistoire_8cpp_ab12343047fefb3413ea3ad9b8ba3e5aa_cgraph}
+\includegraphics[width=350pt]{modehistoire_8cpp_ab12343047fefb3413ea3ad9b8ba3e5aa_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -191,14 +251,20 @@ Here is the caller graph for this function\+:\nopagebreak
 \doxysubsubsection{\texorpdfstring{chap5()}{chap5()}}
 {\footnotesize\ttfamily void chap5 (\begin{DoxyParamCaption}\item[{string \&}]{nom,  }\item[{ifstream \&}]{fichier,  }\item[{unsigned long \&}]{score,  }\item[{unsigned long \&}]{nombredep,  }\item[{unsigned long \&}]{nombresupp,  }\item[{char \&}]{direction,  }\item[{\mbox{\hyperlink{structmaPosition}{ma\+Position}} \&}]{coord,  }\item[{long int \&}]{Nbligne,  }\item[{long int \&}]{Nbcolonne,  }\item[{size\+\_\+t \&}]{KNb\+Candies,  }\item[{size\+\_\+t \&}]{nbtour }\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:\nopagebreak
+
+
+Chapitre 5 Lit la narration du chapitre 5, lance le niveau 5 et affiche la fin du jeu. 
+
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=225pt]{modehistoire_8cpp_aab5a0ed6f45a325ad63871d8945be6c1_cgraph}
+\includegraphics[width=350pt]{modehistoire_8cpp_aab5a0ed6f45a325ad63871d8945be6c1_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -209,26 +275,60 @@ Here is the caller graph for this function\+:\nopagebreak
 \index{modehistoire.cpp@{modehistoire.cpp}!condchap3@{condchap3}}
 \index{condchap3@{condchap3}!modehistoire.cpp@{modehistoire.cpp}}
 \doxysubsubsection{\texorpdfstring{condchap3()}{condchap3()}}
-{\footnotesize\ttfamily int condchap3 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{main_8cpp_aee710f500ed8d179390ae3862af69d24}{mat}}}]{grille,  }\item[{long int \&}]{Nbligne,  }\item[{long int \&}]{Nbcolonne }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily int condchap3 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{main_8cpp_a34079cedfcd0dcc6476bf9f1076e8cbd}{mat}}}]{grille,  }\item[{long int \&}]{Nbligne,  }\item[{long int \&}]{Nbcolonne }\end{DoxyParamCaption})}
 
-Here is the caller graph for this function\+:\nopagebreak
+
+
+Vérifie la condition de victoire du Chapitre 3. Compte le nombre de cases vides (-\/1) dans la grille. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em grille} & La grille \\
+\hline
+\mbox{\texttt{ in}}  & {\em Nbligne} & Nombre de lignes \\
+\hline
+\mbox{\texttt{ in}}  & {\em Nbcolonne} & Nombre de colonnes \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int Le nombre de cases vides 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=241pt]{modehistoire_8cpp_a5add5c5559950476c2dc56c6baed9afb_icgraph}
+\includegraphics[width=350pt]{modehistoire_8cpp_a5add5c5559950476c2dc56c6baed9afb_icgraph}
 \end{center}
 \end{figure}
 \Hypertarget{modehistoire_8cpp_a37a23d4d1a008e192560ef88b8f7694d}\label{modehistoire_8cpp_a37a23d4d1a008e192560ef88b8f7694d} 
 \index{modehistoire.cpp@{modehistoire.cpp}!condchap5@{condchap5}}
 \index{condchap5@{condchap5}!modehistoire.cpp@{modehistoire.cpp}}
 \doxysubsubsection{\texorpdfstring{condchap5()}{condchap5()}}
-{\footnotesize\ttfamily int condchap5 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{main_8cpp_aee710f500ed8d179390ae3862af69d24}{mat}} \&}]{grille,  }\item[{long int \&}]{Nbligne,  }\item[{long int \&}]{Nbcolonne }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily int condchap5 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{main_8cpp_a34079cedfcd0dcc6476bf9f1076e8cbd}{mat}} \&}]{grille,  }\item[{long int \&}]{Nbligne,  }\item[{long int \&}]{Nbcolonne }\end{DoxyParamCaption})}
 
-Here is the caller graph for this function\+:\nopagebreak
+
+
+Vérifie la condition de victoire du Chapitre 4. Compte le nombre de cases vides (-\/1) dans la grille. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em grille} & La grille \\
+\hline
+\mbox{\texttt{ in}}  & {\em Nbligne} & Nombre de lignes \\
+\hline
+\mbox{\texttt{ in}}  & {\em Nbcolonne} & Nombre de colonnes \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int Le nombre de cases vides 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=241pt]{modehistoire_8cpp_a37a23d4d1a008e192560ef88b8f7694d_icgraph}
+\includegraphics[width=350pt]{modehistoire_8cpp_a37a23d4d1a008e192560ef88b8f7694d_icgraph}
 \end{center}
 \end{figure}
 \Hypertarget{modehistoire_8cpp_a24d1c656b93e29aafae03c8235b80a0a}\label{modehistoire_8cpp_a24d1c656b93e29aafae03c8235b80a0a} 
@@ -237,7 +337,12 @@ Here is the caller graph for this function\+:\nopagebreak
 \doxysubsubsection{\texorpdfstring{modehistoire()}{modehistoire()}}
 {\footnotesize\ttfamily void modehistoire (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:\nopagebreak
+
+
+Menu principal du Mode Histoire. Ouvre le fichier texte de narration et permet au joueur de sélectionner le chapitre qu\textquotesingle{}il souhaite jouer. 
+
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -258,11 +363,45 @@ Here is the caller graph for this function\+:
 \doxysubsubsection{\texorpdfstring{niveau1()}{niveau1()}}
 {\footnotesize\ttfamily void niveau1 (\begin{DoxyParamCaption}\item[{string \&}]{nom,  }\item[{unsigned long \&}]{score,  }\item[{unsigned long \&}]{nombredep,  }\item[{unsigned long \&}]{nombresupp,  }\item[{char \&}]{direction,  }\item[{\mbox{\hyperlink{structmaPosition}{ma\+Position}} \&}]{coord,  }\item[{long int \&}]{Nbligne,  }\item[{long int \&}]{Nbcolonne,  }\item[{size\+\_\+t \&}]{KNb\+Candies }\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:\nopagebreak
+
+
+Lance le Niveau 1 l\textquotesingle{}introduction. Grille 4x4, 2 couleurs, jouer jusqu\textquotesingle{}au blocage. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em nom} & Nom du joueur. \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em score} & Score du joueur. \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em nombredep} & Nombre de déplacements. \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em nombresupp} & Nombre de bonbons supprimés. \\
+\hline
+\mbox{\texttt{ out}}  & {\em direction} & Direction du mouvement. \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em coord} & Position du curseur. \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em Nbligne} & Taille (lignes). \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em Nbcolonne} & Taille (colonnes). \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em KNb\+Candies} & Nombre de couleurs. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{modehistoire_8cpp_a69908ca28708a1df8a3aa3503172594d_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{modehistoire_8cpp_a69908ca28708a1df8a3aa3503172594d_icgraph}
 \end{center}
 \end{figure}
 \Hypertarget{modehistoire_8cpp_ab46654af818b28fe03110fe96363c207}\label{modehistoire_8cpp_ab46654af818b28fe03110fe96363c207} 
@@ -271,11 +410,24 @@ Here is the call graph for this function\+:\nopagebreak
 \doxysubsubsection{\texorpdfstring{niveau2()}{niveau2()}}
 {\footnotesize\ttfamily void niveau2 (\begin{DoxyParamCaption}\item[{string \&}]{nom,  }\item[{unsigned long \&}]{score,  }\item[{unsigned long \&}]{nombredep,  }\item[{unsigned long \&}]{nombresupp,  }\item[{char \&}]{direction,  }\item[{\mbox{\hyperlink{structmaPosition}{ma\+Position}} \&}]{coord,  }\item[{long int \&}]{Nbligne,  }\item[{long int \&}]{Nbcolonne,  }\item[{size\+\_\+t \&}]{KNb\+Candies }\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:\nopagebreak
+
+
+Niveau 2 Grille (6x6), 4 chiffres. 
+
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{modehistoire_8cpp_ab46654af818b28fe03110fe96363c207_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{modehistoire_8cpp_ab46654af818b28fe03110fe96363c207_icgraph}
 \end{center}
 \end{figure}
 \Hypertarget{modehistoire_8cpp_a8e16742dc90f5d314418ac54b9bc4e70}\label{modehistoire_8cpp_a8e16742dc90f5d314418ac54b9bc4e70} 
@@ -284,11 +436,29 @@ Here is the call graph for this function\+:\nopagebreak
 \doxysubsubsection{\texorpdfstring{niveau3()}{niveau3()}}
 {\footnotesize\ttfamily bool niveau3 (\begin{DoxyParamCaption}\item[{string \&}]{nom,  }\item[{unsigned long \&}]{score,  }\item[{unsigned long \&}]{nombredep,  }\item[{unsigned long \&}]{nombresupp,  }\item[{char \&}]{direction,  }\item[{\mbox{\hyperlink{structmaPosition}{ma\+Position}} \&}]{coord,  }\item[{long int \&}]{Nbligne,  }\item[{long int \&}]{Nbcolonne,  }\item[{size\+\_\+t \&}]{KNb\+Candies }\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:\nopagebreak
+
+
+Niveau 3 Grille 6x6, 3 chiffres doit avoir effacé au moins 15 chiffres. 
+
+\begin{DoxyReturn}{Returns}
+true Si le joueur a éliminé au moins 15 chiffres 
+
+false Sinon 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{modehistoire_8cpp_a8e16742dc90f5d314418ac54b9bc4e70_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{modehistoire_8cpp_a8e16742dc90f5d314418ac54b9bc4e70_icgraph}
 \end{center}
 \end{figure}
 \Hypertarget{modehistoire_8cpp_a501c2cd13e7c0e2cd47b8a934e5a51b0}\label{modehistoire_8cpp_a501c2cd13e7c0e2cd47b8a934e5a51b0} 
@@ -297,11 +467,34 @@ Here is the call graph for this function\+:\nopagebreak
 \doxysubsubsection{\texorpdfstring{niveau4()}{niveau4()}}
 {\footnotesize\ttfamily bool niveau4 (\begin{DoxyParamCaption}\item[{string \&}]{nom,  }\item[{unsigned long \&}]{score,  }\item[{unsigned long \&}]{nombredep,  }\item[{unsigned long \&}]{nombresupp,  }\item[{char \&}]{direction,  }\item[{\mbox{\hyperlink{structmaPosition}{ma\+Position}} \&}]{coord,  }\item[{long int \&}]{Nbligne,  }\item[{long int \&}]{Nbcolonne,  }\item[{size\+\_\+t \&}]{KNb\+Candies,  }\item[{size\+\_\+t \&}]{nbtour }\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:\nopagebreak
+
+
+Niveau 4 Grille 6x8, 4 couleurs, 10 tours maximum. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em nbtour} & Nombre de tours \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true Si le joueur a terminé en moins de 10 tours 
+
+false Si tours fini alors perdu 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{modehistoire_8cpp_a501c2cd13e7c0e2cd47b8a934e5a51b0_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{modehistoire_8cpp_a501c2cd13e7c0e2cd47b8a934e5a51b0_icgraph}
 \end{center}
 \end{figure}
 \Hypertarget{modehistoire_8cpp_a6b5cc1de640781ab04604fe8aea9b27b}\label{modehistoire_8cpp_a6b5cc1de640781ab04604fe8aea9b27b} 
@@ -310,11 +503,29 @@ Here is the call graph for this function\+:\nopagebreak
 \doxysubsubsection{\texorpdfstring{niveau5()}{niveau5()}}
 {\footnotesize\ttfamily bool niveau5 (\begin{DoxyParamCaption}\item[{string \&}]{nom,  }\item[{unsigned long \&}]{score,  }\item[{unsigned long \&}]{nombredep,  }\item[{unsigned long \&}]{nombresupp,  }\item[{char \&}]{direction,  }\item[{\mbox{\hyperlink{structmaPosition}{ma\+Position}} \&}]{coord,  }\item[{long int \&}]{Nbligne,  }\item[{long int \&}]{Nbcolonne,  }\item[{size\+\_\+t \&}]{KNb\+Candies,  }\item[{size\+\_\+t \&}]{nbtour }\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:\nopagebreak
+
+
+Niveau 5 Grille 8x8, 4 couleurs, 16 tours. Doit éliminer 45 chiffres en moins de 16 tours. 
+
+\begin{DoxyReturn}{Returns}
+true Si condition remplie. 
+
+false Sinon. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{modehistoire_8cpp_a6b5cc1de640781ab04604fe8aea9b27b_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{modehistoire_8cpp_a6b5cc1de640781ab04604fe8aea9b27b_icgraph}
 \end{center}
 \end{figure}
 \Hypertarget{modehistoire_8cpp_a48184dc3b25f26859350dbc4aa63a599}\label{modehistoire_8cpp_a48184dc3b25f26859350dbc4aa63a599} 
@@ -323,6 +534,15 @@ Here is the call graph for this function\+:\nopagebreak
 \doxysubsubsection{\texorpdfstring{verifnom()}{verifnom()}}
 {\footnotesize\ttfamily void verifnom (\begin{DoxyParamCaption}\item[{string \&}]{nom }\end{DoxyParamCaption})}
 
+
+
+Demande le nom du joueur pour le mode histoire. Si le joueur entre "{}\&"{}alors il doit entrer un autre nom valide. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em nom} & Le nom du joueur \\
+\hline
+\end{DoxyParams}
 Here is the caller graph for this function\+:
 \nopagebreak
 \begin{figure}[H]

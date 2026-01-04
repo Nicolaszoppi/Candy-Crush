@@ -9,7 +9,8 @@ Include dependency graph for solo.\+h\+:\nopagebreak
 \includegraphics[width=201pt]{solo_8h__incl}
 \end{center}
 \end{figure}
-This graph shows which files directly or indirectly include this file\+:\nopagebreak
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -26,51 +27,49 @@ struct \mbox{\hyperlink{structmaPosition}{ma\+Position}}
 \item 
 typedef vector$<$ short int $>$ \mbox{\hyperlink{solo_8h_ae045c87c132fe15ce75aeefe25f3aac5}{line}}
 \item 
-typedef vector$<$ \mbox{\hyperlink{main_8cpp_ae045c87c132fe15ce75aeefe25f3aac5}{line}} $>$ \mbox{\hyperlink{solo_8h_aee710f500ed8d179390ae3862af69d24}{mat}}
+typedef vector$<$ \mbox{\hyperlink{main_8cpp_a4fa05b1f00fcde100685cc887554b93b}{line}} $>$ \mbox{\hyperlink{solo_8h_aee710f500ed8d179390ae3862af69d24}{mat}}
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{solo_8h_aaee81cb19b7773fe8d63ebb764b747a3}{reglesjeu}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Affiche les règles du jeu à partir d\textquotesingle{}un fichier externe. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{solo_8h_ae241cf89d39423f89bb8e65688e4c031}{couleur}} (const unsigned \&coul)
-\item 
+\begin{DoxyCompactList}\small\item\em Change la couleur du texte dans la console. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{solo_8h_a889694f6e3de61c00c7ef972da1b49ff}{souligner}} (const unsigned \&chiffre)
-\item 
+\begin{DoxyCompactList}\small\item\em Souligne le texte dans la console. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{solo_8h_a902108fd41723cc1a6aee3b72f60feca}{creategrille}} (size\+\_\+t \&KNb\+Candies, long int \&Nbligne, long int \&Nbcolonne, size\+\_\+t \&nbtour)
-\item 
+\begin{DoxyCompactList}\small\item\em Initialise les paramètres de la grille Demande à l\textquotesingle{}utilisateur le nombre de types de chiffres différents et calcule automatiquementla taille de la grille et le nombre de tours. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{solo_8h_ab9175e8c357d0f9925ce412006b7de43}{creategrilleperso}} (size\+\_\+t \&KNb\+Candies, long int \&Nbligne, long int \&Nbcolonne, size\+\_\+t \&nbtour)
-\item 
-bool \mbox{\hyperlink{solo_8h_a1fd049c8408b3e98edecd1472f25b0a7}{litalign}} (const \mbox{\hyperlink{main_8cpp_aee710f500ed8d179390ae3862af69d24}{mat}} \&grille, \mbox{\hyperlink{structmaPosition}{ma\+Position}} \&coord, const long int \&Nbligne, const long int \&Nbcolonne)
-\item 
-\mbox{\hyperlink{main_8cpp_aee710f500ed8d179390ae3862af69d24}{mat}} \mbox{\hyperlink{solo_8h_a65a2362688df5d28d549009b60eac855}{init\+Grid}} (\mbox{\hyperlink{main_8cpp_aee710f500ed8d179390ae3862af69d24}{mat}} \&grille, const long int \&Nbligne, const long int \&Nbcolonne, const size\+\_\+t \&KNb\+Candies)
-\item 
-void \mbox{\hyperlink{solo_8h_aeac4844f2b7ebff74c1f10f044043f88}{display\+Grid}} (\mbox{\hyperlink{main_8cpp_aee710f500ed8d179390ae3862af69d24}{mat}} \&grille, const long int \&Nbligne, const long int \&Nbcolonne, const \mbox{\hyperlink{structmaPosition}{ma\+Position}} \&coord)
-\item 
-bool \mbox{\hyperlink{solo_8h_a48e2cdcaa0de3d338131e81661bf6999}{possmove}} (\mbox{\hyperlink{main_8cpp_aee710f500ed8d179390ae3862af69d24}{mat}} \&grille, \mbox{\hyperlink{structmaPosition}{ma\+Position}} \&coord, char \&direction, const long int \&Nbligne, const long int \&Nbcolonne)
-\item 
-void \mbox{\hyperlink{solo_8h_aae0c721c97bf177470b2fb801df605d1}{initmove}} (\mbox{\hyperlink{main_8cpp_aee710f500ed8d179390ae3862af69d24}{mat}} \&grille, \mbox{\hyperlink{structmaPosition}{ma\+Position}} \&coord, const long int \&Nbligne, const long int \&Nbcolonne)
-\item 
-void \mbox{\hyperlink{solo_8h_a05a35cc8a32c2ec2c7358964374781b8}{make\+AMove}} (\mbox{\hyperlink{main_8cpp_aee710f500ed8d179390ae3862af69d24}{mat}} \&grille, \mbox{\hyperlink{structmaPosition}{ma\+Position}} \&coord, char \&direction, unsigned long \&nombredep, const long int \&Nbligne, const long int \&Nbcolonne, size\+\_\+t \&nbtour)
-\item 
-void \mbox{\hyperlink{solo_8h_a5036d502c4e8e5796835286339b8e644}{suppressiondoublons}} (\mbox{\hyperlink{main_8cpp_aee710f500ed8d179390ae3862af69d24}{mat}} \&grille, const \mbox{\hyperlink{structmaPosition}{ma\+Position}} \&coord, const long int \&Nbligne, const long int \&Nbcolonne, unsigned long \&nombresupp)
-\item 
-void \mbox{\hyperlink{solo_8h_a5abcd3dadd4e12f8dd749111b9909e74}{remonteval}} (\mbox{\hyperlink{main_8cpp_aee710f500ed8d179390ae3862af69d24}{mat}} \&grille, const long int \&Nbligne, const long int \&Nbcolonne)
-\item 
+\begin{DoxyCompactList}\small\item\em Initialise les paramètres de la grille personnalisé. L\textquotesingle{}utilisateur choisit manuellement toutes les dimensions et contraintes du jeu. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{solo_8h_a1fd049c8408b3e98edecd1472f25b0a7}{litalign}} (const \mbox{\hyperlink{main_8cpp_a34079cedfcd0dcc6476bf9f1076e8cbd}{mat}} \&grille, \mbox{\hyperlink{structmaPosition}{ma\+Position}} \&coord, const long int \&Nbligne, const long int \&Nbcolonne)
+\begin{DoxyCompactList}\small\item\em Vérifie si on a un alignement de 3 chiffres identique. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{main_8cpp_a34079cedfcd0dcc6476bf9f1076e8cbd}{mat}} \mbox{\hyperlink{solo_8h_a65a2362688df5d28d549009b60eac855}{init\+Grid}} (\mbox{\hyperlink{main_8cpp_a34079cedfcd0dcc6476bf9f1076e8cbd}{mat}} \&grille, const long int \&Nbligne, const long int \&Nbcolonne, const size\+\_\+t \&KNb\+Candies)
+\begin{DoxyCompactList}\small\item\em Initialise et remplis la grille avec des valeurs aléatoires. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{solo_8h_aeac4844f2b7ebff74c1f10f044043f88}{display\+Grid}} (\mbox{\hyperlink{main_8cpp_a34079cedfcd0dcc6476bf9f1076e8cbd}{mat}} \&grille, const long int \&Nbligne, const long int \&Nbcolonne, const \mbox{\hyperlink{structmaPosition}{ma\+Position}} \&coord)
+\begin{DoxyCompactList}\small\item\em Affiche la grille dans la console. Gère l\textquotesingle{}affichage des bordures, des couleurs des chiffres et du curseur de sélection. Les cases vides (-\/1 ou -\/2) sont affichées comme des espaces. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{solo_8h_a48e2cdcaa0de3d338131e81661bf6999}{possmove}} (\mbox{\hyperlink{main_8cpp_a34079cedfcd0dcc6476bf9f1076e8cbd}{mat}} \&grille, \mbox{\hyperlink{structmaPosition}{ma\+Position}} \&coord, char \&direction, const long int \&Nbligne, const long int \&Nbcolonne)
+\begin{DoxyCompactList}\small\item\em Vérifie si un mouvement est possible Verifie l\textquotesingle{}échange de deux cases selon la direction donnée. Si alignement via litalign, le mouvement est validé. Sinon, l\textquotesingle{}échange est annulé. \texorpdfstring{$\ast$}{*}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{solo_8h_aae0c721c97bf177470b2fb801df605d1}{initmove}} (\mbox{\hyperlink{main_8cpp_a34079cedfcd0dcc6476bf9f1076e8cbd}{mat}} \&grille, \mbox{\hyperlink{structmaPosition}{ma\+Position}} \&coord, const long int \&Nbligne, const long int \&Nbcolonne)
+\begin{DoxyCompactList}\small\item\em Demande à l\textquotesingle{}utilisateur de sélectionner une case. Vérifie que les coordonnées entrées sont possible et que la case n\textquotesingle{}est pas vide. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{solo_8h_a05a35cc8a32c2ec2c7358964374781b8}{make\+AMove}} (\mbox{\hyperlink{main_8cpp_a34079cedfcd0dcc6476bf9f1076e8cbd}{mat}} \&grille, \mbox{\hyperlink{structmaPosition}{ma\+Position}} \&coord, char \&direction, unsigned long \&nombredep, const long int \&Nbligne, const long int \&Nbcolonne, size\+\_\+t \&nbtour)
+\begin{DoxyCompactList}\small\item\em Gère le tour de jeu (sélection et déplacement). Appelle initmove pour la sélection, demande une direction puis vérifie la validité via possmove et effectue l\textquotesingle{}échange si valide. Et retire 1 tours aux nombre de tours restants. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{solo_8h_a5036d502c4e8e5796835286339b8e644}{suppressiondoublons}} (\mbox{\hyperlink{main_8cpp_a34079cedfcd0dcc6476bf9f1076e8cbd}{mat}} \&grille, const \mbox{\hyperlink{structmaPosition}{ma\+Position}} \&coord, const long int \&Nbligne, const long int \&Nbcolonne, unsigned long \&nombresupp)
+\begin{DoxyCompactList}\small\item\em Supprime les alignements et met à jour le score. Parcourt la grille autour de la position donnée pour trouver les alignements de 3 ou plus. Les cases alignées sont remplacées par -\/1 càd case vide. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{solo_8h_a5abcd3dadd4e12f8dd749111b9909e74}{remonteval}} (\mbox{\hyperlink{main_8cpp_a34079cedfcd0dcc6476bf9f1076e8cbd}{mat}} \&grille, const long int \&Nbligne, const long int \&Nbcolonne)
+\begin{DoxyCompactList}\small\item\em Remonte les chiffres sur la grille. Fait remonter les valeurs pour combler les trous (-\/1) après la supression des alignements. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{solo_8h_ab6796324d383db792dc0e7e3f7d73e79}{scorejeu}} (unsigned long \&score, unsigned long \&nombredep, unsigned long \&nombresupp, size\+\_\+t \&nbtour)
-\item 
-bool \mbox{\hyperlink{solo_8h_ae3eccf309cc7813338869b0aad49cb28}{verifiecoups}} (\mbox{\hyperlink{main_8cpp_aee710f500ed8d179390ae3862af69d24}{mat}} \&grille, long int \&Nbligne, long int \&Nbcolonne, long int ordonnee, long int abscisse)
-\item 
-bool \mbox{\hyperlink{solo_8h_aee6da6c18d4bd8450d07abf018c41c7e}{findujeu}} (\mbox{\hyperlink{main_8cpp_aee710f500ed8d179390ae3862af69d24}{mat}} \&grille, long int \&Nbligne, long int \&Nbcolonne)
-\item 
+\begin{DoxyCompactList}\small\item\em Calcule et affiche le score du joueur. Ajoute un multiplicateur de score si le joueur joue en moins de 3 mouvements pour faire un alignement. Affiche également les tours restants. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{solo_8h_ae3eccf309cc7813338869b0aad49cb28}{verifiecoups}} (\mbox{\hyperlink{main_8cpp_a34079cedfcd0dcc6476bf9f1076e8cbd}{mat}} \&grille, long int \&Nbligne, long int \&Nbcolonne, long int ordonnee, long int abscisse)
+\begin{DoxyCompactList}\small\item\em Vérifie s\textquotesingle{}il existe au moins un coup possible à partir d\textquotesingle{}une case. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{solo_8h_aee6da6c18d4bd8450d07abf018c41c7e}{findujeu}} (\mbox{\hyperlink{main_8cpp_a34079cedfcd0dcc6476bf9f1076e8cbd}{mat}} \&grille, long int \&Nbligne, long int \&Nbcolonne)
+\begin{DoxyCompactList}\small\item\em Vérifie si le jeu est bloqué (aucun coup possible sur toute la grille). \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{solo_8h_a9d7e8af417b6d543da691e9c0e2f6f9f}{clear\+Screen}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Efface le contenu de la console. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{solo_8h_a5d6a62c8fc77f9960d6845f94a5dc211}{modenormalsolo}} (unsigned long \&score, unsigned long \&nombredep, unsigned long \&nombresupp, char \&direction, \mbox{\hyperlink{structmaPosition}{ma\+Position}} \&coord, long int \&Nbligne, long int \&Nbcolonne, size\+\_\+t \&KNb\+Candies)
-\begin{DoxyCompactList}\small\item\em main \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Lance une partie en Mode Solo Normal. La grille est générée automatiquement en fonction du nombre de chiffres choisi. Le jeu s\textquotesingle{}arrête si le joueur n\textquotesingle{}a plus de tours ou s\textquotesingle{}il n\textquotesingle{}y a plus de mouvements possibles. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{solo_8h_a1c5125f19b0b44973d51f47707ff7ad5}{modepersosolo}} (unsigned long \&score, unsigned long \&nombredep, unsigned long \&nombresupp, char \&direction, \mbox{\hyperlink{structmaPosition}{ma\+Position}} \&coord, long int \&Nbligne, long int \&Nbcolonne, size\+\_\+t \&KNb\+Candies)
-\item 
-void \mbox{\hyperlink{solo_8h_a36ce9df10cf710ee8621446713854a71}{modesolo}} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Lance une partie en Mode Solo Personnalisé. Permet au joueur de choisir le nombre de lignes, de colonnes, de chiffres et de tours. Le jeu s\textquotesingle{}arrête si le joueur n\textquotesingle{}a plus de tours ou s\textquotesingle{}il n\textquotesingle{}y a plus de mouvements possibles. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Typedef Documentation}
@@ -78,13 +77,13 @@ void \mbox{\hyperlink{solo_8h_a36ce9df10cf710ee8621446713854a71}{modesolo}} ()
 \index{solo.h@{solo.h}!line@{line}}
 \index{line@{line}!solo.h@{solo.h}}
 \doxysubsubsection{\texorpdfstring{line}{line}}
-{\footnotesize\ttfamily typedef vector$<$short int$>$ \mbox{\hyperlink{main_8cpp_ae045c87c132fe15ce75aeefe25f3aac5}{line}}}
+{\footnotesize\ttfamily typedef vector$<$short int$>$ \mbox{\hyperlink{main_8cpp_a4fa05b1f00fcde100685cc887554b93b}{line}}}
 
 \Hypertarget{solo_8h_aee710f500ed8d179390ae3862af69d24}\label{solo_8h_aee710f500ed8d179390ae3862af69d24} 
 \index{solo.h@{solo.h}!mat@{mat}}
 \index{mat@{mat}!solo.h@{solo.h}}
 \doxysubsubsection{\texorpdfstring{mat}{mat}}
-{\footnotesize\ttfamily typedef vector$<$\mbox{\hyperlink{main_8cpp_ae045c87c132fe15ce75aeefe25f3aac5}{line}}$>$ \mbox{\hyperlink{main_8cpp_aee710f500ed8d179390ae3862af69d24}{mat}}}
+{\footnotesize\ttfamily typedef vector$<$\mbox{\hyperlink{main_8cpp_a4fa05b1f00fcde100685cc887554b93b}{line}}$>$ \mbox{\hyperlink{main_8cpp_a34079cedfcd0dcc6476bf9f1076e8cbd}{mat}}}
 
 
 
@@ -95,12 +94,25 @@ void \mbox{\hyperlink{solo_8h_a36ce9df10cf710ee8621446713854a71}{modesolo}} ()
 \doxysubsubsection{\texorpdfstring{clearScreen()}{clearScreen()}}
 {\footnotesize\ttfamily void clear\+Screen (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
+
+
+Efface le contenu de la console. 
+
 \Hypertarget{solo_8h_ae241cf89d39423f89bb8e65688e4c031}\label{solo_8h_ae241cf89d39423f89bb8e65688e4c031} 
 \index{solo.h@{solo.h}!couleur@{couleur}}
 \index{couleur@{couleur}!solo.h@{solo.h}}
 \doxysubsubsection{\texorpdfstring{couleur()}{couleur()}}
 {\footnotesize\ttfamily void couleur (\begin{DoxyParamCaption}\item[{const unsigned \&}]{coul }\end{DoxyParamCaption})}
 
+
+
+Change la couleur du texte dans la console. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em coul} & Le code ANSI de la couleur que l\textquotesingle{}on veut. \\
+\hline
+\end{DoxyParams}
 Here is the caller graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
@@ -115,6 +127,21 @@ Here is the caller graph for this function\+:
 \doxysubsubsection{\texorpdfstring{creategrille()}{creategrille()}}
 {\footnotesize\ttfamily void creategrille (\begin{DoxyParamCaption}\item[{size\+\_\+t \&}]{KNb\+Candies,  }\item[{long int \&}]{Nbligne,  }\item[{long int \&}]{Nbcolonne,  }\item[{size\+\_\+t \&}]{nbtour }\end{DoxyParamCaption})}
 
+
+
+Initialise les paramètres de la grille Demande à l\textquotesingle{}utilisateur le nombre de types de chiffres différents et calcule automatiquementla taille de la grille et le nombre de tours. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em KNb\+Candies} & Nombre de types de chiffres différents. \\
+\hline
+\mbox{\texttt{ out}}  & {\em Nbligne} & Nombre de lignes de la grille \\
+\hline
+\mbox{\texttt{ out}}  & {\em Nbcolonne} & Nombre de colonnes de la grille \\
+\hline
+\mbox{\texttt{ out}}  & {\em nbtour} & Nombre de tours maximum \\
+\hline
+\end{DoxyParams}
 Here is the caller graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
@@ -129,6 +156,21 @@ Here is the caller graph for this function\+:
 \doxysubsubsection{\texorpdfstring{creategrilleperso()}{creategrilleperso()}}
 {\footnotesize\ttfamily void creategrilleperso (\begin{DoxyParamCaption}\item[{size\+\_\+t \&}]{KNb\+Candies,  }\item[{long int \&}]{Nbligne,  }\item[{long int \&}]{Nbcolonne,  }\item[{size\+\_\+t \&}]{nbtour }\end{DoxyParamCaption})}
 
+
+
+Initialise les paramètres de la grille personnalisé. L\textquotesingle{}utilisateur choisit manuellement toutes les dimensions et contraintes du jeu. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em KNb\+Candies} & Nombre de types de bonbons(chiffres). \\
+\hline
+\mbox{\texttt{ out}}  & {\em Nbligne} & Nombre de lignes. \\
+\hline
+\mbox{\texttt{ out}}  & {\em Nbcolonne} & Nombre de colonnes. \\
+\hline
+\mbox{\texttt{ out}}  & {\em nbtour} & Nombre de tours. \\
+\hline
+\end{DoxyParams}
 Here is the caller graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
@@ -141,9 +183,25 @@ Here is the caller graph for this function\+:
 \index{solo.h@{solo.h}!displayGrid@{displayGrid}}
 \index{displayGrid@{displayGrid}!solo.h@{solo.h}}
 \doxysubsubsection{\texorpdfstring{displayGrid()}{displayGrid()}}
-{\footnotesize\ttfamily void display\+Grid (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{main_8cpp_aee710f500ed8d179390ae3862af69d24}{mat}} \&}]{grille,  }\item[{const long int \&}]{Nbligne,  }\item[{const long int \&}]{Nbcolonne,  }\item[{const \mbox{\hyperlink{structmaPosition}{ma\+Position}} \&}]{coord }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void display\+Grid (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{main_8cpp_a34079cedfcd0dcc6476bf9f1076e8cbd}{mat}} \&}]{grille,  }\item[{const long int \&}]{Nbligne,  }\item[{const long int \&}]{Nbcolonne,  }\item[{const \mbox{\hyperlink{structmaPosition}{ma\+Position}} \&}]{coord }\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:\nopagebreak
+
+
+Affiche la grille dans la console. Gère l\textquotesingle{}affichage des bordures, des couleurs des chiffres et du curseur de sélection. Les cases vides (-\/1 ou -\/2) sont affichées comme des espaces. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em grille} & La grille à afficher \\
+\hline
+\mbox{\texttt{ in}}  & {\em Nbligne} & Nombre de lignes \\
+\hline
+\mbox{\texttt{ in}}  & {\em Nbcolonne} & Nombre de colonnes \\
+\hline
+\mbox{\texttt{ in}}  & {\em coord} & Position actuelle \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -162,9 +220,28 @@ Here is the caller graph for this function\+:
 \index{solo.h@{solo.h}!findujeu@{findujeu}}
 \index{findujeu@{findujeu}!solo.h@{solo.h}}
 \doxysubsubsection{\texorpdfstring{findujeu()}{findujeu()}}
-{\footnotesize\ttfamily bool findujeu (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{main_8cpp_aee710f500ed8d179390ae3862af69d24}{mat}} \&}]{grille,  }\item[{long int \&}]{Nbligne,  }\item[{long int \&}]{Nbcolonne }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily bool findujeu (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{main_8cpp_a34079cedfcd0dcc6476bf9f1076e8cbd}{mat}} \&}]{grille,  }\item[{long int \&}]{Nbligne,  }\item[{long int \&}]{Nbcolonne }\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:\nopagebreak
+
+
+Vérifie si le jeu est bloqué (aucun coup possible sur toute la grille). 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em grille} & La grille \\
+\hline
+\mbox{\texttt{ in}}  & {\em Nbligne} & Nombre de lignes \\
+\hline
+\mbox{\texttt{ in}}  & {\em Nbcolonne} & Nombre de colonnes \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true Si AUCUN coup possible donc fin du jeu 
+
+false Si au moins un coup est possible. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -183,8 +260,26 @@ Here is the caller graph for this function\+:
 \index{solo.h@{solo.h}!initGrid@{initGrid}}
 \index{initGrid@{initGrid}!solo.h@{solo.h}}
 \doxysubsubsection{\texorpdfstring{initGrid()}{initGrid()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{main_8cpp_aee710f500ed8d179390ae3862af69d24}{mat}} init\+Grid (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{main_8cpp_aee710f500ed8d179390ae3862af69d24}{mat}} \&}]{grille,  }\item[{const long int \&}]{Nbligne,  }\item[{const long int \&}]{Nbcolonne,  }\item[{const size\+\_\+t \&}]{KNb\+Candies }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \mbox{\hyperlink{main_8cpp_a34079cedfcd0dcc6476bf9f1076e8cbd}{mat}} init\+Grid (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{main_8cpp_a34079cedfcd0dcc6476bf9f1076e8cbd}{mat}} \&}]{grille,  }\item[{const long int \&}]{Nbligne,  }\item[{const long int \&}]{Nbcolonne,  }\item[{const size\+\_\+t \&}]{KNb\+Candies }\end{DoxyParamCaption})}
 
+
+
+Initialise et remplis la grille avec des valeurs aléatoires. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em grille} & La matrice à remplir. \\
+\hline
+\mbox{\texttt{ in}}  & {\em Nbligne} & Nombre de lignes. \\
+\hline
+\mbox{\texttt{ in}}  & {\em Nbcolonne} & Nombre de colonnes. \\
+\hline
+\mbox{\texttt{ in}}  & {\em KNb\+Candies} & Nombre maximum de types de chiffres (pour le modulo). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+mat La grille remplie. 
+\end{DoxyReturn}
 Here is the caller graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
@@ -197,8 +292,23 @@ Here is the caller graph for this function\+:
 \index{solo.h@{solo.h}!initmove@{initmove}}
 \index{initmove@{initmove}!solo.h@{solo.h}}
 \doxysubsubsection{\texorpdfstring{initmove()}{initmove()}}
-{\footnotesize\ttfamily void initmove (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{main_8cpp_aee710f500ed8d179390ae3862af69d24}{mat}} \&}]{grille,  }\item[{\mbox{\hyperlink{structmaPosition}{ma\+Position}} \&}]{coord,  }\item[{const long int \&}]{Nbligne,  }\item[{const long int \&}]{Nbcolonne }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void initmove (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{main_8cpp_a34079cedfcd0dcc6476bf9f1076e8cbd}{mat}} \&}]{grille,  }\item[{\mbox{\hyperlink{structmaPosition}{ma\+Position}} \&}]{coord,  }\item[{const long int \&}]{Nbligne,  }\item[{const long int \&}]{Nbcolonne }\end{DoxyParamCaption})}
 
+
+
+Demande à l\textquotesingle{}utilisateur de sélectionner une case. Vérifie que les coordonnées entrées sont possible et que la case n\textquotesingle{}est pas vide. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em grille} & La grille actuelle. \\
+\hline
+\mbox{\texttt{ out}}  & {\em coord} & Les coordonnées choisies par l\textquotesingle{}utilisateur. \\
+\hline
+\mbox{\texttt{ in}}  & {\em Nbligne} & Nombre de lignes. \\
+\hline
+\mbox{\texttt{ in}}  & {\em Nbcolonne} & Nombre de colonnes. \\
+\hline
+\end{DoxyParams}
 Here is the caller graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
@@ -211,8 +321,33 @@ Here is the caller graph for this function\+:
 \index{solo.h@{solo.h}!litalign@{litalign}}
 \index{litalign@{litalign}!solo.h@{solo.h}}
 \doxysubsubsection{\texorpdfstring{litalign()}{litalign()}}
-{\footnotesize\ttfamily bool litalign (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{main_8cpp_aee710f500ed8d179390ae3862af69d24}{mat}} \&}]{grille,  }\item[{\mbox{\hyperlink{structmaPosition}{ma\+Position}} \&}]{coord,  }\item[{const long int \&}]{Nbligne,  }\item[{const long int \&}]{Nbcolonne }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily bool litalign (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{main_8cpp_a34079cedfcd0dcc6476bf9f1076e8cbd}{mat}} \&}]{grille,  }\item[{\mbox{\hyperlink{structmaPosition}{ma\+Position}} \&}]{coord,  }\item[{const long int \&}]{Nbligne,  }\item[{const long int \&}]{Nbcolonne }\end{DoxyParamCaption})}
 
+
+
+Vérifie si on a un alignement de 3 chiffres identique. 
+
+
+\begin{DoxyItemize}
+\item Vérifie horizontalement et verticalement autour de la position donnée s\textquotesingle{}il y a une suite de 3 nombres identiques.
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em grille} & La grille de jeu actuelle. \\
+\hline
+\mbox{\texttt{ in}}  & {\em coord} & La position à verifier. \\
+\hline
+\mbox{\texttt{ in}}  & {\em Nbligne} & Nombre total de lignes. \\
+\hline
+\mbox{\texttt{ in}}  & {\em Nbcolonne} & Nombre total de colonnes. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true Si un alignement de 3 chiffres identiques. 
+
+false Sinon. 
+\end{DoxyReturn}
 Here is the caller graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
@@ -225,9 +360,31 @@ Here is the caller graph for this function\+:
 \index{solo.h@{solo.h}!makeAMove@{makeAMove}}
 \index{makeAMove@{makeAMove}!solo.h@{solo.h}}
 \doxysubsubsection{\texorpdfstring{makeAMove()}{makeAMove()}}
-{\footnotesize\ttfamily void make\+AMove (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{main_8cpp_aee710f500ed8d179390ae3862af69d24}{mat}} \&}]{grille,  }\item[{\mbox{\hyperlink{structmaPosition}{ma\+Position}} \&}]{coord,  }\item[{char \&}]{direction,  }\item[{unsigned long \&}]{nombredep,  }\item[{const long int \&}]{Nbligne,  }\item[{const long int \&}]{Nbcolonne,  }\item[{size\+\_\+t \&}]{nbtour }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void make\+AMove (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{main_8cpp_a34079cedfcd0dcc6476bf9f1076e8cbd}{mat}} \&}]{grille,  }\item[{\mbox{\hyperlink{structmaPosition}{ma\+Position}} \&}]{coord,  }\item[{char \&}]{direction,  }\item[{unsigned long \&}]{nombredep,  }\item[{const long int \&}]{Nbligne,  }\item[{const long int \&}]{Nbcolonne,  }\item[{size\+\_\+t \&}]{nbtour }\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:\nopagebreak
+
+
+Gère le tour de jeu (sélection et déplacement). Appelle initmove pour la sélection, demande une direction puis vérifie la validité via possmove et effectue l\textquotesingle{}échange si valide. Et retire 1 tours aux nombre de tours restants. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em grille} & La grille de jeu. \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em coord} & Coordonnées de la case sélectionnée. \\
+\hline
+\mbox{\texttt{ out}}  & {\em direction} & Direction choisie. \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em nombredep} & Compteur de déplacements effectués (statistiques). \\
+\hline
+\mbox{\texttt{ in}}  & {\em Nbligne} & Nombre de lignes. \\
+\hline
+\mbox{\texttt{ in}}  & {\em Nbcolonne} & Nombre de colonnes. \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em nbtour} & Nombre de tours restants. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -250,12 +407,29 @@ Here is the caller graph for this function\+:
 
 
 
-main 
+Lance une partie en Mode Solo Normal. La grille est générée automatiquement en fonction du nombre de chiffres choisi. Le jeu s\textquotesingle{}arrête si le joueur n\textquotesingle{}a plus de tours ou s\textquotesingle{}il n\textquotesingle{}y a plus de mouvements possibles. 
 
-\begin{DoxyReturn}{Returns}
 
-\end{DoxyReturn}
-Here is the call graph for this function\+:\nopagebreak
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em score} & Score du joueur \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em nombredep} & Nombre de déplacements \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em nombresupp} & Nombre de suppressions \\
+\hline
+\mbox{\texttt{ out}}  & {\em direction} & Direction du mouvement \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em coord} & Position du joueur \\
+\hline
+\mbox{\texttt{ out}}  & {\em Nbligne} & Nombre de lignes \\
+\hline
+\mbox{\texttt{ out}}  & {\em Nbcolonne} & Nombre de colonnes \\
+\hline
+\mbox{\texttt{ out}}  & {\em KNb\+Candies} & Nombre de chiffres différents pour le jeu \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -276,7 +450,31 @@ Here is the caller graph for this function\+:
 \doxysubsubsection{\texorpdfstring{modepersosolo()}{modepersosolo()}}
 {\footnotesize\ttfamily void modepersosolo (\begin{DoxyParamCaption}\item[{unsigned long \&}]{score,  }\item[{unsigned long \&}]{nombredep,  }\item[{unsigned long \&}]{nombresupp,  }\item[{char \&}]{direction,  }\item[{\mbox{\hyperlink{structmaPosition}{ma\+Position}} \&}]{coord,  }\item[{long int \&}]{Nbligne,  }\item[{long int \&}]{Nbcolonne,  }\item[{size\+\_\+t \&}]{KNb\+Candies }\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:\nopagebreak
+
+
+Lance une partie en Mode Solo Personnalisé. Permet au joueur de choisir le nombre de lignes, de colonnes, de chiffres et de tours. Le jeu s\textquotesingle{}arrête si le joueur n\textquotesingle{}a plus de tours ou s\textquotesingle{}il n\textquotesingle{}y a plus de mouvements possibles. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em score} & Score du joueur \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em nombredep} & Nombre de déplacements \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em nombresupp} & Nombre de suppressions \\
+\hline
+\mbox{\texttt{ out}}  & {\em direction} & Direction du mouvement \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em coord} & Position du joueur \\
+\hline
+\mbox{\texttt{ out}}  & {\em Nbligne} & Nombre de lignes \\
+\hline
+\mbox{\texttt{ out}}  & {\em Nbcolonne} & Nombre de colonnes \\
+\hline
+\mbox{\texttt{ out}}  & {\em KNb\+Candies} & Nombre de chiffres différents pour le jeu \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -291,33 +489,36 @@ Here is the caller graph for this function\+:
 \includegraphics[width=350pt]{solo_8h_a1c5125f19b0b44973d51f47707ff7ad5_icgraph}
 \end{center}
 \end{figure}
-\Hypertarget{solo_8h_a36ce9df10cf710ee8621446713854a71}\label{solo_8h_a36ce9df10cf710ee8621446713854a71} 
-\index{solo.h@{solo.h}!modesolo@{modesolo}}
-\index{modesolo@{modesolo}!solo.h@{solo.h}}
-\doxysubsubsection{\texorpdfstring{modesolo()}{modesolo()}}
-{\footnotesize\ttfamily void modesolo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-Here is the call graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{solo_8h_a36ce9df10cf710ee8621446713854a71_cgraph}
-\end{center}
-\end{figure}
-Here is the caller graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=329pt]{solo_8h_a36ce9df10cf710ee8621446713854a71_icgraph}
-\end{center}
-\end{figure}
 \Hypertarget{solo_8h_a48e2cdcaa0de3d338131e81661bf6999}\label{solo_8h_a48e2cdcaa0de3d338131e81661bf6999} 
 \index{solo.h@{solo.h}!possmove@{possmove}}
 \index{possmove@{possmove}!solo.h@{solo.h}}
 \doxysubsubsection{\texorpdfstring{possmove()}{possmove()}}
-{\footnotesize\ttfamily bool possmove (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{main_8cpp_aee710f500ed8d179390ae3862af69d24}{mat}} \&}]{grille,  }\item[{\mbox{\hyperlink{structmaPosition}{ma\+Position}} \&}]{coord,  }\item[{char \&}]{direction,  }\item[{const long int \&}]{Nbligne,  }\item[{const long int \&}]{Nbcolonne }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily bool possmove (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{main_8cpp_a34079cedfcd0dcc6476bf9f1076e8cbd}{mat}} \&}]{grille,  }\item[{\mbox{\hyperlink{structmaPosition}{ma\+Position}} \&}]{coord,  }\item[{char \&}]{direction,  }\item[{const long int \&}]{Nbligne,  }\item[{const long int \&}]{Nbcolonne }\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:\nopagebreak
+
+
+Vérifie si un mouvement est possible Verifie l\textquotesingle{}échange de deux cases selon la direction donnée. Si alignement via litalign, le mouvement est validé. Sinon, l\textquotesingle{}échange est annulé. \texorpdfstring{$\ast$}{*}. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em grille} & La grille de jeu. \\
+\hline
+\mbox{\texttt{ in}}  & {\em coord} & La position de départ. \\
+\hline
+\mbox{\texttt{ in}}  & {\em direction} & Direction du mouvement (Z,Q,S,D). \\
+\hline
+\mbox{\texttt{ in}}  & {\em Nbligne} & Nombre de lignes \\
+\hline
+\mbox{\texttt{ in}}  & {\em Nbcolonne} & Nombre de colonnes \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true Si le mouvement provoque un alignement (mouvement valide). 
+
+false Si le mouvement ne fait rien (mouvement invalide). 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -338,7 +539,11 @@ Here is the caller graph for this function\+:
 \doxysubsubsection{\texorpdfstring{reglesjeu()}{reglesjeu()}}
 {\footnotesize\ttfamily void reglesjeu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-Here is the caller graph for this function\+:
+
+
+Affiche les règles du jeu à partir d\textquotesingle{}un fichier externe. 
+
+Lit le fichier "{}reglesdujeu.\+txt"{} et l\textquotesingle{}affiche ligne par ligne les règles du jeudans la console. Here is the caller graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
@@ -350,8 +555,21 @@ Here is the caller graph for this function\+:
 \index{solo.h@{solo.h}!remonteval@{remonteval}}
 \index{remonteval@{remonteval}!solo.h@{solo.h}}
 \doxysubsubsection{\texorpdfstring{remonteval()}{remonteval()}}
-{\footnotesize\ttfamily void remonteval (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{main_8cpp_aee710f500ed8d179390ae3862af69d24}{mat}} \&}]{grille,  }\item[{const long int \&}]{Nbligne,  }\item[{const long int \&}]{Nbcolonne }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void remonteval (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{main_8cpp_a34079cedfcd0dcc6476bf9f1076e8cbd}{mat}} \&}]{grille,  }\item[{const long int \&}]{Nbligne,  }\item[{const long int \&}]{Nbcolonne }\end{DoxyParamCaption})}
 
+
+
+Remonte les chiffres sur la grille. Fait remonter les valeurs pour combler les trous (-\/1) après la supression des alignements. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em grille} & La grille de jeu. \\
+\hline
+\mbox{\texttt{ in}}  & {\em Nbligne} & Nombre de lignes. \\
+\hline
+\mbox{\texttt{ in}}  & {\em Nbcolonne} & Nombre de colonnes. \\
+\hline
+\end{DoxyParams}
 Here is the caller graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
@@ -366,6 +584,21 @@ Here is the caller graph for this function\+:
 \doxysubsubsection{\texorpdfstring{scorejeu()}{scorejeu()}}
 {\footnotesize\ttfamily void scorejeu (\begin{DoxyParamCaption}\item[{unsigned long \&}]{score,  }\item[{unsigned long \&}]{nombredep,  }\item[{unsigned long \&}]{nombresupp,  }\item[{size\+\_\+t \&}]{nbtour }\end{DoxyParamCaption})}
 
+
+
+Calcule et affiche le score du joueur. Ajoute un multiplicateur de score si le joueur joue en moins de 3 mouvements pour faire un alignement. Affiche également les tours restants. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em score} & Le score actuel du joueur. \\
+\hline
+\mbox{\texttt{ in}}  & {\em nombredep} & Le nombre de déplacements effectués pour ce coup. \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em nombresupp} & Le nombre de chiffres supprimés \\
+\hline
+\mbox{\texttt{ in}}  & {\em nbtour} & Le nombre de tours restants. \\
+\hline
+\end{DoxyParams}
 Here is the caller graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
@@ -380,6 +613,15 @@ Here is the caller graph for this function\+:
 \doxysubsubsection{\texorpdfstring{souligner()}{souligner()}}
 {\footnotesize\ttfamily void souligner (\begin{DoxyParamCaption}\item[{const unsigned \&}]{chiffre }\end{DoxyParamCaption})}
 
+
+
+Souligne le texte dans la console. 
+
+Utilisé pour mettre en évidence la position dans la matrice 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em chiffre} & Code de style (4 pour souligner). \\
+\hline
+\end{DoxyParams}
 Here is the caller graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
@@ -392,8 +634,25 @@ Here is the caller graph for this function\+:
 \index{solo.h@{solo.h}!suppressiondoublons@{suppressiondoublons}}
 \index{suppressiondoublons@{suppressiondoublons}!solo.h@{solo.h}}
 \doxysubsubsection{\texorpdfstring{suppressiondoublons()}{suppressiondoublons()}}
-{\footnotesize\ttfamily void suppressiondoublons (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{main_8cpp_aee710f500ed8d179390ae3862af69d24}{mat}} \&}]{grille,  }\item[{const \mbox{\hyperlink{structmaPosition}{ma\+Position}} \&}]{coord,  }\item[{const long int \&}]{Nbligne,  }\item[{const long int \&}]{Nbcolonne,  }\item[{unsigned long \&}]{nombresupp }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void suppressiondoublons (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{main_8cpp_a34079cedfcd0dcc6476bf9f1076e8cbd}{mat}} \&}]{grille,  }\item[{const \mbox{\hyperlink{structmaPosition}{ma\+Position}} \&}]{coord,  }\item[{const long int \&}]{Nbligne,  }\item[{const long int \&}]{Nbcolonne,  }\item[{unsigned long \&}]{nombresupp }\end{DoxyParamCaption})}
 
+
+
+Supprime les alignements et met à jour le score. Parcourt la grille autour de la position donnée pour trouver les alignements de 3 ou plus. Les cases alignées sont remplacées par -\/1 càd case vide. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em grille} & La grille de jeu. \\
+\hline
+\mbox{\texttt{ in}}  & {\em coord} & Position pour ou on vérifie les alignements \\
+\hline
+\mbox{\texttt{ in}}  & {\em Nbligne} & Nombre de lignes \\
+\hline
+\mbox{\texttt{ in}}  & {\em Nbcolonne} & Nombre de colonnes \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em nombresupp} & Compteur total de chiffres supprimés pour le score \\
+\hline
+\end{DoxyParams}
 Here is the caller graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
@@ -406,9 +665,32 @@ Here is the caller graph for this function\+:
 \index{solo.h@{solo.h}!verifiecoups@{verifiecoups}}
 \index{verifiecoups@{verifiecoups}!solo.h@{solo.h}}
 \doxysubsubsection{\texorpdfstring{verifiecoups()}{verifiecoups()}}
-{\footnotesize\ttfamily bool verifiecoups (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{main_8cpp_aee710f500ed8d179390ae3862af69d24}{mat}} \&}]{grille,  }\item[{long int \&}]{Nbligne,  }\item[{long int \&}]{Nbcolonne,  }\item[{long int}]{ordonnee,  }\item[{long int}]{abscisse }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily bool verifiecoups (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{main_8cpp_a34079cedfcd0dcc6476bf9f1076e8cbd}{mat}} \&}]{grille,  }\item[{long int \&}]{Nbligne,  }\item[{long int \&}]{Nbcolonne,  }\item[{long int}]{ordonnee,  }\item[{long int}]{abscisse }\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:\nopagebreak
+
+
+Vérifie s\textquotesingle{}il existe au moins un coup possible à partir d\textquotesingle{}une case. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em grille} & La grille \\
+\hline
+\mbox{\texttt{ in}}  & {\em Nbligne} & Nombre de lignes \\
+\hline
+\mbox{\texttt{ in}}  & {\em Nbcolonne} & Nombre de colonnes \\
+\hline
+\mbox{\texttt{ in}}  & {\em ordonnee} & Ligne de la case à verifier \\
+\hline
+\mbox{\texttt{ in}}  & {\em abscisse} & Colonne de la case à verifier \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true Si un coup est possible depuis cette case. 
+
+false Sinon. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode

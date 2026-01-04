@@ -9,7 +9,8 @@ Include dependency graph for modeinfini.\+h\+:\nopagebreak
 \includegraphics[width=231pt]{modeinfini_8h__incl}
 \end{center}
 \end{figure}
-This graph shows which files directly or indirectly include this file\+:\nopagebreak
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -21,19 +22,19 @@ This graph shows which files directly or indirectly include this file\+:\nopageb
 \item 
 typedef vector$<$ short int $>$ \mbox{\hyperlink{modeinfini_8h_ae045c87c132fe15ce75aeefe25f3aac5}{line}}
 \item 
-typedef vector$<$ \mbox{\hyperlink{main_8cpp_ae045c87c132fe15ce75aeefe25f3aac5}{line}} $>$ \mbox{\hyperlink{modeinfini_8h_aee710f500ed8d179390ae3862af69d24}{mat}}
+typedef vector$<$ \mbox{\hyperlink{main_8cpp_a4fa05b1f00fcde100685cc887554b93b}{line}} $>$ \mbox{\hyperlink{modeinfini_8h_aee710f500ed8d179390ae3862af69d24}{mat}}
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-int \mbox{\hyperlink{modeinfini_8h_a790d64b2ea79a74ab7dea3bec7573a73}{make\+AMoveinfini}} (\mbox{\hyperlink{main_8cpp_aee710f500ed8d179390ae3862af69d24}{mat}} \&grille, \mbox{\hyperlink{structmaPosition}{ma\+Position}} \&coord, char \&direction, unsigned long \&nombredep, const long int \&Nbligne, const long int \&Nbcolonne)
-\item 
+int \mbox{\hyperlink{modeinfini_8h_a790d64b2ea79a74ab7dea3bec7573a73}{make\+AMoveinfini}} (\mbox{\hyperlink{main_8cpp_a34079cedfcd0dcc6476bf9f1076e8cbd}{mat}} \&grille, \mbox{\hyperlink{structmaPosition}{ma\+Position}} \&coord, char \&direction, unsigned long \&nombredep, const long int \&Nbligne, const long int \&Nbcolonne)
+\begin{DoxyCompactList}\small\item\em Gère le déplacement d\textquotesingle{}un bonbon en mode infini Pareil que celle de base et ajoute la possibilité d\textquotesingle{}arrêter la partie en appuyant sur la touche \textquotesingle{}A\textquotesingle{} . \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{modeinfini_8h_af5591e9d5429fcc2b2573e00c7aed10f}{scorejeuinfini}} (unsigned long \&score, unsigned long \&nombredep, unsigned long \&nombresupp)
-\item 
-void \mbox{\hyperlink{modeinfini_8h_a76eb451a8dc883f15db7502c9860ced9}{rempli\+Colonne}} (\mbox{\hyperlink{main_8cpp_aee710f500ed8d179390ae3862af69d24}{mat}} \&grille, long int \&Nbligne, long int \&Nbcolonne, size\+\_\+t \&KNb\+Candies)
+\begin{DoxyCompactList}\small\item\em Affiche et met à jour le score pour le mode infini. Le score est calculé en multipliant le nombre de bonbons supprimés par 10. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{modeinfini_8h_a76eb451a8dc883f15db7502c9860ced9}{rempli\+Colonne}} (\mbox{\hyperlink{main_8cpp_a34079cedfcd0dcc6476bf9f1076e8cbd}{mat}} \&grille, long int \&Nbligne, long int \&Nbcolonne, size\+\_\+t \&KNb\+Candies)
 \begin{DoxyCompactList}\small\item\em main \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{modeinfini_8h_af30deecaf4ef694e85d7765be6764bd4}{modenormalinfini}} (unsigned long \&score, unsigned long \&nombredep, unsigned long \&nombresupp, char \&direction, \mbox{\hyperlink{structmaPosition}{ma\+Position}} \&coord, long int \&Nbligne, long int \&Nbcolonne, size\+\_\+t \&KNb\+Candies)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Fonction principale du jeu en Mode Infini. Initialise une grille mode normal La boucle continue tant que des coups sont possibles ou que le joueur n\textquotesingle{}appuie pas sur A. À chaque tour, la grille est rempli via rempli\+Colonne. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Typedef Documentation}
@@ -41,13 +42,13 @@ void \mbox{\hyperlink{modeinfini_8h_af30deecaf4ef694e85d7765be6764bd4}{modenorma
 \index{modeinfini.h@{modeinfini.h}!line@{line}}
 \index{line@{line}!modeinfini.h@{modeinfini.h}}
 \doxysubsubsection{\texorpdfstring{line}{line}}
-{\footnotesize\ttfamily typedef vector$<$short int$>$ \mbox{\hyperlink{main_8cpp_ae045c87c132fe15ce75aeefe25f3aac5}{line}}}
+{\footnotesize\ttfamily typedef vector$<$short int$>$ \mbox{\hyperlink{main_8cpp_a4fa05b1f00fcde100685cc887554b93b}{line}}}
 
 \Hypertarget{modeinfini_8h_aee710f500ed8d179390ae3862af69d24}\label{modeinfini_8h_aee710f500ed8d179390ae3862af69d24} 
 \index{modeinfini.h@{modeinfini.h}!mat@{mat}}
 \index{mat@{mat}!modeinfini.h@{modeinfini.h}}
 \doxysubsubsection{\texorpdfstring{mat}{mat}}
-{\footnotesize\ttfamily typedef vector$<$\mbox{\hyperlink{main_8cpp_ae045c87c132fe15ce75aeefe25f3aac5}{line}}$>$ \mbox{\hyperlink{main_8cpp_aee710f500ed8d179390ae3862af69d24}{mat}}}
+{\footnotesize\ttfamily typedef vector$<$\mbox{\hyperlink{main_8cpp_a4fa05b1f00fcde100685cc887554b93b}{line}}$>$ \mbox{\hyperlink{main_8cpp_a34079cedfcd0dcc6476bf9f1076e8cbd}{mat}}}
 
 
 
@@ -56,9 +57,32 @@ void \mbox{\hyperlink{modeinfini_8h_af30deecaf4ef694e85d7765be6764bd4}{modenorma
 \index{modeinfini.h@{modeinfini.h}!makeAMoveinfini@{makeAMoveinfini}}
 \index{makeAMoveinfini@{makeAMoveinfini}!modeinfini.h@{modeinfini.h}}
 \doxysubsubsection{\texorpdfstring{makeAMoveinfini()}{makeAMoveinfini()}}
-{\footnotesize\ttfamily int make\+AMoveinfini (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{main_8cpp_aee710f500ed8d179390ae3862af69d24}{mat}} \&}]{grille,  }\item[{\mbox{\hyperlink{structmaPosition}{ma\+Position}} \&}]{coord,  }\item[{char \&}]{direction,  }\item[{unsigned long \&}]{nombredep,  }\item[{const long int \&}]{Nbligne,  }\item[{const long int \&}]{Nbcolonne }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily int make\+AMoveinfini (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{main_8cpp_a34079cedfcd0dcc6476bf9f1076e8cbd}{mat}} \&}]{grille,  }\item[{\mbox{\hyperlink{structmaPosition}{ma\+Position}} \&}]{coord,  }\item[{char \&}]{direction,  }\item[{unsigned long \&}]{nombredep,  }\item[{const long int \&}]{Nbligne,  }\item[{const long int \&}]{Nbcolonne }\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:\nopagebreak
+
+
+Gère le déplacement d\textquotesingle{}un bonbon en mode infini Pareil que celle de base et ajoute la possibilité d\textquotesingle{}arrêter la partie en appuyant sur la touche \textquotesingle{}A\textquotesingle{} . 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em grille} & La grille de jeu. \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em coord} & La position du curseur. \\
+\hline
+\mbox{\texttt{ out}}  & {\em direction} & La direction choisie par le joueur. \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em nombredep} & Compteur de déplacements (incrémenté si mouvement valide). \\
+\hline
+\mbox{\texttt{ in}}  & {\em Nbligne} & Nombre de lignes. \\
+\hline
+\mbox{\texttt{ in}}  & {\em Nbcolonne} & Nombre de colonnes. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int Retourne 0 (Code de statut, potentiellement pour future extension). 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -79,7 +103,31 @@ Here is the caller graph for this function\+:
 \doxysubsubsection{\texorpdfstring{modenormalinfini()}{modenormalinfini()}}
 {\footnotesize\ttfamily void modenormalinfini (\begin{DoxyParamCaption}\item[{unsigned long \&}]{score,  }\item[{unsigned long \&}]{nombredep,  }\item[{unsigned long \&}]{nombresupp,  }\item[{char \&}]{direction,  }\item[{\mbox{\hyperlink{structmaPosition}{ma\+Position}} \&}]{coord,  }\item[{long int \&}]{Nbligne,  }\item[{long int \&}]{Nbcolonne,  }\item[{size\+\_\+t \&}]{KNb\+Candies }\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:\nopagebreak
+
+
+Fonction principale du jeu en Mode Infini. Initialise une grille mode normal La boucle continue tant que des coups sont possibles ou que le joueur n\textquotesingle{}appuie pas sur A. À chaque tour, la grille est rempli via rempli\+Colonne. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em score} & Score du joueur \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em nombredep} & Compteur de déplacements \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em nombresupp} & Compteur de chiffres supprimés. \\
+\hline
+\mbox{\texttt{ out}}  & {\em direction} & Direction du mouvement \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em coord} & Position du joueur \\
+\hline
+\mbox{\texttt{ out}}  & {\em Nbligne} & Nombre de lignes \\
+\hline
+\mbox{\texttt{ out}}  & {\em Nbcolonne} & Nombre de colonnes \\
+\hline
+\mbox{\texttt{ out}}  & {\em KNb\+Candies} & Nombre de chiffres différents pour le jeu \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -98,7 +146,7 @@ Here is the caller graph for this function\+:
 \index{modeinfini.h@{modeinfini.h}!rempliColonne@{rempliColonne}}
 \index{rempliColonne@{rempliColonne}!modeinfini.h@{modeinfini.h}}
 \doxysubsubsection{\texorpdfstring{rempliColonne()}{rempliColonne()}}
-{\footnotesize\ttfamily void rempli\+Colonne (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{main_8cpp_aee710f500ed8d179390ae3862af69d24}{mat}} \&}]{grille,  }\item[{long int \&}]{Nbligne,  }\item[{long int \&}]{Nbcolonne,  }\item[{size\+\_\+t \&}]{KNb\+Candies }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void rempli\+Colonne (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{main_8cpp_a34079cedfcd0dcc6476bf9f1076e8cbd}{mat}} \&}]{grille,  }\item[{long int \&}]{Nbligne,  }\item[{long int \&}]{Nbcolonne,  }\item[{size\+\_\+t \&}]{KNb\+Candies }\end{DoxyParamCaption})}
 
 
 
@@ -107,6 +155,19 @@ main
 \begin{DoxyReturn}{Returns}
 
 \end{DoxyReturn}
+Remplit les colonnes de la grille Remplit les cases vides -\/1 de la grille avec des vals aléatoires entre 1 et KNb\+Candies
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em grille} & La grille \\
+\hline
+\mbox{\texttt{ in}}  & {\em Nbligne} & Nombre de lignes \\
+\hline
+\mbox{\texttt{ in}}  & {\em Nbcolonne} & Nombre de colonnes \\
+\hline
+\mbox{\texttt{ in}}  & {\em KNb\+Candies} & Nombes de chiffres différents \\
+\hline
+\end{DoxyParams}
 Here is the caller graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
@@ -121,6 +182,19 @@ Here is the caller graph for this function\+:
 \doxysubsubsection{\texorpdfstring{scorejeuinfini()}{scorejeuinfini()}}
 {\footnotesize\ttfamily void scorejeuinfini (\begin{DoxyParamCaption}\item[{unsigned long \&}]{score,  }\item[{unsigned long \&}]{nombredep,  }\item[{unsigned long \&}]{nombresupp }\end{DoxyParamCaption})}
 
+
+
+Affiche et met à jour le score pour le mode infini. Le score est calculé en multipliant le nombre de bonbons supprimés par 10. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em score} & Score total du joueur \\
+\hline
+\mbox{\texttt{ in}}  & {\em nombredep} & Nombre total de déplacements effectués \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em nombresupp} & Nombre de chiffres supprimés remis a 0 après chaque deplacements \\
+\hline
+\end{DoxyParams}
 Here is the caller graph for this function\+:
 \nopagebreak
 \begin{figure}[H]

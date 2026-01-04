@@ -1,19 +1,19 @@
 <map id="ajourtxt" name="ajourtxt">
-<area shape="rect" id="Node000001" title=" " alt="" coords="843,132,916,157"/>
-<area shape="rect" id="Node000002" href="$modehistoire_8cpp.html#ad9fcc453c77abfcb4533a4abf7833950" title=" " alt="" coords="405,56,467,81"/>
+<area shape="rect" id="Node000001" title="Saute un nombre donné de lignes dans un fichier sans afficher. Met a jour le texte a afficher pour le..." alt="" coords="843,132,916,157"/>
+<area shape="rect" id="Node000002" href="$modehistoire_8cpp.html#ad9fcc453c77abfcb4533a4abf7833950" title="Chapitre 2. Enchaîne vers le Chapitre 3 si le joueur le souhaite." alt="" coords="405,56,467,81"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="829,130,794,121,701,103,608,89,467,74,467,68,609,84,702,97,795,115,830,125"/>
-<area shape="rect" id="Node000008" href="$modehistoire_8cpp.html#a6a2711a5a74ae4812c6164add65e4da3" title=" " alt="" coords="515,107,576,132"/>
+<area shape="rect" id="Node000008" href="$modehistoire_8cpp.html#a6a2711a5a74ae4812c6164add65e4da3" title="Chapitre 3. Enchaîne vers le Chapitre 4 si le joueur le souhaite." alt="" coords="515,107,576,132"/>
 <area shape="poly" id="edge6_Node000001_Node000008" title=" " alt="" coords="829,144,576,124,576,119,829,138"/>
-<area shape="rect" id="Node000009" href="$modehistoire_8cpp.html#ab12343047fefb3413ea3ad9b8ba3e5aa" title=" " alt="" coords="624,157,685,183"/>
+<area shape="rect" id="Node000009" href="$modehistoire_8cpp.html#ab12343047fefb3413ea3ad9b8ba3e5aa" title="Chapitre 4. Passe au chapitre 5 si le joueur veut." alt="" coords="624,157,685,183"/>
 <area shape="poly" id="edge9_Node000001_Node000009" title=" " alt="" coords="829,153,686,169,685,164,829,148"/>
-<area shape="rect" id="Node000010" href="$modehistoire_8cpp.html#aab5a0ed6f45a325ad63871d8945be6c1" title=" " alt="" coords="733,208,795,233"/>
+<area shape="rect" id="Node000010" href="$modehistoire_8cpp.html#aab5a0ed6f45a325ad63871d8945be6c1" title="Chapitre 5 Lit la narration du chapitre 5, lance le niveau 5 et affiche la fin du jeu." alt="" coords="733,208,795,233"/>
 <area shape="poly" id="edge12_Node000001_Node000010" title=" " alt="" coords="849,167,786,210,783,206,846,163"/>
-<area shape="rect" id="Node000003" href="$modehistoire_8cpp.html#a9acdc485860975bd64adef3834c3cf56" title=" " alt="" coords="296,5,357,31"/>
+<area shape="rect" id="Node000003" href="$modehistoire_8cpp.html#a9acdc485860975bd64adef3834c3cf56" title="Chapitre 1. Enchaîne vers le Chapitre 2 si le joueur le souhaite." alt="" coords="296,5,357,31"/>
 <area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="394,52,354,33,356,28,397,48"/>
-<area shape="rect" id="Node000004" href="$modehistoire_8cpp.html#a24d1c656b93e29aafae03c8235b80a0a" title=" " alt="" coords="140,107,248,132"/>
+<area shape="rect" id="Node000004" href="$modehistoire_8cpp.html#a24d1c656b93e29aafae03c8235b80a0a" title="Menu principal du Mode Histoire. Ouvre le fichier texte de narration et permet au joueur de sélection..." alt="" coords="140,107,248,132"/>
 <area shape="poly" id="edge5_Node000002_Node000004" title=" " alt="" coords="393,80,249,111,248,106,391,75"/>
 <area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="300,41,213,109,210,105,297,37"/>
-<area shape="rect" id="Node000005" href="$main_8cpp.html#a36ce9df10cf710ee8621446713854a71" title=" " alt="" coords="5,107,92,132"/>
+<area shape="rect" id="Node000005" href="$main_8cpp.html#a36ce9df10cf710ee8621446713854a71" title="Menu principal pour les modes Solo. Propose au joueur de choisir entre les différents modes de jeu di..." alt="" coords="5,107,92,132"/>
 <area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="126,122,92,122,92,117,126,117"/>
 <area shape="poly" id="edge7_Node000008_Node000002" title=" " alt="" coords="504,103,463,84,465,79,506,98"/>
 <area shape="poly" id="edge8_Node000008_Node000004" title=" " alt="" coords="501,122,249,122,249,117,501,117"/>

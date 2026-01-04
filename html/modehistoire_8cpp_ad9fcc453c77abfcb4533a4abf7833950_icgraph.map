@@ -1,12 +1,12 @@
 <map id="chap2" name="chap2">
-<area shape="rect" id="Node000001" title=" " alt="" coords="548,31,609,56"/>
-<area shape="rect" id="Node000002" href="$modehistoire_8cpp.html#a9acdc485860975bd64adef3834c3cf56" title=" " alt="" coords="439,5,500,31"/>
+<area shape="rect" id="Node000001" title="Chapitre 2. Enchaîne vers le Chapitre 3 si le joueur le souhaite." alt="" coords="548,31,609,56"/>
+<area shape="rect" id="Node000002" href="$modehistoire_8cpp.html#a9acdc485860975bd64adef3834c3cf56" title="Chapitre 1. Enchaîne vers le Chapitre 2 si le joueur le souhaite." alt="" coords="439,5,500,31"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="534,36,500,28,501,22,535,31"/>
-<area shape="rect" id="Node000003" href="$modehistoire_8cpp.html#a24d1c656b93e29aafae03c8235b80a0a" title=" " alt="" coords="283,31,391,56"/>
+<area shape="rect" id="Node000003" href="$modehistoire_8cpp.html#a24d1c656b93e29aafae03c8235b80a0a" title="Menu principal du Mode Histoire. Ouvre le fichier texte de narration et permet au joueur de sélection..." alt="" coords="283,31,391,56"/>
 <area shape="poly" id="edge5_Node000001_Node000003" title=" " alt="" coords="534,46,391,46,391,41,534,41"/>
 <area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="426,29,391,36,390,30,425,24"/>
-<area shape="rect" id="Node000004" href="$main_8cpp.html#a36ce9df10cf710ee8621446713854a71" title=" " alt="" coords="148,31,235,56"/>
+<area shape="rect" id="Node000004" href="$main_8cpp.html#a36ce9df10cf710ee8621446713854a71" title="Menu principal pour les modes Solo. Propose au joueur de choisir entre les différents modes de jeu di..." alt="" coords="148,31,235,56"/>
 <area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="269,46,235,46,235,41,269,41"/>
-<area shape="rect" id="Node000005" href="$main_8cpp.html#a87da64dc404fab46f81b3a2f39e4d2e3" title=" " alt="" coords="5,31,100,56"/>
+<area shape="rect" id="Node000005" href="$main_8cpp.html#a87da64dc404fab46f81b3a2f39e4d2e3" title="Affiche le menu principal et lance le mode de jeu choisi Permet de choisir entre Solo,..." alt="" coords="5,31,100,56"/>
 <area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="134,46,100,46,100,41,134,41"/>
 </map>

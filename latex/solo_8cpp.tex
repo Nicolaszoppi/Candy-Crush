@@ -1,5 +1,10 @@
 \doxysection{modes\+\_\+de\+\_\+jeu/solo.cpp File Reference}
 \hypertarget{solo_8cpp}{}\label{solo_8cpp}\index{modes\_de\_jeu/solo.cpp@{modes\_de\_jeu/solo.cpp}}
+
+
+Gestion des menus et des boucles de jeu pour le joueur Solo.  
+
+
 {\ttfamily \#include "{}solo.\+h"{}}\newline
 {\ttfamily \#include $<$iostream$>$}\newline
 {\ttfamily \#include $<$vector$>$}\newline
@@ -8,7 +13,8 @@
 {\ttfamily \#include "{}modehistoire.\+h"{}}\newline
 {\ttfamily \#include $<$fstream$>$}\newline
 {\ttfamily \#include $<$limits$>$}\newline
-Include dependency graph for solo.\+cpp\+:\nopagebreak
+Include dependency graph for solo.\+cpp\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -20,31 +26,42 @@ Include dependency graph for solo.\+cpp\+:\nopagebreak
 \item 
 typedef vector$<$ short int $>$ \mbox{\hyperlink{solo_8cpp_ae045c87c132fe15ce75aeefe25f3aac5}{line}}
 \item 
-typedef vector$<$ \mbox{\hyperlink{main_8cpp_ae045c87c132fe15ce75aeefe25f3aac5}{line}} $>$ \mbox{\hyperlink{solo_8cpp_aee710f500ed8d179390ae3862af69d24}{mat}}
+typedef vector$<$ \mbox{\hyperlink{main_8cpp_a4fa05b1f00fcde100685cc887554b93b}{line}} $>$ \mbox{\hyperlink{solo_8cpp_aee710f500ed8d179390ae3862af69d24}{mat}}
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{solo_8cpp_ab6796324d383db792dc0e7e3f7d73e79}{scorejeu}} (unsigned long \&score, unsigned long \&nombredep, unsigned long \&nombresupp, size\+\_\+t \&nbtour)
-\item 
+\begin{DoxyCompactList}\small\item\em Calcule et affiche le score du joueur. Ajoute un multiplicateur de score si le joueur joue en moins de 3 mouvements pour faire un alignement. Affiche également les tours restants. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{solo_8cpp_a5d6a62c8fc77f9960d6845f94a5dc211}{modenormalsolo}} (unsigned long \&score, unsigned long \&nombredep, unsigned long \&nombresupp, char \&direction, \mbox{\hyperlink{structmaPosition}{ma\+Position}} \&coord, long int \&Nbligne, long int \&Nbcolonne, size\+\_\+t \&KNb\+Candies)
-\begin{DoxyCompactList}\small\item\em main \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Lance une partie en Mode Solo Normal. La grille est générée automatiquement en fonction du nombre de chiffres choisi. Le jeu s\textquotesingle{}arrête si le joueur n\textquotesingle{}a plus de tours ou s\textquotesingle{}il n\textquotesingle{}y a plus de mouvements possibles. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{solo_8cpp_a1c5125f19b0b44973d51f47707ff7ad5}{modepersosolo}} (unsigned long \&score, unsigned long \&nombredep, unsigned long \&nombresupp, char \&direction, \mbox{\hyperlink{structmaPosition}{ma\+Position}} \&coord, long int \&Nbligne, long int \&Nbcolonne, size\+\_\+t \&KNb\+Candies)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Lance une partie en Mode Solo Personnalisé. Permet au joueur de choisir le nombre de lignes, de colonnes, de chiffres et de tours. Le jeu s\textquotesingle{}arrête si le joueur n\textquotesingle{}a plus de tours ou s\textquotesingle{}il n\textquotesingle{}y a plus de mouvements possibles. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+Gestion des menus et des boucles de jeu pour le joueur Solo. 
+
+\begin{DoxyAuthor}{Author}
+ZOPPI Nicolas, KEOKHAM Rayan, LONGO Matys ; BUT1 Informatique GROUPE 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+31-\/12-\/2025 
+\end{DoxyDate}
+Ce fichier regroupe les fonctions pour le mode Solo classiquele mode personnalisé, ainsi que le menu de sélection qui redirige vers le mode Infini et le mode Histoire. 
 
 \doxysubsection{Typedef Documentation}
 \Hypertarget{solo_8cpp_ae045c87c132fe15ce75aeefe25f3aac5}\label{solo_8cpp_ae045c87c132fe15ce75aeefe25f3aac5} 
 \index{solo.cpp@{solo.cpp}!line@{line}}
 \index{line@{line}!solo.cpp@{solo.cpp}}
 \doxysubsubsection{\texorpdfstring{line}{line}}
-{\footnotesize\ttfamily typedef vector$<$short int$>$ \mbox{\hyperlink{main_8cpp_ae045c87c132fe15ce75aeefe25f3aac5}{line}}}
+{\footnotesize\ttfamily typedef vector$<$short int$>$ \mbox{\hyperlink{main_8cpp_a4fa05b1f00fcde100685cc887554b93b}{line}}}
 
 \Hypertarget{solo_8cpp_aee710f500ed8d179390ae3862af69d24}\label{solo_8cpp_aee710f500ed8d179390ae3862af69d24} 
 \index{solo.cpp@{solo.cpp}!mat@{mat}}
 \index{mat@{mat}!solo.cpp@{solo.cpp}}
 \doxysubsubsection{\texorpdfstring{mat}{mat}}
-{\footnotesize\ttfamily typedef vector$<$\mbox{\hyperlink{main_8cpp_ae045c87c132fe15ce75aeefe25f3aac5}{line}}$>$ \mbox{\hyperlink{main_8cpp_aee710f500ed8d179390ae3862af69d24}{mat}}}
+{\footnotesize\ttfamily typedef vector$<$\mbox{\hyperlink{main_8cpp_a4fa05b1f00fcde100685cc887554b93b}{line}}$>$ \mbox{\hyperlink{main_8cpp_a34079cedfcd0dcc6476bf9f1076e8cbd}{mat}}}
 
 
 
@@ -57,12 +74,29 @@ void \mbox{\hyperlink{solo_8cpp_a1c5125f19b0b44973d51f47707ff7ad5}{modepersosolo
 
 
 
-main 
+Lance une partie en Mode Solo Normal. La grille est générée automatiquement en fonction du nombre de chiffres choisi. Le jeu s\textquotesingle{}arrête si le joueur n\textquotesingle{}a plus de tours ou s\textquotesingle{}il n\textquotesingle{}y a plus de mouvements possibles. 
 
-\begin{DoxyReturn}{Returns}
 
-\end{DoxyReturn}
-Here is the call graph for this function\+:\nopagebreak
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em score} & Score du joueur \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em nombredep} & Nombre de déplacements \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em nombresupp} & Nombre de suppressions \\
+\hline
+\mbox{\texttt{ out}}  & {\em direction} & Direction du mouvement \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em coord} & Position du joueur \\
+\hline
+\mbox{\texttt{ out}}  & {\em Nbligne} & Nombre de lignes \\
+\hline
+\mbox{\texttt{ out}}  & {\em Nbcolonne} & Nombre de colonnes \\
+\hline
+\mbox{\texttt{ out}}  & {\em KNb\+Candies} & Nombre de chiffres différents pour le jeu \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -83,7 +117,31 @@ Here is the caller graph for this function\+:
 \doxysubsubsection{\texorpdfstring{modepersosolo()}{modepersosolo()}}
 {\footnotesize\ttfamily void modepersosolo (\begin{DoxyParamCaption}\item[{unsigned long \&}]{score,  }\item[{unsigned long \&}]{nombredep,  }\item[{unsigned long \&}]{nombresupp,  }\item[{char \&}]{direction,  }\item[{\mbox{\hyperlink{structmaPosition}{ma\+Position}} \&}]{coord,  }\item[{long int \&}]{Nbligne,  }\item[{long int \&}]{Nbcolonne,  }\item[{size\+\_\+t \&}]{KNb\+Candies }\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:\nopagebreak
+
+
+Lance une partie en Mode Solo Personnalisé. Permet au joueur de choisir le nombre de lignes, de colonnes, de chiffres et de tours. Le jeu s\textquotesingle{}arrête si le joueur n\textquotesingle{}a plus de tours ou s\textquotesingle{}il n\textquotesingle{}y a plus de mouvements possibles. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em score} & Score du joueur \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em nombredep} & Nombre de déplacements \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em nombresupp} & Nombre de suppressions \\
+\hline
+\mbox{\texttt{ out}}  & {\em direction} & Direction du mouvement \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em coord} & Position du joueur \\
+\hline
+\mbox{\texttt{ out}}  & {\em Nbligne} & Nombre de lignes \\
+\hline
+\mbox{\texttt{ out}}  & {\em Nbcolonne} & Nombre de colonnes \\
+\hline
+\mbox{\texttt{ out}}  & {\em KNb\+Candies} & Nombre de chiffres différents pour le jeu \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -104,6 +162,21 @@ Here is the caller graph for this function\+:
 \doxysubsubsection{\texorpdfstring{scorejeu()}{scorejeu()}}
 {\footnotesize\ttfamily void scorejeu (\begin{DoxyParamCaption}\item[{unsigned long \&}]{score,  }\item[{unsigned long \&}]{nombredep,  }\item[{unsigned long \&}]{nombresupp,  }\item[{size\+\_\+t \&}]{nbtour }\end{DoxyParamCaption})}
 
+
+
+Calcule et affiche le score du joueur. Ajoute un multiplicateur de score si le joueur joue en moins de 3 mouvements pour faire un alignement. Affiche également les tours restants. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em score} & Le score actuel du joueur. \\
+\hline
+\mbox{\texttt{ in}}  & {\em nombredep} & Le nombre de déplacements effectués pour ce coup. \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em nombresupp} & Le nombre de chiffres supprimés \\
+\hline
+\mbox{\texttt{ in}}  & {\em nbtour} & Le nombre de tours restants. \\
+\hline
+\end{DoxyParams}
 Here is the caller graph for this function\+:
 \nopagebreak
 \begin{figure}[H]

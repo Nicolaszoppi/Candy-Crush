@@ -72,11 +72,11 @@ void souligner (const unsigned & chiffre) {//Souligne ou nous serons dans la mat
  * @param[out] nbtour Nombre de tours maximum 
  */
 void creategrille (size_t & KNbCandies, long int & Nbligne, long int & Nbcolonne,size_t & nbtour) {  //Crée une grille selon le nombre de chiffres possibles (commence à 3)
-    cout << "Nombre max ?" << endl;
     while (true) {
+        cout << "Nombre max ?" << endl;
         cin >> KNbCandies;
-        if (KNbCandies < 3) {
-            cout << "Il doit y avoir minimum 3 chiffres possibles." << endl;
+        if ((KNbCandies < 3) || (KNbCandies > 9)) {
+            cout << "Il ne peut y avoir qu'un minimum de 3 et un maximum de 9 possibilités." << endl;
         }
         else break;
     }
@@ -100,8 +100,8 @@ void creategrilleperso (size_t & KNbCandies, long int & Nbligne, long int & Nbco
     while (true) {
         cout << "Nombre max ?" << endl;
         cin >> KNbCandies;
-        if (KNbCandies < 2) {
-            cout << "Il doit y avoir minimum 2 chiffres possibles." << endl;
+        if ((KNbCandies < 2) || (KNbCandies > 9)) {
+            cout << "Il ne peut y avoir qu'un minimum de 2 et un maximum de 9 possibilités." << endl;
         }
         else break;
     }
@@ -208,7 +208,16 @@ mat initGrid (mat & grille,const long int & Nbligne,const long int & Nbcolonne,c
  * @param[in] coord Position actuelle
  */
 void displayGrid (mat & grille,const long int & Nbligne,const long int & Nbcolonne, const maPosition & coord) {//Affiche la grille sous forme de tableau
+    cout << endl << "   ";
+    for (long int abs = 0; abs < 10 ; ++abs) {
+        cout << "  " << abs << " ";
+    }
+    cout << endl;
     for (long int i = 0; i < Nbligne ; ++i) {
+        if (i < 10) {
+            cout << " " << i << " ";
+        }
+        else cout << "   ";
         for (long int j = 0; j < Nbcolonne; ++j ) {
             if (j == coord.abs && i == coord.ord) {
                 cout << "| ";

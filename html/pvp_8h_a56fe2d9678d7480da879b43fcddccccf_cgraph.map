@@ -1,5 +1,5 @@
 <map id="scorejeufinal" name="scorejeufinal">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,111,31"/>
-<area shape="rect" id="Node000002" href="$main_8cpp.html#ae241cf89d39423f89bb8e65688e4c031" title=" " alt="" coords="159,5,229,31"/>
+<area shape="rect" id="Node000001" title="Affiche les résultats et choisi le vainqueur Compare les scores des deux joueurs et affiche un messag..." alt="" coords="5,5,111,31"/>
+<area shape="rect" id="Node000002" href="$main_8cpp.html#ae241cf89d39423f89bb8e65688e4c031" title="Change la couleur du texte dans la console." alt="" coords="159,5,229,31"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="111,15,145,15,145,21,111,21"/>
 </map>

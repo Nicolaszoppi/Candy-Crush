@@ -1,5 +1,5 @@
 <map id="possmove" name="possmove">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,95,31"/>
-<area shape="rect" id="Node000002" href="$main_8cpp.html#a1fd049c8408b3e98edecd1472f25b0a7" title=" " alt="" coords="143,5,209,31"/>
+<area shape="rect" id="Node000001" title="Vérifie si un mouvement est possible Verifie l&#39;échange de deux cases selon la direction donnée...." alt="" coords="5,5,95,31"/>
+<area shape="rect" id="Node000002" href="$main_8cpp.html#a1fd049c8408b3e98edecd1472f25b0a7" title="Vérifie si on a un alignement de 3 chiffres identique." alt="" coords="143,5,209,31"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="95,15,129,15,129,21,95,21"/>
 </map>

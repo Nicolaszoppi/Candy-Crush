@@ -333,8 +333,7 @@ void chap5(string & nom,ifstream & fichier,unsigned long & score, unsigned long 
         cin >> nombre;
         cin.ignore(numeric_limits<streamsize>::max(), '\n');
         if (nombre == 1) {
-            //if (niveau5(nom,score,nombredep,nombresupp , direction,coord,Nbligne,Nbcolonne,KNbCandies,nbtour)) break;
-            break;
+            if (niveau5(nom,score,nombredep,nombresupp , direction,coord,Nbligne,Nbcolonne,KNbCandies,nbtour)) break;
         }
         else if (nombre == 2) {
             reglesjeu();
@@ -366,8 +365,7 @@ void chap4(string & nom,ifstream & fichier,unsigned long & score, unsigned long 
         cin >> nombre;
         cin.ignore(numeric_limits<streamsize>::max(), '\n');
         if (nombre == 1) {
-            //if (niveau4(nom,score,nombredep,nombresupp , direction,coord,Nbligne,Nbcolonne,KNbCandies,nbtour)) break;
-            break;
+            if (niveau4(nom,score,nombredep,nombresupp , direction,coord,Nbligne,Nbcolonne,KNbCandies,nbtour)) break;
         }
         else if (nombre == 2) {
             reglesjeu();
@@ -413,8 +411,7 @@ void chap3(string & nom,ifstream & fichier,unsigned long & score, unsigned long 
         cin >> nombre;
         cin.ignore(numeric_limits<streamsize>::max(), '\n');
         if (nombre == 1) {
-            //if (niveau3(nom,score,nombredep,nombresupp , direction,coord,Nbligne,Nbcolonne,KNbCandies)) break;
-            break;
+            if (niveau3(nom,score,nombredep,nombresupp , direction,coord,Nbligne,Nbcolonne,KNbCandies)) break;
         }
         else if (nombre == 2) {
             reglesjeu();
@@ -459,7 +456,7 @@ void chap2(string & nom,ifstream & fichier,unsigned long & score, unsigned long 
         cin >> nombre;
         cin.ignore(numeric_limits<streamsize>::max(), '\n');
         if (nombre == 1) {
-            //niveau2 (nom,score,nombredep,nombresupp , direction,coord,Nbligne,Nbcolonne,KNbCandies,nbtour);
+            niveau2 (nom,score,nombredep,nombresupp , direction,coord,Nbligne,Nbcolonne,KNbCandies);
             break;
         }
         else if (nombre == 2) {
@@ -511,7 +508,7 @@ void chap1(string & nom,ifstream & fichier,unsigned long & score, unsigned long 
         cin >> nombre;
         cin.get();
         if (nombre == 1) {
-            //niveau1 (nom,score,nombredep,nombresupp , direction,coord,Nbligne,Nbcolonne,KNbCandies);
+            niveau1 (nom,score,nombredep,nombresupp , direction,coord,Nbligne,Nbcolonne,KNbCandies);
             break;
         }
         else if (nombre == 2) {
