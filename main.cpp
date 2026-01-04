@@ -46,6 +46,13 @@ void reglesjeu () {
 }
 
 /**
+ * @brief Efface le contenu de la console.
+ */
+void clearScreen () {
+    cout << "\033[H\033[2J";
+}
+
+/**
  * @brief Change la couleur du texte dans la console.
  * @param[in] coul Le code ANSI de la couleur que l'on veut.
  */
@@ -208,6 +215,7 @@ mat initGrid (mat & grille,const long int & Nbligne,const long int & Nbcolonne,c
  * @param[in] coord Position actuelle
  */
 void displayGrid (mat & grille,const long int & Nbligne,const long int & Nbcolonne, const maPosition & coord) {//Affiche la grille sous forme de tableau
+    clearScreen();
     cout << endl << "   ";
     for (long int abs = 0; abs < 10 ; ++abs) {
         cout << "  " << abs << " ";
@@ -614,12 +622,7 @@ bool findujeu (mat & grille, long int & Nbligne, long int & Nbcolonne){
     }
     return true;
 }
-/**
- * @brief Efface le contenu de la console.
- */
-void clearScreen () {
-    cout << "\033[H\033[2J";
-}
+
 
 /**
  * @brief Codes de couleurs ANSI pour la console

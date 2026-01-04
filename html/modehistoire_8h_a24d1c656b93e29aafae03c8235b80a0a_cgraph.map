@@ -10,62 +10,62 @@
 <area shape="poly" id="edge47_Node000001_Node000007" title=" " alt="" coords="95,318,502,170,504,175,97,323"/>
 <area shape="rect" id="Node000008" href="$modehistoire_8cpp.html#aab5a0ed6f45a325ad63871d8945be6c1" title="Chapitre 5 Lit la narration du chapitre 5, lance le niveau 5 et affiche la fin du jeu." alt="" coords="681,94,742,119"/>
 <area shape="poly" id="edge48_Node000001_Node000008" title=" " alt="" coords="64,319,94,266,118,230,147,194,181,160,220,131,263,111,310,104,432,104,667,104,667,109,432,109,310,109,265,117,223,136,185,164,151,197,123,233,99,268,69,322"/>
-<area shape="rect" id="Node000032" href="$modehistoire_8cpp.html#a48184dc3b25f26859350dbc4aa63a599" title="Demande le nom du joueur pour le mode histoire. Si le joueur entre &quot;&amp;&quot;alors il doit entrer un autre n..." alt="" coords="271,897,352,922"/>
-<area shape="poly" id="edge49_Node000001_Node000032" title=" " alt="" coords="65,346,74,406,93,499,123,609,164,718,188,766,210,802,273,876,284,886,280,890,269,879,205,805,183,769,159,720,118,610,88,500,69,407,60,347"/>
+<area shape="rect" id="Node000033" href="$modehistoire_8cpp.html#a48184dc3b25f26859350dbc4aa63a599" title="Demande le nom du joueur pour le mode histoire. Si le joueur entre &quot;&amp;&quot;alors il doit entrer un autre n..." alt="" coords="271,897,352,922"/>
+<area shape="poly" id="edge49_Node000001_Node000033" title=" " alt="" coords="65,346,74,406,93,499,123,609,164,718,188,766,210,802,273,876,284,886,280,890,269,879,205,805,183,769,159,720,118,610,88,500,69,407,60,347"/>
 <area shape="rect" id="Node000003" href="$modehistoire_8cpp.html#ab4c880e4d24ea4654f2ffcc029087cc9" title="Affiche les lignes du fichier texte." alt="" coords="839,347,923,373"/>
 <area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="205,706,237,746,289,796,320,819,354,838,391,851,430,856,548,856,624,854,683,844,710,833,736,818,761,796,789,768,806,738,822,696,847,586,865,472,874,386,880,387,870,473,852,587,827,697,811,741,793,771,765,800,739,822,712,838,685,849,624,860,548,861,429,861,390,856,352,843,317,823,285,800,233,749,200,709"/>
 <area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="195,681,299,384,304,385,200,683"/>
-<area shape="rect" id="Node000024" href="$main_8cpp.html#aaee81cb19b7773fe8d63ebb764b747a3" title="Affiche les règles du jeu à partir d&#39;un fichier externe." alt="" coords="839,195,922,221"/>
-<area shape="poly" id="edge43_Node000002_Node000024" title=" " alt="" coords="223,705,314,737,371,750,429,755,548,755,621,761,681,770,708,770,735,765,761,752,789,729,808,698,819,654,826,601,829,542,829,424,831,374,836,334,851,279,867,233,872,234,856,281,841,335,836,374,835,424,834,542,831,601,825,655,812,700,793,732,764,756,736,770,709,775,681,775,621,767,548,760,429,760,370,755,312,742,221,710"/>
-<area shape="rect" id="Node000031" href="$modehistoire_8cpp.html#a69908ca28708a1df8a3aa3503172594d" title="Lance le Niveau 1 l&#39;introduction. Grille 4x4, 2 couleurs, jouer jusqu&#39;au blocage." alt="" coords="509,595,584,621"/>
-<area shape="poly" id="edge35_Node000002_Node000031" title=" " alt="" coords="222,685,495,618,497,623,223,690"/>
-<area shape="poly" id="edge44_Node000002_Node000032" title=" " alt="" coords="199,707,223,783,245,831,273,876,282,886,278,890,269,879,240,833,218,784,194,709"/>
+<area shape="rect" id="Node000025" href="$main_8cpp.html#aaee81cb19b7773fe8d63ebb764b747a3" title="Affiche les règles du jeu à partir d&#39;un fichier externe." alt="" coords="839,195,922,221"/>
+<area shape="poly" id="edge43_Node000002_Node000025" title=" " alt="" coords="223,705,314,737,371,750,429,755,548,755,621,761,681,770,708,770,735,765,761,752,789,729,808,698,819,654,826,601,829,542,829,424,831,374,836,334,851,279,867,233,872,234,856,281,841,335,836,374,835,424,834,542,831,601,825,655,812,700,793,732,764,756,736,770,709,775,681,775,621,767,548,760,429,760,370,755,312,742,221,710"/>
+<area shape="rect" id="Node000032" href="$modehistoire_8cpp.html#a69908ca28708a1df8a3aa3503172594d" title="Lance le Niveau 1 l&#39;introduction. Grille 4x4, 2 couleurs, jouer jusqu&#39;au blocage." alt="" coords="509,595,584,621"/>
+<area shape="poly" id="edge35_Node000002_Node000032" title=" " alt="" coords="222,685,495,618,497,623,223,690"/>
+<area shape="poly" id="edge44_Node000002_Node000033" title=" " alt="" coords="199,707,223,783,245,831,273,876,282,886,278,890,269,879,240,833,218,784,194,709"/>
 <area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="322,371,386,482,439,560,501,637,535,672,570,703,606,729,643,747,680,758,717,759,753,750,789,729,808,705,824,669,838,623,849,571,866,466,875,386,880,387,871,467,854,572,843,624,829,671,812,708,792,733,755,755,717,765,679,763,641,752,604,733,567,707,531,676,497,640,435,563,382,485,317,373"/>
 <area shape="rect" id="Node000005" href="$modehistoire_8cpp.html#a882ce2a1f510bde5afda2fb52c650a58" title="Saute un nombre donné de lignes dans un fichier sans afficher. Met a jour le texte a afficher pour le..." alt="" coords="844,18,917,43"/>
 <area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="316,345,342,297,384,227,440,149,473,111,508,77,542,49,575,29,606,15,638,7,706,4,791,11,831,17,830,22,790,16,706,9,639,12,608,20,577,33,545,53,511,81,476,115,444,152,388,230,346,299,321,347"/>
 <area shape="poly" id="edge6_Node000004_Node000006" title=" " alt="" coords="341,343,386,324,388,329,343,348"/>
-<area shape="poly" id="edge34_Node000004_Node000024" title=" " alt="" coords="342,355,422,348,535,333,663,307,728,288,790,266,823,248,852,227,855,232,826,252,792,270,729,293,664,312,536,339,423,353,343,360"/>
-<area shape="rect" id="Node000030" href="$modehistoire_8cpp.html#ab46654af818b28fe03110fe96363c207" title="Niveau 2 Grille (6x6), 4 chiffres." alt="" coords="509,546,584,571"/>
-<area shape="poly" id="edge26_Node000004_Node000030" title=" " alt="" coords="328,370,404,440,511,531,517,536,513,540,508,535,401,444,324,374"/>
+<area shape="poly" id="edge34_Node000004_Node000025" title=" " alt="" coords="342,355,422,348,535,333,663,307,728,288,790,266,823,248,852,227,855,232,826,252,792,270,729,293,664,312,536,339,423,353,343,360"/>
+<area shape="rect" id="Node000031" href="$modehistoire_8cpp.html#ab46654af818b28fe03110fe96363c207" title="Niveau 2 Grille (6x6), 4 chiffres." alt="" coords="509,546,584,571"/>
+<area shape="poly" id="edge26_Node000004_Node000031" title=" " alt="" coords="328,370,404,440,511,531,517,536,513,540,508,535,401,444,324,374"/>
 <area shape="poly" id="edge7_Node000006_Node000003" title=" " alt="" coords="462,309,826,351,825,356,461,314"/>
 <area shape="poly" id="edge8_Node000006_Node000005" title=" " alt="" coords="434,294,467,209,488,163,507,131,535,97,561,73,591,55,631,39,683,26,736,20,830,22,830,27,737,25,684,31,633,44,593,60,564,77,539,101,512,134,493,165,472,211,439,296"/>
 <area shape="poly" id="edge9_Node000006_Node000007" title=" " alt="" coords="437,294,465,246,507,188,517,177,521,181,511,191,470,248,441,297"/>
-<area shape="poly" id="edge25_Node000006_Node000024" title=" " alt="" coords="461,299,825,217,827,223,462,304"/>
-<area shape="rect" id="Node000026" href="$modehistoire_8cpp.html#a8e16742dc90f5d314418ac54b9bc4e70" title="Niveau 3 Grille 6x6, 3 chiffres doit avoir effacé au moins 15 chiffres." alt="" coords="509,497,584,522"/>
-<area shape="poly" id="edge17_Node000006_Node000026" title=" " alt="" coords="442,320,534,483,529,486,437,323"/>
+<area shape="poly" id="edge25_Node000006_Node000025" title=" " alt="" coords="461,299,825,217,827,223,462,304"/>
+<area shape="rect" id="Node000027" href="$modehistoire_8cpp.html#a8e16742dc90f5d314418ac54b9bc4e70" title="Niveau 3 Grille 6x6, 3 chiffres doit avoir effacé au moins 15 chiffres." alt="" coords="509,497,584,522"/>
+<area shape="poly" id="edge17_Node000006_Node000027" title=" " alt="" coords="442,320,534,483,529,486,437,323"/>
 <area shape="poly" id="edge10_Node000007_Node000003" title=" " alt="" coords="570,168,848,338,846,343,567,172"/>
 <area shape="poly" id="edge11_Node000007_Node000005" title=" " alt="" coords="557,143,587,110,608,93,631,79,682,58,735,44,830,31,830,36,736,49,683,63,633,84,611,98,591,114,560,146"/>
 <area shape="poly" id="edge12_Node000007_Node000008" title=" " alt="" coords="577,146,667,117,668,123,578,151"/>
-<area shape="poly" id="edge16_Node000007_Node000024" title=" " alt="" coords="578,158,673,169,791,187,827,194,826,199,790,192,672,175,577,163"/>
+<area shape="poly" id="edge16_Node000007_Node000025" title=" " alt="" coords="578,158,673,169,791,187,827,194,826,199,790,192,672,175,577,163"/>
 <area shape="poly" id="edge13_Node000008_Node000003" title=" " alt="" coords="723,118,865,334,861,337,719,121"/>
 <area shape="poly" id="edge14_Node000008_Node000005" title=" " alt="" coords="741,93,790,72,842,47,844,52,792,77,743,98"/>
-<area shape="poly" id="edge15_Node000008_Node000024" title=" " alt="" coords="743,114,792,136,827,160,857,184,853,188,824,164,789,141,741,119"/>
+<area shape="poly" id="edge15_Node000008_Node000025" title=" " alt="" coords="743,114,792,136,827,160,857,184,853,188,824,164,789,141,741,119"/>
 <area shape="rect" id="Node000011" href="$main_8cpp.html#aeac4844f2b7ebff74c1f10f044043f88" title="Affiche la grille dans la console. Gère l&#39;affichage des bordures, des couleurs des chiffres et du cur..." alt="" coords="663,645,759,670"/>
-<area shape="poly" id="edge18_Node000026_Node000011" title=" " alt="" coords="573,520,586,532,602,559,609,584,616,607,634,630,652,642,649,646,630,634,611,610,604,585,597,561,582,535,569,524"/>
-<area shape="rect" id="Node000014" href="$main_8cpp.html#aee6da6c18d4bd8450d07abf018c41c7e" title="Vérifie si le jeu est bloqué (aucun coup possible sur toute la grille)." alt="" coords="674,694,749,719"/>
-<area shape="poly" id="edge19_Node000026_Node000014" title=" " alt="" coords="574,520,586,532,598,552,605,572,608,609,612,645,620,662,634,679,647,689,662,696,660,701,644,694,630,683,615,665,607,646,603,610,600,573,594,555,582,535,570,524"/>
-<area shape="rect" id="Node000018" href="$main_8cpp.html#a65a2362688df5d28d549009b60eac855" title="Initialise et remplis la grille avec des valeurs aléatoires." alt="" coords="676,398,747,423"/>
-<area shape="poly" id="edge20_Node000026_Node000018" title=" " alt="" coords="557,495,588,464,631,432,662,419,664,424,633,437,592,468,561,498"/>
-<area shape="rect" id="Node000028" href="$modeinfini_8cpp.html#a790d64b2ea79a74ab7dea3bec7573a73" title="Gère le déplacement d&#39;un bonbon en mode infini Pareil que celle de base et ajoute la possibilité d&#39;ar..." alt="" coords="644,447,779,473"/>
-<area shape="poly" id="edge21_Node000026_Node000028" title=" " alt="" coords="584,496,654,474,656,479,585,501"/>
-<area shape="rect" id="Node000021" href="$main_8cpp.html#a5abcd3dadd4e12f8dd749111b9909e74" title="Remonte les chiffres sur la grille. Fait remonter les valeurs pour combler les trous (&#45;1) après la su..." alt="" coords="663,497,760,522"/>
-<area shape="poly" id="edge22_Node000026_Node000021" title=" " alt="" coords="584,507,648,507,648,512,584,512"/>
-<area shape="rect" id="Node000029" href="$modeinfini_8cpp.html#af5591e9d5429fcc2b2573e00c7aed10f" title="Affiche et met à jour le score pour le mode infini. Le score est calculé en multipliant le nombre de ..." alt="" coords="657,546,766,571"/>
-<area shape="poly" id="edge23_Node000026_Node000029" title=" " alt="" coords="585,518,656,539,654,544,584,523"/>
-<area shape="rect" id="Node000023" href="$main_8cpp.html#a5036d502c4e8e5796835286339b8e644" title="Supprime les alignements et met à jour le score. Parcourt la grille autour de la position donnée pour..." alt="" coords="632,595,791,621"/>
-<area shape="poly" id="edge24_Node000026_Node000023" title=" " alt="" coords="570,520,586,531,609,558,619,569,633,580,647,588,645,593,631,585,615,573,605,561,582,535,567,524"/>
-<area shape="poly" id="edge27_Node000030_Node000011" title=" " alt="" coords="570,569,586,581,609,607,619,618,633,630,652,639,649,644,631,634,615,622,605,610,582,585,567,574"/>
-<area shape="poly" id="edge28_Node000030_Node000014" title=" " alt="" coords="573,570,586,581,602,608,609,633,616,656,634,679,662,695,660,700,630,683,611,659,604,635,597,610,582,584,569,574"/>
-<area shape="poly" id="edge29_Node000030_Node000018" title=" " alt="" coords="568,544,582,532,597,506,603,481,611,457,630,433,661,416,664,421,634,437,616,460,609,483,602,508,586,535,572,548"/>
-<area shape="poly" id="edge30_Node000030_Node000028" title=" " alt="" coords="566,544,582,531,605,506,615,494,631,482,642,476,645,480,633,486,619,498,609,509,586,535,569,548"/>
-<area shape="poly" id="edge31_Node000030_Node000021" title=" " alt="" coords="584,545,654,524,656,529,585,550"/>
-<area shape="poly" id="edge32_Node000030_Node000029" title=" " alt="" coords="584,556,643,556,643,561,584,561"/>
-<area shape="poly" id="edge33_Node000030_Node000023" title=" " alt="" coords="585,567,656,589,654,594,584,572"/>
-<area shape="poly" id="edge36_Node000031_Node000011" title=" " alt="" coords="585,617,656,638,654,643,584,622"/>
-<area shape="poly" id="edge37_Node000031_Node000014" title=" " alt="" coords="562,619,592,649,633,679,662,692,660,697,631,684,589,653,558,623"/>
-<area shape="poly" id="edge38_Node000031_Node000018" title=" " alt="" coords="569,593,582,581,593,561,599,542,602,506,607,470,615,451,630,433,645,422,662,415,664,420,648,427,634,437,620,454,612,471,608,506,605,543,598,563,586,584,573,597"/>
-<area shape="poly" id="edge39_Node000031_Node000028" title=" " alt="" coords="568,593,582,581,597,555,603,531,611,506,630,482,636,478,639,482,634,486,616,509,609,532,602,557,586,584,572,597"/>
-<area shape="poly" id="edge40_Node000031_Node000021" title=" " alt="" coords="566,593,582,581,605,555,615,543,631,531,649,522,651,527,633,536,619,547,609,558,586,585,569,597"/>
-<area shape="poly" id="edge41_Node000031_Node000029" title=" " alt="" coords="584,594,654,573,656,578,585,600"/>
-<area shape="poly" id="edge42_Node000031_Node000023" title=" " alt="" coords="584,605,618,605,618,611,584,611"/>
+<area shape="poly" id="edge18_Node000027_Node000011" title=" " alt="" coords="573,520,586,532,602,559,609,584,616,607,634,630,652,642,649,646,630,634,611,610,604,585,597,561,582,535,569,524"/>
+<area shape="rect" id="Node000015" href="$main_8cpp.html#aee6da6c18d4bd8450d07abf018c41c7e" title="Vérifie si le jeu est bloqué (aucun coup possible sur toute la grille)." alt="" coords="674,694,749,719"/>
+<area shape="poly" id="edge19_Node000027_Node000015" title=" " alt="" coords="574,520,586,532,598,552,605,572,608,609,612,645,620,662,634,679,647,689,662,696,660,701,644,694,630,683,615,665,607,646,603,610,600,573,594,555,582,535,570,524"/>
+<area shape="rect" id="Node000019" href="$main_8cpp.html#a65a2362688df5d28d549009b60eac855" title="Initialise et remplis la grille avec des valeurs aléatoires." alt="" coords="676,398,747,423"/>
+<area shape="poly" id="edge20_Node000027_Node000019" title=" " alt="" coords="557,495,588,464,631,432,662,419,664,424,633,437,592,468,561,498"/>
+<area shape="rect" id="Node000029" href="$modeinfini_8cpp.html#a790d64b2ea79a74ab7dea3bec7573a73" title="Gère le déplacement d&#39;un bonbon en mode infini Pareil que celle de base et ajoute la possibilité d&#39;ar..." alt="" coords="644,447,779,473"/>
+<area shape="poly" id="edge21_Node000027_Node000029" title=" " alt="" coords="584,496,654,474,656,479,585,501"/>
+<area shape="rect" id="Node000022" href="$main_8cpp.html#a5abcd3dadd4e12f8dd749111b9909e74" title="Remonte les chiffres sur la grille. Fait remonter les valeurs pour combler les trous (&#45;1) après la su..." alt="" coords="663,497,760,522"/>
+<area shape="poly" id="edge22_Node000027_Node000022" title=" " alt="" coords="584,507,648,507,648,512,584,512"/>
+<area shape="rect" id="Node000030" href="$modeinfini_8cpp.html#af5591e9d5429fcc2b2573e00c7aed10f" title="Affiche et met à jour le score pour le mode infini. Le score est calculé en multipliant le nombre de ..." alt="" coords="657,546,766,571"/>
+<area shape="poly" id="edge23_Node000027_Node000030" title=" " alt="" coords="585,518,656,539,654,544,584,523"/>
+<area shape="rect" id="Node000024" href="$main_8cpp.html#a5036d502c4e8e5796835286339b8e644" title="Supprime les alignements et met à jour le score. Parcourt la grille autour de la position donnée pour..." alt="" coords="632,595,791,621"/>
+<area shape="poly" id="edge24_Node000027_Node000024" title=" " alt="" coords="570,520,586,531,609,558,619,569,633,580,647,588,645,593,631,585,615,573,605,561,582,535,567,524"/>
+<area shape="poly" id="edge27_Node000031_Node000011" title=" " alt="" coords="570,569,586,581,609,607,619,618,633,630,652,639,649,644,631,634,615,622,605,610,582,585,567,574"/>
+<area shape="poly" id="edge28_Node000031_Node000015" title=" " alt="" coords="573,570,586,581,602,608,609,633,616,656,634,679,662,695,660,700,630,683,611,659,604,635,597,610,582,584,569,574"/>
+<area shape="poly" id="edge29_Node000031_Node000019" title=" " alt="" coords="568,544,582,532,597,506,603,481,611,457,630,433,661,416,664,421,634,437,616,460,609,483,602,508,586,535,572,548"/>
+<area shape="poly" id="edge30_Node000031_Node000029" title=" " alt="" coords="566,544,582,531,605,506,615,494,631,482,642,476,645,480,633,486,619,498,609,509,586,535,569,548"/>
+<area shape="poly" id="edge31_Node000031_Node000022" title=" " alt="" coords="584,545,654,524,656,529,585,550"/>
+<area shape="poly" id="edge32_Node000031_Node000030" title=" " alt="" coords="584,556,643,556,643,561,584,561"/>
+<area shape="poly" id="edge33_Node000031_Node000024" title=" " alt="" coords="585,567,656,589,654,594,584,572"/>
+<area shape="poly" id="edge36_Node000032_Node000011" title=" " alt="" coords="585,617,656,638,654,643,584,622"/>
+<area shape="poly" id="edge37_Node000032_Node000015" title=" " alt="" coords="562,619,592,649,633,679,662,692,660,697,631,684,589,653,558,623"/>
+<area shape="poly" id="edge38_Node000032_Node000019" title=" " alt="" coords="569,593,582,581,593,561,599,542,602,506,607,470,615,451,630,433,645,422,662,415,664,420,648,427,634,437,620,454,612,471,608,506,605,543,598,563,586,584,573,597"/>
+<area shape="poly" id="edge39_Node000032_Node000029" title=" " alt="" coords="568,593,582,581,597,555,603,531,611,506,630,482,636,478,639,482,634,486,616,509,609,532,602,557,586,584,572,597"/>
+<area shape="poly" id="edge40_Node000032_Node000022" title=" " alt="" coords="566,593,582,581,605,555,615,543,631,531,649,522,651,527,633,536,619,547,609,558,586,585,569,597"/>
+<area shape="poly" id="edge41_Node000032_Node000030" title=" " alt="" coords="584,594,654,573,656,578,585,600"/>
+<area shape="poly" id="edge42_Node000032_Node000024" title=" " alt="" coords="584,605,618,605,618,611,584,611"/>
 </map>

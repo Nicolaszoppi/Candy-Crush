@@ -15,8 +15,7 @@ Fichier principal de notre Projet de SAE 1.\+01 -\/ "{}\+Candy Crush"{}.
 {\ttfamily \#include $<$modes\+\_\+de\+\_\+jeu/modehistoire.\+h$>$}\newline
 {\ttfamily \#include $<$cstdlib$>$}\newline
 {\ttfamily \#include $<$fstream$>$}\newline
-Include dependency graph for main.\+cpp\+:
-\nopagebreak
+Include dependency graph for main.\+cpp\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -35,6 +34,8 @@ typedef vector$<$ \mbox{\hyperlink{main_8cpp_a4fa05b1f00fcde100685cc887554b93b}{
 \item 
 void \mbox{\hyperlink{main_8cpp_aaee81cb19b7773fe8d63ebb764b747a3}{reglesjeu}} ()
 \begin{DoxyCompactList}\small\item\em Affiche les règles du jeu à partir d\textquotesingle{}un fichier externe. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main_8cpp_a9d7e8af417b6d543da691e9c0e2f6f9f}{clear\+Screen}} ()
+\begin{DoxyCompactList}\small\item\em Efface le contenu de la console. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{main_8cpp_ae241cf89d39423f89bb8e65688e4c031}{couleur}} (const unsigned \&coul)
 \begin{DoxyCompactList}\small\item\em Change la couleur du texte dans la console. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{main_8cpp_a889694f6e3de61c00c7ef972da1b49ff}{souligner}} (const unsigned \&chiffre)
@@ -63,8 +64,6 @@ bool \mbox{\hyperlink{main_8cpp_ae3eccf309cc7813338869b0aad49cb28}{verifiecoups}
 \begin{DoxyCompactList}\small\item\em Vérifie s\textquotesingle{}il existe au moins un coup possible à partir d\textquotesingle{}une case. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{main_8cpp_aee6da6c18d4bd8450d07abf018c41c7e}{findujeu}} (\mbox{\hyperlink{main_8cpp_a34079cedfcd0dcc6476bf9f1076e8cbd}{mat}} \&grille, long int \&Nbligne, long int \&Nbcolonne)
 \begin{DoxyCompactList}\small\item\em Vérifie si le jeu est bloqué (aucun coup possible sur toute la grille). \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{main_8cpp_a9d7e8af417b6d543da691e9c0e2f6f9f}{clear\+Screen}} ()
-\begin{DoxyCompactList}\small\item\em Efface le contenu de la console. \end{DoxyCompactList}\item 
 const unsigned \mbox{\hyperlink{main_8cpp_a63a18a31ab7815ab0d4eb5c133e5d1a5}{KReset}} (0)
 \begin{DoxyCompactList}\small\item\em Codes de couleurs ANSI pour la console Reset la couleur. \end{DoxyCompactList}\item 
 const unsigned \mbox{\hyperlink{main_8cpp_a2ce1342a3c5061b4504256f7ac7cfda6}{KNoir}} (30)
@@ -144,8 +143,7 @@ Here is the call graph for this function\+:
 \includegraphics[width=350pt]{main_8cpp_a87da64dc404fab46f81b3a2f39e4d2e3_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -162,6 +160,14 @@ Here is the caller graph for this function\+:
 
 Efface le contenu de la console. 
 
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_8cpp_a9d7e8af417b6d543da691e9c0e2f6f9f_icgraph}
+\end{center}
+\end{figure}
 \Hypertarget{main_8cpp_ae241cf89d39423f89bb8e65688e4c031}\label{main_8cpp_ae241cf89d39423f89bb8e65688e4c031} 
 \index{main.cpp@{main.cpp}!couleur@{couleur}}
 \index{couleur@{couleur}!main.cpp@{main.cpp}}
@@ -177,8 +183,7 @@ Change la couleur du texte dans la console.
 \mbox{\texttt{ in}}  & {\em coul} & Le code ANSI de la couleur que l\textquotesingle{}on veut. \\
 \hline
 \end{DoxyParams}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -206,8 +211,7 @@ Initialise les paramètres de la grille Demande à l\textquotesingle{}utilisateu
 \mbox{\texttt{ out}}  & {\em nbtour} & Nombre de tours maximum \\
 \hline
 \end{DoxyParams}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -235,8 +239,7 @@ Initialise les paramètres de la grille personnalisé. L\textquotesingle{}utilis
 \mbox{\texttt{ out}}  & {\em nbtour} & Nombre de tours. \\
 \hline
 \end{DoxyParams}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -269,11 +272,10 @@ Here is the call graph for this function\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=250pt]{main_8cpp_aeac4844f2b7ebff74c1f10f044043f88_cgraph}
+\includegraphics[width=262pt]{main_8cpp_aeac4844f2b7ebff74c1f10f044043f88_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -304,16 +306,14 @@ true Si AUCUN coup possible donc fin du jeu
 
 false Si au moins un coup est possible. 
 \end{DoxyReturn}
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{main_8cpp_aee6da6c18d4bd8450d07abf018c41c7e_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -344,8 +344,7 @@ Initialise et remplis la grille avec des valeurs aléatoires.
 \begin{DoxyReturn}{Returns}
 mat La grille remplie. 
 \end{DoxyReturn}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -373,8 +372,7 @@ Demande à l\textquotesingle{}utilisateur de sélectionner une case. Vérifie qu
 \mbox{\texttt{ in}}  & {\em Nbcolonne} & Nombre de colonnes. \\
 \hline
 \end{DoxyParams}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -492,8 +490,7 @@ true Si un alignement de 3 chiffres identiques.
 
 false Sinon. 
 \end{DoxyReturn}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -545,16 +542,14 @@ Gère le tour de jeu (sélection et déplacement). Appelle initmove pour la sél
 \mbox{\texttt{ in,out}}  & {\em nbtour} & Nombre de tours restants. \\
 \hline
 \end{DoxyParams}
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=346pt]{main_8cpp_a05a35cc8a32c2ec2c7358964374781b8_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -579,8 +574,7 @@ Here is the call graph for this function\+:
 \includegraphics[width=350pt]{main_8cpp_a5d321712f87eb6014a0a07500cc2eb45_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -605,8 +599,7 @@ Here is the call graph for this function\+:
 \includegraphics[width=350pt]{main_8cpp_a36ce9df10cf710ee8621446713854a71_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -641,16 +634,14 @@ true Si le mouvement provoque un alignement (mouvement valide).
 
 false Si le mouvement ne fait rien (mouvement invalide). 
 \end{DoxyReturn}
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=233pt]{main_8cpp_a48e2cdcaa0de3d338131e81661bf6999_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -667,8 +658,7 @@ Here is the caller graph for this function\+:
 
 Affiche les règles du jeu à partir d\textquotesingle{}un fichier externe. 
 
-Lit le fichier "{}reglesdujeu.\+txt"{} et l\textquotesingle{}affiche ligne par ligne les règles du jeudans la console. Here is the caller graph for this function\+:
-\nopagebreak
+Lit le fichier "{}reglesdujeu.\+txt"{} et l\textquotesingle{}affiche ligne par ligne les règles du jeudans la console. Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -694,8 +684,7 @@ Remonte les chiffres sur la grille. Fait remonter les valeurs pour combler les t
 \mbox{\texttt{ in}}  & {\em Nbcolonne} & Nombre de colonnes. \\
 \hline
 \end{DoxyParams}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -717,8 +706,7 @@ Utilisé pour mettre en évidence la position dans la matrice
 \mbox{\texttt{ in}}  & {\em chiffre} & Code de style (4 pour souligner). \\
 \hline
 \end{DoxyParams}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -748,8 +736,7 @@ Supprime les alignements et met à jour le score. Parcourt la grille autour de l
 \mbox{\texttt{ in,out}}  & {\em nombresupp} & Compteur total de chiffres supprimés pour le score \\
 \hline
 \end{DoxyParams}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -784,16 +771,14 @@ true Si un coup est possible depuis cette case.
 
 false Sinon. 
 \end{DoxyReturn}
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=345pt]{main_8cpp_ae3eccf309cc7813338869b0aad49cb28_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode

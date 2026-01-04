@@ -2,52 +2,54 @@
 <area shape="rect" id="Node000001" title="Menu principal du mode PvP. Permet de choisir entre le mode normal et le mode personnalisé...." alt="" coords="5,277,88,303"/>
 <area shape="rect" id="Node000002" href="$pvp_8cpp.html#a0970a0efd6e3ca77db70a8790c7d1638" title="Lance une partie PvP en mode normal. Génère une grille, puis la duplique pour que chaque joueur ait e..." alt="" coords="136,228,265,253"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="86,275,146,255,148,260,88,280"/>
-<area shape="rect" id="Node000019" href="$pvp_8cpp.html#a9db53af76781f897f707ed99d0a54751" title="Lance une partie PvP en mode personnalisé. Fonctionne exactement comme modenormalpvp mais utilise cre..." alt="" coords="141,277,260,303"/>
-<area shape="poly" id="edge20_Node000001_Node000019" title=" " alt="" coords="88,287,128,287,128,293,88,293"/>
-<area shape="rect" id="Node000021" href="$main_8cpp.html#aaee81cb19b7773fe8d63ebb764b747a3" title="Affiche les règles du jeu à partir d&#39;un fichier externe." alt="" coords="159,327,242,352"/>
-<area shape="poly" id="edge31_Node000001_Node000021" title=" " alt="" coords="88,300,148,320,146,325,86,305"/>
+<area shape="rect" id="Node000020" href="$pvp_8cpp.html#a9db53af76781f897f707ed99d0a54751" title="Lance une partie PvP en mode personnalisé. Fonctionne exactement comme modenormalpvp mais utilise cre..." alt="" coords="141,277,260,303"/>
+<area shape="poly" id="edge21_Node000001_Node000020" title=" " alt="" coords="88,287,128,287,128,293,88,293"/>
+<area shape="rect" id="Node000022" href="$main_8cpp.html#aaee81cb19b7773fe8d63ebb764b747a3" title="Affiche les règles du jeu à partir d&#39;un fichier externe." alt="" coords="159,327,242,352"/>
+<area shape="poly" id="edge32_Node000001_Node000022" title=" " alt="" coords="88,300,148,320,146,325,86,305"/>
 <area shape="rect" id="Node000003" href="$main_8cpp.html#a902108fd41723cc1a6aee3b72f60feca" title="Initialise les paramètres de la grille Demande à l&#39;utilisateur le nombre de types de chiffres différe..." alt="" coords="345,5,441,31"/>
 <area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="203,227,215,190,237,140,269,86,289,62,312,40,330,29,333,33,315,44,293,65,273,89,242,142,220,192,208,229"/>
-<area shape="rect" id="Node000004" href="$main_8cpp.html#aeac4844f2b7ebff74c1f10f044043f88" title="Affiche la grille dans la console. Gère l&#39;affichage des bordures, des couleurs des chiffres et du cur..." alt="" coords="345,449,441,475"/>
-<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="250,251,267,264,283,287,290,309,291,353,293,395,300,415,315,436,333,449,330,453,311,440,295,418,287,396,286,353,285,310,278,289,263,268,247,256"/>
-<area shape="rect" id="Node000007" href="$main_8cpp.html#aee6da6c18d4bd8450d07abf018c41c7e" title="Vérifie si le jeu est bloqué (aucun coup possible sur toute la grille)." alt="" coords="355,55,430,80"/>
-<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="206,226,244,161,275,122,312,89,341,75,343,80,315,94,279,126,248,164,210,229"/>
-<area shape="rect" id="Node000011" href="$main_8cpp.html#a65a2362688df5d28d549009b60eac855" title="Initialise et remplis la grille avec des valeurs aléatoires." alt="" coords="357,252,428,277"/>
-<area shape="poly" id="edge9_Node000002_Node000011" title=" " alt="" coords="266,246,344,256,343,261,265,251"/>
-<area shape="rect" id="Node000012" href="$main_8cpp.html#a05a35cc8a32c2ec2c7358964374781b8" title="Gère le tour de jeu (sélection et déplacement). Appelle initmove pour la sélection,..." alt="" coords="341,104,444,129"/>
-<area shape="poly" id="edge10_Node000002_Node000012" title=" " alt="" coords="211,226,253,184,281,160,312,140,328,132,330,137,315,144,284,165,256,188,215,230"/>
-<area shape="rect" id="Node000014" href="$main_8cpp.html#a5abcd3dadd4e12f8dd749111b9909e74" title="Remonte les chiffres sur la grille. Fait remonter les valeurs pour combler les trous (&#45;1) après la su..." alt="" coords="344,301,441,327"/>
-<area shape="poly" id="edge13_Node000002_Node000014" title=" " alt="" coords="237,251,266,264,314,288,334,295,332,300,312,292,264,268,235,256"/>
-<area shape="rect" id="Node000015" href="$pvp_8cpp.html#a56fe2d9678d7480da879b43fcddccccf" title="Affiche les résultats et choisi le vainqueur Compare les scores des deux joueurs et affiche un messag..." alt="" coords="340,153,445,179"/>
-<area shape="poly" id="edge14_Node000002_Node000015" title=" " alt="" coords="228,225,312,189,336,181,337,186,314,194,230,230"/>
-<area shape="rect" id="Node000016" href="$pvp_8cpp.html#a8b028aef35e81dfdb44a7ba4741036b1" title="Calcule et affiche le score d&#39;un joueur pendant son tour. Applique un bonus de points si le joueur a ..." alt="" coords="342,351,443,376"/>
-<area shape="poly" id="edge16_Node000002_Node000016" title=" " alt="" coords="246,251,267,264,283,283,291,302,299,320,315,337,331,346,328,351,312,341,295,323,287,304,279,286,264,268,243,256"/>
-<area shape="rect" id="Node000017" href="$main_8cpp.html#a5036d502c4e8e5796835286339b8e644" title="Supprime les alignements et met à jour le score. Parcourt la grille autour de la position donnée pour..." alt="" coords="313,400,472,425"/>
-<area shape="poly" id="edge17_Node000002_Node000017" title=" " alt="" coords="249,251,267,264,280,280,287,296,291,328,296,358,303,372,315,387,320,391,316,395,311,391,298,375,291,359,286,328,282,298,275,283,263,268,246,256"/>
-<area shape="rect" id="Node000018" href="$duo_8cpp.html#a780f2233c7d6571a2cb307a25d801ebb" title="Affiche quel joueur doit jouer sur le tour Si pair joueur 1 joue, si impair joueur 2 joue." alt="" coords="348,203,437,228"/>
-<area shape="poly" id="edge18_Node000002_Node000018" title=" " alt="" coords="265,230,334,220,335,226,266,235"/>
-<area shape="rect" id="Node000005" href="$main_8cpp.html#ae241cf89d39423f89bb8e65688e4c031" title="Change la couleur du texte dans la console." alt="" coords="535,204,606,229"/>
-<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="440,452,456,446,470,436,491,415,508,390,535,337,553,285,562,242,568,244,558,286,540,339,513,393,495,418,474,440,459,450,442,457"/>
-<area shape="rect" id="Node000006" href="$main_8cpp.html#a889694f6e3de61c00c7ef972da1b49ff" title="Souligne le texte dans la console." alt="" coords="529,449,612,475"/>
-<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="441,459,515,459,515,465,441,465"/>
-<area shape="rect" id="Node000008" href="$main_8cpp.html#ae3eccf309cc7813338869b0aad49cb28" title="Vérifie s&#39;il existe au moins un coup possible à partir d&#39;une case." alt="" coords="520,53,621,79"/>
-<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="430,64,506,64,506,69,430,70"/>
-<area shape="rect" id="Node000009" href="$main_8cpp.html#a48e2cdcaa0de3d338131e81661bf6999" title="Vérifie si un mouvement est possible Verifie l&#39;échange de deux cases selon la direction donnée...." alt="" coords="669,104,759,129"/>
-<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="608,76,665,97,663,102,607,81"/>
-<area shape="poly" id="edge12_Node000012_Node000009" title=" " alt="" coords="445,126,520,138,571,142,621,138,659,130,660,136,622,143,571,147,520,143,444,131"/>
-<area shape="rect" id="Node000013" href="$main_8cpp.html#aae0c721c97bf177470b2fb801df605d1" title="Demande à l&#39;utilisateur de sélectionner une case. Vérifie que les coordonnées entrées sont possible e..." alt="" coords="531,103,611,128"/>
-<area shape="poly" id="edge11_Node000012_Node000013" title=" " alt="" coords="444,114,516,113,517,118,444,119"/>
-<area shape="poly" id="edge15_Node000015_Node000005" title=" " alt="" coords="439,176,523,200,521,206,438,181"/>
-<area shape="poly" id="edge19_Node000018_Node000005" title=" " alt="" coords="437,213,522,214,522,219,437,218"/>
-<area shape="poly" id="edge22_Node000019_Node000004" title=" " alt="" coords="249,301,267,313,280,330,287,346,291,377,296,407,303,422,315,436,333,448,330,452,312,440,298,424,291,409,286,378,282,347,275,332,263,317,246,305"/>
-<area shape="poly" id="edge23_Node000019_Node000007" title=" " alt="" coords="249,275,263,264,278,243,285,221,286,178,287,134,295,112,311,89,325,79,341,72,343,77,328,83,315,93,300,114,292,135,291,178,290,222,283,245,267,268,252,279"/>
-<area shape="poly" id="edge24_Node000019_Node000011" title=" " alt="" coords="260,280,343,268,344,274,261,285"/>
-<area shape="poly" id="edge25_Node000019_Node000012" title=" " alt="" coords="248,275,263,264,275,249,282,234,286,203,291,172,298,156,312,140,327,129,330,133,315,144,303,159,296,173,292,204,287,235,280,252,267,268,251,279"/>
-<area shape="poly" id="edge26_Node000019_Node000014" title=" " alt="" coords="261,295,330,304,330,309,260,300"/>
-<area shape="poly" id="edge27_Node000019_Node000015" title=" " alt="" coords="246,275,264,264,279,246,287,227,295,208,312,189,326,180,329,185,315,193,299,211,292,229,284,249,267,268,248,279"/>
-<area shape="poly" id="edge28_Node000019_Node000016" title=" " alt="" coords="237,300,266,313,314,337,334,344,332,349,312,342,264,318,235,305"/>
-<area shape="poly" id="edge29_Node000019_Node000017" title=" " alt="" coords="246,300,267,313,283,333,291,351,299,369,315,387,323,392,320,396,312,391,295,372,287,354,279,335,264,317,243,305"/>
-<area shape="poly" id="edge30_Node000019_Node000018" title=" " alt="" coords="237,275,264,264,312,238,334,230,336,235,314,243,266,268,239,280"/>
-<area shape="rect" id="Node000020" href="$main_8cpp.html#ab9175e8c357d0f9925ce412006b7de43" title="Initialise les paramètres de la grille personnalisé. L&#39;utilisateur choisit manuellement toutes les di..." alt="" coords="327,499,459,524"/>
-<area shape="poly" id="edge21_Node000019_Node000020" title=" " alt="" coords="250,301,267,313,283,336,290,359,291,402,293,444,300,465,315,486,319,489,315,493,311,489,295,467,287,445,286,402,285,360,278,339,263,317,247,305"/>
+<area shape="rect" id="Node000004" href="$main_8cpp.html#aeac4844f2b7ebff74c1f10f044043f88" title="Affiche la grille dans la console. Gère l&#39;affichage des bordures, des couleurs des chiffres et du cur..." alt="" coords="345,301,441,327"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="237,251,266,264,314,288,334,295,332,300,312,292,264,268,235,256"/>
+<area shape="rect" id="Node000008" href="$main_8cpp.html#aee6da6c18d4bd8450d07abf018c41c7e" title="Vérifie si le jeu est bloqué (aucun coup possible sur toute la grille)." alt="" coords="355,203,430,228"/>
+<area shape="poly" id="edge7_Node000002_Node000008" title=" " alt="" coords="265,230,341,219,342,225,266,235"/>
+<area shape="rect" id="Node000012" href="$main_8cpp.html#a65a2362688df5d28d549009b60eac855" title="Initialise et remplis la grille avec des valeurs aléatoires." alt="" coords="357,449,428,475"/>
+<area shape="poly" id="edge10_Node000002_Node000012" title=" " alt="" coords="250,251,267,264,283,287,290,309,291,353,293,395,300,415,315,436,329,446,345,453,343,458,326,451,311,440,295,418,287,396,286,353,285,310,278,289,263,268,247,256"/>
+<area shape="rect" id="Node000013" href="$main_8cpp.html#a05a35cc8a32c2ec2c7358964374781b8" title="Gère le tour de jeu (sélection et déplacement). Appelle initmove pour la sélection,..." alt="" coords="341,252,444,277"/>
+<area shape="poly" id="edge11_Node000002_Node000013" title=" " alt="" coords="266,246,328,254,327,259,265,251"/>
+<area shape="rect" id="Node000015" href="$main_8cpp.html#a5abcd3dadd4e12f8dd749111b9909e74" title="Remonte les chiffres sur la grille. Fait remonter les valeurs pour combler les trous (&#45;1) après la su..." alt="" coords="344,55,441,80"/>
+<area shape="poly" id="edge14_Node000002_Node000015" title=" " alt="" coords="206,226,244,161,275,122,312,89,330,79,332,84,315,94,279,126,248,164,210,229"/>
+<area shape="rect" id="Node000016" href="$pvp_8cpp.html#a56fe2d9678d7480da879b43fcddccccf" title="Affiche les résultats et choisi le vainqueur Compare les scores des deux joueurs et affiche un messag..." alt="" coords="340,351,445,376"/>
+<area shape="poly" id="edge15_Node000002_Node000016" title=" " alt="" coords="246,251,267,264,283,283,291,302,299,320,315,337,329,345,326,350,312,341,295,323,287,304,279,286,264,268,243,256"/>
+<area shape="rect" id="Node000017" href="$pvp_8cpp.html#a8b028aef35e81dfdb44a7ba4741036b1" title="Calcule et affiche le score d&#39;un joueur pendant son tour. Applique un bonus de points si le joueur a ..." alt="" coords="342,104,443,129"/>
+<area shape="poly" id="edge17_Node000002_Node000017" title=" " alt="" coords="211,226,253,183,281,159,312,138,328,131,330,136,315,143,284,163,256,187,215,230"/>
+<area shape="rect" id="Node000018" href="$main_8cpp.html#a5036d502c4e8e5796835286339b8e644" title="Supprime les alignements et met à jour le score. Parcourt la grille autour de la position donnée pour..." alt="" coords="313,153,472,179"/>
+<area shape="poly" id="edge18_Node000002_Node000018" title=" " alt="" coords="227,225,312,188,333,180,334,185,314,192,229,230"/>
+<area shape="rect" id="Node000019" href="$duo_8cpp.html#a780f2233c7d6571a2cb307a25d801ebb" title="Affiche quel joueur doit jouer sur le tour Si pair joueur 1 joue, si impair joueur 2 joue." alt="" coords="348,400,437,425"/>
+<area shape="poly" id="edge19_Node000002_Node000019" title=" " alt="" coords="249,251,267,264,280,280,287,296,291,328,296,358,303,372,315,387,336,400,334,404,312,391,298,375,291,359,286,328,282,298,275,283,263,268,246,256"/>
+<area shape="rect" id="Node000005" href="$main_8cpp.html#a9d7e8af417b6d543da691e9c0e2f6f9f" title="Efface le contenu de la console." alt="" coords="521,351,620,376"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="440,324,511,344,510,349,438,329"/>
+<area shape="rect" id="Node000006" href="$main_8cpp.html#ae241cf89d39423f89bb8e65688e4c031" title="Change la couleur du texte dans la console." alt="" coords="535,400,606,425"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="442,323,473,337,489,349,499,362,508,374,522,387,528,391,525,395,518,391,504,377,494,365,485,353,471,342,440,328"/>
+<area shape="rect" id="Node000007" href="$main_8cpp.html#a889694f6e3de61c00c7ef972da1b49ff" title="Souligne le texte dans la console." alt="" coords="529,301,612,327"/>
+<area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="441,311,515,311,515,317,441,317"/>
+<area shape="rect" id="Node000009" href="$main_8cpp.html#ae3eccf309cc7813338869b0aad49cb28" title="Vérifie s&#39;il existe au moins un coup possible à partir d&#39;une case." alt="" coords="520,151,621,176"/>
+<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="430,202,513,177,514,182,431,207"/>
+<area shape="rect" id="Node000010" href="$main_8cpp.html#a48e2cdcaa0de3d338131e81661bf6999" title="Vérifie si un mouvement est possible Verifie l&#39;échange de deux cases selon la direction donnée...." alt="" coords="669,176,759,201"/>
+<area shape="poly" id="edge9_Node000009_Node000010" title=" " alt="" coords="622,170,656,176,655,181,621,175"/>
+<area shape="poly" id="edge13_Node000013_Node000010" title=" " alt="" coords="444,250,655,200,657,205,445,255"/>
+<area shape="rect" id="Node000014" href="$main_8cpp.html#aae0c721c97bf177470b2fb801df605d1" title="Demande à l&#39;utilisateur de sélectionner une case. Vérifie que les coordonnées entrées sont possible e..." alt="" coords="531,252,611,277"/>
+<area shape="poly" id="edge12_Node000013_Node000014" title=" " alt="" coords="444,262,517,262,517,267,444,267"/>
+<area shape="poly" id="edge16_Node000016_Node000006" title=" " alt="" coords="440,373,523,397,521,402,438,379"/>
+<area shape="poly" id="edge20_Node000019_Node000006" title=" " alt="" coords="437,410,522,410,522,415,437,415"/>
+<area shape="poly" id="edge23_Node000020_Node000004" title=" " alt="" coords="261,295,331,304,330,309,260,300"/>
+<area shape="poly" id="edge24_Node000020_Node000008" title=" " alt="" coords="237,275,264,264,312,238,341,227,343,232,314,243,266,268,239,280"/>
+<area shape="poly" id="edge25_Node000020_Node000012" title=" " alt="" coords="249,301,267,313,280,330,287,346,291,377,296,407,303,422,315,436,329,446,345,452,343,457,327,450,312,440,298,424,291,409,286,378,282,347,275,332,263,317,246,305"/>
+<area shape="poly" id="edge26_Node000020_Node000013" title=" " alt="" coords="260,280,328,271,328,276,261,285"/>
+<area shape="poly" id="edge27_Node000020_Node000015" title=" " alt="" coords="249,275,263,264,278,243,285,221,286,178,287,134,295,112,311,89,330,77,333,81,315,93,300,114,292,135,291,178,290,222,283,245,267,268,252,279"/>
+<area shape="poly" id="edge28_Node000020_Node000016" title=" " alt="" coords="237,300,266,313,314,337,334,344,332,349,312,342,264,318,235,305"/>
+<area shape="poly" id="edge29_Node000020_Node000017" title=" " alt="" coords="248,275,263,264,275,249,282,234,286,202,291,171,298,155,312,139,328,127,331,132,315,143,303,157,296,172,291,203,287,235,280,252,267,268,251,279"/>
+<area shape="poly" id="edge30_Node000020_Node000018" title=" " alt="" coords="246,275,264,264,279,246,287,227,295,207,312,188,320,183,322,187,315,192,299,210,292,229,284,248,267,268,248,279"/>
+<area shape="poly" id="edge31_Node000020_Node000019" title=" " alt="" coords="246,300,267,313,283,333,291,351,299,369,315,387,336,398,334,403,312,391,295,372,287,354,279,335,264,317,243,305"/>
+<area shape="rect" id="Node000021" href="$main_8cpp.html#ab9175e8c357d0f9925ce412006b7de43" title="Initialise les paramètres de la grille personnalisé. L&#39;utilisateur choisit manuellement toutes les di..." alt="" coords="327,499,459,524"/>
+<area shape="poly" id="edge22_Node000020_Node000021" title=" " alt="" coords="250,301,267,313,283,336,290,359,291,402,293,444,300,465,315,486,319,489,315,493,311,489,295,467,287,445,286,402,285,360,278,339,263,317,247,305"/>
 </map>

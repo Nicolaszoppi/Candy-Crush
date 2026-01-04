@@ -1,7 +1,9 @@
 <map id="displayGrid" name="displayGrid">
-<area shape="rect" id="Node000001" title="Affiche la grille dans la console. Gère l&#39;affichage des bordures, des couleurs des chiffres et du cur..." alt="" coords="5,31,101,56"/>
-<area shape="rect" id="Node000002" href="$main_8cpp.html#ae241cf89d39423f89bb8e65688e4c031" title="Change la couleur du texte dans la console." alt="" coords="155,5,226,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="101,32,141,24,142,30,102,37"/>
-<area shape="rect" id="Node000003" href="$main_8cpp.html#a889694f6e3de61c00c7ef972da1b49ff" title="Souligne le texte dans la console." alt="" coords="149,55,232,80"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="102,49,136,55,135,60,101,54"/>
+<area shape="rect" id="Node000001" title="Affiche la grille dans la console. Gère l&#39;affichage des bordures, des couleurs des chiffres et du cur..." alt="" coords="5,55,101,80"/>
+<area shape="rect" id="Node000002" href="$main_8cpp.html#a9d7e8af417b6d543da691e9c0e2f6f9f" title="Efface le contenu de la console." alt="" coords="149,5,248,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="91,52,146,33,148,38,92,57"/>
+<area shape="rect" id="Node000003" href="$main_8cpp.html#ae241cf89d39423f89bb8e65688e4c031" title="Change la couleur du texte dans la console." alt="" coords="163,55,234,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="101,65,150,65,150,70,101,70"/>
+<area shape="rect" id="Node000004" href="$main_8cpp.html#a889694f6e3de61c00c7ef972da1b49ff" title="Souligne le texte dans la console." alt="" coords="157,104,240,129"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="92,78,148,97,146,102,91,83"/>
 </map>
