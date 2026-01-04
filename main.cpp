@@ -1,3 +1,13 @@
+/**
+*@file main.cpp
+*@author ZOPPI Nicolas, KEOKHAM Rayan, LONGO Matys ; BUT1 Informatique GROUPE 
+*@date 31-12-2025
+*@brief Fichier principal de notre Projet de SAE 1.01 - "Candy Crush"
+
+ * Ce fichier permet de lancer le jeu et d'accéder aux différents modes de jeu
+ * avec un menu principal.
+*/
+
 #include <iostream>
 #include <vector>
 #include <ctime>
@@ -9,9 +19,22 @@
 #include<cstdlib>
 #include <fstream>
 using namespace std;
-
+/**
+ * @typedef line
+ * @brief Représente une ligne de la grille
+ */
 typedef vector <short int> line; // un type représentant une ligne de la grille
+
+/**
+ * @typedef mat
+ * @brief Représente la grille de jeu
+ */
 typedef vector <line> mat; // un type représentant la grille
+/**
+ * @brief Affiche les règles du jeu à partir d'un fichier externe.
+ *
+ * Lit le fichier "reglesdujeu.txt" et l'affiche ligne par ligne les règles du jeudans la console.
+ */
 void reglesjeu () {
     string ligne;
     ifstream fichier("../../reglesdujeu.txt");
@@ -21,12 +44,33 @@ void reglesjeu () {
         cout << ligne << endl;
     }
 }
+
+/**
+ * @brief Change la couleur du texte dans la console.
+ * @param[in] coul Le code ANSI de la couleur que l'on veut.
+ */
 void couleur (const unsigned & coul) {
     cout << "\033[" << coul <<"m";//Définira la couleur de chaque chiffre
 }
+/**
+ * @brief Souligne le texte dans la console.
+ *
+ * Utilisé pour mettre en évidence la position dans la matrice
+ * @param[in] chiffre Code de style (4 pour souligner).
+ */
 void souligner (const unsigned & chiffre) {//Souligne ou nous serons dans la matrice
     cout << "\033[4;" << chiffre << "m";
 }
+
+/**
+ * @brief Initialise les paramètres de la grille
+ * Demande à l'utilisateur le nombre de types de chiffres différents et calcule automatiquementla taille de la grille et le nombre de tours.
+ *
+ * @param[out] KNbCandies Nombre de types de chiffres différents.
+ * @param[out] Nbligne Nombre de lignes de la grille 
+ * @param[out] Nbcolonne Nombre de colonnes de la grille
+ * @param[out] nbtour Nombre de tours maximum 
+ */
 void creategrille (size_t & KNbCandies, long int & Nbligne, long int & Nbcolonne,size_t & nbtour) {  //Crée une grille selon le nombre de chiffres possibles (commence à 3)
     cout << "Nombre max ?" << endl;
     while (true) {
@@ -42,6 +86,16 @@ void creategrille (size_t & KNbCandies, long int & Nbligne, long int & Nbcolonne
     cout << "Taille de la grille : " << Nbligne << "*" << Nbcolonne << endl;
     cout << "Nombre de tours : " << nbtour << endl;
 }
+
+
+/**
+ * @brief Initialise les paramètres de la grille personnalisé.
+ * L'utilisateur choisit manuellement toutes les dimensions et contraintes du jeu.
+ * @param[out] KNbCandies Nombre de types de bonbons(chiffres).
+ * @param[out] Nbligne Nombre de lignes.
+ * @param[out] Nbcolonne Nombre de colonnes.
+ * @param[out] nbtour Nombre de tours.
+ */
 void creategrilleperso (size_t & KNbCandies, long int & Nbligne, long int & Nbcolonne,size_t & nbtour) { //Crée une grille entièrement customisable (rectangulaire ou carrée)
     while (true) {
         cout << "Nombre max ?" << endl;
@@ -76,6 +130,19 @@ void creategrilleperso (size_t & KNbCandies, long int & Nbligne, long int & Nbco
         else break;
     }
 }
+
+/**
+ * @brief Vérifie si on a un alignement de 3 chiffres identique.
+ *  * Vérifie horizontalement et verticalement autour de la position donnée s'il y a
+ * une suite de 3 nombres identiques.
+ *
+ * @param[in] grille La grille de jeu actuelle.
+ * @param[in] coord La position à verifier.
+ * @param[in] Nbligne Nombre total de lignes.
+ * @param[in] Nbcolonne Nombre total de colonnes.
+ * @return true Si un alignement de 3 chiffres identiques.
+ * @return false Sinon.
+ */
 bool litalign (const mat & grille, maPosition & coord,const long int & Nbligne,const long int & Nbcolonne) {
     //permet de trouver si il y a un alignement vertical ou horizontal de minimum trois mêmes chiffre d'affilée par raport à la position
     long int i = 0;
@@ -110,6 +177,16 @@ bool litalign (const mat & grille, maPosition & coord,const long int & Nbligne,c
     }
     return false;
 }
+
+/**
+ * @brief Initialise et remplis la grille avec des valeurs aléatoires.
+ *
+ * @param[in,out] grille La matrice à remplir.
+ * @param[in] Nbligne Nombre de lignes.
+ * @param[in] Nbcolonne Nombre de colonnes.
+ * @param[in] KNbCandies Nombre maximum de types de chiffres (pour le modulo).
+ * @return mat La grille remplie.
+ */
 mat initGrid (mat & grille,const long int & Nbligne,const long int & Nbcolonne,const size_t & KNbCandies) { //Donne les valeurs aléatoirement dans chaque cases
     for (long int i = 0; i < Nbligne ; ++i) {
         for (long int j = 0; j < Nbcolonne;++j ) {
@@ -118,6 +195,18 @@ mat initGrid (mat & grille,const long int & Nbligne,const long int & Nbcolonne,c
     }
     return grille;
 }
+
+
+/**
+ * @brief Affiche la grille dans la console.
+ * Gère l'affichage des bordures, des couleurs des chiffres et du curseur de sélection.
+ * Les cases vides (-1 ou -2) sont affichées comme des espaces.
+ *
+ * @param[in,out] grille La grille à afficher
+ * @param[in] Nbligne Nombre de lignes
+ * @param[in] Nbcolonne Nombre de colonnes
+ * @param[in] coord Position actuelle
+ */
 void displayGrid (mat & grille,const long int & Nbligne,const long int & Nbcolonne, const maPosition & coord) {//Affiche la grille sous forme de tableau
     for (long int i = 0; i < Nbligne ; ++i) {
         for (long int j = 0; j < Nbcolonne; ++j ) {
@@ -152,6 +241,19 @@ void displayGrid (mat & grille,const long int & Nbligne,const long int & Nbcolon
         cout << "|" << endl;
     }
 }
+
+/**
+ * @brief Vérifie si un mouvement est possible
+ * Verifie l'échange de deux cases selon la direction donnée. Si alignement via litalign, le mouvement est validé. Sinon, l'échange est annulé.
+ * *
+ * @param[in,out] grille La grille de jeu.
+ * @param[in] coord La position de départ.
+ * @param[in] direction Direction du mouvement (Z,Q,S,D).
+ * @param[in] Nbligne Nombre de lignes
+ * @param[in] Nbcolonne Nombre de colonnes
+ * @return true Si le mouvement provoque un alignement (mouvement valide).
+ * @return false Si le mouvement ne fait rien (mouvement invalide).
+ */
 bool possmove (mat & grille, maPosition & coord,char & direction,const long int & Nbligne,const long int & Nbcolonne) {
     maPosition coordtest;
     coordtest.abs = coord.abs;
@@ -223,6 +325,15 @@ bool possmove (mat & grille, maPosition & coord,char & direction,const long int 
     }
     return false;
 }
+
+/**
+ * @brief Demande à l'utilisateur de sélectionner une case.
+ * Vérifie que les coordonnées entrées sont possible et que la case n'est pas vide.
+ * @param[in] grille La grille actuelle.
+ * @param[out] coord Les coordonnées choisies par l'utilisateur.
+ * @param[in] Nbligne Nombre de lignes.
+ * @param[in] Nbcolonne Nombre de colonnes.
+ */
 void initmove (mat & grille,maPosition & coord,const long int & Nbligne,const long int & Nbcolonne ) {
     //Donne les coordonnées du départ du déplacement
     cout << "coordonnées ? (x,y)" << endl;
@@ -247,6 +358,19 @@ void initmove (mat & grille,maPosition & coord,const long int & Nbligne,const lo
         else break;
     }
 }
+
+/**
+ * @brief Gère le tour de jeu (sélection et déplacement).
+ * Appelle initmove pour la sélection, demande une direction puis vérifie la validité via possmove et effectue l'échange si valide.
+ * Et retire 1 tours aux nombre de tours restants.
+ * @param[in,out] grille La grille de jeu.
+ * @param[in,out] coord Coordonnées de la case sélectionnée.
+ * @param[out] direction Direction choisie.
+ * @param[in,out] nombredep Compteur de déplacements effectués (statistiques).
+ * @param[in] Nbligne Nombre de lignes.
+ * @param[in] Nbcolonne Nombre de colonnes.
+ * @param[in,out] nbtour Nombre de tours restants.
+ */
 void makeAMove (mat & grille,maPosition & coord,char & direction,unsigned long & nombredep,const long int & Nbligne,const long int & Nbcolonne,size_t & nbtour ) {
     initmove(grille,coord,Nbligne,Nbcolonne);
     size_t valeurtrans;
@@ -339,6 +463,18 @@ void makeAMove (mat & grille,maPosition & coord,char & direction,unsigned long &
         }
     }
 }
+
+/**
+ * @brief Supprime les alignements et met à jour le score.
+ * Parcourt la grille autour de la position donnée pour trouver les alignements de 3 ou plus.
+ * Les cases alignées sont remplacées par -1 càd case vide.
+ * @param[in,out] grille La grille de jeu.
+ * @param[in] coord Position pour ou on vérifie les alignements
+ * @param[in] Nbligne Nombre de lignes
+ * @param[in] Nbcolonne Nombre de colonnes
+ * @param[in,out] nombresupp Compteur total de chiffres supprimés pour le score
+ */
+
 void suppressiondoublons (mat & grille, const maPosition & coord,const long int & Nbligne,const long int & Nbcolonne,unsigned long & nombresupp) {
     //applique la suppression des alignements de même chiffres d'affilée
     long int valeurmilieu = grille[coord.ord][coord.abs];
@@ -381,6 +517,14 @@ void suppressiondoublons (mat & grille, const maPosition & coord,const long int 
         grille[coord.ord][coord.abs] = -1;
     }
 }
+
+/**
+ * @brief Remonte les chiffres sur la grille.
+ * Fait remonter les valeurs pour combler les trous (-1) après la supression des alignements.
+ * @param[in,out] grille La grille de jeu.
+ * @param[in] Nbligne Nombre de lignes.
+ * @param[in] Nbcolonne Nombre de colonnes.
+ */
 void remonteval (mat & grille,const long int & Nbligne,const long int & Nbcolonne) {
     //remonte de BAS EN HAUT les chiffres
     long int i = 0;
@@ -400,6 +544,17 @@ void remonteval (mat & grille,const long int & Nbligne,const long int & Nbcolonn
         j = 0;
     }
 }
+
+/**
+ * @brief Vérifie s'il existe au moins un coup possible à partir d'une case.
+ * @param[in,out] grille La grille
+ * @param[in] Nbligne Nombre de lignes
+ * @param[in] Nbcolonne Nombre de colonnes
+ * @param[in] ordonnee Ligne de la case à verifier 
+ * @param[in] abscisse Colonne de la case à verifier 
+ * @return true Si un coup est possible depuis cette case.
+ * @return false Sinon.
+ */
 bool verifiecoups (mat & grille, long int & Nbligne, long int & Nbcolonne, long int ordonnee, long int abscisse) {
     maPosition coord;
     char direction = 'a';
@@ -431,6 +586,15 @@ bool verifiecoups (mat & grille, long int & Nbligne, long int & Nbcolonne, long 
     }
     return false;
 }
+
+/**
+ * @brief Vérifie si le jeu est bloqué (aucun coup possible sur toute la grille).
+ * @param[in,out] grille La grille
+ * @param[in] Nbligne Nombre de lignes
+ * @param[in] Nbcolonne Nombre de colonnes
+ * @return true Si AUCUN coup possible donc fin du jeu
+ * @return false Si au moins un coup est possible.
+ */
 bool findujeu (mat & grille, long int & Nbligne, long int & Nbcolonne){
     for (long int i = 0;i < Nbligne;++i) {
         for (long int j = 0 ; j < Nbcolonne; ++j) {
@@ -441,18 +605,59 @@ bool findujeu (mat & grille, long int & Nbligne, long int & Nbcolonne){
     }
     return true;
 }
+/**
+ * @brief Efface le contenu de la console.
+ */
 void clearScreen () {
     cout << "\033[H\033[2J";
 }
+
+/**
+ * @brief Codes de couleurs ANSI pour la console
+ * Reset la couleur
+ */
 const unsigned KReset   (0);
+/**
+ * @brief Codes de couleurs ANSI pour la console
+ * Couleur Noir
+ */
 const unsigned KNoir    (30);
+/**
+ * @brief Codes de couleurs ANSI pour la consolec
+ * Couleur Rouge
+ */
 const unsigned KRouge   (31);
+/**
+ * @brief Codes de couleurs ANSI pour la console
+ * Couleur Vert
+ */
 const unsigned KVert    (32);
+/**
+ * @brief Codes de couleurs ANSI pour la console
+ * Couleur Jaune
+ */
 const unsigned KJaune   (33);
+/**
+ * @brief Codes de couleurs ANSI pour la console
+ * Couleur Bleu
+ */
 const unsigned KBleu    (34);
+/**
+ * @brief Codes de couleurs ANSI pour la console
+ * Couleur Magenta
+ */
 const unsigned KMAgenta (35);
+/**
+ * @brief Codes de couleurs ANSI pour la console
+ * Couleur Cyan
+ */
 const unsigned KCyan    (36);
 
+
+/**
+ * @brief Menu principal pour les modes Solo.
+ * Propose au joueur de choisir entre les différents modes de jeu disponibles en solo.
+ */
 void modesolo() {
     unsigned long score = 0;
     unsigned long nombredep = 0;
@@ -493,7 +698,10 @@ void modesolo() {
         }
     }
 }
-
+/**
+ * @brief Menu principal du mode Duo.
+ * Permet de choisir entre le mode coop et le mode PVP
+ */
 void modeduo() {
     size_t joueur = 2;
     unsigned long score = 0;
@@ -550,6 +758,11 @@ void modeduo() {
     }
 
 }
+
+/**
+ * @brief Affiche le menu principal et lance le mode de jeu choisi
+ * Permet de choisir entre Solo, Duo, ou quitter.
+ */
 void choixmode () {
     //menu principal qui permet le choix du mode voulu
     size_t mode;
@@ -572,6 +785,10 @@ void choixmode () {
         }
     }
 }
+/**
+ * @brief main
+ * Lance le menu pour jouer
+ */
 int main()
 {
     srand(time(nullptr));

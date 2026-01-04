@@ -1,13 +1,42 @@
+/**
+ * @file modeinfini.cpp
+ * @author ZOPPI Nicolas, KEOKHAM Rayan, LONGO Matys ; BUT1 Informatique GROUPE
+ * @date 31-12-2025
+ * @brief mode de jeu infini.
+ * 
+ * Ce mode fait en sorte de remplir la grille automatiquement après chaque coup,
+ * permettant une partie sans fin tant que des coups sont possibles.
+ */
 #include "solo.h"
 #include <iostream>
 #include <vector>
 #include <ctime>
 #include <fstream>
 using namespace std;
-
+/**
+ * @typedef line
+ * @brief Représente une ligne de la grille
+ */
 typedef vector <short int> line; // un type représentant une ligne de la grille
+
+/**
+ * @typedef mat
+ * @brief Représente la grille du jeu
+ */
 typedef vector <line> mat; // un type représentant la grille
 
+
+/**
+ * @brief Gère le déplacement d'un bonbon en mode infini
+ * Pareil que celle de base et ajoute la possibilité d'arrêter la partie en appuyant sur la touche 'A' .
+ * @param[in,out] grille La grille de jeu.
+ * @param[in,out] coord La position du curseur.
+ * @param[out] direction La direction choisie par le joueur.
+ * @param[in,out] nombredep Compteur de déplacements (incrémenté si mouvement valide).
+ * @param[in] Nbligne Nombre de lignes.
+ * @param[in] Nbcolonne Nombre de colonnes.
+ * @return int Retourne 0 (Code de statut, potentiellement pour future extension).
+ */
 int makeAMoveinfini (mat & grille,maPosition & coord,char & direction,unsigned long & nombredep,const long int & Nbligne,const long int & Nbcolonne) {
     initmove(grille,coord,Nbligne,Nbcolonne);
     size_t valeurtrans;
@@ -100,6 +129,16 @@ int makeAMoveinfini (mat & grille,maPosition & coord,char & direction,unsigned l
     }
     return 0;
 }
+
+
+/**
+ * @brief Affiche et met à jour le score pour le mode infini.
+ * Le score est calculé en multipliant le nombre de bonbons supprimés par 10.
+ *
+ * @param[in,out] score Score total du joueur
+ * @param[in] nombredep Nombre total de déplacements effectués
+ * @param[in,out] nombresupp Nombre de chiffres supprimés remis a 0 après chaque deplacements
+ */
 void scorejeuinfini (unsigned long & score, unsigned long & nombredep, unsigned long & nombresupp) {
     //affiche le score après chaque déplacement et aussi le nombre de déplacement mais pas les tours
     cout << "Nombre de déplacements : " << nombredep << endl;
@@ -112,6 +151,16 @@ void scorejeuinfini (unsigned long & score, unsigned long & nombredep, unsigned 
  * @brief main
  * @return
  */
+
+/**
+ * @brief Remplit les colonnes de la grille
+ * Remplit les cases vides -1 de la grille avec des vals aléatoires entre 1 et KNbCandies
+*
+ * @param[in,out] grille La grille
+ * @param[in] Nbligne Nombre de lignes
+ * @param[in] Nbcolonne Nombre de colonnes
+ * @param[in] KNbCandies Nombes de chiffres différents
+ */
 void rempliColonne(mat & grille, long int & Nbligne,long int & Nbcolonne, size_t & KNbCandies) {
     for (long int i = 0 ; i < Nbligne ; ++i) {
         for (long int j = 0 ; j  < Nbcolonne ; ++j) {
@@ -121,6 +170,22 @@ void rempliColonne(mat & grille, long int & Nbligne,long int & Nbcolonne, size_t
         }
     }
 }
+
+/**
+ * @brief Fonction principale du jeu en Mode Infini.
+ * Initialise une grille mode normal
+ * La boucle continue tant que des coups sont possibles ou que le joueur n'appuie pas sur A.
+ * À chaque tour, la grille est rempli via rempliColonne.
+ *
+ * @param[in,out] score Score du joueur
+ * @param[in,out] nombredep Compteur de déplacements
+ * @param[in,out] nombresupp Compteur de chiffres supprimés.
+ * @param[out] direction Direction du mouvement
+ * @param[in,out] coord Position du joueur
+ * @param[out] Nbligne Nombre de lignes
+ * @param[out] Nbcolonne Nombre de colonnes
+ * @param[out] KNbCandies Nombre de chiffres différents pour le jeu
+ */
 void modenormalinfini (unsigned long & score, unsigned long & nombredep, unsigned long & nombresupp , char & direction, maPosition & coord, long int & Nbligne,long int & Nbcolonne, size_t & KNbCandies) {
     cout << "Nombre max ?" << endl;
     while (true) {
