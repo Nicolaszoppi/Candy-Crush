@@ -1,3 +1,14 @@
+/**
+ * @file pvp.cpp
+ * @author ZOPPI Nicolas, KEOKHAM Rayan, LONGO Matys ; BUT1 Informatique GROUPE
+ * @date 31-12-2025
+ * @brief Gestion du mode PvP
+ *
+ * Ce fichier contient les fonctions pour faire marcher le mode pvp
+ * Chaque joueur dispose de sa propre grille identique au début et doit réaliser le meilleur score.
+ */
+
+
 #include "duo.h"
 #include "modes_de_jeu/solo.h"
 #include "modes_de_jeu/duo.h"
@@ -8,10 +19,28 @@
 #include <termios.h>
 #include <fstream>
 using namespace std;
-
+/**
+ * @typedef line
+ * @brief Représente une ligne de la grille
+ */
 typedef vector <short int> line; // un type représentant une ligne de la grille
+/**
+ * @typedef mat
+ * @brief Représente la grille du jeu
+ */
 typedef vector <line> mat; // un type représentant la grille
 
+/**
+ * @brief Calcule et affiche le score d'un joueur pendant son tour.
+ * Applique un bonus de points si le joueur a joué vite (moins de 3 déplacements).
+ * enlève un tour au compteur si tour du joueur 2
+ *
+ * @param[in,out] score Score actuel du joueur.
+ * @param[in] nombredep Nombre de déplacements effectués
+ * @param[in,out] nombresupp Nombre de chiffres supprimés 
+ * @param[in,out] nbtour Nombre de tours restants pour la partie.
+ * @param[in] joueur joueur 1 ou joueur 2 selon la parité.
+ */
 void scorejeupvp (unsigned long & score, unsigned long & nombredep, unsigned long & nombresupp, size_t & nbtour,size_t joueur ) {
     //affiche le score après chaque déplacement et aussi le nombre de tours restants et le nombre de déplacements
     cout << "Nombre de déplacements : " << nombredep << endl;
@@ -26,6 +55,16 @@ void scorejeupvp (unsigned long & score, unsigned long & nombredep, unsigned lon
     cout << "Tours restants : " << nbtour << endl;
     nombresupp = 0;
 }
+
+/**
+ * @brief Affiche les résultats et choisi le vainqueur 
+ * Compare les scores des deux joueurs et affiche un message de victoire ou d'égalité,et les stats de la partie.
+ *
+ * @param[in] score Score final du Joueur 1.
+ * @param[in] score2 Score final du Joueur 2.
+ * @param[in] nombredep Total des déplacements du Joueur 1.
+ * @param[in] nombredep2 Total des déplacements du Joueur 2.
+ */
 void scorejeufinal(unsigned long & score,unsigned long & score2, unsigned long & nombredep,unsigned long nombredep2) {
     couleur(31);
     if (score2 > score) {
@@ -49,6 +88,24 @@ void scorejeufinal(unsigned long & score,unsigned long & score2, unsigned long &
         cout << "Nombre de déplacements du joueur 2 : " << nombredep2 << endl;
     }
 }
+/**
+ * @brief Lance une partie PvP en mode normal.
+ * Génère une grille, puis la duplique pour que chaque joueur ait exactement la même grille.
+ * Les joueurs jouent chacun leur tour sur leur propre grille.
+ *
+ * @param[in,out] score Score du Joueur 1.
+ * @param[in,out] score2 Score du Joueur 2.
+ * @param[in,out] nombredep Déplacements Joueur 1.
+ * @param[in,out] nombredep2 Déplacements Joueur 2.
+ * @param[in,out] nombresupp Chiffres supprimés J1.
+ * @param[in,out] nombresupp2 Chiffres supprimés J2.
+ * @param[out] direction Direction du déplacement
+ * @param[in,out] coord Position du joueur
+ * @param[out] Nbligne Nombre de lignes.
+ * @param[out] Nbcolonne Nombre de colonnes.
+ * @param[out] KNbCandies Nombre de chiffres différents.
+ * @param[in,out] joueur tour du joueur
+ */
 void modenormalpvp (unsigned long & score,unsigned long & score2, unsigned long & nombredep,unsigned long nombredep2, unsigned long & nombresupp ,unsigned long nombresupp2 , char & direction, maPosition & coord, long int & Nbligne,long int & Nbcolonne, size_t & KNbCandies,size_t & joueur) {
     size_t nbtour = 0;
     creategrille (KNbCandies, Nbligne,Nbcolonne,nbtour);
@@ -90,6 +147,25 @@ void modenormalpvp (unsigned long & score,unsigned long & score2, unsigned long 
     scorejeufinal(score,score2,nombredep,nombredep2);
     return;
 }
+
+/**
+ * @brief Lance une partie PvP en mode personnalisé.
+ * Fonctionne exactement comme modenormalpvp mais utilise `creategrilleperso`
+ * pour personaliser les paramètres de la grille.
+ *
+ * @param[in,out] score Score J1.
+ * @param[in,out] score2 Score J2.
+ * @param[in,out] nombredep Déplacements J1.
+ * @param[in,out] nombredep2 Déplacements J2.
+ * @param[in,out] nombresupp Suppressions J1.
+ * @param[in,out] nombresupp2 Suppressions J2.
+ * @param[out] direction Direction.
+ * @param[in,out] coord Position.
+ * @param[out] Nbligne Lignes.
+ * @param[out] Nbcolonne Colonnes.
+ * @param[out] KNbCandies Nombres de chiffres différents.
+ * @param[in,out] joueur Identifiant joueur.
+ */
 void modepersopvp (unsigned long & score,unsigned long & score2, unsigned long & nombredep,unsigned long nombredep2, unsigned long & nombresupp ,unsigned long nombresupp2 , char & direction, maPosition & coord, long int & Nbligne,long int & Nbcolonne, size_t & KNbCandies,size_t & joueur) {
     size_t nbtour = 0;
     creategrilleperso (KNbCandies, Nbligne,Nbcolonne,nbtour);
@@ -129,6 +205,11 @@ void modepersopvp (unsigned long & score,unsigned long & score2, unsigned long &
     scorejeufinal(score,score2,nombredep,nombredep2);
     return;
 }
+/**
+ * @brief Menu principal du mode PvP.
+ * Permet de choisir entre le mode normal et le mode personnalisé.
+ * Initialise les variables nécessaires a la partie 
+ */
 void modepvp() {
     size_t joueur = 2;
     unsigned long score = 0;
