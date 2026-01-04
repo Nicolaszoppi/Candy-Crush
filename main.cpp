@@ -453,6 +453,103 @@ const unsigned KBleu    (34);
 const unsigned KMAgenta (35);
 const unsigned KCyan    (36);
 
+void modesolo() {
+    unsigned long score = 0;
+    unsigned long nombredep = 0;
+    unsigned long nombresupp = 0;
+    char direction = 'a';
+    maPosition coord;
+    coord.ord = 0;
+    coord.abs = 0;
+    long int Nbligne;
+    long int Nbcolonne;
+    size_t KNbCandies;
+    size_t mode;
+    while (true) {
+        cout << "Quel mode choisir ?" << endl;
+        cout << "1 : Mode normal" << endl << "2 : Mode personnalisé" << endl << "3 : Mode infini" << endl << "4 : Mode campagne" << endl << "5 : Règles du jeu" << endl;
+        cout << "(ou 10 pour quitter)" << endl;
+        cin >> mode;
+        if (mode == 1) {
+            modenormalsolo(score,nombredep,nombresupp,direction,coord,Nbligne,Nbcolonne,KNbCandies);
+        }
+        else if (mode == 2) {
+            modepersosolo(score,nombredep,nombresupp,direction,coord,Nbligne,Nbcolonne,KNbCandies);
+        }
+        else if (mode == 3) {
+            modenormalinfini(score,nombredep,nombresupp,direction,coord,Nbligne,Nbcolonne,KNbCandies);
+        }
+        else if (mode == 4) {
+            modehistoire();
+        }
+        else if (mode == 5) {
+            reglesjeu();
+        }
+        else if (mode == 10) {
+            return;
+        }
+        else {
+            cout << "Entrez quelque chose de valide.";
+        }
+    }
+}
+
+void modeduo() {
+    size_t joueur = 2;
+    unsigned long score = 0;
+    unsigned long nombredep = 0;
+    unsigned long nombresupp = 0;
+    char direction = 'a';
+    maPosition coord;
+    coord.ord = 0;
+    coord.abs = 0;
+    long int Nbligne;
+    long int Nbcolonne;
+    size_t KNbCandies;
+    size_t mode;
+    cout << "Bienvenue !" << endl << "Quel mode de jeu choisir ?" << endl;
+    while (true) {
+        cout << "1 : Mode coop" << endl << "2 : Mode PVP (contre)" << endl << "3 : Règles du jeu" << endl;
+        cout << "(10 pour quitter)" << endl;
+        cin >> mode;
+        if (mode == 1) {
+            while (true) {
+                cout << "Quel mode de choisir ?" << endl;
+                cout << "1 : Mode normal" << endl << "2 : Mode personnalisé" << endl << "3 : Règles du jeu" << endl;
+                cout << "(10 pour quitter)" << endl;
+                cin >> mode;
+                if (mode == 1) {
+                    modenormalduo(score,nombredep,nombresupp,direction,coord,Nbligne,Nbcolonne,KNbCandies,joueur);
+                }
+                else if (mode == 2) {
+                    modepersoduo(score,nombredep,nombresupp,direction,coord,Nbligne,Nbcolonne,KNbCandies,joueur);
+                }
+                else if (mode == 3) {
+                    reglesjeu ();
+                }
+                else if (mode == 10) {
+                    return;
+                }
+                else {
+                    cout << "Entrez quelque chose de valide.";
+                }
+            }
+        }
+        else if (mode == 2) {
+            modepvp();
+        }
+        else if (mode == 3) {
+            reglesjeu ();
+        }
+        else if (mode == 10) {
+            return;
+        }
+        else {
+            cout << "Entrez quelque chose de valide.";
+        }
+    }
+
+}
 void choixmode () {
     //menu principal qui permet le choix du mode voulu
     size_t mode;

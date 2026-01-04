@@ -70,44 +70,4 @@ void modepersosolo (unsigned long & score, unsigned long & nombredep, unsigned l
     return;
 
 }
-void modesolo() {
-    unsigned long score = 0;
-    unsigned long nombredep = 0;
-    unsigned long nombresupp = 0;
-    char direction = 'a';
-    maPosition coord;
-    coord.ord = 0;
-    coord.abs = 0;
-    long int Nbligne;
-    long int Nbcolonne;
-    size_t KNbCandies;
-    size_t mode;
-    while (true) {
-        cout << "Quel mode choisir ?" << endl;
-        cout << "1 : Mode normal" << endl << "2 : Mode personnalisé" << endl << "3 : Mode infini" << endl << "4 : Mode campagne" << endl << "5 : Règles du jeu" << endl;
-        cout << "(ou 10 pour quitter)" << endl;
-        cin >> mode;
-        cin.ignore(numeric_limits<streamsize>::max(), '\n');
-        if (mode == 1) {
-            modenormalsolo(score,nombredep,nombresupp,direction,coord,Nbligne,Nbcolonne,KNbCandies);
-        }
-        else if (mode == 2) {
-            modepersosolo(score,nombredep,nombresupp,direction,coord,Nbligne,Nbcolonne,KNbCandies);
-        }
-        else if (mode == 3) {
-            modenormalinfini(score,nombredep,nombresupp,direction,coord,Nbligne,Nbcolonne,KNbCandies);
-        }
-        else if (mode == 4) {
-            modehistoire();
-        }
-        else if (mode == 5) {
-            reglesjeu();
-        }
-        else if (mode == 10) {
-            return;
-        }
-        else {
-            cout << "Entrez quelque chose de valide.";
-        }
-    }
-}
+

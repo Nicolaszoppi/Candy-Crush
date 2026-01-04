@@ -1,0 +1,21 @@
+\doxysection{pvp.\+h}
+\hypertarget{pvp_8h_source}{}\label{pvp_8h_source}\index{modes\_de\_jeu/pvp.h@{modes\_de\_jeu/pvp.h}}
+\mbox{\hyperlink{pvp_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ PVP\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ PVP\_H}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{solo_8h}{solo.h}}"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{duo_8h}{duo.h}}"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00006\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{keyword}{typedef}\ vector\ <short\ int>\ \mbox{\hyperlink{pvp_8h_ae045c87c132fe15ce75aeefe25f3aac5}{line}};\ \textcolor{comment}{//\ un\ type\ représentant\ une\ ligne\ de\ la\ grille}}
+\DoxyCodeLine{00009\ \textcolor{keyword}{typedef}\ vector\ <line>\ \mbox{\hyperlink{pvp_8h_aee710f500ed8d179390ae3862af69d24}{mat}};\ \textcolor{comment}{//\ un\ type\ représentant\ la\ grille}}
+\DoxyCodeLine{00010\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{pvp_8h_a8b028aef35e81dfdb44a7ba4741036b1}{scorejeupvp}}\ (\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ \&\ score,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ \&\ nombredep,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ \&\ nombresupp,\ \textcolor{keywordtype}{size\_t}\ \&\ nbtour,\textcolor{keywordtype}{size\_t}\ joueur\ );}
+\DoxyCodeLine{00011\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{pvp_8h_a56fe2d9678d7480da879b43fcddccccf}{scorejeufinal}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ \&\ score,\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ \&\ score2,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ \&\ nombredep,\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ nombredep2);}
+\DoxyCodeLine{00012\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{pvp_8h_a452b1b3225da3d84cb9d85989da3fe16}{modenormalpvp}}\ (\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ \&\ score,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ \&\ nombredep,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ \&\ nombresupp\ ,\ \textcolor{keywordtype}{char}\ \&\ direction,\ \mbox{\hyperlink{structmaPosition}{maPosition}}\ \&\ coord,\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{int}\ \&\ Nbligne,\textcolor{keywordtype}{long}\ \textcolor{keywordtype}{int}\ \&\ Nbcolonne,\ \textcolor{keywordtype}{size\_t}\ \&\ KNbCandies,\textcolor{keywordtype}{size\_t}\ \&\ joueur);}
+\DoxyCodeLine{00013\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{pvp_8h_a1b0bbe99606f971504723d5d8be0f1ed}{modepersopvp}}\ (\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ \&\ score,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ \&\ nombredep,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ \&\ nombresupp\ ,\ \textcolor{keywordtype}{char}\ \&\ direction,\ \mbox{\hyperlink{structmaPosition}{maPosition}}\ \&\ coord,\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{int}\ \&\ Nbligne,\textcolor{keywordtype}{long}\ \textcolor{keywordtype}{int}\ \&\ Nbcolonne,\ \textcolor{keywordtype}{size\_t}\ \&\ KNbCandies,\textcolor{keywordtype}{size\_t}\ \&\ joueur);}
+\DoxyCodeLine{00014\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{pvp_8h_a7f39b2756087709b7b84f40e9ff882b1}{modepvp}}();}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

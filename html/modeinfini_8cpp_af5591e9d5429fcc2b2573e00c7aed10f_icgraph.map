@@ -1,0 +1,17 @@
+<map id="scorejeuinfini" name="scorejeuinfini">
+<area shape="rect" id="Node000001" title=" " alt="" coords="571,80,680,105"/>
+<area shape="rect" id="Node000002" href="$modeinfini_8cpp.html#af30deecaf4ef694e85d7765be6764bd4" title=" " alt="" coords="385,5,523,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="588,76,522,44,493,33,495,28,524,40,590,71"/>
+<area shape="rect" id="Node000006" href="$modehistoire_8cpp.html#a69908ca28708a1df8a3aa3503172594d" title=" " alt="" coords="417,55,491,80"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="557,85,491,75,492,70,557,80"/>
+<area shape="rect" id="Node000007" href="$modehistoire_8cpp.html#ab46654af818b28fe03110fe96363c207" title=" " alt="" coords="417,104,491,129"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="557,105,492,114,491,109,557,100"/>
+<area shape="rect" id="Node000008" href="$modehistoire_8cpp.html#a8e16742dc90f5d314418ac54b9bc4e70" title=" " alt="" coords="417,153,491,179"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="587,114,524,143,492,156,490,151,522,138,585,109"/>
+<area shape="rect" id="Node000003" href="$main_8cpp.html#a36ce9df10cf710ee8621446713854a71" title=" " alt="" coords="251,5,337,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="372,21,337,21,337,15,372,15"/>
+<area shape="rect" id="Node000004" href="$main_8cpp.html#a87da64dc404fab46f81b3a2f39e4d2e3" title=" " alt="" coords="108,5,203,31"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="237,21,203,21,203,15,237,15"/>
+<area shape="rect" id="Node000005" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,60,31"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="95,21,60,21,60,15,95,15"/>
+</map>

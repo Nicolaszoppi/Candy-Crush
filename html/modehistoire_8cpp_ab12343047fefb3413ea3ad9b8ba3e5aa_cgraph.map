@@ -1,0 +1,14 @@
+<map id="chap4" name="chap4">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,56,67,81"/>
+<area shape="rect" id="Node000002" href="$modehistoire_8cpp.html#ab4c880e4d24ea4654f2ffcc029087cc9" title=" " alt="" coords="224,5,308,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="50,54,78,33,114,15,163,7,210,8,210,13,163,13,115,21,81,37,53,58"/>
+<area shape="rect" id="Node000003" href="$modehistoire_8cpp.html#a882ce2a1f510bde5afda2fb52c650a58" title=" " alt="" coords="229,68,303,93"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="67,68,216,75,215,81,67,73"/>
+<area shape="rect" id="Node000004" href="$modehistoire_8cpp.html#aab5a0ed6f45a325ad63871d8945be6c1" title=" " alt="" coords="115,31,176,56"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="66,59,101,51,102,56,68,64"/>
+<area shape="rect" id="Node000005" href="$main_8cpp.html#aaee81cb19b7773fe8d63ebb764b747a3" title=" " alt="" coords="225,117,307,143"/>
+<area shape="poly" id="edge7_Node000001_Node000005" title=" " alt="" coords="68,74,212,113,211,118,66,79"/>
+<area shape="poly" id="edge4_Node000004_Node000002" title=" " alt="" coords="176,34,210,27,211,32,177,40"/>
+<area shape="poly" id="edge5_Node000004_Node000003" title=" " alt="" coords="177,50,217,63,215,68,176,55"/>
+<area shape="poly" id="edge6_Node000004_Node000005" title=" " alt="" coords="163,54,226,104,231,108,228,112,222,108,159,58"/>
+</map>

@@ -1,0 +1,127 @@
+\doxysection{modes\+\_\+de\+\_\+jeu/modeinfini.cpp File Reference}
+\hypertarget{modeinfini_8cpp}{}\label{modeinfini_8cpp}\index{modes\_de\_jeu/modeinfini.cpp@{modes\_de\_jeu/modeinfini.cpp}}
+{\ttfamily \#include "{}solo.\+h"{}}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$ctime$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+Include dependency graph for modeinfini.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{modeinfini_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef vector$<$ short int $>$ \mbox{\hyperlink{modeinfini_8cpp_ae045c87c132fe15ce75aeefe25f3aac5}{line}}
+\item 
+typedef vector$<$ \mbox{\hyperlink{main_8cpp_ae045c87c132fe15ce75aeefe25f3aac5}{line}} $>$ \mbox{\hyperlink{modeinfini_8cpp_aee710f500ed8d179390ae3862af69d24}{mat}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{modeinfini_8cpp_a790d64b2ea79a74ab7dea3bec7573a73}{make\+AMoveinfini}} (\mbox{\hyperlink{main_8cpp_aee710f500ed8d179390ae3862af69d24}{mat}} \&grille, \mbox{\hyperlink{structmaPosition}{ma\+Position}} \&coord, char \&direction, unsigned long \&nombredep, const long int \&Nbligne, const long int \&Nbcolonne)
+\item 
+void \mbox{\hyperlink{modeinfini_8cpp_af5591e9d5429fcc2b2573e00c7aed10f}{scorejeuinfini}} (unsigned long \&score, unsigned long \&nombredep, unsigned long \&nombresupp)
+\item 
+void \mbox{\hyperlink{modeinfini_8cpp_a76eb451a8dc883f15db7502c9860ced9}{rempli\+Colonne}} (\mbox{\hyperlink{main_8cpp_aee710f500ed8d179390ae3862af69d24}{mat}} \&grille, long int \&Nbligne, long int \&Nbcolonne, size\+\_\+t \&KNb\+Candies)
+\begin{DoxyCompactList}\small\item\em main \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{modeinfini_8cpp_af30deecaf4ef694e85d7765be6764bd4}{modenormalinfini}} (unsigned long \&score, unsigned long \&nombredep, unsigned long \&nombresupp, char \&direction, \mbox{\hyperlink{structmaPosition}{ma\+Position}} \&coord, long int \&Nbligne, long int \&Nbcolonne, size\+\_\+t \&KNb\+Candies)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Typedef Documentation}
+\Hypertarget{modeinfini_8cpp_ae045c87c132fe15ce75aeefe25f3aac5}\label{modeinfini_8cpp_ae045c87c132fe15ce75aeefe25f3aac5} 
+\index{modeinfini.cpp@{modeinfini.cpp}!line@{line}}
+\index{line@{line}!modeinfini.cpp@{modeinfini.cpp}}
+\doxysubsubsection{\texorpdfstring{line}{line}}
+{\footnotesize\ttfamily typedef vector$<$short int$>$ \mbox{\hyperlink{main_8cpp_ae045c87c132fe15ce75aeefe25f3aac5}{line}}}
+
+\Hypertarget{modeinfini_8cpp_aee710f500ed8d179390ae3862af69d24}\label{modeinfini_8cpp_aee710f500ed8d179390ae3862af69d24} 
+\index{modeinfini.cpp@{modeinfini.cpp}!mat@{mat}}
+\index{mat@{mat}!modeinfini.cpp@{modeinfini.cpp}}
+\doxysubsubsection{\texorpdfstring{mat}{mat}}
+{\footnotesize\ttfamily typedef vector$<$\mbox{\hyperlink{main_8cpp_ae045c87c132fe15ce75aeefe25f3aac5}{line}}$>$ \mbox{\hyperlink{main_8cpp_aee710f500ed8d179390ae3862af69d24}{mat}}}
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{modeinfini_8cpp_a790d64b2ea79a74ab7dea3bec7573a73}\label{modeinfini_8cpp_a790d64b2ea79a74ab7dea3bec7573a73} 
+\index{modeinfini.cpp@{modeinfini.cpp}!makeAMoveinfini@{makeAMoveinfini}}
+\index{makeAMoveinfini@{makeAMoveinfini}!modeinfini.cpp@{modeinfini.cpp}}
+\doxysubsubsection{\texorpdfstring{makeAMoveinfini()}{makeAMoveinfini()}}
+{\footnotesize\ttfamily int make\+AMoveinfini (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{main_8cpp_aee710f500ed8d179390ae3862af69d24}{mat}} \&}]{grille,  }\item[{\mbox{\hyperlink{structmaPosition}{ma\+Position}} \&}]{coord,  }\item[{char \&}]{direction,  }\item[{unsigned long \&}]{nombredep,  }\item[{const long int \&}]{Nbligne,  }\item[{const long int \&}]{Nbcolonne }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{modeinfini_8cpp_a790d64b2ea79a74ab7dea3bec7573a73_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{modeinfini_8cpp_a790d64b2ea79a74ab7dea3bec7573a73_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{modeinfini_8cpp_af30deecaf4ef694e85d7765be6764bd4}\label{modeinfini_8cpp_af30deecaf4ef694e85d7765be6764bd4} 
+\index{modeinfini.cpp@{modeinfini.cpp}!modenormalinfini@{modenormalinfini}}
+\index{modenormalinfini@{modenormalinfini}!modeinfini.cpp@{modeinfini.cpp}}
+\doxysubsubsection{\texorpdfstring{modenormalinfini()}{modenormalinfini()}}
+{\footnotesize\ttfamily void modenormalinfini (\begin{DoxyParamCaption}\item[{unsigned long \&}]{score,  }\item[{unsigned long \&}]{nombredep,  }\item[{unsigned long \&}]{nombresupp,  }\item[{char \&}]{direction,  }\item[{\mbox{\hyperlink{structmaPosition}{ma\+Position}} \&}]{coord,  }\item[{long int \&}]{Nbligne,  }\item[{long int \&}]{Nbcolonne,  }\item[{size\+\_\+t \&}]{KNb\+Candies }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{modeinfini_8cpp_af30deecaf4ef694e85d7765be6764bd4_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{modeinfini_8cpp_af30deecaf4ef694e85d7765be6764bd4_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{modeinfini_8cpp_a76eb451a8dc883f15db7502c9860ced9}\label{modeinfini_8cpp_a76eb451a8dc883f15db7502c9860ced9} 
+\index{modeinfini.cpp@{modeinfini.cpp}!rempliColonne@{rempliColonne}}
+\index{rempliColonne@{rempliColonne}!modeinfini.cpp@{modeinfini.cpp}}
+\doxysubsubsection{\texorpdfstring{rempliColonne()}{rempliColonne()}}
+{\footnotesize\ttfamily void rempli\+Colonne (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{main_8cpp_aee710f500ed8d179390ae3862af69d24}{mat}} \&}]{grille,  }\item[{long int \&}]{Nbligne,  }\item[{long int \&}]{Nbcolonne,  }\item[{size\+\_\+t \&}]{KNb\+Candies }\end{DoxyParamCaption})}
+
+
+
+main 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{modeinfini_8cpp_a76eb451a8dc883f15db7502c9860ced9_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{modeinfini_8cpp_af5591e9d5429fcc2b2573e00c7aed10f}\label{modeinfini_8cpp_af5591e9d5429fcc2b2573e00c7aed10f} 
+\index{modeinfini.cpp@{modeinfini.cpp}!scorejeuinfini@{scorejeuinfini}}
+\index{scorejeuinfini@{scorejeuinfini}!modeinfini.cpp@{modeinfini.cpp}}
+\doxysubsubsection{\texorpdfstring{scorejeuinfini()}{scorejeuinfini()}}
+{\footnotesize\ttfamily void scorejeuinfini (\begin{DoxyParamCaption}\item[{unsigned long \&}]{score,  }\item[{unsigned long \&}]{nombredep,  }\item[{unsigned long \&}]{nombresupp }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{modeinfini_8cpp_af5591e9d5429fcc2b2573e00c7aed10f_icgraph}
+\end{center}
+\end{figure}

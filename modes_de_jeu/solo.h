@@ -30,5 +30,4 @@ bool findujeu (mat & grille, long int & Nbligne, long int & Nbcolonne);
 void clearScreen ();
 void modenormalsolo (unsigned long & score, unsigned long & nombredep, unsigned long & nombresupp , char & direction, maPosition & coord, long int & Nbligne,long int & Nbcolonne, size_t & KNbCandies);
 void modepersosolo (unsigned long & score, unsigned long & nombredep, unsigned long & nombresupp , char & direction, maPosition & coord, long int & Nbligne,long int & Nbcolonne, size_t & KNbCandies);
-void modesolo();
 #endif
