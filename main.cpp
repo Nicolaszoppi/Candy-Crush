@@ -620,7 +620,7 @@ const unsigned KReset   (0);
  */
 const unsigned KNoir    (30);
 /**
- * @brief Codes de couleurs ANSI pour la console
+ * @brief Codes de couleurs ANSI pour la consolec
  * Couleur Rouge
  */
 const unsigned KRouge   (31);

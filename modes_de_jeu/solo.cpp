@@ -1,15 +1,44 @@
+/**
+ * @file solo.cpp
+ * @author ZOPPI Nicolas, KEOKHAM Rayan, LONGO Matys ; BUT1 Informatique GROUPE
+ * @date 31-12-2025
+ * @brief Gestion des menus et des boucles de jeu pour le joueur Solo.
+ *
+ * Ce fichier regroupe les fonctions pour le mode Solo classiquele mode personnalisé,
+ * ainsi que le menu de sélection qui redirige vers le mode Infini et le mode Histoire.
+ */
+
 #include "solo.h"
 #include <iostream>
 #include <vector>
 #include <ctime>
-#include <unistd.h>
-#include <termios.h>
+#include "modeinfini.h"
+#include "modehistoire.h"
+#include <fstream>
+#include <limits>
 using namespace std;
 
+/**
+ * @typedef line
+ * @brief Représente une ligne de la grille
+ */
 typedef vector <short int> line; // un type représentant une ligne de la grille
+/**
+ * @typedef mat
+ * @brief Représente la grille du jeu
+ */
 typedef vector <line> mat; // un type représentant la grille
 
-
+/**
+ * @brief Calcule et affiche le score du joueur.
+ * Ajoute un multiplicateur de score si le joueur joue en moins de 3 mouvements pour faire un alignement.
+ *Affiche également les tours restants.
+ *
+ * @param[in,out] score Le score actuel du joueur.
+ * @param[in] nombredep Le nombre de déplacements effectués pour ce coup.
+ * @param[in,out] nombresupp Le nombre de chiffres supprimés
+ * @param[in] nbtour Le nombre de tours restants.
+ */
 void scorejeu (unsigned long & score, unsigned long & nombredep, unsigned long & nombresupp, size_t & nbtour) {
     //affiche le score après chaque déplacement et aussi le nombre de déplacement
     cout << "Nombre de déplacements : " << nombredep << endl;
@@ -25,8 +54,18 @@ void scorejeu (unsigned long & score, unsigned long & nombredep, unsigned long &
 }
 
 /**
- * @brief main
- * @return
+ * @brief Lance une partie en Mode Solo Normal.
+ * La grille est générée automatiquement en fonction du nombre de chiffres choisi.
+ * Le jeu s'arrête si le joueur n'a plus de tours ou s'il n'y a plus de mouvements possibles.
+ *
+ * @param[in,out] score Score du joueur
+ * @param[in,out] nombredep Nombre de déplacements
+ * @param[in,out] nombresupp Nombre de suppressions
+ * @param[out] direction Direction du mouvement
+ * @param[in,out] coord Position du joueur
+ * @param[out] Nbligne Nombre de lignes
+ * @param[out] Nbcolonne Nombre de colonnes
+ * @param[out] KNbCandies Nombre de chiffres différents pour le jeu
  */
 void modenormalsolo (unsigned long & score, unsigned long & nombredep, unsigned long & nombresupp , char & direction, maPosition & coord, long int & Nbligne,long int & Nbcolonne, size_t & KNbCandies) {
     size_t nbtour = 0;
@@ -47,6 +86,21 @@ void modenormalsolo (unsigned long & score, unsigned long & nombredep, unsigned 
     cout << "Partie terminée !" << endl;
     scorejeu(score,nombredep,nombresupp,nbtour);
 }
+
+/**
+ * @brief Lance une partie en Mode Solo Personnalisé.
+ * Permet au joueur de choisir le nombre de lignes, de colonnes, de chiffres et de tours.
+ * Le jeu s'arrête si le joueur n'a plus de tours ou s'il n'y a plus de mouvements possibles.
+ *
+ * @param[in,out] score Score du joueur
+ * @param[in,out] nombredep Nombre de déplacements
+ * @param[in,out] nombresupp Nombre de suppressions
+ * @param[out] direction Direction du mouvement
+ * @param[in,out] coord Position du joueur
+ * @param[out] Nbligne Nombre de lignes
+ * @param[out] Nbcolonne Nombre de colonnes
+ * @param[out] KNbCandies Nombre de chiffres différents pour le jeu
+ */
 void modepersosolo (unsigned long & score, unsigned long & nombredep, unsigned long & nombresupp , char & direction, maPosition & coord, long int & Nbligne,long int & Nbcolonne, size_t & KNbCandies) {
     size_t nbtour = 0;
     creategrilleperso (KNbCandies, Nbligne,Nbcolonne,nbtour);
@@ -65,8 +119,14 @@ void modepersosolo (unsigned long & score, unsigned long & nombredep, unsigned l
     }
     cout << "Partie terminée !" << endl;
     scorejeu(score,nombredep,nombresupp,nbtour);
+    return;
 
 }
+
+/**
+ * @brief Menu principal pour les modes Solo.
+ * Propose au joueur de choisir entre les différents modes de jeu disponibles en solo.
+ */
 void modesolo() {
     unsigned long score = 0;
     unsigned long nombredep = 0;
@@ -79,10 +139,12 @@ void modesolo() {
     long int Nbcolonne;
     size_t KNbCandies;
     size_t mode;
-    cout << "Bienvenue !" << endl << "Quel mode choisir ?" << endl;
-    cout << "1 : Mode normal" << endl << "2 : Mode personnalisé" << endl << "3 : Règles du jeu" << endl;
     while (true) {
+        cout << "Quel mode choisir ?" << endl;
+        cout << "1 : Mode normal" << endl << "2 : Mode personnalisé" << endl << "3 : Mode infini" << endl << "4 : Mode campagne" << endl << "5 : Règles du jeu" << endl;
+        cout << "(ou 10 pour quitter)" << endl;
         cin >> mode;
+        cin.ignore(numeric_limits<streamsize>::max(), '\n');
         if (mode == 1) {
             modenormalsolo(score,nombredep,nombresupp,direction,coord,Nbligne,Nbcolonne,KNbCandies);
         }
@@ -90,7 +152,16 @@ void modesolo() {
             modepersosolo(score,nombredep,nombresupp,direction,coord,Nbligne,Nbcolonne,KNbCandies);
         }
         else if (mode == 3) {
-            cout << "Dans ce jeu, le but va être de deplacer un jeton (chiffre) et sa ligne et colonne d'arrivée va supprimer les alignements de trois (ou plus) mêmes chiffres. " << endl << "Le but est donc de vider la grille et le jeu se finit quand il n'y a plus d'alignement possible ou que le nombre de tours restants est nul.";
+            modenormalinfini(score,nombredep,nombresupp,direction,coord,Nbligne,Nbcolonne,KNbCandies);
+        }
+        else if (mode == 4) {
+            modehistoire();
+        }
+        else if (mode == 5) {
+            reglesjeu();
+        }
+        else if (mode == 10) {
+            return;
         }
         else {
             cout << "Entrez quelque chose de valide.";

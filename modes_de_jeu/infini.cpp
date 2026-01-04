@@ -1,187 +1,212 @@
+/**
+ * @file infini.cpp
+ * @author ZOPPI Nicolas, KEOKHAM Rayan, LONGO Matys ; BUT1 Informatique GROUPE
+ * @date 31-12-2025
+ * @brief mode de jeu infini.
+ *
+ * Ce mode fait en sorte de remplir la grille automatiquement après chaque coup,
+ * permettant une partie sans fin tant que des coups sont possibles.
+ */
+
+#include "solo.h"
 #include <iostream>
 #include <vector>
 #include <ctime>
-#include <cstdlib>
+#include <fstream>
 using namespace std;
-typedef vector<unsigned> line;
-typedef vector<line> mat;
-struct maPosition {
-    unsigned abs;
-    unsigned ord;
-};
+/**
+ * @typedef line
+ * @brief Représente une ligne de la grille
+ */
+typedef vector <short int> line; // un type représentant une ligne de la grille
+/**
+ * @typedef mat
+ * @brief Représente la grille du jeu
+ */
+typedef vector <line> mat; // un type représentant la grille
 
-const unsigned KNbCandies = 9;
-const unsigned KImpossible = 0;
-const unsigned KMaxCoupsClassique = 20;
-
-void couleur(const unsigned & coul) {
-    cout << "\033[" << coul << "m";
-}
-void clearScreen() {
-    cout << "\033[H\033[2J";
-}
-
-void initGrid(mat & grid, const size_t & matSize) {
-    grid.assign(matSize, line(matSize));
-    for (size_t i = 0; i < matSize; ++i) {
-        for (size_t j = 0; j < matSize; ++j) {
-            grid[i][j] = 1 + rand() % KNbCandies;
-        }
-    }
-}
-
-void displayGrid(const mat & grid) {
-    clearScreen();
-    cout << "    ";
-    for(size_t j = 0; j < grid.size(); ++j) cout << j << " ";
-    cout << endl << "   " << string(grid.size() * 2, '-') << endl;
-
-    for (size_t i = 0; i < grid.size(); ++i) {
-        if(i < 10) cout << i << " | ";
-        else cout << i << "| ";
-        for (size_t j = 0; j < grid[i].size(); ++j) {
-            if (grid[i][j] == KImpossible) cout << "  ";
+/**
+ * @brief Gère le déplacement d'un bonbon en mode infini
+ * Pareil que celle de base et ajoute la possibilité d'arrêter la partie en appuyant sur la touche 'A' .
+ * @param[in,out] grille La grille de jeu.
+ * @param[in,out] coord La position du curseur.
+ * @param[out] direction La direction choisie par le joueur.
+ * @param[in,out] nombredep Compteur de déplacements (incrémenté si mouvement valide).
+ * @param[in] Nbligne Nombre de lignes.
+ * @param[in] Nbcolonne Nombre de colonnes.
+ * @return int Retourne 0 (Code de statut, potentiellement pour future extension).
+ */
+int makeAMoveinfini (mat & grille,maPosition & coord,char & direction,unsigned long & nombredep,const long int & Nbligne,const long int & Nbcolonne) {
+    initmove(grille,coord,Nbligne,Nbcolonne);
+    size_t valeurtrans;
+    //Demande la directon du déplacement (de 1 case seulement)
+    while (true) {
+        cout << "Entrez votre direction. (ZQSD), R pour revenir en arrière et A pour arrêter" << endl;
+        cin >> direction;
+        char directionmin = tolower(direction);
+        if (directionmin == 'z') {
+            if (coord.ord <= 0) {
+                cout << "Vous ne pouvez pas avancer plus" << endl;
+            }
             else {
-                couleur(30 + grid[i][j]);
-                cout << grid[i][j] << " ";
-                couleur(0);
+                if (possmove(grille,coord,directionmin,Nbligne,Nbcolonne)) {
+                    coord.ord = coord.ord - 1;
+                    valeurtrans = grille[coord.ord][coord.abs];
+                    grille[coord.ord][coord.abs] = grille[coord.ord + 1][coord.abs];
+                    grille[coord.ord + 1][coord.abs] = valeurtrans;
+                    ++nombredep;
+                    break;
+                }
+                else {
+                    cout << "déplacement impossible." << endl;//dans le cas ou litalign() est faux càd aucune suite de 3 chiffres identiques
+                }
             }
         }
-        cout << "|" << endl;
-    }
-    cout << "   " << string(grid.size() * 2, '-') << endl;
-}
-
-void refillColumn(mat & grid, unsigned col, unsigned startRow, unsigned howMany) {
-    for (int i = (int)startRow - 1; i >= 0; --i) {
-        grid[i + howMany][col] = grid[i][col];
-    }
-    for (unsigned i = 0; i < howMany; ++i) {
-        grid[i][col] = 1 + rand() % KNbCandies;
-    }
-}
-
-bool atLeastThreeInAColumn(const mat & grid, maPosition & pos, unsigned & howMany) {
-    for (size_t j = 0; j < grid.size(); ++j) {
-        for (size_t i = 0; i < grid.size() - 2; ++i) {
-            if (grid[i][j] != KImpossible && grid[i][j] == grid[i+1][j] && grid[i][j] == grid[i+2][j]) {
-                pos.ord = (unsigned)i;
-                pos.abs = (unsigned)j;
-                howMany = 3;
-                while (i + howMany < grid.size() && grid[i + howMany][j] == grid[i][j]) howMany++;
-                return true;
+        if (directionmin == 's') {
+            if (coord.ord >= Nbligne - 1) {
+                cout << "Vous ne pouvez pas avancer plus" << endl;
+            }
+            else {
+                if (possmove(grille,coord,directionmin,Nbligne,Nbcolonne)) {
+                    coord.ord = coord.ord + 1;
+                    valeurtrans = grille[coord.ord][coord.abs];
+                    grille[coord.ord][coord.abs] = grille[coord.ord - 1][coord.abs];
+                    grille[coord.ord - 1][coord.abs] = valeurtrans;
+                    ++nombredep;
+                    break;
+                }
+                else {
+                    cout << "déplacement impossible." << endl;
+                }
             }
         }
-    }
-    return false;
-}
-
-bool atLeastThreeInARow(const mat & grid, maPosition & pos, unsigned & howMany) {
-    for (size_t i = 0; i < grid.size(); ++i) {
-        for (size_t j = 0; j < grid.size() - 2; ++j) {
-            if (grid[i][j] != KImpossible && grid[i][j] == grid[i][j+1] && grid[i][j] == grid[i][j+2]) {
-                pos.ord = (unsigned)i;
-                pos.abs = (unsigned)j;
-                howMany = 3;
-                while (j + howMany < grid.size() && grid[i][j + howMany] == grid[i][j]) howMany++;
-                return true;
+        if (directionmin == 'q') {
+            if (coord.abs <= 0) {
+                cout << "Vous ne pouvez pas avancer plus" << endl;
+            }
+            else {
+                if (possmove(grille,coord,directionmin,Nbligne,Nbcolonne)) {
+                    coord.abs = coord.abs - 1;
+                    valeurtrans = grille[coord.ord][coord.abs];
+                    grille[coord.ord][coord.abs] = grille[coord.ord][coord.abs + 1];
+                    grille[coord.ord][coord.abs + 1] = valeurtrans;
+                    ++nombredep;;
+                    break;
+                }
+                else {
+                    cout << "déplacement impossible." << endl;
+                }
             }
         }
-    }
-    return false;
-}
-
-void makeAMove(mat & grid, const maPosition & pos, char direction) {
-    size_t taille = grid.size();
-    unsigned x = pos.abs;
-    unsigned y = pos.ord;
-    direction = (char)tolower(direction);
-
-    if (direction == 'z' && y > 0) swap(grid[y][x], grid[y-1][x]);
-    else if (direction == 's' && y < taille - 1) swap(grid[y][x], grid[y+1][x]);
-    else if (direction == 'q' && x > 0) swap(grid[y][x], grid[y][x-1]);
-    else if (direction == 'd' && x < taille - 1) swap(grid[y][x], grid[y][x+1]);
-}
-
-
-
-int displayMenu() {
-    int choix;
-    clearScreen();
-    cout << "" << endl;
-    cout << "CANDY CRUSH BUT1" << endl;
-    cout << "1. Mode Classique" << endl;
-    cout << "2. Mode Infini" << endl;
-    cout << "0. Quitter" << endl;
-    cout << "" << endl;
-    cout << "Votre choix : ";
-    cin >> choix;
-    return choix;
-}
-
-
-int main() {
-    srand((unsigned)time(NULL));
-    mat grid;
-    size_t taille;
-    unsigned score = 0, coups = 0;
-
-    // Appel de la fonction menu
-    int mode = displayMenu();
-
-    if (mode == 0) return 0;
-
-    cout << "Taille de la grille ? ";
-    cin >> taille;
-    if (taille < 4) taille = 4;
-    initGrid(grid, taille);
-
-    while (mode == 2 || (mode == 1 && coups < KMaxCoupsClassique)) {
-        displayGrid(grid);
-        cout << "Score : " << score;
-        if (mode == 1) cout << " | Coups : " << coups << "/" << KMaxCoupsClassique;
-        else cout << " | Mode : INFINI (999 pour quitter)";
-        cout << endl;
-
-        maPosition p;
-        char dir;
-
-        cout << "Ligne : ";
-        cin >> p.ord;
-        if (p.ord == 999) break;
-
-        cout << "Colonne : ";
-        cin >> p.abs;
-
-        cout << "Direction (Z,Q,S,D) : ";
-        cin >> dir;
-
-        if (cin.fail() || p.ord >= taille || p.abs >= taille) {
-            cin.clear(); cin.ignore(100, '\n');
-            continue;
-        }
-
-        makeAMove(grid, p, dir);
-        coups++;
-
-        bool encore = true;
-        while (encore) {
-            encore = false;
-            maPosition matchP; unsigned nb;
-            if (atLeastThreeInAColumn(grid, matchP, nb)) {
-                score += nb;
-                refillColumn(grid, matchP.abs, matchP.ord, nb);
-                encore = true;
-            } else if (atLeastThreeInARow(grid, matchP, nb)) {
-                score += nb;
-                for (unsigned k = 0; k < nb; ++k) refillColumn(grid, matchP.abs + k, matchP.ord, 1);
-                encore = true;
+        if (directionmin == 'd') {
+            if (coord.abs >= Nbcolonne - 1) {
+                cout << "Vous ne pouvez pas avancer plus" << endl;
             }
-            if(encore) displayGrid(grid);
+            else {
+                if (possmove(grille,coord,directionmin,Nbligne,Nbcolonne)) {
+                    coord.abs = coord.abs + 1;
+                    valeurtrans = grille[coord.ord][coord.abs];
+                    grille[coord.ord][coord.abs] = grille[coord.ord][coord.abs - 1];
+                    grille[coord.ord][coord.abs - 1] = valeurtrans;
+                    ++nombredep;
+                    break;
+                }
+                else {
+                    cout << "déplacement impossible." << endl;
+                }
+            }
+        }
+        if (directionmin == 'r') {//revient en arrière en cas d'erreur
+            initmove(grille,coord,Nbligne,Nbcolonne);
+        }
+        else if (directionmin == 'a') {
+            return 0;
+        }
+        else {
+            cout << "Entrez quelque chose de valide." << endl;
         }
     }
-
-    displayGrid(grid);
-    cout << "PARTIE TERMINEE ! Score : " << score << endl;
     return 0;
+}
+
+/**
+ * @brief Affiche et met à jour le score pour le mode infini.
+ * Le score est calculé en multipliant le nombre de bonbons supprimés par 10.
+ *
+ * @param[in,out] score Score total du joueur
+ * @param[in] nombredep Nombre total de déplacements effectués
+ * @param[in,out] nombresupp Nombre de chiffres supprimés remis a 0 après chaque deplacements
+ */
+void scorejeuinfini (unsigned long & score, unsigned long & nombredep, unsigned long & nombresupp) {
+    //affiche le score après chaque déplacement et aussi le nombre de déplacement mais pas les tours
+    cout << "Nombre de déplacements : " << nombredep << endl;
+    score = score + (nombresupp * 10);
+    cout << "Score : " << score << endl;
+    nombresupp = 0;
+}
+
+/**
+ * @brief Remplit les colonnes de la grille
+ * Remplit les cases vides -1 de la grille avec des vals aléatoires entre 1 et KNbCandies
+*
+ * @param[in,out] grille La grille
+ * @param[in] Nbligne Nombre de lignes
+ * @param[in] Nbcolonne Nombre de colonnes
+ * @param[in] KNbCandies Nombes de chiffres différents
+ */
+void rempliColonne(mat & grille, long int & Nbligne,long int & Nbcolonne, size_t & KNbCandies) {
+    for (long int i = 0 ; i < Nbligne ; ++i) {
+        for (long int j = 0 ; j  < Nbcolonne ; ++j) {
+            if (grille[i][j] == -1) {
+                grille[i][j] = 1 + rand() % KNbCandies;
+            }
+        }
+    }
+}
+/**
+ * @brief Fonction principale du jeu en Mode Infini.
+ * Initialise une grille mode normal
+ * La boucle continue tant que des coups sont possibles ou que le joueur n'appuie pas sur A.
+ * À chaque tour, la grille est rempli via rempliColonne.
+ *
+ * @param[in,out] score Score du joueur
+ * @param[in,out] nombredep Compteur de déplacements
+ * @param[in,out] nombresupp Compteur de chiffres supprimés.
+ * @param[out] direction Direction du mouvement
+ * @param[in,out] coord Position du joueur
+ * @param[out] Nbligne Nombre de lignes
+ * @param[out] Nbcolonne Nombre de colonnes
+ * @param[out] KNbCandies Nombre de chiffres différents pour le jeu
+ */
+void modenormalinfini (unsigned long & score, unsigned long & nombredep, unsigned long & nombresupp , char & direction, maPosition & coord, long int & Nbligne,long int & Nbcolonne, size_t & KNbCandies) {
+    cout << "Nombre max ?" << endl;
+    while (true) {
+        cin >> KNbCandies;
+        if (KNbCandies < 3) {
+            cout << "Il doit y avoir minimum 3 chiffres possibles." << endl;
+        }
+        else break;
+    }
+    Nbligne = KNbCandies * 5;
+    Nbcolonne = Nbligne;
+    mat grille(Nbligne,line (Nbcolonne,0));
+    initGrid(grille,Nbligne,Nbcolonne, KNbCandies);
+    while (findujeu(grille,Nbligne,Nbcolonne)) {
+        initGrid (grille,Nbligne,Nbcolonne, KNbCandies);
+    }
+    displayGrid(grille, Nbligne,Nbcolonne,coord);
+    while (!findujeu (grille,Nbligne,Nbcolonne)) {
+        makeAMoveinfini (grille,coord,direction,nombredep,Nbligne,Nbcolonne);
+        if (direction == 'a') {
+            break;
+        }
+        suppressiondoublons(grille,coord,Nbligne,Nbcolonne,nombresupp);
+        remonteval (grille,Nbligne,Nbcolonne);
+        rempliColonne(grille,Nbligne, Nbcolonne, KNbCandies);
+        displayGrid(grille, Nbligne,Nbcolonne,coord);
+        scorejeuinfini(score,nombredep,nombresupp);
+    }
+    cout << "Partie terminée !" << endl;
+    scorejeuinfini(score,nombredep,nombresupp);
+    return;
 }
