@@ -1,3 +1,11 @@
+/**
+ * @file modehistoire.cpp
+ * @author ZOPPI Nicolas, KEOKHAM Rayan, LONGO Matys ; BUT1 Informatique GROUPE
+ * @date 2025-01-04
+ * @brief Gestion du Mode Histoire 
+ *
+ * Ce fichier contient les fonctions pour les 5 chapitres du mode histoire.
+ */
 #include "solo.h"
 #include <iostream>
 #include <vector>
@@ -7,8 +15,21 @@
 #include "modeinfini.h"
 using namespace std;
 
+/**
+ * @typedef line
+ * @brief Représente une ligne de la grille.
+ */
 typedef vector <short int> line;
+/**
+ * @typedef mat
+ * @brief Représente la grille du jeu
+ */
 typedef vector <line> mat;
+
+/** @brief Demande le nom du joueur pour le mode histoire.
+ * Si le joueur entre "&"alors il doit entrer un autre nom valide
+ * @param[out] nom Le nom du joueur
+ */
 void verifnom(string & nom) {
     while (true) {
         if (nom == "&") {
@@ -23,6 +44,16 @@ void verifnom(string & nom) {
         else break;
     }
 }
+
+/**
+ * @brief Vérifie la condition de victoire du Chapitre 3.
+ * Compte le nombre de cases vides (-1) dans la grille.
+ *
+ * @param[in] grille La grille 
+ * @param[in] Nbligne Nombre de lignes
+ * @param[in] Nbcolonne Nombre de colonnes
+ * @return int Le nombre de cases vides
+ */
 int condchap3(mat grille, long int & Nbligne,long int & Nbcolonne) {
     int nombrevide =0;
     for (long int i = 0; i < Nbligne; ++i) {
@@ -34,6 +65,14 @@ int condchap3(mat grille, long int & Nbligne,long int & Nbcolonne) {
     }
     return nombrevide;
 }
+/**
+ * @brief Vérifie la condition de victoire du Chapitre 4.
+ * Compte le nombre de cases vides (-1) dans la grille
+ * @param[in] grille La grille 
+ * @param[in] Nbligne Nombre de lignes
+ * @param[in] Nbcolonne Nombre de colonnes
+ * @return int Le nombre de cases vides
+ */
 int condchap5(mat & grille, long int & Nbligne,long int & Nbcolonne) {
     int nombrevide = 0;
     for (long int i = 0; i < Nbligne; ++i) {
@@ -45,6 +84,19 @@ int condchap5(mat & grille, long int & Nbligne,long int & Nbcolonne) {
     }
     return nombrevide;
 }
+/**
+ * @brief Lance le Niveau 1 l'introduction.
+ * Grille 4x4, 2 couleurs, jouer jusqu'au blocage.
+ * @param[in] nom Nom du joueur.
+ * @param[in,out] score Score du joueur.
+ * @param[in,out] nombredep Nombre de déplacements.
+ * @param[in,out] nombresupp Nombre de bonbons supprimés.
+ * @param[out] direction Direction du mouvement.
+ * @param[in,out] coord Position du curseur.
+ * @param[in,out] Nbligne Taille (lignes).
+ * @param[in,out] Nbcolonne Taille (colonnes).
+ * @param[in,out] KNbCandies Nombre de couleurs.
+ */
 void niveau1(string & nom,unsigned long & score, unsigned long & nombredep, unsigned long & nombresupp , char & direction, maPosition & coord, long int & Nbligne,long int & Nbcolonne, size_t & KNbCandies) {
     cout << "Ton objectif, " << nom << ", est de seulement terminer la partie." << endl;
     cout << "Appuyez sur Entrée pour commencer." << endl;
@@ -73,6 +125,10 @@ void niveau1(string & nom,unsigned long & score, unsigned long & nombredep, unsi
     cout << "Partie terminée !" << endl;
     scorejeuinfini(score,nombredep,nombresupp);
 }
+/**
+ * @brief Niveau 2
+ * Grille (6x6), 4 chiffres.
+ */
 void niveau2(string & nom,unsigned long & score, unsigned long & nombredep, unsigned long & nombresupp , char & direction, maPosition & coord, long int & Nbligne,long int & Nbcolonne, size_t & KNbCandies) {
     cout << "Ton objectif, " << nom << ", est de terminer la partie, mais la grille est bien plus complexe." << endl;
     cout << "Appuyez sur Entrée pour commencer." << endl;
@@ -101,6 +157,13 @@ void niveau2(string & nom,unsigned long & score, unsigned long & nombredep, unsi
     cout << "Partie terminée !" << endl;
     scorejeuinfini(score,nombredep,nombresupp);
 }
+
+/**
+ * @brief Niveau 3
+ * Grille 6x6, 3 chiffres doit avoir effacé au moins 15 chiffres
+ * @return true Si le joueur a éliminé au moins 15 chiffres
+ * @return false Sinon
+ */
 bool niveau3(string & nom,unsigned long & score, unsigned long & nombredep, unsigned long & nombresupp , char & direction, maPosition & coord, long int & Nbligne,long int & Nbcolonne, size_t & KNbCandies) {
     cout << "Ton objectif, " << nom << ", est de terminer la partie, mais en éliminant au moins 15 chiffres." << endl;
     cout << "Appuyez sur Entrée pour commencer." << endl;
@@ -136,6 +199,14 @@ bool niveau3(string & nom,unsigned long & score, unsigned long & nombredep, unsi
         return false;
     }
 }
+
+/**
+ * @brief Niveau 4
+ * Grille 6x8, 4 couleurs, 10 tours maximum.
+ * @param[in,out] nbtour Nombre de tours 
+ * @return true Si le joueur a terminé en moins de 10 tours
+ * @return false Si tours fini alors perdu
+ */
 bool niveau4(string & nom,unsigned long & score, unsigned long & nombredep, unsigned long & nombresupp , char & direction, maPosition & coord, long int & Nbligne,long int & Nbcolonne, size_t & KNbCandies,size_t & nbtour) {
     cout << "Ton objectif, " << nom << ", est de finir le niveau en moins de 10 tours." << endl;
     cout << "Appuyez sur Entrée pour commencer." << endl;
@@ -171,6 +242,12 @@ bool niveau4(string & nom,unsigned long & score, unsigned long & nombredep, unsi
     scorejeu(score,nombredep,nombresupp,nbtour);
     return true;
 }
+/**
+ * @brief Niveau 5
+ * Grille 8x8, 4 couleurs, 16 tours. Doit éliminer 45 chiffres en moins de 16 tours.
+ * @return true Si condition remplie.
+ * @return false Sinon.
+ */
 bool niveau5(string & nom,unsigned long & score, unsigned long & nombredep, unsigned long & nombresupp , char & direction, maPosition & coord, long int & Nbligne,long int & Nbcolonne, size_t & KNbCandies,size_t & nbtour) {
     cout << "Je vois tout... " << "Comment vaincre le démon... " << endl;
     cout << "Objectif : " << nom << " doit éliminer au moins 45 chiffres en moins de 16 tours !!" << endl;
@@ -211,6 +288,11 @@ bool niveau5(string & nom,unsigned long & score, unsigned long & nombredep, unsi
         return false;
     }
 }
+/**
+ * @brief Affiche les lignes du fichier texte
+ * @param[in,out] fichier Flux de fichier ouvert ifstream
+ * @param[in] val Nombre de lignes à lire et afficher
+ */
 void affichetxt(ifstream & fichier, int val) {
     string ligne;
     for(int i = 0; i< val; ++i){
@@ -220,6 +302,12 @@ void affichetxt(ifstream & fichier, int val) {
     }
 
 }
+/**
+ * @brief Saute un nombre donné de lignes dans un fichier sans afficher.
+ * Met a jour le texte a afficher pour le mode histoire.
+ * @param[in,out] fichier Flux de fichier 
+ * @param[in] val Nombre de lignes à ignorer
+ */
 void ajourtxt(ifstream & fichier, int val) {
     string ligne;
     for(int i = 0; i< val; ++i){
@@ -228,6 +316,10 @@ void ajourtxt(ifstream & fichier, int val) {
     }
 
 }
+/**
+ * @brief Chapitre 5
+ * Lit la narration du chapitre 5, lance le niveau 5 et affiche la fin du jeu.
+ */
 void chap5(string & nom,ifstream & fichier,unsigned long & score, unsigned long & nombredep, unsigned long & nombresupp , char & direction, maPosition & coord, long int & Nbligne,long int & Nbcolonne, size_t & KNbCandies,size_t & nbtour) {
     int nombre;
     fichier.seekg(0);
@@ -260,6 +352,10 @@ void chap5(string & nom,ifstream & fichier,unsigned long & score, unsigned long 
     affichetxt(fichier,13);
     cout << endl << "Merci d'avoir joué !!" << endl << endl;
 }
+/**
+ * @brief Chapitre 4.
+ * Passe au chapitre 5 si le joueur veut
+ */
 void chap4(string & nom,ifstream & fichier,unsigned long & score, unsigned long & nombredep, unsigned long & nombresupp , char & direction, maPosition & coord, long int & Nbligne,long int & Nbcolonne, size_t & KNbCandies,size_t & nbtour) {
     int nombre;
     fichier.seekg(0);
@@ -302,6 +398,10 @@ void chap4(string & nom,ifstream & fichier,unsigned long & score, unsigned long 
         }
     }
 }
+/**
+ * @brief Chapitre 3.
+ * Enchaîne vers le Chapitre 4 si le joueur le souhaite.
+ */
 void chap3(string & nom,ifstream & fichier,unsigned long & score, unsigned long & nombredep, unsigned long & nombresupp , char & direction, maPosition & coord, long int & Nbligne,long int & Nbcolonne, size_t & KNbCandies) {
     size_t nbtour = 0;
     int nombre;
@@ -345,6 +445,10 @@ void chap3(string & nom,ifstream & fichier,unsigned long & score, unsigned long 
         }
     }
 }
+/**
+ * @brief Chapitre 2.
+ * Enchaîne vers le Chapitre 3 si le joueur le souhaite.
+ */
 void chap2(string & nom,ifstream & fichier,unsigned long & score, unsigned long & nombredep, unsigned long & nombresupp , char & direction, maPosition & coord, long int & Nbligne,long int & Nbcolonne, size_t & KNbCandies) {
     int nombre;
     fichier.seekg(0);
@@ -388,7 +492,10 @@ void chap2(string & nom,ifstream & fichier,unsigned long & score, unsigned long 
     }
 }
 
-
+/**
+ * @brief Chapitre 1.
+ * Enchaîne vers le Chapitre 2 si le joueur le souhaite.
+ */
 void chap1(string & nom,ifstream & fichier,unsigned long & score, unsigned long & nombredep, unsigned long & nombresupp , char & direction, maPosition & coord, long int & Nbligne,long int & Nbcolonne, size_t & KNbCandies) {
     int nombre;
     fichier.seekg(0);
@@ -436,6 +543,10 @@ void chap1(string & nom,ifstream & fichier,unsigned long & score, unsigned long 
         }
     }
 }
+/**
+ * @brief Menu principal du Mode Histoire.
+ * Ouvre le fichier texte de narration et permet au joueur de sélectionner le chapitre qu'il souhaite jouer.
+ */
 void modehistoire() {
     ifstream fichier("../../modehistoirenarration.txt");
     if (!fichier) {
