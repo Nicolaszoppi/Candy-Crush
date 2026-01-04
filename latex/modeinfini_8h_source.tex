@@ -1,0 +1,20 @@
+\doxysection{modeinfini.\+h}
+\hypertarget{modeinfini_8h_source}{}\label{modeinfini_8h_source}\index{modes\_de\_jeu/modeinfini.h@{modes\_de\_jeu/modeinfini.h}}
+\mbox{\hyperlink{modeinfini_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ MODEINFINI\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ MODEINFINI\_H}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{solo_8h}{solo.h}}"{}}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00006\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{keyword}{typedef}\ vector\ <short\ int>\ \mbox{\hyperlink{modeinfini_8h_ae045c87c132fe15ce75aeefe25f3aac5}{line}};\ \textcolor{comment}{//\ un\ type\ représentant\ une\ ligne\ de\ la\ grille}}
+\DoxyCodeLine{00009\ \textcolor{keyword}{typedef}\ vector\ <line>\ \mbox{\hyperlink{modeinfini_8h_aee710f500ed8d179390ae3862af69d24}{mat}};\ \textcolor{comment}{//\ un\ type\ représentant\ la\ grille}}
+\DoxyCodeLine{00010\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{modeinfini_8h_a790d64b2ea79a74ab7dea3bec7573a73}{makeAMoveinfini}}\ (\mbox{\hyperlink{main_8cpp_aee710f500ed8d179390ae3862af69d24}{mat}}\ \&\ grille,\mbox{\hyperlink{structmaPosition}{maPosition}}\ \&\ coord,\textcolor{keywordtype}{char}\ \&\ direction,\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ \&\ nombredep,\textcolor{keyword}{const}\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{int}\ \&\ Nbligne,\textcolor{keyword}{const}\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{int}\ \&\ Nbcolonne);}
+\DoxyCodeLine{00011\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{modeinfini_8h_af5591e9d5429fcc2b2573e00c7aed10f}{scorejeuinfini}}\ (\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ \&\ score,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ \&\ nombredep,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ \&\ nombresupp);}
+\DoxyCodeLine{00012\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{modeinfini_8h_a76eb451a8dc883f15db7502c9860ced9}{rempliColonne}}(\mbox{\hyperlink{main_8cpp_aee710f500ed8d179390ae3862af69d24}{mat}}\ \&\ grille,\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{int}\ \&\ Nbligne,\textcolor{keywordtype}{long}\ \textcolor{keywordtype}{int}\ \&\ Nbcolonne,\ \textcolor{keywordtype}{size\_t}\ \&\ KNbCandies);}
+\DoxyCodeLine{00013\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{modeinfini_8h_af30deecaf4ef694e85d7765be6764bd4}{modenormalinfini}}\ (\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ \&\ score,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ \&\ nombredep,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ \&\ nombresupp\ ,\ \textcolor{keywordtype}{char}\ \&\ direction,\ \mbox{\hyperlink{structmaPosition}{maPosition}}\ \&\ coord,\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{int}\ \&\ Nbligne,\textcolor{keywordtype}{long}\ \textcolor{keywordtype}{int}\ \&\ Nbcolonne,\ \textcolor{keywordtype}{size\_t}\ \&\ KNbCandies);}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

@@ -1,0 +1,13 @@
+<map id="chap3" name="chap3">
+<area shape="rect" id="Node000001" title=" " alt="" coords="515,81,576,107"/>
+<area shape="rect" id="Node000002" href="$modehistoire_8cpp.html#ad9fcc453c77abfcb4533a4abf7833950" title=" " alt="" coords="405,56,467,81"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="501,86,466,78,468,73,502,81"/>
+<area shape="rect" id="Node000004" href="$modehistoire_8cpp.html#a24d1c656b93e29aafae03c8235b80a0a" title=" " alt="" coords="140,56,248,81"/>
+<area shape="poly" id="edge6_Node000001_Node000004" title=" " alt="" coords="501,98,405,97,248,79,249,74,405,91,501,93"/>
+<area shape="rect" id="Node000003" href="$modehistoire_8cpp.html#a9acdc485860975bd64adef3834c3cf56" title=" " alt="" coords="296,5,357,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="394,52,354,33,356,28,397,48"/>
+<area shape="poly" id="edge5_Node000002_Node000004" title=" " alt="" coords="391,71,248,71,248,66,391,66"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="284,37,229,58,227,53,282,32"/>
+<area shape="rect" id="Node000005" href="$solo_8cpp.html#a36ce9df10cf710ee8621446713854a71" title=" " alt="" coords="5,56,92,81"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="126,71,92,71,92,66,126,66"/>
+</map>

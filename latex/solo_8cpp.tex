@@ -1,0 +1,141 @@
+\doxysection{modes\+\_\+de\+\_\+jeu/solo.cpp File Reference}
+\hypertarget{solo_8cpp}{}\label{solo_8cpp}\index{modes\_de\_jeu/solo.cpp@{modes\_de\_jeu/solo.cpp}}
+{\ttfamily \#include "{}solo.\+h"{}}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$ctime$>$}\newline
+{\ttfamily \#include "{}modeinfini.\+h"{}}\newline
+{\ttfamily \#include "{}modehistoire.\+h"{}}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$limits$>$}\newline
+Include dependency graph for solo.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{solo_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef vector$<$ short int $>$ \mbox{\hyperlink{solo_8cpp_ae045c87c132fe15ce75aeefe25f3aac5}{line}}
+\item 
+typedef vector$<$ \mbox{\hyperlink{main_8cpp_ae045c87c132fe15ce75aeefe25f3aac5}{line}} $>$ \mbox{\hyperlink{solo_8cpp_aee710f500ed8d179390ae3862af69d24}{mat}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{solo_8cpp_ab6796324d383db792dc0e7e3f7d73e79}{scorejeu}} (unsigned long \&score, unsigned long \&nombredep, unsigned long \&nombresupp, size\+\_\+t \&nbtour)
+\item 
+void \mbox{\hyperlink{solo_8cpp_a5d6a62c8fc77f9960d6845f94a5dc211}{modenormalsolo}} (unsigned long \&score, unsigned long \&nombredep, unsigned long \&nombresupp, char \&direction, \mbox{\hyperlink{structmaPosition}{ma\+Position}} \&coord, long int \&Nbligne, long int \&Nbcolonne, size\+\_\+t \&KNb\+Candies)
+\begin{DoxyCompactList}\small\item\em main \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{solo_8cpp_a1c5125f19b0b44973d51f47707ff7ad5}{modepersosolo}} (unsigned long \&score, unsigned long \&nombredep, unsigned long \&nombresupp, char \&direction, \mbox{\hyperlink{structmaPosition}{ma\+Position}} \&coord, long int \&Nbligne, long int \&Nbcolonne, size\+\_\+t \&KNb\+Candies)
+\item 
+void \mbox{\hyperlink{solo_8cpp_a36ce9df10cf710ee8621446713854a71}{modesolo}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Typedef Documentation}
+\Hypertarget{solo_8cpp_ae045c87c132fe15ce75aeefe25f3aac5}\label{solo_8cpp_ae045c87c132fe15ce75aeefe25f3aac5} 
+\index{solo.cpp@{solo.cpp}!line@{line}}
+\index{line@{line}!solo.cpp@{solo.cpp}}
+\doxysubsubsection{\texorpdfstring{line}{line}}
+{\footnotesize\ttfamily typedef vector$<$short int$>$ \mbox{\hyperlink{main_8cpp_ae045c87c132fe15ce75aeefe25f3aac5}{line}}}
+
+\Hypertarget{solo_8cpp_aee710f500ed8d179390ae3862af69d24}\label{solo_8cpp_aee710f500ed8d179390ae3862af69d24} 
+\index{solo.cpp@{solo.cpp}!mat@{mat}}
+\index{mat@{mat}!solo.cpp@{solo.cpp}}
+\doxysubsubsection{\texorpdfstring{mat}{mat}}
+{\footnotesize\ttfamily typedef vector$<$\mbox{\hyperlink{main_8cpp_ae045c87c132fe15ce75aeefe25f3aac5}{line}}$>$ \mbox{\hyperlink{main_8cpp_aee710f500ed8d179390ae3862af69d24}{mat}}}
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{solo_8cpp_a5d6a62c8fc77f9960d6845f94a5dc211}\label{solo_8cpp_a5d6a62c8fc77f9960d6845f94a5dc211} 
+\index{solo.cpp@{solo.cpp}!modenormalsolo@{modenormalsolo}}
+\index{modenormalsolo@{modenormalsolo}!solo.cpp@{solo.cpp}}
+\doxysubsubsection{\texorpdfstring{modenormalsolo()}{modenormalsolo()}}
+{\footnotesize\ttfamily void modenormalsolo (\begin{DoxyParamCaption}\item[{unsigned long \&}]{score,  }\item[{unsigned long \&}]{nombredep,  }\item[{unsigned long \&}]{nombresupp,  }\item[{char \&}]{direction,  }\item[{\mbox{\hyperlink{structmaPosition}{ma\+Position}} \&}]{coord,  }\item[{long int \&}]{Nbligne,  }\item[{long int \&}]{Nbcolonne,  }\item[{size\+\_\+t \&}]{KNb\+Candies }\end{DoxyParamCaption})}
+
+
+
+main 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{solo_8cpp_a5d6a62c8fc77f9960d6845f94a5dc211_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{solo_8cpp_a5d6a62c8fc77f9960d6845f94a5dc211_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{solo_8cpp_a1c5125f19b0b44973d51f47707ff7ad5}\label{solo_8cpp_a1c5125f19b0b44973d51f47707ff7ad5} 
+\index{solo.cpp@{solo.cpp}!modepersosolo@{modepersosolo}}
+\index{modepersosolo@{modepersosolo}!solo.cpp@{solo.cpp}}
+\doxysubsubsection{\texorpdfstring{modepersosolo()}{modepersosolo()}}
+{\footnotesize\ttfamily void modepersosolo (\begin{DoxyParamCaption}\item[{unsigned long \&}]{score,  }\item[{unsigned long \&}]{nombredep,  }\item[{unsigned long \&}]{nombresupp,  }\item[{char \&}]{direction,  }\item[{\mbox{\hyperlink{structmaPosition}{ma\+Position}} \&}]{coord,  }\item[{long int \&}]{Nbligne,  }\item[{long int \&}]{Nbcolonne,  }\item[{size\+\_\+t \&}]{KNb\+Candies }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{solo_8cpp_a1c5125f19b0b44973d51f47707ff7ad5_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{solo_8cpp_a1c5125f19b0b44973d51f47707ff7ad5_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{solo_8cpp_a36ce9df10cf710ee8621446713854a71}\label{solo_8cpp_a36ce9df10cf710ee8621446713854a71} 
+\index{solo.cpp@{solo.cpp}!modesolo@{modesolo}}
+\index{modesolo@{modesolo}!solo.cpp@{solo.cpp}}
+\doxysubsubsection{\texorpdfstring{modesolo()}{modesolo()}}
+{\footnotesize\ttfamily void modesolo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{solo_8cpp_a36ce9df10cf710ee8621446713854a71_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=329pt]{solo_8cpp_a36ce9df10cf710ee8621446713854a71_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{solo_8cpp_ab6796324d383db792dc0e7e3f7d73e79}\label{solo_8cpp_ab6796324d383db792dc0e7e3f7d73e79} 
+\index{solo.cpp@{solo.cpp}!scorejeu@{scorejeu}}
+\index{scorejeu@{scorejeu}!solo.cpp@{solo.cpp}}
+\doxysubsubsection{\texorpdfstring{scorejeu()}{scorejeu()}}
+{\footnotesize\ttfamily void scorejeu (\begin{DoxyParamCaption}\item[{unsigned long \&}]{score,  }\item[{unsigned long \&}]{nombredep,  }\item[{unsigned long \&}]{nombresupp,  }\item[{size\+\_\+t \&}]{nbtour }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{solo_8cpp_ab6796324d383db792dc0e7e3f7d73e79_icgraph}
+\end{center}
+\end{figure}

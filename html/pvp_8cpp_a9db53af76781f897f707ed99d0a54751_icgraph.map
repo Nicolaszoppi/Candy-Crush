@@ -1,0 +1,11 @@
+<map id="modepersopvp" name="modepersopvp">
+<area shape="rect" id="Node000001" title=" " alt="" coords="512,5,631,31"/>
+<area shape="rect" id="Node000002" href="$pvp_8cpp.html#a7f39b2756087709b7b84f40e9ff882b1" title=" " alt="" coords="381,5,464,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="498,21,464,21,464,15,498,15"/>
+<area shape="rect" id="Node000003" href="$duo_8cpp.html#a5d321712f87eb6014a0a07500cc2eb45" title=" " alt="" coords="251,5,333,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="368,21,333,21,333,15,368,15"/>
+<area shape="rect" id="Node000004" href="$main_8cpp.html#a87da64dc404fab46f81b3a2f39e4d2e3" title=" " alt="" coords="108,5,203,31"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="237,21,203,21,203,15,237,15"/>
+<area shape="rect" id="Node000005" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,60,31"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="95,21,60,21,60,15,95,15"/>
+</map>

@@ -1,0 +1,158 @@
+\doxysection{modes\+\_\+de\+\_\+jeu/pvp.cpp File Reference}
+\hypertarget{pvp_8cpp}{}\label{pvp_8cpp}\index{modes\_de\_jeu/pvp.cpp@{modes\_de\_jeu/pvp.cpp}}
+{\ttfamily \#include "{}duo.\+h"{}}\newline
+{\ttfamily \#include "{}modes\+\_\+de\+\_\+jeu/solo.\+h"{}}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$ctime$>$}\newline
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+{\ttfamily \#include $<$termios.\+h$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+Include dependency graph for pvp.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{pvp_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef vector$<$ short int $>$ \mbox{\hyperlink{pvp_8cpp_ae045c87c132fe15ce75aeefe25f3aac5}{line}}
+\item 
+typedef vector$<$ \mbox{\hyperlink{main_8cpp_ae045c87c132fe15ce75aeefe25f3aac5}{line}} $>$ \mbox{\hyperlink{pvp_8cpp_aee710f500ed8d179390ae3862af69d24}{mat}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{pvp_8cpp_a8b028aef35e81dfdb44a7ba4741036b1}{scorejeupvp}} (unsigned long \&score, unsigned long \&nombredep, unsigned long \&nombresupp, size\+\_\+t \&nbtour, size\+\_\+t joueur)
+\item 
+void \mbox{\hyperlink{pvp_8cpp_a56fe2d9678d7480da879b43fcddccccf}{scorejeufinal}} (unsigned long \&score, unsigned long \&score2, unsigned long \&nombredep, unsigned long nombredep2)
+\item 
+void \mbox{\hyperlink{pvp_8cpp_a0970a0efd6e3ca77db70a8790c7d1638}{modenormalpvp}} (unsigned long \&score, unsigned long \&score2, unsigned long \&nombredep, unsigned long nombredep2, unsigned long \&nombresupp, unsigned long nombresupp2, char \&direction, \mbox{\hyperlink{structmaPosition}{ma\+Position}} \&coord, long int \&Nbligne, long int \&Nbcolonne, size\+\_\+t \&KNb\+Candies, size\+\_\+t \&joueur)
+\item 
+void \mbox{\hyperlink{pvp_8cpp_a9db53af76781f897f707ed99d0a54751}{modepersopvp}} (unsigned long \&score, unsigned long \&score2, unsigned long \&nombredep, unsigned long nombredep2, unsigned long \&nombresupp, unsigned long nombresupp2, char \&direction, \mbox{\hyperlink{structmaPosition}{ma\+Position}} \&coord, long int \&Nbligne, long int \&Nbcolonne, size\+\_\+t \&KNb\+Candies, size\+\_\+t \&joueur)
+\item 
+void \mbox{\hyperlink{pvp_8cpp_a7f39b2756087709b7b84f40e9ff882b1}{modepvp}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Typedef Documentation}
+\Hypertarget{pvp_8cpp_ae045c87c132fe15ce75aeefe25f3aac5}\label{pvp_8cpp_ae045c87c132fe15ce75aeefe25f3aac5} 
+\index{pvp.cpp@{pvp.cpp}!line@{line}}
+\index{line@{line}!pvp.cpp@{pvp.cpp}}
+\doxysubsubsection{\texorpdfstring{line}{line}}
+{\footnotesize\ttfamily typedef vector$<$short int$>$ \mbox{\hyperlink{main_8cpp_ae045c87c132fe15ce75aeefe25f3aac5}{line}}}
+
+\Hypertarget{pvp_8cpp_aee710f500ed8d179390ae3862af69d24}\label{pvp_8cpp_aee710f500ed8d179390ae3862af69d24} 
+\index{pvp.cpp@{pvp.cpp}!mat@{mat}}
+\index{mat@{mat}!pvp.cpp@{pvp.cpp}}
+\doxysubsubsection{\texorpdfstring{mat}{mat}}
+{\footnotesize\ttfamily typedef vector$<$\mbox{\hyperlink{main_8cpp_ae045c87c132fe15ce75aeefe25f3aac5}{line}}$>$ \mbox{\hyperlink{main_8cpp_aee710f500ed8d179390ae3862af69d24}{mat}}}
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{pvp_8cpp_a0970a0efd6e3ca77db70a8790c7d1638}\label{pvp_8cpp_a0970a0efd6e3ca77db70a8790c7d1638} 
+\index{pvp.cpp@{pvp.cpp}!modenormalpvp@{modenormalpvp}}
+\index{modenormalpvp@{modenormalpvp}!pvp.cpp@{pvp.cpp}}
+\doxysubsubsection{\texorpdfstring{modenormalpvp()}{modenormalpvp()}}
+{\footnotesize\ttfamily void modenormalpvp (\begin{DoxyParamCaption}\item[{unsigned long \&}]{score,  }\item[{unsigned long \&}]{score2,  }\item[{unsigned long \&}]{nombredep,  }\item[{unsigned long}]{nombredep2,  }\item[{unsigned long \&}]{nombresupp,  }\item[{unsigned long}]{nombresupp2,  }\item[{char \&}]{direction,  }\item[{\mbox{\hyperlink{structmaPosition}{ma\+Position}} \&}]{coord,  }\item[{long int \&}]{Nbligne,  }\item[{long int \&}]{Nbcolonne,  }\item[{size\+\_\+t \&}]{KNb\+Candies,  }\item[{size\+\_\+t \&}]{joueur }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{pvp_8cpp_a0970a0efd6e3ca77db70a8790c7d1638_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{pvp_8cpp_a0970a0efd6e3ca77db70a8790c7d1638_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{pvp_8cpp_a9db53af76781f897f707ed99d0a54751}\label{pvp_8cpp_a9db53af76781f897f707ed99d0a54751} 
+\index{pvp.cpp@{pvp.cpp}!modepersopvp@{modepersopvp}}
+\index{modepersopvp@{modepersopvp}!pvp.cpp@{pvp.cpp}}
+\doxysubsubsection{\texorpdfstring{modepersopvp()}{modepersopvp()}}
+{\footnotesize\ttfamily void modepersopvp (\begin{DoxyParamCaption}\item[{unsigned long \&}]{score,  }\item[{unsigned long \&}]{score2,  }\item[{unsigned long \&}]{nombredep,  }\item[{unsigned long}]{nombredep2,  }\item[{unsigned long \&}]{nombresupp,  }\item[{unsigned long}]{nombresupp2,  }\item[{char \&}]{direction,  }\item[{\mbox{\hyperlink{structmaPosition}{ma\+Position}} \&}]{coord,  }\item[{long int \&}]{Nbligne,  }\item[{long int \&}]{Nbcolonne,  }\item[{size\+\_\+t \&}]{KNb\+Candies,  }\item[{size\+\_\+t \&}]{joueur }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{pvp_8cpp_a9db53af76781f897f707ed99d0a54751_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{pvp_8cpp_a9db53af76781f897f707ed99d0a54751_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{pvp_8cpp_a7f39b2756087709b7b84f40e9ff882b1}\label{pvp_8cpp_a7f39b2756087709b7b84f40e9ff882b1} 
+\index{pvp.cpp@{pvp.cpp}!modepvp@{modepvp}}
+\index{modepvp@{modepvp}!pvp.cpp@{pvp.cpp}}
+\doxysubsubsection{\texorpdfstring{modepvp()}{modepvp()}}
+{\footnotesize\ttfamily void modepvp (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{pvp_8cpp_a7f39b2756087709b7b84f40e9ff882b1_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{pvp_8cpp_a7f39b2756087709b7b84f40e9ff882b1_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{pvp_8cpp_a56fe2d9678d7480da879b43fcddccccf}\label{pvp_8cpp_a56fe2d9678d7480da879b43fcddccccf} 
+\index{pvp.cpp@{pvp.cpp}!scorejeufinal@{scorejeufinal}}
+\index{scorejeufinal@{scorejeufinal}!pvp.cpp@{pvp.cpp}}
+\doxysubsubsection{\texorpdfstring{scorejeufinal()}{scorejeufinal()}}
+{\footnotesize\ttfamily void scorejeufinal (\begin{DoxyParamCaption}\item[{unsigned long \&}]{score,  }\item[{unsigned long \&}]{score2,  }\item[{unsigned long \&}]{nombredep,  }\item[{unsigned long}]{nombredep2 }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=248pt]{pvp_8cpp_a56fe2d9678d7480da879b43fcddccccf_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{pvp_8cpp_a56fe2d9678d7480da879b43fcddccccf_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{pvp_8cpp_a8b028aef35e81dfdb44a7ba4741036b1}\label{pvp_8cpp_a8b028aef35e81dfdb44a7ba4741036b1} 
+\index{pvp.cpp@{pvp.cpp}!scorejeupvp@{scorejeupvp}}
+\index{scorejeupvp@{scorejeupvp}!pvp.cpp@{pvp.cpp}}
+\doxysubsubsection{\texorpdfstring{scorejeupvp()}{scorejeupvp()}}
+{\footnotesize\ttfamily void scorejeupvp (\begin{DoxyParamCaption}\item[{unsigned long \&}]{score,  }\item[{unsigned long \&}]{nombredep,  }\item[{unsigned long \&}]{nombresupp,  }\item[{size\+\_\+t \&}]{nbtour,  }\item[{size\+\_\+t}]{joueur }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{pvp_8cpp_a8b028aef35e81dfdb44a7ba4741036b1_icgraph}
+\end{center}
+\end{figure}
