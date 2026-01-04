@@ -7,11 +7,20 @@
 #include <modes_de_jeu/modeinfini.h>
 #include <modes_de_jeu/modehistoire.h>
 #include<cstdlib>
+#include <fstream>
 using namespace std;
 
 typedef vector <short int> line; // un type représentant une ligne de la grille
 typedef vector <line> mat; // un type représentant la grille
-
+void reglesjeu () {
+    string ligne;
+    ifstream fichier("../../reglesdujeu.txt");
+    while (true){
+        getline(fichier,ligne);
+        if (fichier.eof())break;
+        cout << ligne << endl;
+    }
+}
 void couleur (const unsigned & coul) {
     cout << "\033[" << coul <<"m";//Définira la couleur de chaque chiffre
 }
@@ -447,8 +456,8 @@ const unsigned KCyan    (36);
 void choixmode () {
     //menu principal qui permet le choix du mode voulu
     size_t mode;
-    cout << "Bienvenue !" << endl << "Sélectionnez le nombre de joueur" << endl;
     while (true) {
+        cout << "Bienvenue !" << endl << "Sélectionnez le nombre de joueur" << endl;
         cout << "1 : Solo" << endl << "2 : Duo" << endl;
         cout << "(10 pour quitter)" << endl;
         cin >> mode;

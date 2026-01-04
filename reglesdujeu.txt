@@ -1,0 +1,29 @@
+Règles du jeu--
+
+Déplacer un jeton (chiffre) pour supprimer tous les alignements de même jeton consécutifs dans la ligne et colonne de ce dernier.
+La partie se termine lorsqu'il n'y a plus aucun déplacement possible (donc souvent car la grille est presque vide ou vide)
+ou que le nombre de tour restant est nul.Le score est modifié à chaque tour et dépend grandement du nombre de suppressions effectuées en un seul déplacement.
+Plusieurs modes de jeu sont à disposition :
+
+1--Mode solo
+
+--Mode basique, nous pouvons choisir de customiser notre propre grille (les jetons seront toujours aléatoires par contre) donc le nombre de ligne et de colonne
+ou tout simplement seulement choisir les possibilités de jeton (minimum de 1 à 3, max de 1 à 9).
+Les coordonées de la grille iront de 0 au nombre de ligne-1 (la même chose pour les colonnes).
+c'est à dire,par exemple, que si nous entrons une taille de ligne égale à 7, les coordonnées en ordonnée iront de 0 à 6, équivalent à 7 colonnes.
+Chaque déplacement (Z le haut, Q à gauche, D à droite et S en bas) ne va seulement que d'1 case et un déplacement n'est possible qu'en cas de suppression de jetons possible.
+
+--Nous avons aussi le mode infini qui est la même chose sauf que les cases vides après le remontage des jetons deviennent un nouveau jeton aléatoire (donc c'est infini),
+vous pouvez choisir d'arrêter à tout moment et votre score s'affichera à la fin.
+
+--Enfin, le mode campagne (ou histoire) ou nous suivrons une histoire (no spoil) avec 5 niveaux différents avec chacun ses spécificités au niveau des règles de jeu !
+
+2--Mode duo
+
+--Tout d'abord, nous avons le mode coop qui consiste à jouer chacun son tour (les joueurs jouent quand c'est le jeu qui les appelle)
+et donc ressemble énormément au mode solo.
+
+--Ensuite nous avons le mode pvp (Player versus player donc joueur contre joueur), chacun commence avec la même grille mais chacun peut effectuer ses déplacements indépendemment
+de l'autre. Chacun a donc son propre score et la partie se termine lorsqu'une des 2 grilles n'a plus aucun déplacement possible, la personne ayant le meilleur score remporte la partie.
+
+

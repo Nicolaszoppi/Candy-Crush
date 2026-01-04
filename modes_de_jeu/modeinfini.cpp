@@ -2,12 +2,13 @@
 #include <iostream>
 #include <vector>
 #include <ctime>
+#include <fstream>
 using namespace std;
 
 typedef vector <short int> line; // un type représentant une ligne de la grille
 typedef vector <line> mat; // un type représentant la grille
 
-int makeAMoveinfini (mat & grille,maPosition & coord,char & direction,unsigned long & nombredep,const long int & Nbligne,const long int & Nbcolonne,size_t & nbtour ) {
+int makeAMoveinfini (mat & grille,maPosition & coord,char & direction,unsigned long & nombredep,const long int & Nbligne,const long int & Nbcolonne) {
     initmove(grille,coord,Nbligne,Nbcolonne);
     size_t valeurtrans;
     //Demande la directon du déplacement (de 1 case seulement)
@@ -26,7 +27,6 @@ int makeAMoveinfini (mat & grille,maPosition & coord,char & direction,unsigned l
                     grille[coord.ord][coord.abs] = grille[coord.ord + 1][coord.abs];
                     grille[coord.ord + 1][coord.abs] = valeurtrans;
                     ++nombredep;
-                    --nbtour;
                     break;
                 }
                 else {
@@ -45,7 +45,6 @@ int makeAMoveinfini (mat & grille,maPosition & coord,char & direction,unsigned l
                     grille[coord.ord][coord.abs] = grille[coord.ord - 1][coord.abs];
                     grille[coord.ord - 1][coord.abs] = valeurtrans;
                     ++nombredep;
-                    --nbtour;
                     break;
                 }
                 else {
@@ -63,8 +62,7 @@ int makeAMoveinfini (mat & grille,maPosition & coord,char & direction,unsigned l
                     valeurtrans = grille[coord.ord][coord.abs];
                     grille[coord.ord][coord.abs] = grille[coord.ord][coord.abs + 1];
                     grille[coord.ord][coord.abs + 1] = valeurtrans;
-                    ++nombredep;
-                    --nbtour;
+                    ++nombredep;;
                     break;
                 }
                 else {
@@ -83,7 +81,6 @@ int makeAMoveinfini (mat & grille,maPosition & coord,char & direction,unsigned l
                     grille[coord.ord][coord.abs] = grille[coord.ord][coord.abs - 1];
                     grille[coord.ord][coord.abs - 1] = valeurtrans;
                     ++nombredep;
-                    --nbtour;
                     break;
                 }
                 else {
@@ -104,10 +101,10 @@ int makeAMoveinfini (mat & grille,maPosition & coord,char & direction,unsigned l
     return 0;
 }
 void scorejeuinfini (unsigned long & score, unsigned long & nombredep, unsigned long & nombresupp) {
-    //affiche le score après chaque déplacement et aussi le nombre de déplacement
+    //affiche le score après chaque déplacement et aussi le nombre de déplacement mais pas les tours
     cout << "Nombre de déplacements : " << nombredep << endl;
     score = score + (nombresupp * 10);
-    cout << "Score jeu : " << score << endl;
+    cout << "Score : " << score << endl;
     nombresupp = 0;
 }
 
@@ -115,7 +112,6 @@ void scorejeuinfini (unsigned long & score, unsigned long & nombredep, unsigned 
  * @brief main
  * @return
  */
-
 void rempliColonne(mat & grille, long int & Nbligne,long int & Nbcolonne, size_t & KNbCandies) {
     for (long int i = 0 ; i < Nbligne ; ++i) {
         for (long int j = 0 ; j  < Nbcolonne ; ++j) {
@@ -126,16 +122,24 @@ void rempliColonne(mat & grille, long int & Nbligne,long int & Nbcolonne, size_t
     }
 }
 void modenormalinfini (unsigned long & score, unsigned long & nombredep, unsigned long & nombresupp , char & direction, maPosition & coord, long int & Nbligne,long int & Nbcolonne, size_t & KNbCandies) {
-    size_t nbtour = 0;
-    creategrille (KNbCandies, Nbligne,Nbcolonne,nbtour);
+    cout << "Nombre max ?" << endl;
+    while (true) {
+        cin >> KNbCandies;
+        if (KNbCandies < 3) {
+            cout << "Il doit y avoir minimum 3 chiffres possibles." << endl;
+        }
+        else break;
+    }
+    Nbligne = KNbCandies * 5;
+    Nbcolonne = Nbligne;
     mat grille(Nbligne,line (Nbcolonne,0));
     initGrid(grille,Nbligne,Nbcolonne, KNbCandies);
     while (findujeu(grille,Nbligne,Nbcolonne)) {
         initGrid (grille,Nbligne,Nbcolonne, KNbCandies);
     }
     displayGrid(grille, Nbligne,Nbcolonne,coord);
-    while (!findujeu (grille,Nbligne,Nbcolonne) && !(nbtour == 0)) {
-        makeAMoveinfini (grille,coord,direction,nombredep,Nbligne,Nbcolonne,nbtour);
+    while (!findujeu (grille,Nbligne,Nbcolonne)) {
+        makeAMoveinfini (grille,coord,direction,nombredep,Nbligne,Nbcolonne);
         if (direction == 'a') {
             break;
         }
